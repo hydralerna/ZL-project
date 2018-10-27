@@ -45,8 +45,6 @@ animation{
 animation{
   name = "protected",
   src_image = "npc/old_man.png",
-  frame_delay = 50,
-  frame_to_loop_on = 1,
   directions = {
     { x = 112, y = 72, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21 },
     { x = 112, y = 72, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21 },
