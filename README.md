@@ -14,7 +14,7 @@ an open-source adventure 2D game engine.
 
 - ZL means "Zelda-like", so this is not in Zelda's world, but it looks like it.
 - However, they are tiles and sprites, in some images, from official games that belong to Nintendo.
-This content is provides under fair use.
+This content is provided under fair use.
 
 
 ### About Solarus
