@@ -24,6 +24,7 @@ Custom or edited creations by:
 "Deathbringer" (Forum: TSR, Profile: https://www.spriters-resource.com/submitter/Deathbringer/)
 "Thunder Wool" (Forum: TSR, Profile: https://www.spriters-resource.com/submitter/Thunder+Wool/)
 "leinglo" (Forum: TSR, Profile: https://www.spriters-resource.com/submitter/leinglo/)
+"Zunashy" (Forum Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=813)
 "froggy77" (Forum: Oniromancie,  Profile: http://www.rpg-maker.fr/index.php?page=membre&id=18714 , Forum: Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=76)
 
 
@@ -31,11 +32,13 @@ Colors by:
 "VinnyVideo"  (Site: https://gamefaqs.gamespot.com/gameboy/563277-the-legend-of-zelda-links-awakening/faqs, Profile:  https://gamefaqs.gamespot.com/community/VinnyVideo)
 
 
-Ripped sprites / tiles by:
+Ripped sprites / tiles or/and creation of tilesets / spritesheets by:
 "VinnyVideo"  (Site: https://gamefaqs.gamespot.com/gameboy/563277-the-legend-of-zelda-links-awakening/faqs, Profile:  https://gamefaqs.gamespot.com/community/VinnyVideo)
 "Mister Mike" (Forum: TSR, Profile: https://www.spriters-resource.com/submitter/MisterMike/)
 "Kimimaru" (Forum: TSR, Profile: https://www.spriters-resource.com/submitter/Kimimaru/)
 "Bruce Juice" (Forum: TSR, Profile: https://www.spriters-resource.com/submitter/BruceJuice/)
+"Breandan Maloney" (Forum: Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=807)
+"Drshnaps" (Forum: Sprite Database, Profile: http://spritedatabase.net/contributor/85)
 "BigGoron" (Forum: TSR, Profile:https://www.spriters-resource.com/submitter/BigGoron/)
 "Katsu (Forum: Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=738)
 "Deathbringer" (Forum: TSR, Profile: https://www.spriters-resource.com/submitter/Deathbringer/)
@@ -53,7 +56,7 @@ Ripped sprites / tiles by:
 "Artemis251" (Site: http://zelda.speedruns.com/la/doghouse/in-game-maps)
 "Jay Harland"  (Site: http://zelda.speedruns.com/la/doghouse/in-game-maps)
 "mabdulra"  (Site: http://zelda.speedruns.com/la/doghouse/in-game-maps)
-
+"Zunashy" (Forum Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=813)
 
 
 
