@@ -26,6 +26,7 @@ Custom or edited creations by:
 "leinglo" (Forum: TSR, Profile: https://www.spriters-resource.com/submitter/leinglo/)
 "Zunashy" (Forum Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=813)
 "froggy77" (Forum: Oniromancie,  Profile: http://www.rpg-maker.fr/index.php?page=membre&id=18714 , Forum: Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=76)
+"Alter_Hoshi"  (Forum Solarus, Profile:  http://forum.solarus-games.org/index.php?action=profile;u=818)
 
 
 Colors by:
@@ -57,7 +58,7 @@ Ripped sprites / tiles or/and creation of tilesets / spritesheets by:
 "Jay Harland"  (Site: http://zelda.speedruns.com/la/doghouse/in-game-maps)
 "mabdulra"  (Site: http://zelda.speedruns.com/la/doghouse/in-game-maps)
 "Zunashy" (Forum Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=813)
-
+"Alter_Hoshi"  (Forum Solarus, Profile:  http://forum.solarus-games.org/index.php?action=profile;u=818)
 
 
 
