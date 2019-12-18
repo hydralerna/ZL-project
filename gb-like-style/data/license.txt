@@ -11,6 +11,7 @@ http://creativecommons.org/licenses/by-sa/4.0/
 - Please credit:
 
 Custom or edited creations by:
+"ansimuz" (Luis Zuno, Forum: OGA, Profile: https://opengameart.org/users/ansimuz,  patreon: https://www.patreon.com/ansimuz)
 "Doude"  (Forum: Oniromancie, Profile: http://www.rpg-maker.fr/index.php?page=membre&id=1111)
 "Nemau"  (Forum: Oniromancie, Profile: http://www.rpg-maker.fr/index.php?page=membre&id=9460)
 "ArMM1998" (Armando Montero, Forum: OGA, Profile: https://opengameart.org/users/armm1998)
@@ -25,9 +26,9 @@ Custom or edited creations by:
 "Thunder Wool" (Forum: TSR, Profile: https://www.spriters-resource.com/submitter/Thunder+Wool/)
 "leinglo" (Forum: TSR, Profile: https://www.spriters-resource.com/submitter/leinglo/)
 "Zunashy" (Forum Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=813)
-"froggy77" (Forum: Oniromancie,  Profile: http://www.rpg-maker.fr/index.php?page=membre&id=18714 , Forum: Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=76)
 "Alter_Hoshi"  (Forum Solarus, Profile:  http://forum.solarus-games.org/index.php?action=profile;u=818)
-
+"Jetrel" (Jetrel, Forum: OGA, Profile: https://opengameart.org/users/jetrel)
+"froggy77" (Forum: Oniromancie,  Profile: http://www.rpg-maker.fr/index.php?page=membre&id=18714 , Forum: Solarus, Profile: http://forum.solarus-games.org/index.php?action=profile;u=76)
 
 Colors by:
 "VinnyVideo"  (Site: https://gamefaqs.gamespot.com/gameboy/563277-the-legend-of-zelda-links-awakening/faqs, Profile:  https://gamefaqs.gamespot.com/community/VinnyVideo)
