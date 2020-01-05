@@ -367,6 +367,16 @@ tile_pattern{
 }
 
 tile_pattern{
+  id = "129",
+  ground = "wall",
+  default_layer = 0,
+  x = 232,
+  y = 96,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
   id = "13",
   ground = "wall",
   default_layer = 0,
@@ -375,6 +385,16 @@ tile_pattern{
   width = 16,
   height = 16,
   repeat_mode = "none",
+}
+
+tile_pattern{
+  id = "130",
+  ground = "wall",
+  default_layer = 0,
+  x = 232,
+  y = 104,
+  width = 8,
+  height = 8,
 }
 
 tile_pattern{
