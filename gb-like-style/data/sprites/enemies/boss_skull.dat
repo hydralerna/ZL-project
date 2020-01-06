@@ -1,0 +1,70 @@
+animation{
+  name = "stopped",
+  src_image = "doors/dungeon_door_skull.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 4 },
+  },
+}
+animation{
+  name = "dying",
+  src_image = "doors/dungeon_door_skull.png",
+  frame_delay = 100,
+  directions = {
+    { x = 0, y = 120, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 24, num_columns = 8 },
+    { x = 0, y = 120, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 24, num_columns = 8 },
+    { x = 0, y = 120, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 24, num_columns = 8 },
+    { x = 0, y = 120, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 24, num_columns = 8 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "doors/dungeon_door_skull.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 120, frame_width = 32, frame_height = 40, origin_x = 8, origin_y = 24, num_frames = 8 },
+    { x = 0, y = 120, frame_width = 32, frame_height = 40, origin_x = 8, origin_y = 24, num_frames = 8 },
+    { x = 0, y = 120, frame_width = 32, frame_height = 40, origin_x = 8, origin_y = 24, num_frames = 8 },
+    { x = 0, y = 120, frame_width = 32, frame_height = 40, origin_x = 8, origin_y = 24, num_frames = 8 },
+  },
+}
+animation{
+  name = "immobilized",
+  src_image = "doors/dungeon_door_skull.png",
+  frame_delay = 50,
+  directions = {
+    { x = 96, y = 80, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 3 },
+    { x = 96, y = 80, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 3 },
+    { x = 96, y = 80, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 3 },
+    { x = 96, y = 80, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 3 },
+  },
+}
+animation{
+  name = "shaking",
+  src_image = "doors/dungeon_door_skull.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 64, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 2, num_columns = 1 },
+    { x = 64, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 2, num_columns = 1 },
+    { x = 64, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 2, num_columns = 1 },
+    { x = 64, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 2, num_columns = 1 },
+  },
+}
+animation{
+  name = "walking",
+  src_image = "doors/dungeon_door_skull.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 4 },
+  },
+}

@@ -1,0 +1,32 @@
+animation{
+  name = "open",
+  src_image = "doors/dungeon_door_skull.png",
+  directions = {
+    { x = 224, y = 80, frame_width = 32, frame_height = 40, origin_x = 8, origin_y = 24 },
+  },
+}
+animation{
+  name = "closed",
+  src_image = "doors/dungeon_door_skull.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 32, y = 0, frame_width = 32, frame_height = 40, origin_x = 8, origin_y = 24, num_frames = 2 },
+  },
+}
+animation{
+  name = "opening",
+  src_image = "doors/dungeon_door_skull.png",
+  frame_delay = 100,
+  directions = {
+    { x = 0, y = 120, frame_width = 32, frame_height = 40, origin_x = 8, origin_y = 24, num_frames = 24, num_columns = 8 },
+  },
+}
+animation{
+  name = "closing",
+  src_image = "doors/dungeon_door_skull.png",
+  frame_delay = 150,
+  directions = {
+    { x = 0, y = 80, frame_width = 32, frame_height = 40, origin_x = 8, origin_y = 24, num_frames = 6 },
+  },
+}
