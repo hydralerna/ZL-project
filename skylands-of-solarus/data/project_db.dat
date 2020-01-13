@@ -1,0 +1,179 @@
+map{ id = "test_map", description = "Test Map" }
+
+tileset{ id = "8px_all_zcfc_01", description = "8px_all_zcfc_01" }
+
+sprite{ id = "entities/arrow", description = "entities/arrow" }
+sprite{ id = "entities/bomb", description = "entities/bomb" }
+sprite{ id = "entities/crystal", description = "entities/crystal" }
+sprite{ id = "entities/crystal_block", description = "entities/crystal_block" }
+sprite{ id = "entities/explosion", description = "entities/explosion" }
+sprite{ id = "entities/items", description = "entities/items" }
+sprite{ id = "entities/rupee_icon", description = "entities/rupee_icon" }
+sprite{ id = "entities/shadow", description = "entities/shadow" }
+sprite{ id = "entities/star", description = "entities/star" }
+sprite{ id = "hero/fire_rod", description = "hero/fire_rod" }
+sprite{ id = "hero/ground1", description = "hero/ground1" }
+sprite{ id = "hero/ground2", description = "hero/ground2" }
+sprite{ id = "hero/ice_rod", description = "hero/ice_rod" }
+sprite{ id = "hero/shield1", description = "hero/shield1" }
+sprite{ id = "hero/shield2", description = "hero/shield2" }
+sprite{ id = "hero/shield3", description = "hero/shield3" }
+sprite{ id = "hero/sword1", description = "hero/sword1" }
+sprite{ id = "hero/sword2", description = "hero/sword2" }
+sprite{ id = "hero/sword3", description = "hero/sword3" }
+sprite{ id = "hero/sword4", description = "hero/sword4" }
+sprite{ id = "hero/sword_stars1", description = "hero/sword_stars1" }
+sprite{ id = "hero/sword_stars2", description = "hero/sword_stars2" }
+sprite{ id = "hero/trail", description = "hero/trail" }
+sprite{ id = "hero/tunic1", description = "hero/tunic1" }
+sprite{ id = "hero/tunic2", description = "hero/tunic2" }
+sprite{ id = "hero/tunic3", description = "hero/tunic3" }
+sprite{ id = "hud/dialog_box_message_end", description = "hud/dialog_box_message_end" }
+sprite{ id = "hud/empty_heart", description = "hud/empty_heart" }
+sprite{ id = "hud/icon_action", description = "hud/icon_action" }
+sprite{ id = "hud/icon_attack", description = "hud/icon_attack" }
+sprite{ id = "hud/icon_item_1", description = "hud/icon_item_1" }
+sprite{ id = "hud/icon_item_2", description = "hud/icon_item_2" }
+sprite{ id = "hud/icon_pause", description = "hud/icon_pause" }
+sprite{ id = "menus/solarus_logo/solarus_logo", description = "menus/solarus_logo/solarus_logo" }
+
+
+sound{ id = "arrow_hit", description = "arrow_hit" }
+sound{ id = "bomb", description = "bomb" }
+sound{ id = "boomerang", description = "boomerang" }
+sound{ id = "boss_charge", description = "boss_charge" }
+sound{ id = "boss_fireball", description = "boss_fireball" }
+sound{ id = "boss_hurt", description = "boss_hurt" }
+sound{ id = "boss_killed", description = "boss_killed" }
+sound{ id = "bounce", description = "bounce" }
+sound{ id = "bow", description = "bow" }
+sound{ id = "bush", description = "bush" }
+sound{ id = "cane", description = "cane" }
+sound{ id = "chest_appears", description = "chest_appears" }
+sound{ id = "chest_open", description = "chest_open" }
+sound{ id = "cursor", description = "cursor" }
+sound{ id = "danger", description = "danger" }
+sound{ id = "door_closed", description = "door_closed" }
+sound{ id = "door_open", description = "door_open" }
+sound{ id = "door_unlocked", description = "door_unlocked" }
+sound{ id = "enemy_awake", description = "enemy_awake" }
+sound{ id = "enemy_hurt", description = "enemy_hurt" }
+sound{ id = "enemy_killed", description = "enemy_killed" }
+sound{ id = "explosion", description = "explosion" }
+sound{ id = "external_stairs_down", description = "external_stairs_down" }
+sound{ id = "external_stairs_up", description = "external_stairs_up" }
+sound{ id = "hammer", description = "hammer" }
+sound{ id = "hammer_stake", description = "hammer_stake" }
+sound{ id = "heart", description = "heart" }
+sound{ id = "heart_container", description = "heart_container" }
+sound{ id = "hero_dying", description = "hero_dying" }
+sound{ id = "hero_falls", description = "hero_falls" }
+sound{ id = "hero_hurt", description = "hero_hurt" }
+sound{ id = "hero_lands", description = "hero_lands" }
+sound{ id = "hero_pushes", description = "hero_pushes" }
+sound{ id = "hero_seen", description = "hero_seen" }
+sound{ id = "hookshot", description = "hookshot" }
+sound{ id = "ice", description = "ice" }
+sound{ id = "internal_stairs_down", description = "internal_stairs_down" }
+sound{ id = "internal_stairs_up", description = "internal_stairs_up" }
+sound{ id = "intro", description = "intro" }
+sound{ id = "item_in_water", description = "item_in_water" }
+sound{ id = "jump", description = "jump" }
+sound{ id = "lantern", description = "lantern" }
+sound{ id = "lift", description = "lift" }
+sound{ id = "lightning", description = "lightning" }
+sound{ id = "magic_meter", description = "magic_meter" }
+sound{ id = "menus/solarus_logo", description = "Solarus logo" }
+sound{ id = "message_end", description = "message_end" }
+sound{ id = "message_letter", description = "message_letter" }
+sound{ id = "monkey", description = "monkey" }
+sound{ id = "monster_hurt", description = "monster_hurt" }
+sound{ id = "octorok", description = "octorok" }
+sound{ id = "ok", description = "ok" }
+sound{ id = "pause_closed", description = "pause_closed" }
+sound{ id = "pause_open", description = "pause_open" }
+sound{ id = "picked_item", description = "picked_item" }
+sound{ id = "picked_rupee", description = "picked_rupee" }
+sound{ id = "picked_small_key", description = "picked_small_key" }
+sound{ id = "piece_of_heart", description = "piece_of_heart" }
+sound{ id = "running", description = "running" }
+sound{ id = "running_obstacle", description = "running_obstacle" }
+sound{ id = "rupee_counter", description = "rupee_counter" }
+sound{ id = "rupee_counter_end", description = "rupee_counter_end" }
+sound{ id = "secret", description = "secret" }
+sound{ id = "shield", description = "shield" }
+sound{ id = "splash", description = "splash" }
+sound{ id = "stairs_down_end", description = "stairs_down_end" }
+sound{ id = "stairs_down_start", description = "stairs_down_start" }
+sound{ id = "stairs_up_end", description = "stairs_up_end" }
+sound{ id = "stairs_up_start", description = "stairs_up_start" }
+sound{ id = "stone", description = "stone" }
+sound{ id = "swim", description = "swim" }
+sound{ id = "switch", description = "switch" }
+sound{ id = "sword1", description = "sword1" }
+sound{ id = "sword2", description = "sword2" }
+sound{ id = "sword3", description = "sword3" }
+sound{ id = "sword4", description = "sword4" }
+sound{ id = "sword_spin_attack_load", description = "sword_spin_attack_load" }
+sound{ id = "sword_spin_attack_release", description = "sword_spin_attack_release" }
+sound{ id = "sword_tapping", description = "sword_tapping" }
+sound{ id = "sword_tapping_weak_wall", description = "sword_tapping_weak_wall" }
+sound{ id = "throw", description = "throw" }
+sound{ id = "timer", description = "timer" }
+sound{ id = "timer_hurry", description = "timer_hurry" }
+sound{ id = "treasure", description = "treasure" }
+sound{ id = "victory", description = "victory" }
+sound{ id = "walk_on_grass", description = "walk_on_grass" }
+sound{ id = "walk_on_water", description = "walk_on_water" }
+sound{ id = "warp", description = "warp" }
+sound{ id = "water_drain", description = "water_drain" }
+sound{ id = "water_drain_begin", description = "water_drain_begin" }
+sound{ id = "water_fill", description = "water_fill" }
+sound{ id = "water_fill_begin", description = "water_fill_begin" }
+sound{ id = "world_warp", description = "world_warp" }
+sound{ id = "wrong", description = "wrong" }
+sound{ id = "zora", description = "zora" }
+
+item{ id = "bomb", description = "bomb" }
+item{ id = "money_bag", description = "money_bag" }
+
+
+
+language{ id = "en", description = "English" }
+
+font{ id = "8_bit", description = "8 bit" }
+font{ id = "enter_command", description = "enter_command" }
+
+shader{ id = "grayscale", description = "grayscale" }
+shader{ id = "hq2x", description = "hq2x" }
+
+file{ path = "fonts/8_bit.png", author = "usr_share, Christopho", license = "Public domain" }
+file{ path = "fonts/enter_command.ttf", author = "Jeti", license = "CC BY 4.0" }
+file{ path = "languages/en/text/strings.dat", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "main.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/features.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/game_manager.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/hud", license = "GPL v3" }
+file{ path = "scripts/hud/action_icon.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/hud/attack_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
+file{ path = "scripts/hud/hearts.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/hud/hud.lua", author = "Christopho, Olivier Cléro", license = "GPL v3" }
+file{ path = "scripts/hud/hud_config.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/hud/hud_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
+file{ path = "scripts/hud/item_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
+file{ path = "scripts/hud/money.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/hud/pause_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
+file{ path = "scripts/initial_game.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/language_manager.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/menus", license = "GPL v3" }
+file{ path = "scripts/menus/dialog_box.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/menus/initial_menus_config.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/menus/solarus_logo.lua", author = "Maxs", license = "GPL v3" }
+file{ path = "scripts/menus/start_game.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/multi_events.lua", author = "Christopho, std::gregwar", license = "GPL v3" }
+file{ path = "scripts/text_fx_helper.lua", author = "Olivier Cléro", license = "GPL v3" }
+file{ path = "shaders/grayscale.dat", author = "Christopho", license = "GPL v3" }
+file{ path = "shaders/grayscale.frag.glsl", author = "Vlag", license = "GPL v3" }
+file{ path = "shaders/hq2x.dat", author = "Christopho", license = "GPL v3" }
+file{ path = "shaders/hq2x.frag.glsl", author = "slime73, Vlag", license = "GPL v3" }
+file{ path = "sounds/menus/solarus_logo.ogg", author = "Diarandor", license = "CC BY-SA 4.0" }

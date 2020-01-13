@@ -1,0 +1,70 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 208,
+  height = 192,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 16,
+  width = 208,
+  height = 16,
+  pattern = "47",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 160,
+  width = 208,
+  height = 16,
+  pattern = "47",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 32,
+  width = 16,
+  height = 128,
+  pattern = "47",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 32,
+  width = 16,
+  height = 128,
+  pattern = "47",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 32,
+  width = 176,
+  height = 128,
+  pattern = "46",
+}
+
+destination{
+  name = "starting_destination",
+  layer = 0,
+  x = 104,
+  y = 93,
+  direction = 1,
+}
+
+pickable{
+  layer = 0,
+  x = 136,
+  y = 61,
+  treasure_name = "bomb",
+}
+
