@@ -1582,14 +1582,22 @@ destination{
   name = "starting_destination",
   layer = 0,
   x = 104,
-  y = 109,
+  y = 325,
   direction = 1,
 }
 
 pickable{
   layer = 0,
-  x = 152,
-  y = 77,
+  x = 160,
+  y = 261,
   treasure_name = "bomb",
+}
+
+separator{
+  layer = 0,
+  x = 0,
+  y = 184,
+  width = 208,
+  height = 16,
 }
 
