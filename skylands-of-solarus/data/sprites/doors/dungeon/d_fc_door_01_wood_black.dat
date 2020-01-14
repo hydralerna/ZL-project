@@ -1,6 +1,6 @@
 animation{
   name = "closed",
-  src_image = "doors/dungeon_door_02.png",
+  src_image = "doors/dungeon/d_fc_door_01.png",
   directions = {
     { x = 144, y = 0, frame_width = 16, frame_height = 32, origin_x = 0, origin_y = 8 },
     { x = 32, y = 0, frame_width = 32, frame_height = 16, origin_x = 8, origin_y = 0 },
@@ -10,7 +10,7 @@ animation{
 }
 animation{
   name = "closing",
-  src_image = "doors/dungeon_door_02.png",
+  src_image = "doors/dungeon/d_fc_door_01.png",
   frame_delay = 50,
   directions = {
     { x = 144, y = 32, frame_width = 16, frame_height = 32, origin_x = 0, origin_y = 8, num_frames = 2, num_columns = 1 },
@@ -21,7 +21,7 @@ animation{
 }
 animation{
   name = "open",
-  src_image = "doors/dungeon_door_02.png",
+  src_image = "doors/dungeon/d_fc_door_01.png",
   directions = {
     { x = 144, y = 128, frame_width = 16, frame_height = 32, origin_x = 0, origin_y = 8 },
     { x = 32, y = 64, frame_width = 32, frame_height = 16, origin_x = 8, origin_y = 0 },
@@ -31,7 +31,7 @@ animation{
 }
 animation{
   name = "opening",
-  src_image = "doors/dungeon_door_02.png",
+  src_image = "doors/dungeon/d_fc_door_01.png",
   frame_delay = 50,
   directions = {
     { x = 144, y = 64, frame_width = 16, frame_height = 32, origin_x = 0, origin_y = 8, num_frames = 2, num_columns = 1 },

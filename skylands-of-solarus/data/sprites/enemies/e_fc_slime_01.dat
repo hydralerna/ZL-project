@@ -1,6 +1,6 @@
 animation{
   name = "walking",
-  src_image = "enemies/slime_by_Sharm.png",
+  src_image = "enemies/e_fc_slime_01.png",
   frame_delay = 120,
   frame_to_loop_on = 0,
   directions = {

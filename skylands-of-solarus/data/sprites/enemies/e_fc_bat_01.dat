@@ -1,6 +1,6 @@
 animation{
   name = "walking",
-  src_image = "enemies/bat_by_Sharm.png",
+  src_image = "enemies/e_fc_bat_01.png",
   frame_delay = 80,
   frame_to_loop_on = 0,
   directions = {
@@ -12,7 +12,7 @@ animation{
 }
 animation{
   name = "dying",
-  src_image = "enemies/bat_by_Sharm.png",
+  src_image = "enemies/e_fc_bat_01.png",
   frame_delay = 50,
   directions = {
     { x = 96, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 6, num_columns = 1 },
@@ -23,7 +23,7 @@ animation{
 }
 animation{
   name = "hurt",
-  src_image = "enemies/bat_by_Sharm.png",
+  src_image = "enemies/e_fc_bat_01.png",
   frame_delay = 80,
   directions = {
     { x = 0, y = 128, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 7 },
@@ -34,7 +34,7 @@ animation{
 }
 animation{
   name = "stopped",
-  src_image = "enemies/bat_by_Sharm.png",
+  src_image = "enemies/e_fc_bat_01.png",
   frame_delay = 80,
   frame_to_loop_on = 0,
   directions = {

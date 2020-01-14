@@ -1,6 +1,6 @@
 animation{
   name = "attack",
-  src_image = "enemies/slime.png",
+  src_image = "enemies/e_fc_slime_02.png",
   frame_delay = 150,
   frame_to_loop_on = 0,
   directions = {
@@ -12,7 +12,7 @@ animation{
 }
 animation{
   name = "hurt",
-  src_image = "enemies/slime.png",
+  src_image = "enemies/e_fc_slime_02.png",
   frame_delay = 50,
   frame_to_loop_on = 0,
   directions = {
@@ -24,7 +24,7 @@ animation{
 }
 animation{
   name = "stopped",
-  src_image = "enemies/slime.png",
+  src_image = "enemies/e_fc_slime_02.png",
   frame_delay = 300,
   frame_to_loop_on = 0,
   directions = {
@@ -36,7 +36,7 @@ animation{
 }
 animation{
   name = "walking",
-  src_image = "enemies/slime.png",
+  src_image = "enemies/e_fc_slime_02.png",
   frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {

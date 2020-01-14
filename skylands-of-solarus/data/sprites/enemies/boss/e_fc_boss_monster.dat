@@ -1,6 +1,6 @@
 animation{
   name = "stopped",
-  src_image = "doors/dungeon_door_monster.png",
+  src_image = "doors/out/o_fc_door_monster.png",
   frame_delay = 250,
   frame_to_loop_on = 0,
   directions = {
@@ -12,7 +12,7 @@ animation{
 }
 animation{
   name = "dying",
-  src_image = "doors/dungeon_door_monster.png",
+  src_image = "doors/out/o_fc_door_monster.png",
   frame_delay = 150,
   directions = {
     { x = 0, y = 320, frame_width = 32, frame_height = 40, origin_x = 16, origin_y = 37, num_frames = 24, num_columns = 8 },
@@ -23,7 +23,7 @@ animation{
 }
 animation{
   name = "hurt",
-  src_image = "doors/dungeon_door_monster.png",
+  src_image = "doors/out/o_fc_door_monster.png",
   frame_delay = 150,
   frame_to_loop_on = 0,
   directions = {
@@ -35,7 +35,7 @@ animation{
 }
 animation{
   name = "hurt_open",
-  src_image = "doors/dungeon_door_monster.png",
+  src_image = "doors/out/o_fc_door_monster.png",
   frame_delay = 150,
   frame_to_loop_on = 0,
   directions = {
@@ -47,7 +47,7 @@ animation{
 }
 animation{
   name = "immobilized",
-  src_image = "doors/dungeon_door_monster.png",
+  src_image = "doors/out/o_fc_door_monster.png",
   frame_delay = 50,
   frame_to_loop_on = 2,
   directions = {
@@ -59,7 +59,7 @@ animation{
 }
 animation{
   name = "shaking",
-  src_image = "doors/dungeon_door_monster.png",
+  src_image = "doors/out/o_fc_door_monster.png",
   frame_delay = 50,
   frame_to_loop_on = 0,
   directions = {
@@ -71,7 +71,7 @@ animation{
 }
 animation{
   name = "stopped_open",
-  src_image = "doors/dungeon_door_monster.png",
+  src_image = "doors/out/o_fc_door_monster.png",
   frame_delay = 250,
   frame_to_loop_on = 0,
   directions = {
@@ -83,7 +83,7 @@ animation{
 }
 animation{
   name = "walking",
-  src_image = "doors/dungeon_door_monster.png",
+  src_image = "doors/out/o_fc_door_monster.png",
   frame_delay = 150,
   frame_to_loop_on = 0,
   directions = {
