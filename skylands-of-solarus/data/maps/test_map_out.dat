@@ -1,0 +1,396 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 416,
+  height = 368,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 16,
+  width = 208,
+  height = 336,
+  pattern = "77",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 24,
+  width = 8,
+  height = 8,
+  pattern = "80",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 16,
+  width = 32,
+  height = 336,
+  pattern = "82",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 16,
+  width = 8,
+  height = 336,
+  pattern = "52",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 16,
+  width = 8,
+  height = 336,
+  pattern = "52",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 0,
+  width = 208,
+  height = 368,
+  pattern = "78",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 0,
+  width = 208,
+  height = 16,
+  pattern = "148",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 352,
+  width = 208,
+  height = 16,
+  pattern = "148",
+}
+
+tile{
+  layer = 0,
+  x = 24,
+  y = 256,
+  width = 8,
+  height = 32,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 256,
+  width = 8,
+  height = 32,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 272,
+  width = 8,
+  height = 16,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 256,
+  width = 16,
+  height = 8,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 272,
+  width = 16,
+  height = 8,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 280,
+  width = 16,
+  height = 8,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = 280,
+  width = 16,
+  height = 8,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 256,
+  width = 8,
+  height = 32,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 256,
+  width = 8,
+  height = 32,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 256,
+  width = 8,
+  height = 32,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 256,
+  width = 8,
+  height = 32,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 296,
+  width = 8,
+  height = 56,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 336,
+  width = 8,
+  height = 8,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 328,
+  width = 8,
+  height = 8,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 336,
+  width = 8,
+  height = 8,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 328,
+  width = 8,
+  height = 8,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 296,
+  width = 8,
+  height = 56,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 336,
+  width = 8,
+  height = 8,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 328,
+  width = 8,
+  height = 8,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 336,
+  width = 8,
+  height = 8,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 328,
+  width = 8,
+  height = 8,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 256,
+  width = 8,
+  height = 32,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 256,
+  width = 8,
+  height = 32,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 264,
+  width = 8,
+  height = 16,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 264,
+  width = 8,
+  height = 16,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 288,
+  y = 256,
+  width = 16,
+  height = 8,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 288,
+  y = 280,
+  width = 16,
+  height = 8,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 264,
+  width = 8,
+  height = 16,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 272,
+  width = 8,
+  height = 16,
+  pattern = "131",
+}
+
+tile{
+  layer = 0,
+  x = 200,
+  y = 16,
+  width = 16,
+  height = 336,
+  pattern = "121",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 328,
+  width = 40,
+  height = 24,
+  pattern = "148",
+}
+
+destination{
+  name = "destination",
+  layer = 0,
+  x = 104,
+  y = 45,
+  direction = 3,
+}
+
+teletransporter{
+  layer = 0,
+  x = 96,
+  y = 8,
+  width = 16,
+  height = 16,
+  destination_map = "test_map",
+}
+

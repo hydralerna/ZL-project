@@ -660,11 +660,121 @@ tile_pattern{
 }
 
 tile_pattern{
+  id = "159",
+  ground = "traversable",
+  default_layer = 0,
+  x = 40,
+  y = 24,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
   id = "16",
   ground = "shallow_water",
   default_layer = 0,
   x = 32,
   y = 48,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
+  id = "160",
+  ground = "wall",
+  default_layer = 0,
+  x = 40,
+  y = 32,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
+  id = "161",
+  ground = "low_wall",
+  default_layer = 0,
+  x = 40,
+  y = 40,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
+  id = "162",
+  ground = "deep_water",
+  default_layer = 0,
+  x = 40,
+  y = 48,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
+  id = "163",
+  ground = "shallow_water",
+  default_layer = 0,
+  x = 40,
+  y = 56,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
+  id = "164",
+  ground = "grass",
+  default_layer = 0,
+  x = 40,
+  y = 64,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
+  id = "165",
+  ground = "hole",
+  default_layer = 0,
+  x = 40,
+  y = 72,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
+  id = "166",
+  ground = "ice",
+  default_layer = 0,
+  x = 40,
+  y = 80,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
+  id = "167",
+  ground = "ladder",
+  default_layer = 0,
+  x = 40,
+  y = 88,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
+  id = "168",
+  ground = "prickles",
+  default_layer = 0,
+  x = 40,
+  y = 96,
+  width = 8,
+  height = 8,
+}
+
+tile_pattern{
+  id = "169",
+  ground = "lava",
+  default_layer = 0,
+  x = 40,
+  y = 104,
   width = 8,
   height = 8,
 }

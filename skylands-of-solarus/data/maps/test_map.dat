@@ -1,11 +1,47 @@
 properties{
   x = 0,
   y = 0,
-  width = 208,
+  width = 416,
   height = 384,
   min_layer = 0,
   max_layer = 2,
   tileset = "dungeon/d_fc_wll_walls_01",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 224,
+  width = 16,
+  height = 16,
+  pattern = "12",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 224,
+  width = 16,
+  height = 16,
+  pattern = "12",
+}
+
+tile{
+  layer = 0,
+  x = 320,
+  y = 208,
+  width = 80,
+  height = 16,
+  pattern = "12",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 208,
+  width = 64,
+  height = 16,
+  pattern = "12",
 }
 
 tile{
@@ -93,55 +129,10 @@ tile{
 tile{
   layer = 0,
   x = 192,
-  y = 224,
+  y = 304,
   width = 16,
-  height = 128,
+  height = 48,
   pattern = "25",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 224,
-  width = 16,
-  height = 16,
-  pattern = "125",
-}
-
-tile{
-  layer = 0,
-  x = 64,
-  y = 224,
-  width = 16,
-  height = 16,
-  pattern = "125",
-}
-
-tile{
-  layer = 0,
-  x = 88,
-  y = 224,
-  width = 8,
-  height = 16,
-  pattern = "79",
-}
-
-tile{
-  layer = 0,
-  x = 96,
-  y = 224,
-  width = 16,
-  height = 16,
-  pattern = "110",
-}
-
-tile{
-  layer = 0,
-  x = 112,
-  y = 224,
-  width = 8,
-  height = 16,
-  pattern = "80",
 }
 
 tile{
@@ -250,15 +241,6 @@ tile{
   width = 16,
   height = 16,
   pattern = "27",
-}
-
-tile{
-  layer = 0,
-  x = 192,
-  y = 280,
-  width = 16,
-  height = 16,
-  pattern = "102",
 }
 
 tile{
@@ -852,15 +834,6 @@ tile{
   width = 16,
   height = 16,
   pattern = "110",
-}
-
-tile{
-  layer = 0,
-  x = 24,
-  y = 208,
-  width = 16,
-  height = 16,
-  pattern = "37",
 }
 
 tile{
@@ -1578,6 +1551,826 @@ tile{
   tileset = "8px_all_zcfc_01",
 }
 
+tile{
+  layer = 0,
+  x = 208,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "11",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "13",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 304,
+  width = 16,
+  height = 48,
+  pattern = "24",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "34",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "36",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 320,
+  width = 16,
+  height = 32,
+  pattern = "25",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 256,
+  width = 16,
+  height = 16,
+  pattern = "122",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 272,
+  width = 16,
+  height = 8,
+  pattern = "83",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 296,
+  width = 16,
+  height = 8,
+  pattern = "87",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "122",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 352,
+  width = 176,
+  height = 16,
+  pattern = "35",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 224,
+  width = 16,
+  height = 16,
+  pattern = "81",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 240,
+  width = 16,
+  height = 96,
+  pattern = "85",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "89",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 224,
+  width = 16,
+  height = 16,
+  pattern = "83",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "91",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 256,
+  width = 16,
+  height = 64,
+  pattern = "87",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 224,
+  width = 144,
+  height = 16,
+  pattern = "82",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 336,
+  width = 144,
+  height = 16,
+  pattern = "90",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 224,
+  width = 8,
+  height = 8,
+  pattern = "156",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 344,
+  width = 8,
+  height = 8,
+  pattern = "158",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 392,
+  y = 224,
+  width = 8,
+  height = 8,
+  pattern = "157",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 392,
+  y = 344,
+  width = 8,
+  height = 8,
+  pattern = "159",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 192,
+  width = 208,
+  height = 16,
+  pattern = "129",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 368,
+  width = 208,
+  height = 16,
+  pattern = "129",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 224,
+  width = 16,
+  height = 48,
+  pattern = "25",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 224,
+  width = 16,
+  height = 48,
+  pattern = "24",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 224,
+  width = 16,
+  height = 32,
+  pattern = "25",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "26",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 256,
+  width = 16,
+  height = 16,
+  pattern = "14",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 256,
+  width = 16,
+  height = 16,
+  pattern = "36",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "13",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 272,
+  width = 16,
+  height = 32,
+  pattern = "25",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 272,
+  width = 16,
+  height = 32,
+  pattern = "129",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 240,
+  width = 16,
+  height = 16,
+  pattern = "86",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "86",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "83",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 240,
+  width = 16,
+  height = 16,
+  pattern = "91",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 392,
+  y = 248,
+  width = 8,
+  height = 8,
+  pattern = "159",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 392,
+  y = 320,
+  width = 8,
+  height = 8,
+  pattern = "157",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 280,
+  width = 32,
+  height = 16,
+  pattern = "94",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "125",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "125",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 296,
+  width = 16,
+  height = 8,
+  pattern = "88",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 280,
+  width = 16,
+  height = 16,
+  pattern = "114",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 272,
+  width = 16,
+  height = 8,
+  pattern = "84",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "128",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "128",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 240,
+  width = 96,
+  height = 16,
+  pattern = "90",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 320,
+  width = 96,
+  height = 16,
+  pattern = "82",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 240,
+  width = 16,
+  height = 16,
+  pattern = "86",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "86",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "86",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 240,
+  width = 16,
+  height = 16,
+  pattern = "86",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 256,
+  width = 16,
+  height = 64,
+  pattern = "85",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 256,
+  width = 16,
+  height = 64,
+  pattern = "87",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 248,
+  width = 8,
+  height = 8,
+  pattern = "155",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 320,
+  width = 8,
+  height = 8,
+  pattern = "152",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 248,
+  width = 8,
+  height = 8,
+  pattern = "154",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 320,
+  width = 8,
+  height = 8,
+  pattern = "153",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 256,
+  width = 16,
+  height = 16,
+  pattern = "45",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 272,
+  width = 16,
+  height = 32,
+  pattern = "58",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "72",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 256,
+  width = 64,
+  height = 16,
+  pattern = "46",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 272,
+  width = 16,
+  height = 32,
+  pattern = "59",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 256,
+  width = 16,
+  height = 16,
+  pattern = "47",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 304,
+  width = 64,
+  height = 16,
+  pattern = "73",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "74",
+}
+
+tile{
+  layer = 0,
+  x = 24,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "37",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 240,
+  width = 64,
+  height = 16,
+  pattern = "159",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 304,
+  width = 64,
+  height = 16,
+  pattern = "159",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 256,
+  width = 16,
+  height = 64,
+  pattern = "159",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 256,
+  width = 16,
+  height = 64,
+  pattern = "159",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 256,
+  width = 64,
+  height = 16,
+  pattern = "159",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 344,
+  width = 16,
+  height = 8,
+  pattern = "244",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 344,
+  width = 16,
+  height = 8,
+  pattern = "244",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 224,
+  width = 16,
+  height = 8,
+  pattern = "241",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 224,
+  width = 16,
+  height = 8,
+  pattern = "241",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 272,
+  enabled_at_start = false,
+  width = 64,
+  height = 32,
+  pattern = "48",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 216,
+  width = 16,
+  height = 24,
+  pattern = "8",
+  tileset = "dungeon/d_fc_trv_entrances_02a",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 216,
+  width = 16,
+  height = 24,
+  pattern = "9",
+  tileset = "dungeon/d_fc_trv_entrances_02a",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 224,
+  width = 32,
+  height = 16,
+  pattern = "7",
+  tileset = "dungeon/d_fc_trv_entrances_02a",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 240,
+  width = 64,
+  height = 8,
+  pattern = "12",
+  tileset = "dungeon/d_fc_trv_entrances_02a",
+}
+
+tile{
+  layer = 0,
+  x = 288,
+  y = 208,
+  width = 8,
+  height = 16,
+  pattern = "79",
+}
+
+tile{
+  layer = 0,
+  x = 296,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "110",
+}
+
+tile{
+  layer = 0,
+  x = 312,
+  y = 208,
+  width = 8,
+  height = 16,
+  pattern = "80",
+}
+
 destination{
   name = "starting_destination",
   layer = 0,
@@ -1588,8 +2381,8 @@ destination{
 
 pickable{
   layer = 0,
-  x = 160,
-  y = 261,
+  x = 344,
+  y = 333,
   treasure_name = "bomb",
 }
 
@@ -1599,5 +2392,240 @@ separator{
   y = 184,
   width = 208,
   height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 208,
+  y = 184,
+  width = 208,
+  height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 200,
+  y = 192,
+  width = 16,
+  height = 192,
+}
+
+wall{
+  layer = 0,
+  x = 272,
+  y = 256,
+  width = 64,
+  height = 16,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 256,
+  y = 256,
+  width = 16,
+  height = 64,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 336,
+  y = 256,
+  width = 16,
+  height = 64,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+wall{
+  layer = 0,
+  x = 272,
+  y = 304,
+  width = 64,
+  height = 16,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+}
+
+jumper{
+  layer = 0,
+  x = 264,
+  y = 256,
+  width = 80,
+  height = 8,
+  direction = 6,
+  jump_length = 32,
+}
+
+jumper{
+  layer = 0,
+  x = 264,
+  y = 312,
+  width = 80,
+  height = 8,
+  direction = 2,
+  jump_length = 32,
+}
+
+jumper{
+  layer = 0,
+  x = 344,
+  y = 264,
+  width = 8,
+  height = 48,
+  direction = 4,
+  jump_length = 32,
+}
+
+jumper{
+  layer = 0,
+  x = 256,
+  y = 312,
+  width = 8,
+  height = 8,
+  direction = 1,
+  jump_length = 40,
+}
+
+jumper{
+  layer = 0,
+  x = 344,
+  y = 312,
+  width = 8,
+  height = 8,
+  direction = 3,
+  jump_length = 40,
+}
+
+jumper{
+  layer = 0,
+  x = 344,
+  y = 256,
+  width = 8,
+  height = 8,
+  direction = 5,
+  jump_length = 40,
+}
+
+jumper{
+  layer = 0,
+  x = 256,
+  y = 264,
+  width = 8,
+  height = 48,
+  direction = 0,
+  jump_length = 40,
+}
+
+jumper{
+  layer = 0,
+  x = 256,
+  y = 256,
+  width = 8,
+  height = 8,
+  direction = 7,
+  jump_length = 40,
+}
+
+teletransporter{
+  layer = 0,
+  x = 88,
+  y = 224,
+  width = 32,
+  height = 16,
+  destination_map = "test_map",
+  destination = "destination_test",
+}
+
+destination{
+  name = "destination_test",
+  layer = 0,
+  x = 304,
+  y = 237,
+  direction = 3,
+}
+
+door{
+  layer = 0,
+  x = 96,
+  y = 224,
+  direction = 3,
+  sprite = "doors/dungeon/d_fc_door_02a_wide_door_nokey",
+  opening_method = "interaction",
+}
+
+teletransporter{
+  layer = 0,
+  x = 96,
+  y = 344,
+  width = 16,
+  height = 16,
+  destination_map = "test_map_out",
+  destination = "destination",
+}
+
+tile{
+  layer = 2,
+  x = 208,
+  y = 272,
+  width = 8,
+  height = 32,
+  pattern = "133",
+}
+
+tile{
+  layer = 2,
+  x = 200,
+  y = 272,
+  width = 8,
+  height = 32,
+  pattern = "132",
+}
+
+tile{
+  layer = 2,
+  x = 88,
+  y = 216,
+  width = 32,
+  height = 16,
+  pattern = "10",
+  tileset = "dungeon/d_fc_trv_entrances_02a",
+}
+
+wall{
+  layer = 2,
+  x = 200,
+  y = 264,
+  width = 16,
+  height = 16,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+wall{
+  layer = 2,
+  x = 200,
+  y = 296,
+  width = 16,
+  height = 16,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
 }
 
