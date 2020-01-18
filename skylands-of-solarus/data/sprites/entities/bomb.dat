@@ -1,8 +1,23 @@
 animation{
-  name = "stopped",
+  name = "item",
   src_image = "items/bomb.png",
   directions = {
     { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8 },
+    { x = 0, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8 },
+    { x = 0, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8 },
+    { x = 0, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8 },
+  },
+}
+animation{
+  name = "stopped",
+  src_image = "items/bomb.png",
+  frame_delay = 180,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 80, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 80, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 80, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 80, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
   },
 }
 animation{
@@ -11,7 +26,22 @@ animation{
   frame_delay = 90,
   frame_to_loop_on = 0,
   directions = {
+    { x = 144, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 144, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 144, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 144, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+  },
+}
+animation{
+  name = "stopped_on_floor",
+  src_image = "items/bomb.png",
+  frame_delay = 180,
+  frame_to_loop_on = 0,
+  directions = {
     { x = 16, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 16, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 16, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 16, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
   },
 }
 animation{
@@ -20,7 +50,10 @@ animation{
   frame_delay = 180,
   frame_to_loop_on = 0,
   directions = {
-    { x = 16, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 208, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 208, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 208, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 208, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
   },
 }
 animation{
@@ -29,6 +62,9 @@ animation{
   frame_delay = 90,
   frame_to_loop_on = 0,
   directions = {
-    { x = 16, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 272, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 272, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 272, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 272, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
   },
 }
