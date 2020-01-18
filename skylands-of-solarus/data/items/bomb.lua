@@ -7,6 +7,7 @@ function item:on_created()
 
   self:set_savegame_variable("possession_bomb")
   self:set_assignable(true)
+  self:set_brandish_when_picked(false)
 end
 
 function item:on_obtaining()
@@ -37,7 +38,8 @@ function item:on_using()
   self:get_map():create_bomb{
     x = x,
     y = y,
-    layer = layer
+    layer = layer,
+    -- properties = {{key = "test", value = "3",}, {key = "essai", value = "8",}}
   }
 
   self:set_finished()
