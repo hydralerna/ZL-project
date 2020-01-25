@@ -119,10 +119,10 @@ function pause_icon_builder:new(game, config)
   
   -- Listens to the on_unpaused event, to update the text.
   game:register_event("on_unpaused", function()
-    pause_icon:set_effect_displayed(" ", true)
+    pause_icon:set_effect_displayed("pause", true)
   end)
 
-  pause_icon:set_effect_displayed(" ")
+  pause_icon:set_effect_displayed("pause")
 
   -- Returns the menu.
   return pause_icon
