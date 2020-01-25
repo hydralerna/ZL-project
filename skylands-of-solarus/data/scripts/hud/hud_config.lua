@@ -13,7 +13,7 @@
 local hud_config = {
 
 
-  -- BG (Top and bottom bars)
+  -- HUD background (top and bottom bars)
   {
     menu_script = "scripts/hud/hud_bg",
     x = 0,
