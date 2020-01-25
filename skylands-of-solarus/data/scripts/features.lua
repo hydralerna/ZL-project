@@ -7,7 +7,9 @@
 
 require("scripts/hud/hud")
 require("scripts/menus/dialog_box")
-require("scripts/meta/map")
+require("scripts/meta/enemy")
 require("scripts/meta/bomb")
 require("scripts/meta/explosion")
+require("scripts/meta/map")
+
 return true
