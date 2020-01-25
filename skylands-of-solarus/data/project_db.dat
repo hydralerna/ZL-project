@@ -6,13 +6,18 @@ tileset{ id = "dungeon/d_fc_trv_carpets_01", description = "d_fc_trv_carpets_01"
 tileset{ id = "dungeon/d_fc_trv_entrances_01", description = "d_fc_trv_entrances_01" }
 tileset{ id = "dungeon/d_fc_trv_entrances_02a", description = "d_fc_trv_entrances_02a" }
 tileset{ id = "dungeon/d_fc_trv_floors_01", description = "d_fc_trv_floors_01" }
+tileset{ id = "dungeon/d_fc_wll_braziers_01", description = "dungeon/d_fc_wll_braziers_01" }
 tileset{ id = "dungeon/d_fc_wll_walls_01", description = "d_fc_wll_walls_01" }
 tileset{ id = "dungeon/d_zc_trv_entrances_01", description = "d_zc_trv_entrances_01" }
 tileset{ id = "dungeon/d_zc_trv_floors_01", description = "d_zc_trv_floors_01" }
 tileset{ id = "dungeon/d_zc_trv_specials_01", description = "d_zc_trv_specials_01" }
+tileset{ id = "dungeon/d_zc_trv_stairs_01", description = "d_zc_trv_stairs_01" }
 tileset{ id = "dungeon/d_zc_walls_specials_01", description = "d_zc_walls_specials_01" }
+tileset{ id = "dungeon/d_zc_wll_braziers_01", description = "d_zc_wll_braziers_01" }
+tileset{ id = "dungeon/d_zc_wll_torches_01", description = "d_zc_wll_torches_01" }
+tileset{ id = "dungeon/d_zc_wll_torches_02", description = "d_zc_wll_torches_02" }
 tileset{ id = "dungeon/d_zc_wll_walls_01", description = "d_zc_wll_walls_01" }
-tileset{ id = "out/o_fc_trv_pavement_01", description = "out/o_fc_trv_pavement_01" }
+tileset{ id = "out/o_fc_trv_pavement_01", description = "o_fc_trv_pavement_01" }
 tileset{ id = "out/o_zc_wll_houses_01", description = "out/o_zc_wll_houses_01" }
 
 sprite{ id = "doors/dungeon/d_fc_door_01_wood_black", description = "doors/dungeon/d_fc_door_01_wood_black" }
@@ -35,13 +40,17 @@ sprite{ id = "doors/out/o_fc_door_slime_ok", description = "doors/out/o_fc_door_
 sprite{ id = "enemies/boss/e_fc_boss_monster", description = "enemies/boss/e_fc_boss_monster" }
 sprite{ id = "enemies/boss/e_fc_boss_skull", description = "enemies/boss/e_fc_boss_skull" }
 sprite{ id = "enemies/boss/e_fc_boss_slime", description = "enemies/boss/e_fc_boss_slime" }
+sprite{ id = "enemies/bosses/e_fc_vitreous", description = "enemies/bosses/vitreous" }
 sprite{ id = "enemies/e_fc_bat_01", description = "enemies/e_fc_bat_01" }
 sprite{ id = "enemies/e_fc_ghost_01", description = "enemies/e_fc_ghost_01" }
 sprite{ id = "enemies/e_fc_haunted_tree_01", description = "enemies/e_fc_haunted_tree_01" }
+sprite{ id = "enemies/e_fc_maloney" }
 sprite{ id = "enemies/e_fc_slime_01", description = "enemies/e_fc_slime_01" }
 sprite{ id = "enemies/e_fc_slime_02", description = "enemies/e_fc_slime_02" }
 sprite{ id = "enemies/e_fc_spider_01", description = "enemies/e_fc_spider_01" }
 sprite{ id = "enemies/e_fc_spiderskull_01", description = "enemies/e_fc_spiderskull_01" }
+sprite{ id = "enemies/e_fc_vitreous_child" }
+sprite{ id = "enemies/enemy_killed", description = "enemies/enemy_killed" }
 sprite{ id = "entities/arrow", description = "entities/arrow" }
 sprite{ id = "entities/bomb", description = "entities/bomb" }
 sprite{ id = "entities/crystal", description = "entities/crystal" }
@@ -177,6 +186,8 @@ sound{ id = "zora", description = "zora" }
 item{ id = "bomb", description = "bomb" }
 item{ id = "money_bag", description = "money_bag" }
 
+enemy{ id = "bosses/e_fc_vitreous", description = "Vitreous" }
+enemy{ id = "e_fc_vitreous_child", description = "Vitreous child" }
 
 
 language{ id = "en", description = "English" }
