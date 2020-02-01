@@ -66,7 +66,7 @@ void main() {
     scaledpos /= screenSizeScaled;
  
     // Get base color.
-    vec4 pixcol = texture2D(sol_texture, pixpos);
+    vec4 pixcol = COMPAT_TEXTURE(sol_texture, pixpos);
  
     // Mix dither texture.
     pixcol = mix(pixcol, overlayPixel, 0.1);
@@ -81,8 +81,8 @@ void main() {
     gray += (rand(scaledpos + offset) * 2 - 1) * noiseAlpha;
  
     // Map the palette to the pixel based on the brightness and shift.
-    pixcol = texture2D(palette, vec2(gray, shift));
+    pixcol = COMPAT_TEXTURE(palette, vec2(gray, shift));
  
     // Multiply through the gl_Color for final output.
-    gl_FragColor = pixcol * sol_vcolor;
+    FragColor = pixcol * sol_vcolor;
 }
