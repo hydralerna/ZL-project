@@ -2191,7 +2191,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
+  x = 272,
   y = 296,
   width = 16,
   height = 8,
@@ -2831,16 +2831,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 368,
-  y = 48,
-  width = 16,
-  height = 16,
-  pattern = "67",
-  tileset = "dungeon/d_fc_trv_floors_01",
-}
-
-tile{
-  layer = 0,
   x = 248,
   y = 96,
   width = 16,
@@ -3203,6 +3193,16 @@ tile{
   pattern = "113",
 }
 
+tile{
+  layer = 0,
+  x = 368,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "67",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
 destination{
   name = "starting_destination",
   layer = 0,
@@ -3370,7 +3370,7 @@ door{
   y = 176,
   direction = 3,
   sprite = "doors/dungeon/d_fc_door_02a_wide_door_nokey",
-  opening_method = "interaction",
+  opening_method = "explosion",
 }
 
 teletransporter{
@@ -3383,14 +3383,6 @@ teletransporter{
   destination = "destination",
 }
 
-enemy{
-  layer = 0,
-  x = 104,
-  y = 53,
-  direction = 3,
-  breed = "bosses/e_fc_vitreous",
-}
-
 separator{
   layer = 0,
   x = 200,
@@ -3399,53 +3391,10 @@ separator{
   height = 160,
 }
 
-enemy{
-  name = "vitreous_child_1",
-  layer = 0,
-  x = 40,
-  y = 77,
-  direction = 3,
-  breed = "e_fc_vitreous_child",
-}
-
-enemy{
-  name = "vitreous_child_2",
-  layer = 0,
-  x = 80,
-  y = 69,
-  direction = 3,
-  breed = "e_fc_vitreous_child",
-}
-
-enemy{
-  name = "vitreous_child_3",
-  layer = 0,
-  x = 152,
-  y = 77,
-  direction = 3,
-  breed = "e_fc_vitreous_child",
-}
-
 separator{
   layer = 0,
   x = 0,
   y = 152,
-  width = 208,
-  height = 16,
-}
-
-separator{
-  layer = 0,
-  x = 0,
-  y = -8,
-  width = 208,
-  height = 16,
-}
-
-separator{
-  layer = 0,
-  x = 208,
-  y = -8,
   width = 208,
   height = 16,
 }
