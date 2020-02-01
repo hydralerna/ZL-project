@@ -196,8 +196,13 @@ language{ id = "en", description = "English" }
 font{ id = "8_bit", description = "8 bit" }
 font{ id = "enter_command", description = "enter_command" }
 
+shader{ id = "6xbrz", description = "6xbrz" }
+shader{ id = "gb", description = "gb" }
 shader{ id = "grayscale", description = "grayscale" }
 shader{ id = "hq2x", description = "hq2x" }
+shader{ id = "index_palette_shader", description = "Index Palette Shader" }
+shader{ id = "lcd", description = "lcd" }
+shader{ id = "sepia", description = "sepia" }
 
 file{ path = "fonts/8_bit.png", author = "usr_share, Christopho", license = "Public domain" }
 file{ path = "fonts/enter_command.ttf", author = "Jeti", license = "CC BY 4.0" }
