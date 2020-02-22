@@ -89,4 +89,9 @@ function text_fx_helper:draw_text_with_stroke_and_shadow(dst_surface, text, stro
   text:draw(dst_surface)
 end
 
+-- Draws the text.
+function text_fx_helper:draw_text(dst_surface, text)
+  text:draw(dst_surface)
+end
+
 return text_fx_helper
