@@ -85,7 +85,9 @@ sprite{ id = "hud/icon_attack", description = "hud/icon_attack" }
 sprite{ id = "hud/icon_item_1", description = "hud/icon_item_1" }
 sprite{ id = "hud/icon_item_2", description = "hud/icon_item_2" }
 sprite{ id = "hud/icon_pause", description = "hud/icon_pause" }
+sprite{ id = "menus/menu_tabs", description = "menus/menu_tabs" }
 sprite{ id = "menus/solarus_logo/solarus_logo", description = "menus/solarus_logo/solarus_logo" }
+sprite{ id = "menus/title_screen/sword", description = "menus/title_screen/sword" }
 
 
 sound{ id = "arrow_hit", description = "arrow_hit" }
