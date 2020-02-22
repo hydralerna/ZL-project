@@ -1,0 +1,30 @@
+animation{
+  name = "active",
+  src_image = "menus/menu_tabs.png",
+  directions = {
+    { x = 128, y = 0, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 16 },
+  },
+}
+animation{
+  name = "activation",
+  src_image = "menus/menu_tabs.png",
+  frame_delay = 50,
+  directions = {
+    { x = 32, y = 0, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 16, num_frames = 2 },
+  },
+}
+animation{
+  name = "deactivation",
+  src_image = "menus/menu_tabs.png",
+  frame_delay = 50,
+  directions = {
+    { x = 64, y = 0, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 16, num_frames = 2 },
+  },
+}
+animation{
+  name = "inactive",
+  src_image = "menus/menu_tabs.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 16 },
+  },
+}
