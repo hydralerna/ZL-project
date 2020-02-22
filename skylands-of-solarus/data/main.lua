@@ -5,7 +5,11 @@ require("scripts/features")
 require("scripts/multi_events")
 
 -- Edit scripts/menus/initial_menus_config.lua to add or change menus before starting a game.
+local game_manager = require("scripts/game_manager")
 local shader_manager = require("scripts/shader_manager")
+local info_manager = require("scripts/info_manager")
+local index_palette_shader = require("scripts/index_palette_shader")
+local palette_menu = require("scripts/menus/palette_menu")
 local initial_menus_config = require("scripts/menus/initial_menus_config")
 local initial_menus = {}
 
@@ -15,6 +19,9 @@ function sol.main:on_started()
   sol.main.load_settings()
   math.randomseed(os.time())
 
+
+  index_palette_shader:set_palette()
+  
   -- Show the initial menus.
   if #initial_menus_config == 0 then
     return
@@ -39,9 +46,29 @@ function sol.main:on_started()
     end
   end
 
+  -- Set default settings for "index_palette_shader" if there is no "palette.dat"
+  local default_settings = {
+	palette_id = 1,
+	shift = 0,
+	offset = 0,
+	screenScale = 2,
+	noiseAlpha = 0,
+  }
+  info_manager:create_sol_file("palette.dat", default_settings)
+
+
+  -- Set "index_palette_shader" to the camera
+  local game_meta = sol.main.get_metatable("game")
+  --local game_meta = sol.main.get_metatable"game"
+  function game_meta:on_map_changed()
+    local camera_surface = self:get_map():get_camera():get_surface()
+	--index_palette_shader:set_palette(camera_surface)
+  end
+
+
   local game_meta = sol.main.get_metatable("game")
   game_meta:register_event("on_started", function(game)
-    -- Skip initial menus when a game starts.
+  -- Skip initial menus when a game starts.
     for _, menu in ipairs(initial_menus) do
       sol.menu.stop(menu)
     end
@@ -57,21 +84,28 @@ end
 local eff_m = require('scripts/maps/effect_manager')
 local gb = require('scripts/maps/gb_effect')
 
+
 -- Event called when the player pressed a keyboard key.
 function sol.main:on_key_pressed(key, modifiers)
 
   local handled = false
   if key == "f5" then
+	local game = sol.main.get_game()
     -- F5: change the video mode.
     -- shader_manager:switch_shader()
-    palette_img = sol.surface.create("palette.png", false)
-    local shader = sol.shader.create("index_palette_shader")
-    shader:set_uniform("shift", 0.75)
-    shader:set_uniform("offset", 0)
-    shader:set_uniform("screenScale", 2)
-    shader:set_uniform("noiseAlpha", 0)
-    shader:set_uniform("palette", palette_img)
-    sol.video.set_shader(shader)
+	if sol.menu.is_started(palette_menu) then
+		index_palette_shader:set_palette()
+		sol.menu.stop(palette_menu)
+		if game then
+			game:set_paused(false)
+		end
+	else
+		if game then
+			game:set_paused(true)
+		end
+		sol.video.set_shader(nil)
+		sol.menu.start(sol.main, palette_menu)
+	end
   elseif key == "f11" or
     (key == "return" and (modifiers.alt or modifiers.control)) then
     -- F11 or Ctrl + return or Alt + Return: switch fullscreen.
