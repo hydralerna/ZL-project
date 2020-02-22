@@ -1,6 +1,9 @@
 -- The background of the hud shown in the game screen.
 
+require("scripts/multi_events")
+
 local hud_bg_builder = {}
+
 
 function hud_bg_builder:new(game, config)
 
@@ -28,30 +31,35 @@ function hud_bg_builder:new(game, config)
     end)
   end
 
+
   function hud_bg:rebuild_surface()
 
     hud_bg.surface:clear()
 
   end
 
+
   function hud_bg:get_surface()
 
     return hud_bg.surface
   end
 
+
   function hud_bg:on_draw(dst_surface)
 
+    local sel_shader
     local x = 0
-	local y = hud_bg.dst_h - hud_bg.tile_h
-	while x < hud_bg.dst_w do
-		hud_bg.bg_img:draw_region(0, 0, hud_bg.tile_w, hud_bg.tile_h, dst_surface, x, 0)
-		hud_bg.bg_img:draw_region(0, hud_bg.tile_h, hud_bg.tile_w, hud_bg.tile_h, dst_surface, x, y)
-		x = x + hud_bg.tile_w
-	end
-    -- hud_bg.surface:draw(dst_surface, x, y)
+    local y = hud_bg.dst_h - hud_bg.tile_h
+    while x < hud_bg.dst_w do
+      hud_bg.bg_img:draw_region(0, 0, hud_bg.tile_w, hud_bg.tile_h, dst_surface, x, 0)
+      hud_bg.bg_img:draw_region(0, hud_bg.tile_h, hud_bg.tile_w, hud_bg.tile_h, dst_surface, x, y)
+      x = x + hud_bg.tile_w
+    end
   end
 
+
   function hud_bg:on_started()
+
     hud_bg:check()
     hud_bg:rebuild_surface()
   end
