@@ -1,0 +1,37 @@
+animation{
+  name = "invisible",
+  src_image = "menus/title_screen/sword.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 112, origin_x = 24, origin_y = 16 },
+  },
+}
+animation{
+  name = "appearing",
+  src_image = "menus/title_screen/sword.png",
+  frame_delay = 50,
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 112, origin_x = 24, origin_y = 16, num_frames = 32, num_columns = 8 },
+  },
+}
+animation{
+  name = "falling",
+  src_image = "menus/title_screen/sword.png",
+  frame_delay = 50,
+  directions = {
+    { x = 0, y = 448, frame_width = 48, frame_height = 112, origin_x = 24, origin_y = 16, num_frames = 8 },
+  },
+}
+animation{
+  name = "static",
+  src_image = "menus/title_screen/sword.png",
+  directions = {
+    { x = 336, y = 336, frame_width = 48, frame_height = 112, origin_x = 24, origin_y = 16 },
+  },
+}
+animation{
+  name = "static2",
+  src_image = "menus/title_screen/sword.png",
+  directions = {
+    { x = 0, y = 560, frame_width = 48, frame_height = 112, origin_x = 24, origin_y = 16 },
+  },
+}
