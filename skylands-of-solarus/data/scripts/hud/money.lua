@@ -71,11 +71,9 @@ function coins_builder:new(game, config)
   function coins:rebuild_surface()
 
     coins.surface:clear()
-
     -- Max money (icon).
     -- coins.coin_icons_img:draw_region((coins.coin_bag_displayed - 1) * 12, 0, 12, 12, coins.surface)
     coins.coin_icons_img:draw_region(3, 2, 10, 12, coins.surface, 0, 1)
-
     -- Current coin (counter).
     local max_money = game:get_max_money()
     coins.text_surface:set_text(coins.money_displayed)
