@@ -3379,7 +3379,7 @@ teletransporter{
   y = 296,
   width = 16,
   height = 16,
-  destination_map = "test_map_out",
+  destination_map = "Champiville",
   destination = "destination",
 }
 

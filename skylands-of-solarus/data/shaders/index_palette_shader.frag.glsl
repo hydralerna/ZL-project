@@ -1,6 +1,6 @@
 // Original script named "Index Palette Shader" by Kyle Pulver (http://kpulv.com/368/Index_Palette_Shader/).
 // Shader based off of Dan Fessler's HD Index Painting tutorial.
-// Script adapted by froggy77 for Solarus Game Engine.
+// Script adapted by froggy77 for Solarus Game Engine. Corrected by Llamazing.
 // 
 // 
 // The idea is to take a normal image and render it with an extremely limited palette. Essentially it's like a game boy shader, and with the help of a dither map texture it actually creates the illusion that there are more colors than there actually are.

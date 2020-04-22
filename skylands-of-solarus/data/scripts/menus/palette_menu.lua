@@ -1,5 +1,6 @@
 -- WIP
 
+local game_manager = require("scripts/game_manager")
 local index_palette_shader = require("scripts/index_palette_shader")
 local info_manager = require("scripts/info_manager")
 local text_fx_helper = require("scripts/text_fx_helper")
@@ -83,14 +84,12 @@ function palette_menu:on_started()
                         "dd31dd"
 }
 
-  self.dst_w, self.dst_h = sol.video.get_quest_size()
+  self.surface_w, self.surface_h = sol.video.get_quest_size()
 
   self.pixel = tonumber(info_manager:get_value_in_file("palette.dat", "palette_id"))
   self.active_pixel = self.pixel
   self.palette_k = ring_next(0, self.palette_h, self.pixel, false)
   self.active_palette_k = self.palette_k
-
-  self.surface_w, self.surface_h = sol.video.get_quest_size()
 
   self.inactive_tab_sprite = sol.sprite.create("menus/menu_tabs")
   self.inactive_tab_sprite:set_animation("inactive")
@@ -102,8 +101,35 @@ function palette_menu:on_started()
 
   self.bg_surface = sol.surface.create(self.surface_w, self.surface_h)
   self.bg_surface:fill_color(self.palette_array[self.active_palette_k][1])
+
   self.bg2_surface = sol.surface.create(self.surface_w - 16, self.surface_h - 24)
-  self.bg2_surface:fill_color(self.palette_array[self.active_palette_k][3])
+  self.bg2_surface:fill_color(self.palette_array[self.active_palette_k][3], 0, 0, self.surface_w - 16, 32)
+  self.bg2_surface:fill_color(self.palette_array[self.active_palette_k][3], 0, 134, self.surface_w - 16, 2)
+  self.bg2_surface:fill_color(self.palette_array[self.active_palette_k][3], 82, 32, 2, 102)
+
+  self.preview_surface = sol.surface.create(100, 102)
+  self.preview_surface:fill_color(self.palette_array[self.active_palette_k][2])
+  self.preview_surface:fill_color(self.palette_array[self.active_palette_k][1], 1, 1, 98, 102)
+  self.preview_surface:fill_color({0, 0, 0, 255}, 3, 3, 94, 96)
+  self.preview_surface:fill_color(self.palette_array[self.active_palette_k][4], 1, 101, 98, 1)
+
+
+  local map = sol.main.get_game():get_map()
+  local hero = map:get_hero()
+  local hero_x, hero_y = hero:get_position()
+  print("hero_x", hero_x, "hero_y", hero_y)
+  local camera = map:get_camera()
+  local camera_x, camera_y = camera:get_position()
+  print("camera_x", camera_x, "camera_y", camera_y)
+  self.preview_x = hero_x - camera_x - 45
+  self.preview_y = hero_y - camera_y - 46
+  print("self.preview_x", self.preview_x, "self.preview_y", self.preview_y)
+  self.camera_surface = camera:get_surface()
+  --self.camera_surface:set_scale(2, 2)
+  index_palette_shader:set_palette(self.camera_surface)
+
+
+
 
   self.info_surface = sol.surface.create(176, 24)
   self.info_surface:fill_color(self.palette_array[self.active_palette_k][2])
@@ -111,24 +137,19 @@ function palette_menu:on_started()
   self.info_surface:fill_color({0, 0, 0, 255}, 3, 3, 170, 18)
   self.info_surface:fill_color(self.palette_array[self.active_palette_k][4], 0, 23, 176, 1)
 
-  self.sword_sprite = sol.sprite.create("menus/title_screen/sword")
-  self.sword_sprite:set_animation("static")
-  index_palette_shader:set_palette(self.sword_sprite)
 
   self.text_surface = sol.text_surface.create({
     horizontal_alignment = "left",
     vertical_alignment = "middle",
     font = "enter_command",
-    color = self.palette_array[1][2],
+    color = self.palette_array[self.active_palette_k][2],
     text = "PALETTE",
     font_size = 16,
   })
   self.text_surface:set_xy(0, 6)
   self.text_width, self.text_height = self.text_surface:get_size()
   self.title_surface = sol.surface.create(self.text_width, self.text_height)
-  --self.title_surface:fill_color(self.palette_array[self.active_palette_k][3])
-  self.text_position_x = (self.dst_w - self.text_width) / 2
-  index_palette_shader:set_palette(self.title_surface)
+  self.text_position_x = (self.surface_w - self.text_width) / 2
 
   self.palette_surface =  sol.surface.create(74, 102)
   self.palette_surface:fill_color(self.palette_array[self.active_palette_k][2])
@@ -142,7 +163,7 @@ function palette_menu:on_started()
     font = "enter_command",
     font_size = 16,
   })
-  --index_palette_shader:set_palette(self.id_text_surface)
+
 end
 
 
@@ -150,6 +171,8 @@ function palette_menu:on_draw(dst_surface)
 
 	self.bg_surface:draw(dst_surface, 0, 0)
  	self.bg2_surface:draw(dst_surface, 8, 16)
+  self.preview_surface:draw(dst_surface, 92, 48)
+  self.camera_surface:draw_region(self.preview_x, self.preview_y, 90, 92, self.preview_surface, 5, 5)
 
   for i=1, 6 do
     if i == 1 then
@@ -170,22 +193,22 @@ function palette_menu:on_draw(dst_surface)
   self.menus_img:draw_region(48, 8, 8, 8, dst_surface, 8, 176)
   self.menus_img:draw_region(56, 8, 8, 8, dst_surface, 192, 176)
   local borders_x = 16
-  while borders_x  < (self.dst_w - 16) do
+  while borders_x  < (self.surface_w - 16) do
    self.menus_img:draw_region(0, 0, 8, 8, dst_surface, borders_x, 16)
    self.menus_img:draw_region(0, 0, 8, 8, dst_surface, borders_x, 40)
-   self.menus_img:draw_region(8, 8, 8, 8, dst_surface, borders_x, self.dst_h - 16)
+   self.menus_img:draw_region(8, 8, 8, 8, dst_surface, borders_x, self.surface_h - 16)
    borders_x = borders_x + 8
   end
   local borders_y = 24
-  while borders_y  < (self.dst_h - 16) do
+  while borders_y  < (self.surface_h - 16) do
    self.menus_img:draw_region(0, 8, 8, 8, dst_surface, 8, borders_y)
-   self.menus_img:draw_region(8, 0, 8, 8, dst_surface, self.dst_w - 16, borders_y)
+   self.menus_img:draw_region(8, 0, 8, 8, dst_surface, self.surface_w - 16, borders_y)
    borders_y = borders_y + 8
   end
   self.menus_img:draw_region(16, 8, 8, 8, dst_surface, 8, 40)
   self.menus_img:draw_region(24, 0, 8, 8, dst_surface, 192, 40)
 
-  self.sword_sprite:draw_region(-24, -16, 48, 100, dst_surface, 160, 64)
+
 
   self.info_surface:draw(dst_surface, 16, 152)
 
@@ -229,19 +252,6 @@ function palette_menu:on_draw(dst_surface)
   end
   -- self.id_surface:fill_color({255, 0, 255, 255})
 
-  self.menus_img:draw_region(0, 16, 4, 4, dst_surface, 16, 47)
-  self.menus_img:draw_region(4, 16, 4, 4, dst_surface, 86, 47)
-  self.menus_img:draw_region(0, 20, 4, 4, dst_surface, 16, 147)
-  self.menus_img:draw_region(4, 20, 4, 4, dst_surface, 86, 147)
-
-  self.menus_img:draw_region(0, 16, 4, 4, dst_surface, 16, 151)
-  self.menus_img:draw_region(4, 16, 4, 4, dst_surface, 188, 151)
-  self.menus_img:draw_region(0, 20, 4, 4, dst_surface, 16, 172)
-  self.menus_img:draw_region(4, 20, 4, 4, dst_surface, 188, 172)
-
-  self.menus_img:draw_region(32, 16, 8, 5, dst_surface, 48, 46)
-  self.menus_img:draw_region(40, 16, 8, 5, dst_surface, 48, 147)
-
   self.id_surface:clear()
   self.stroke_color = self.palette_array[self.palette_k][1]
   self.id_text_surface:set_color(self.palette_array[self.palette_k][4])
@@ -249,6 +259,25 @@ function palette_menu:on_draw(dst_surface)
   self.id_text_width, self.id_text_height = self.id_text_surface:get_size()
   self.id_text_surface:set_xy((168 - self.id_text_width) / 2, 7)
   text_fx_helper:draw_text_with_stroke(self.id_surface, self.id_text_surface, self.stroke_color)
+
+  self.menus_img:draw_region(0, 16, 4, 4, dst_surface, 16, 47)
+  self.menus_img:draw_region(4, 16, 4, 4, dst_surface, 86, 47)
+  self.menus_img:draw_region(0, 20, 4, 4, dst_surface, 16, 147)
+  self.menus_img:draw_region(4, 20, 4, 4, dst_surface, 86, 147)
+
+  self.menus_img:draw_region(0, 16, 4, 4, dst_surface, 92, 47)
+  self.menus_img:draw_region(4, 16, 4, 4, dst_surface, 188, 47)
+  self.menus_img:draw_region(0, 20, 4, 4, dst_surface, 92, 147)
+  self.menus_img:draw_region(4, 20, 4, 4, dst_surface, 188, 147)
+
+  self.menus_img:draw_region(0, 16, 4, 4, dst_surface, 16, 151)
+  self.menus_img:draw_region(4, 16, 4, 4, dst_surface, 188, 151)
+  self.menus_img:draw_region(0, 20, 4, 4, dst_surface, 16, 173)
+  self.menus_img:draw_region(4, 20, 4, 4, dst_surface, 188, 173)
+
+  self.menus_img:draw_region(32, 16, 8, 5, dst_surface, 48, 46)
+  self.menus_img:draw_region(40, 16, 8, 5, dst_surface, 48, 147)
+
 end
 
 
@@ -266,28 +295,40 @@ function palette_menu:on_key_pressed(key)
      local shift = one_shift * self.pixel
      self.active_pixel = self.pixel
      self.active_palette_k = self.palette_k
-     self.bg_surface:fill_color(self.palette_array[self.active_palette_k][1])
-     self.bg2_surface:fill_color(self.palette_array[self.active_palette_k][3])
+
      info_manager:set_value_in_file("palette.dat", "palette_id", self.pixel)
      info_manager:set_value_in_file("palette.dat", "shift", shift)
-     self.sword_sprite:set_animation("appearing", function()
-        self.sword_sprite:set_animation("static")
-     end)
-     index_palette_shader:set_palette(self.sword_sprite)
+
+     self.bg_surface:fill_color(self.palette_array[self.active_palette_k][1])
+
+     self.bg2_surface:fill_color(self.palette_array[self.active_palette_k][3], 0, 0, self.surface_w - 16, 32)
+     self.bg2_surface:fill_color(self.palette_array[self.active_palette_k][3], 0, 134, self.surface_w - 16, 2)
+     self.bg2_surface:fill_color(self.palette_array[self.active_palette_k][3], 82, 32, 2, 102)
+
+     self.preview_surface:fill_color(self.palette_array[self.active_palette_k][2])
+     self.preview_surface:fill_color(self.palette_array[self.active_palette_k][1], 1, 1, 98, 102)
+     self.preview_surface:fill_color({0, 0, 0, 255}, 3, 3, 94, 96)
+     self.preview_surface:fill_color(self.palette_array[self.active_palette_k][4], 1, 101, 98, 1)
+
+
      index_palette_shader:set_palette(self.inactive_tab_sprite)
      index_palette_shader:set_palette(self.active_tab_sprite)
+     index_palette_shader:set_palette(self.camera_surface)
      self.palette_surface:fill_color(self.palette_array[self.active_palette_k][2])
      self.palette_surface:fill_color(self.palette_array[self.active_palette_k][1], 1, 1, 72, 100)
      self.palette_surface:fill_color(self.palette_array[self.active_palette_k][4], 0, 101, 72, 1)
+
      self.info_surface:fill_color(self.palette_array[self.active_palette_k][2])
      self.info_surface:fill_color(self.palette_array[self.active_palette_k][1], 1, 1, 174, 22)
      self.info_surface:fill_color({0, 0, 0, 255}, 3, 3, 170, 18)
      self.info_surface:fill_color(self.palette_array[self.active_palette_k][4], 0, 23, 176, 1)
 
-
      index_palette_shader:set_palette(self.menus_img)
-     index_palette_shader:set_palette(self.title_surface)
+
+     self.text_surface:set_color(self.palette_array[self.active_palette_k][2])
+
   end
   --return handled
 end
+
 return palette_menu

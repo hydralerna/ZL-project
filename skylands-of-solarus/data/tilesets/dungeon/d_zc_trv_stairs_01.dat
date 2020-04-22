@@ -1,4 +1,4 @@
-background_color{ 255, 255, 255 }
+background_color{ 224, 255, 208 }
 tile_pattern{
   id = "1",
   ground = "ladder",
