@@ -1,6 +1,7 @@
 ﻿# ---------------------------------
-$Credit = "Script version: 1.0
-Date: 23/03/2020
+$Credit = "Script version: 1.1
+Date v1.0: 23/03/2020
+Date v1.1: 24/04/2020
 Author: Loïc GUYADER (froggy77)
 -------
 Generate a report to detect errors
@@ -11,6 +12,10 @@ in a folder and its subfolders.
 Tested with:
     - PowerShell: v5.1
     - ImageMagick: v7.0.9
+-------
+v1.1: Correction of a bug with errors, 
+because 'identify' and 'convert' commands
+generate 2 errors for each object.
 -------
 "
 # ---------------------------------
@@ -107,7 +112,8 @@ if ($($Env:Path -split ";") -match "ImageMagick") {
 
 			$Name = -join("<a href=`"file:///", $_.FullName, "`">", $BaseName, "</a>")
 			$NbColors = identify -format %k $_.FullName
-			$NbColors = [int]$NbColors 
+			$NbColors = [int]$NbColors
+			$Palette = convert $_.FullName -format %c histogram:info:-
 			if ($error.Count -gt $LastErrorCount) {
 				if ($error[$LastErrorCount].Exception.Message.Contains("CRC")) {
 					$Status = "KO : CRC error"
@@ -123,7 +129,6 @@ if ($($Env:Path -split ";") -match "ImageMagick") {
 				$Status = "OK"
 				$RowColor = ""
 			}
-			$Palette = convert $_.FullName -format %c histogram:info:-
 			if ($NbColors -eq 1) {
 				$Regex = [Regex]::new("(?=\#)(.*?)(?=\s)")
 				$Match = $Regex.Match($Palette )
