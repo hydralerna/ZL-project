@@ -1,4 +1,4 @@
-background_color{ 224, 255, 208 }
+background_color{ 255, 0, 255 }
 tile_pattern{
   id = "1",
   ground = "traversable",

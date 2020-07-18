@@ -2,6 +2,7 @@
 $Credit = "Script version: 1.1
 Date v1.0: 23/03/2020
 Date v1.1: 24/04/2020
+Date v1.2: 12/07/2020
 Author: Loïc GUYADER (froggy77)
 -------
 Generate a report to detect errors
@@ -16,6 +17,8 @@ Tested with:
 v1.1: Correction of a bug with errors, 
 because 'identify' and 'convert' commands
 generate 2 errors for each object.
+v1.2:  Adding a column for ICC Profile.
+Identify with the -quiet option to avoid errors.
 -------
 "
 # ---------------------------------
@@ -85,14 +88,14 @@ if ($($Env:Path -split ";") -match "ImageMagick") {
 	$IM_ArrayList = New-Object -TypeName "System.Collections.ArrayList"
 	$IM_ArrayList.Add("`r`n<div id=`"right`">`r`n<table>`r`n") | Out-Null
 	$IM_ArrayList.Add("<thead>`r`n") | Out-Null
-	$IM_ArrayList.Add("<tr><th>FILE</th><th>STATUS</th><th>Nb COLORS</th><th>PALETTE</th></tr>`r`n") | Out-Null
+	$IM_ArrayList.Add("<tr><th>FILE</th><th>STATUS</th><th>ICC PROFILE</th><th>Nb COLORS</th><th>PALETTE</th></tr>`r`n") | Out-Null
 	$IM_ArrayList.Add("</thead>`r`n") | Out-Null
 	$IM_ArrayList.Add("<tbody>`r`n") | Out-Null
 	$CountBMP = Get-ChildItem $DirName -Filter *.bmp | Measure-Object | ForEach-Object{$_.Count}
 	$CountPNG = Get-ChildItem $DirName -Filter *.png | Measure-Object | ForEach-Object{$_.Count}
 	$CountFiles = $CountBMP + $CountPNG
 	if ($CountFiles -ne 0) {
-		$IM_ArrayList.Add(-join("<tr class=dir><td colspan=`"4`">", "<a href=`"file:///", $LastDirName, "`">", "&#128193; ", $LastDirName, "</a>", "</td></tr>", "`r`n")) | Out-Null
+		$IM_ArrayList.Add(-join("<tr class=dir><td colspan=`"5`">", "<a href=`"file:///", $LastDirName, "`">", "&#128193; ", $LastDirName, "</a>", "</td></tr>", "`r`n")) | Out-Null
 	}
 	Get-ChildItem -Path $LastDirName -Include @("*.png", "*.bmp") -Recurse |
 		ForEach-Object {
@@ -106,12 +109,12 @@ if ($($Env:Path -split ";") -match "ImageMagick") {
 			if ($DirName -ne $LastDirName) {
 				$LastDirName = $DirName
 				if ($CountFiles -ne 0) {
-					$IM_ArrayList.Add(-join("<tr class=`"dir`"><td colspan=`"4`">", "<a href=`"file:///", $LastDirName, "`">", "&#128193; ", $LastDirName, "</a>", "</td></tr>", "`r`n")) | Out-Null
+					$IM_ArrayList.Add(-join("<tr class=`"dir`"><td colspan=`"5`">", "<a href=`"file:///", $LastDirName, "`">", "&#128193; ", $LastDirName, "</a>", "</td></tr>", "`r`n")) | Out-Null
 				}
 			}
-
 			$Name = -join("<a href=`"file:///", $_.FullName, "`">", $BaseName, "</a>")
-			$NbColors = identify -format %k $_.FullName
+			$ICCProfile = identify -quiet -format "%[profile:icc]" $_.FullName
+			$NbColors = identify -quiet -format %k $_.FullName
 			$NbColors = [int]$NbColors
 			$Palette = convert $_.FullName -format %c histogram:info:-
 			if ($error.Count -gt $LastErrorCount) {
@@ -207,7 +210,7 @@ if ($($Env:Path -split ";") -match "ImageMagick") {
 				$NbColors_span_text = -join("<span title=`"", $Palette_text, "`">", [String]$NbColors, "</span>")
 				$Palette_span_text = "<span title=`"Too many colors to display`">No preview</span>"
 			}
-			$IM_ArrayList.Add(-join("<tr", $RowColor, "><td>", $Name, "</td><td>", $Status, "</td><td>", $NbColors_span_text, "</td><td>", $Palette_span_text, "</td></tr>`r`n")) | Out-Null
+			$IM_ArrayList.Add(-join("<tr", $RowColor, "><td>", $Name, "</td><td>", $Status, "</td><td>", $ICCProfile, "</td><td>", $NbColors_span_text, "</td><td>", $Palette_span_text, "</td></tr>`r`n")) | Out-Null
 			if ($Status -eq "OK") {
 				Write-Host "|" -BackgroundColor Green -ForegroundColor Green -NoNewline
 			} else {

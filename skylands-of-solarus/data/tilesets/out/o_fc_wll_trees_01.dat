@@ -27,6 +27,7 @@ tile_pattern{
   y = 128,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -48,6 +49,7 @@ tile_pattern{
   y = 128,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -58,6 +60,7 @@ tile_pattern{
   y = 128,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -122,6 +125,7 @@ tile_pattern{
   y = 144,
   width = 16,
   height = 16,
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -142,6 +146,7 @@ tile_pattern{
   y = 144,
   width = 16,
   height = 16,
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -163,6 +168,7 @@ tile_pattern{
   y = 144,
   width = 16,
   height = 16,
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -734,6 +740,7 @@ tile_pattern{
   y = 240,
   width = 16,
   height = 16,
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -1241,6 +1248,7 @@ tile_pattern{
   y = 128,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -1261,26 +1269,29 @@ tile_pattern{
   y = 128,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
   id = "208",
-  ground = "wall",
+  ground = "traversable",
   default_layer = 0,
   x = 128,
   y = 144,
   width = 16,
   height = 16,
+  repeat_mode = "none",
 }
 
 tile_pattern{
   id = "209",
-  ground = "wall",
+  ground = "traversable",
   default_layer = 0,
   x = 160,
   y = 144,
   width = 16,
   height = 16,
+  repeat_mode = "none",
 }
 
 tile_pattern{
@@ -1591,6 +1602,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -1611,6 +1623,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -1621,6 +1634,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -1631,6 +1645,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -1641,6 +1656,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -1651,6 +1667,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -1661,6 +1678,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -1671,6 +1689,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{

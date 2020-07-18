@@ -1,30 +1,37 @@
-map{ id = "Champiville", description = "Champiville (outside)" }
-map{ id = "Temple", description = "Temple" }
-map{ id = "test_map", description = "Test Map" }
+map{ id = "Tests/Champiville", description = "Champiville (outside)" }
+map{ id = "Tests/Temple", description = "Temple" }
+map{ id = "Tests/cliffs_and_dungeons", description = "Cliffs & Dungeons" }
+map{ id = "Tests/pavements" }
+map{ id = "Tests/test_map", description = "Test Map" }
 
 tileset{ id = "8px_all_zcfc_01" }
-tileset{ id = "dungeon/d_fc_trv_carpets_01", description = "d_fc_trv_carpets_01" }
-tileset{ id = "dungeon/d_fc_trv_entrances_01", description = "d_fc_trv_entrances_01" }
-tileset{ id = "dungeon/d_fc_trv_entrances_02a", description = "d_fc_trv_entrances_02a" }
-tileset{ id = "dungeon/d_fc_trv_floors_01", description = "d_fc_trv_floors_01" }
-tileset{ id = "dungeon/d_fc_trv_halo_01", description = "d_fc_trv_halo_01" }
-tileset{ id = "dungeon/d_fc_wll_braziers_01", description = "d_fc_wll_braziers_01" }
-tileset{ id = "dungeon/d_fc_wll_torches_01", description = "d_zc_wll_torches_02" }
-tileset{ id = "dungeon/d_fc_wll_walls_01", description = "d_fc_wll_walls_01" }
-tileset{ id = "dungeon/d_zc_trv_entrances_01", description = "d_zc_trv_entrances_01" }
-tileset{ id = "dungeon/d_zc_trv_floors_01", description = "d_zc_trv_floors_01" }
-tileset{ id = "dungeon/d_zc_trv_specials_01", description = "d_zc_trv_specials_01" }
-tileset{ id = "dungeon/d_zc_trv_stairs_01", description = "d_zc_trv_stairs_01" }
-tileset{ id = "dungeon/d_zc_wll_braziers_01", description = "d_zc_wll_braziers_01" }
-tileset{ id = "dungeon/d_zc_wll_specials_01", description = "d_zc_wll_specials_01" }
-tileset{ id = "dungeon/d_zc_wll_torches_01", description = "d_zc_wll_torches_01" }
-tileset{ id = "dungeon/d_zc_wll_walls_01", description = "d_zc_wll_walls_01" }
+tileset{ id = "dungeon/d_fc_trv_carpets_01" }
+tileset{ id = "dungeon/d_fc_trv_entrances_01" }
+tileset{ id = "dungeon/d_fc_trv_entrances_02a" }
+tileset{ id = "dungeon/d_fc_trv_floors_01" }
+tileset{ id = "dungeon/d_fc_trv_halo_01" }
+tileset{ id = "dungeon/d_fc_trv_pavement_01" }
+tileset{ id = "dungeon/d_fc_trv_pavement_02" }
+tileset{ id = "dungeon/d_fc_wll_braziers_01" }
+tileset{ id = "dungeon/d_fc_wll_torches_01" }
+tileset{ id = "dungeon/d_fc_wll_walls_01" }
+tileset{ id = "dungeon/d_zc_trv_entrances_01" }
+tileset{ id = "dungeon/d_zc_trv_floors_01" }
+tileset{ id = "dungeon/d_zc_trv_specials_01" }
+tileset{ id = "dungeon/d_zc_trv_stairs_01" }
+tileset{ id = "dungeon/d_zc_wll_braziers_01" }
+tileset{ id = "dungeon/d_zc_wll_specials_01" }
+tileset{ id = "dungeon/d_zc_wll_torches_01" }
+tileset{ id = "dungeon/d_zc_wll_walls_01" }
 tileset{ id = "out/o_fc_cliffs_02" }
 tileset{ id = "out/o_fc_skylands_01" }
 tileset{ id = "out/o_fc_trv_grass_01" }
+tileset{ id = "out/o_fc_trv_grass_02" }
 tileset{ id = "out/o_fc_trv_pavement_01" }
 tileset{ id = "out/o_fc_trv_pavement_02" }
 tileset{ id = "out/o_fc_wll_barriers_01" }
+tileset{ id = "out/o_fc_wll_cliffs_and_dungeons_01" }
+tileset{ id = "out/o_fc_wll_houses_02" }
 tileset{ id = "out/o_fc_wll_mushrooms_01" }
 tileset{ id = "out/o_fc_wll_pillars_01" }
 tileset{ id = "out/o_fc_wll_stones_tombstones_statues_01" }
@@ -249,6 +256,7 @@ file{ path = "scripts/language_manager.lua", author = "Christopho", license = "G
 file{ path = "scripts/menus", license = "GPL v3" }
 file{ path = "scripts/menus/dialog_box.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/initial_menus_config.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/menus/palette_menu.lua", author = "froggy77, llamazing", }
 file{ path = "scripts/menus/solarus_logo.lua", author = "Maxs", license = "GPL v3" }
 file{ path = "scripts/menus/start_game.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/multi_events.lua", author = "Christopho, std::gregwar", license = "GPL v3" }
@@ -258,3 +266,34 @@ file{ path = "shaders/grayscale.frag.glsl", author = "Vlag", license = "GPL v3" 
 file{ path = "shaders/hq2x.dat", author = "Christopho", license = "GPL v3" }
 file{ path = "shaders/hq2x.frag.glsl", author = "slime73, Vlag", license = "GPL v3" }
 file{ path = "sounds/menus/solarus_logo.ogg", author = "Diarandor", license = "CC BY-SA 4.0" }
+file{ path = "tilesets/dungeon/d_fc_trv_halo_01.dat", author = "froggy77", }
+file{ path = "tilesets/dungeon/d_fc_trv_halo_01.tiles.png", author = "froggy77", }
+file{ path = "tilesets/dungeon/d_fc_trv_pavement_01.dat", author = "DragonDePlatino, froggy77", license = "CC-BY 4.0" }
+file{ path = "tilesets/dungeon/d_fc_trv_pavement_01.tiles.png", author = "DragonDePlatino, froggy77", license = "CC-BY 4.0" }
+file{ path = "tilesets/dungeon/d_fc_wll_braziers_01.dat", author = "froggy77", }
+file{ path = "tilesets/dungeon/d_fc_wll_braziers_01.tiles.png", author = "froggy77", }
+file{ path = "tilesets/dungeon/d_fc_wll_furnitures_01.tiles.png", author = "froggy77", }
+file{ path = "tilesets/dungeon/d_fc_wll_torches_01.dat", author = "froggy77", }
+file{ path = "tilesets/dungeon/d_fc_wll_walls_01.dat", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
+file{ path = "tilesets/dungeon/d_fc_wll_walls_01.tiles.png", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
+file{ path = "tilesets/dungeon/d_fc_wll_walls_01_TEST_COLORS.tiles.png", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
+file{ path = "tilesets/dungeon/d_zc_trv_entrances_01.dat", author = "froggy77", }
+file{ path = "tilesets/dungeon/d_zc_trv_entrances_01.tiles.png", author = "froggy77", }
+file{ path = "tilesets/dungeon/d_zc_wll_braziers_01.dat", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
+file{ path = "tilesets/dungeon/d_zc_wll_braziers_01.tiles.png", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
+file{ path = "tilesets/dungeon/d_zc_wll_furnitures_01.tiles.png", author = "Nintendo, edited and added stuffs by froggy77 and Thunder Wool", }
+file{ path = "tilesets/dungeon/d_zc_wll_specials_01.dat", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
+file{ path = "tilesets/dungeon/d_zc_wll_specials_01.tiles.png", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
+file{ path = "tilesets/dungeon/d_zc_wll_torches_01.dat", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
+file{ path = "tilesets/dungeon/d_zc_wll_torches_01.tiles.png", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
+file{ path = "tilesets/dungeon/d_zc_wll_walls_01.dat", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
+file{ path = "tilesets/dungeon/d_zc_wll_walls_01.tiles.png", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
+file{ path = "tilesets/out/o_fc_wll_cliffs_and_dungeons_01.dat", author = "Ansimuz, froggy77", license = "Public Domain CC0" }
+file{ path = "tilesets/out/o_fc_wll_cliffs_and_dungeons_01.tiles.png", author = "Ansimuz, froggy77", license = "Public Domain CC0" }
+file{ path = "tilesets/out/o_fc_wll_houses_02.dat", author = "Ansimuz, froggy77", license = "Public Domain CC0" }
+file{ path = "tilesets/out/o_fc_wll_houses_02.tiles.png", author = "Ansimuz, froggy77", license = "Public Domain CC0" }
+file{ path = "tilesets/out/o_fc_wll_mushrooms_01.tiles.png", author = "froggy77", }
+file{ path = "tilesets/out/o_fc_wll_mushrooms_01_TEST_COLORS.tiles.png", author = "froggy77", }
+file{ path = "tilesets/out/o_fc_wll_store_signs_01.dat", author = "froggy77", }
+file{ path = "tilesets/out/o_fc_wll_store_signs_01.tiles.png", author = "froggy77", }
+file{ path = "tilesets/out/o_fc_wll_temples_01.dat", author = "DragonDePlatino, froggy77", license = "CC-BY 4.0" }
