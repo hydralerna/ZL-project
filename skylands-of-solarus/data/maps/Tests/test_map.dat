@@ -3379,8 +3379,7 @@ teletransporter{
   y = 296,
   width = 16,
   height = 16,
-  destination_map = "Tests/Champiville",
-  destination = "destination",
+  destination_map = "Tests/test_map_for_CrookiNari",
 }
 
 separator{
