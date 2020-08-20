@@ -3,6 +3,7 @@ map{ id = "Tests/Temple", description = "Temple" }
 map{ id = "Tests/cliffs_and_dungeons", description = "Cliffs & Dungeons" }
 map{ id = "Tests/pavements" }
 map{ id = "Tests/test_map", description = "Test Map" }
+map{ id = "Tests/test_map_for_CrookiNari", description = "For CrookiNari" }
 
 tileset{ id = "8px_all_zcfc_01" }
 tileset{ id = "dungeon/d_fc_trv_carpets_01" }
@@ -27,11 +28,13 @@ tileset{ id = "out/o_fc_cliffs_02" }
 tileset{ id = "out/o_fc_skylands_01" }
 tileset{ id = "out/o_fc_trv_grass_01" }
 tileset{ id = "out/o_fc_trv_grass_02" }
+tileset{ id = "out/o_fc_trv_grass_03" }
 tileset{ id = "out/o_fc_trv_pavement_01" }
 tileset{ id = "out/o_fc_trv_pavement_02" }
 tileset{ id = "out/o_fc_wll_barriers_01" }
 tileset{ id = "out/o_fc_wll_cliffs_and_dungeons_01" }
 tileset{ id = "out/o_fc_wll_houses_02" }
+tileset{ id = "out/o_fc_wll_houses_03" }
 tileset{ id = "out/o_fc_wll_mushrooms_01" }
 tileset{ id = "out/o_fc_wll_pillars_01" }
 tileset{ id = "out/o_fc_wll_stones_tombstones_statues_01" }
@@ -288,10 +291,12 @@ file{ path = "tilesets/dungeon/d_zc_wll_torches_01.dat", author = "Nintendo, edi
 file{ path = "tilesets/dungeon/d_zc_wll_torches_01.tiles.png", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
 file{ path = "tilesets/dungeon/d_zc_wll_walls_01.dat", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
 file{ path = "tilesets/dungeon/d_zc_wll_walls_01.tiles.png", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
+file{ path = "tilesets/out/o_fc_trv_grass_03.dat", author = "froggy77", }
 file{ path = "tilesets/out/o_fc_wll_cliffs_and_dungeons_01.dat", author = "Ansimuz, froggy77", license = "Public Domain CC0" }
 file{ path = "tilesets/out/o_fc_wll_cliffs_and_dungeons_01.tiles.png", author = "Ansimuz, froggy77", license = "Public Domain CC0" }
 file{ path = "tilesets/out/o_fc_wll_houses_02.dat", author = "Ansimuz, froggy77", license = "Public Domain CC0" }
 file{ path = "tilesets/out/o_fc_wll_houses_02.tiles.png", author = "Ansimuz, froggy77", license = "Public Domain CC0" }
+file{ path = "tilesets/out/o_fc_wll_houses_03.dat", author = "froggy77, CrookiNari", }
 file{ path = "tilesets/out/o_fc_wll_mushrooms_01.tiles.png", author = "froggy77", }
 file{ path = "tilesets/out/o_fc_wll_mushrooms_01_TEST_COLORS.tiles.png", author = "froggy77", }
 file{ path = "tilesets/out/o_fc_wll_store_signs_01.dat", author = "froggy77", }
