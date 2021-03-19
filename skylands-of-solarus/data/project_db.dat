@@ -4,6 +4,7 @@ map{ id = "Tests/cliffs_and_dungeons", description = "Cliffs & Dungeons" }
 map{ id = "Tests/pavements" }
 map{ id = "Tests/test_map", description = "Test Map" }
 map{ id = "Tests/test_map_for_CrookiNari", description = "For CrookiNari" }
+map{ id = "Tests/test_python", description = "Test for Python" }
 
 tileset{ id = "8px_all_zcfc_01" }
 tileset{ id = "dungeon/d_fc_trv_carpets_01" }
@@ -50,6 +51,9 @@ tileset{ id = "out/o_zc_wll_houses_01" }
 tileset{ id = "out/o_zc_wll_pillars_01" }
 tileset{ id = "out/o_zc_wll_store_signs_01" }
 
+sprite{ id = "destructibles/jar" }
+sprite{ id = "destructibles/pot" }
+sprite{ id = "destructibles/pot2" }
 sprite{ id = "doors/dungeon/d_fc_door_01_wood_black", description = "doors/dungeon/d_fc_door_01_wood_black" }
 sprite{ id = "doors/dungeon/d_fc_door_01_wood_normal", description = "doors/dungeon/d_fc_door_01_wood_normal" }
 sprite{ id = "doors/dungeon/d_fc_door_01_wood_stairs_down", description = "doors/dungeon/d_fc_door_01_wood_stairs_down" }
