@@ -687,15 +687,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
-  y = 96,
-  width = 16,
-  height = 16,
-  pattern = "162",
-}
-
-tile{
-  layer = 0,
   x = 368,
   y = 64,
   width = 16,
@@ -833,7 +824,7 @@ tile{
   layer = 0,
   x = 272,
   y = 0,
-  width = 64,
+  width = 96,
   height = 16,
   pattern = "101",
 }
@@ -1921,19 +1912,10 @@ tile{
 tile{
   layer = 0,
   x = 800,
-  y = 288,
-  width = 16,
-  height = 16,
-  pattern = "228",
-}
-
-tile{
-  layer = 0,
-  x = 800,
   y = 272,
   width = 16,
-  height = 16,
-  pattern = "210",
+  height = 32,
+  pattern = "228",
 }
 
 tile{
@@ -3375,31 +3357,11 @@ tile{
 
 tile{
   layer = 0,
-  x = 512,
-  y = 336,
-  width = 16,
-  height = 16,
-  pattern = "139",
-  tileset = "out/o_fc_trv_grass_02",
-}
-
-tile{
-  layer = 0,
   x = 224,
   y = 352,
   width = 16,
   height = 16,
   pattern = "139",
-  tileset = "out/o_fc_trv_grass_02",
-}
-
-tile{
-  layer = 0,
-  x = 536,
-  y = 320,
-  width = 8,
-  height = 8,
-  pattern = "107",
   tileset = "out/o_fc_trv_grass_02",
 }
 
@@ -3794,11 +3756,431 @@ tile{
   tileset = "out/o_fc_trv_grass_02",
 }
 
+tile{
+  layer = 0,
+  x = 368,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "143",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "160",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "96",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 16,
+  width = 16,
+  height = 48,
+  pattern = "121",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 16,
+  width = 8,
+  height = 8,
+  pattern = "114",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 296,
+  y = 24,
+  width = 8,
+  height = 8,
+  pattern = "97",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 360,
+  y = 40,
+  width = 8,
+  height = 8,
+  pattern = "102",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 288,
+  y = 48,
+  width = 8,
+  height = 8,
+  pattern = "107",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "139",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 328,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "106",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 24,
+  width = 16,
+  height = 16,
+  pattern = "59",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "47",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "66",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "49",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "63",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 352,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "64",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 312,
+  y = 24,
+  width = 16,
+  height = 16,
+  pattern = "50",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 8,
+  width = 8,
+  height = 8,
+  pattern = "96",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "240",
+}
+
+tile{
+  layer = 0,
+  x = 296,
+  y = 64,
+  width = 16,
+  height = 16,
+  pattern = "222",
+}
+
+tile{
+  layer = 0,
+  x = 288,
+  y = 64,
+  width = 16,
+  height = 16,
+  pattern = "134",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 56,
+  width = 8,
+  height = 8,
+  pattern = "121",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 392,
+  y = 16,
+  enabled_at_start = false,
+  width = 16,
+  height = 16,
+  pattern = "",
+  tileset = "dungeon/d_fc_trv_pavement_01",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "65",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 552,
+  y = 312,
+  width = 16,
+  height = 16,
+  pattern = "64",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 544,
+  y = 328,
+  width = 16,
+  height = 16,
+  pattern = "55",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "53",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 560,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "62",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 568,
+  y = 344,
+  width = 16,
+  height = 16,
+  pattern = "57",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 576,
+  y = 336,
+  width = 8,
+  height = 8,
+  pattern = "110",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 536,
+  y = 344,
+  width = 16,
+  height = 16,
+  pattern = "52",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 520,
+  y = 360,
+  width = 16,
+  height = 16,
+  pattern = "60",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 520,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "139",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 536,
+  y = 312,
+  width = 16,
+  height = 16,
+  pattern = "57",
+  tileset = "dungeon/d_fc_trv_pavement_02",
+}
+
+tile{
+  layer = 0,
+  x = 536,
+  y = 328,
+  width = 8,
+  height = 8,
+  pattern = "107",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 104,
+  width = 16,
+  height = 32,
+  pattern = "45",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "63",
+}
+
+tile{
+  layer = 0,
+  x = 296,
+  y = 112,
+  width = 48,
+  height = 16,
+  pattern = "54",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 296,
+  y = 112,
+  width = 8,
+  height = 8,
+  pattern = "65",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 296,
+  y = 128,
+  width = 8,
+  height = 8,
+  pattern = "89",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 328,
+  y = 128,
+  width = 8,
+  height = 8,
+  pattern = "68",
+  tileset = "out/o_fc_trv_grass_02",
+}
+
+tile{
+  layer = 0,
+  x = 280,
+  y = 136,
+  width = 16,
+  height = 16,
+  pattern = "81",
+}
+
+tile{
+  layer = 0,
+  x = 296,
+  y = 136,
+  width = 8,
+  height = 16,
+  pattern = "291",
+}
+
 destination{
   name = "destination",
   layer = 0,
-  x = 552,
-  y = 349,
+  x = 600,
+  y = 389,
   direction = 3,
 }
 

@@ -2152,46 +2152,6 @@ tile{
 tile{
   layer = 0,
   x = 272,
-  y = 256,
-  width = 64,
-  height = 16,
-  pattern = "159",
-  tileset = "8px_all_zcfc_01",
-}
-
-tile{
-  layer = 0,
-  x = 256,
-  y = 208,
-  width = 16,
-  height = 64,
-  pattern = "159",
-  tileset = "8px_all_zcfc_01",
-}
-
-tile{
-  layer = 0,
-  x = 336,
-  y = 208,
-  width = 16,
-  height = 64,
-  pattern = "159",
-  tileset = "8px_all_zcfc_01",
-}
-
-tile{
-  layer = 0,
-  x = 272,
-  y = 208,
-  width = 64,
-  height = 16,
-  pattern = "159",
-  tileset = "8px_all_zcfc_01",
-}
-
-tile{
-  layer = 0,
-  x = 272,
   y = 296,
   width = 16,
   height = 8,
@@ -3203,6 +3163,26 @@ tile{
   tileset = "dungeon/d_fc_trv_floors_01",
 }
 
+tile{
+  layer = 0,
+  x = 288,
+  y = 224,
+  width = 8,
+  height = 8,
+  pattern = "165",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 216,
+  width = 80,
+  height = 48,
+  pattern = "165",
+  tileset = "8px_all_zcfc_01",
+}
+
 destination{
   name = "starting_destination",
   layer = 0,
@@ -3228,10 +3208,10 @@ separator{
 
 wall{
   layer = 0,
-  x = 272,
+  x = 264,
   y = 208,
-  width = 64,
-  height = 16,
+  width = 80,
+  height = 8,
   stops_hero = true,
   stops_npcs = true,
   stops_enemies = true,
@@ -3241,9 +3221,9 @@ wall{
 wall{
   layer = 0,
   x = 256,
-  y = 208,
-  width = 16,
-  height = 64,
+  y = 216,
+  width = 8,
+  height = 48,
   stops_hero = true,
   stops_npcs = true,
   stops_enemies = true,
@@ -3252,10 +3232,10 @@ wall{
 
 wall{
   layer = 0,
-  x = 336,
-  y = 208,
-  width = 16,
-  height = 64,
+  x = 344,
+  y = 216,
+  width = 8,
+  height = 48,
   stops_hero = true,
   stops_npcs = true,
   stops_enemies = true,
@@ -3264,10 +3244,10 @@ wall{
 
 wall{
   layer = 0,
-  x = 272,
-  y = 256,
-  width = 64,
-  height = 16,
+  x = 264,
+  y = 264,
+  width = 80,
+  height = 8,
   stops_hero = true,
   stops_npcs = true,
   stops_enemies = true,

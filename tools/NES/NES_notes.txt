@@ -1,0 +1,135 @@
+_________________________________________________
+
+N E S
+_________________________________________________
+
+---------------------------
+SPECIFICATIONS
+---------------------------
+
+Here are the specifications of the NES System itself.
+CPU Type: modified 6502 8-bit (NMOS)
+Clock Speed: 1.773447 MHz (PAL) or 1.7897725 MHz (NTSC)
+Processor: 8-Bit PPU (Picture Processing Unit)
+Colors Available: 52
+Colors per Sprite: 4 (including transparency)
+Maximum Colors on-screen: 25 (4 sprite palettes, 4 background palettes)
+RAM Memory: 2 KB
+Video RAM: 2 KB
+Game Program Memory: 128K, 32K, 16K or 8K Bytes, 1 Meg, 256K, or 64K Bits
+Game Character Memory: 128K, 32K, 16K or 8K Bytes, 1 Meg, 256K, or 64K Bits
+Scrolling: Horizontal and Vertical
+Sound: PSG sound (2 Square Waves, 1 Triangle Wave, 1 White Noise)
+Sprite Size: 8x8 or 8x16
+Maximum Sprites: 64 (8 per scanline)
+Minimum Cart Size: 16 KB
+Maximum Cart Size: 512 KB
+Picture Resolution: 256 x 240 pixels
+_________________________________________________
+
+---------------------------
+NES COLORS
+---------------------------
+
+#646464
+#aeaeae
+#ffffff
+#002d69
+#0f63b3
+#bcdfff
+#131f7f
+#405bd0
+#8fa2ff
+#d1d8ff
+#3c137c
+#78417c
+#c890ff
+#e8d1ff
+#600b62
+#a736a9
+#f785fa
+#fbcdfd
+#730a37
+#c03470
+#ff83c0
+#ffcce5
+#710f07
+#bd3c30
+#ff8b7f
+#ffcfca
+#5a1a00
+#9f4a00
+#ef9a49
+#f8d5b4
+#342800
+#6d5c00
+#c6ac2c
+#e4dca8
+#0b3400
+#366d00
+#85bc2f
+#cce3a9
+#003c00
+#077704
+#55c753
+#b9e8b8
+#003d10
+#00793d
+#3cc98c
+#aee8d0
+#003840
+#00727d
+#3ec2cd
+#afe5ea
+#000000
+#646464
+#aeaeae
+#ffffff
+#002d69
+#0f63b3
+#bcdfff
+#131f7f
+#405bd0
+#8fa2ff
+#d1d8ff
+#3c137c
+#78417c
+#c890ff
+#e8d1ff
+#600b62
+#a736a9
+#f785fa
+#fbcdfd
+#730a37
+#c03470
+#ff83c0
+#ffcce5
+#710f07
+#bd3c30
+#ff8b7f
+#ffcfca
+#5a1a00
+#9f4a00
+#ef9a49
+#f8d5b4
+#342800
+#6d5c00
+#c6ac2c
+#e4dca8
+#0b3400
+#366d00
+#85bc2f
+#cce3a9
+#003c00
+#077704
+#55c753
+#b9e8b8
+#003d10
+#00793d
+#3cc98c
+#aee8d0
+#003840
+#00727d
+#3ec2cd
+#afe5ea
+#000000

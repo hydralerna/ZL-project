@@ -1,7 +1,7 @@
 properties{
   x = 0,
   y = 0,
-  width = 280,
+  width = 192,
   height = 216,
   min_layer = 0,
   max_layer = 2,
@@ -916,6 +916,32 @@ tile{
   width = 8,
   height = 8,
   pattern = "80",
+}
+
+wall{
+  layer = 0,
+  x = 16,
+  y = 32,
+  width = 8,
+  height = 96,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
+}
+
+wall{
+  layer = 0,
+  x = 152,
+  y = 32,
+  width = 8,
+  height = 96,
+  stops_hero = true,
+  stops_npcs = true,
+  stops_enemies = true,
+  stops_blocks = true,
+  stops_projectiles = true,
 }
 
 tile{
