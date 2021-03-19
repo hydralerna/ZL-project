@@ -2,7 +2,7 @@ animation{
   name = "on_ground",
   src_image = "destructibles/pots.png",
   directions = {
-    { x = 0, y = 432, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 25 },
+    { x = 0, y = 432, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29 },
   },
 }
 animation{
