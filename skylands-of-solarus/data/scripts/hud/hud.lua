@@ -542,8 +542,10 @@ local function initialize_hud_features(game)
       keys = element
     -- elseif element_config.menu_script == "scripts/hud/rupees" then
       -- rupees = element
-    elseif element_config.menu_script == "scripts/hud/coins" then
-      coins = element
+    -- elseif element_config.menu_script == "scripts/hud/coins" then
+      -- coins = element
+    -- elseif element_config.menu_script == "scripts/hud/lvl_and_exp" then
+      -- lvl_and_exp = element
     end
   end
 
