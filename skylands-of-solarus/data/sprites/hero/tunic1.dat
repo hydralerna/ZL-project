@@ -237,10 +237,10 @@ animation{
   frame_delay = 30,
   frame_to_loop_on = 5,
   directions = {
-    { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 22 },
-    { x = 0, y = 24, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 22 },
-    { x = 0, y = 48, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 22 },
-    { x = 0, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 22 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 22 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 22 },
+    { x = 0, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 22 },
+    { x = 0, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 22 },
   },
 }
 animation{
