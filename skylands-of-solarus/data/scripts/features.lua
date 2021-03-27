@@ -10,6 +10,7 @@ require("scripts/menus/dialog_box")
 require("scripts/meta/enemy")
 require("scripts/meta/bomb")
 require("scripts/meta/explosion")
+require("scripts/meta/game")
 require("scripts/meta/map")
 
 return true
