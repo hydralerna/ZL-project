@@ -14,11 +14,10 @@ function coins_builder:new(game, config)
     horizontal_alignment = "left",
     vertical_alignment = "middle",
     font = "enter_command",
-    color = {224, 255, 208},
+    color = {48, 111, 80},
     font_size = 16,
   })
-  coins.font_stroke_color = {15, 31, 32}
-  coins.font_shadow_color = {143, 192, 112}
+  coins.font_fx_color = {143, 192, 112}
   coins.text_surface:set_text(game:get_money())
   coins.coin_icons_img = sol.surface.create("hud/coin_icon.png")
   coins.coin_bag_displayed = game:get_item("money_bag"):get_variant()
@@ -49,11 +48,11 @@ function coins_builder:new(game, config)
 
       -- Play a sound if we have just reached the final value.
       if coins.money_displayed == money then
-        sol.audio.play_sound("picked_money")
+        sol.audio.play_sound("picked_rupee")
 
       -- While the counter is scrolling, play a sound every 3 values.
       elseif coins.money_displayed % 3 == 0 then
-        sol.audio.play_sound("picked_money")
+        sol.audio.play_sound("picked_rupee")
       end
     end
 
@@ -72,17 +71,15 @@ function coins_builder:new(game, config)
 
     coins.surface:clear()
     -- Max money (icon).
-    -- coins.coin_icons_img:draw_region((coins.coin_bag_displayed - 1) * 12, 0, 12, 12, coins.surface)
-    coins.coin_icons_img:draw_region(3, 2, 10, 12, coins.surface, 0, 1)
+    coins.coin_icons_img:draw_region(0, 0, 10, 11, coins.surface, 0, 1)
     -- Current coin (counter).
     local max_money = game:get_max_money()
     coins.text_surface:set_text(coins.money_displayed)
     coins.text_surface:set_xy(13, 6)
     if coins.money_displayed == max_money then
-      coins.text_surface:set_color({143, 192, 112})
-      text_fx_helper:draw_text_with_stroke_and_shadow(coins.surface, coins.text_surface, coins.font_stroke_color, coins.font_shadow_color)
+      text_fx_helper:draw_text_with_stroke(coins.surface, coins.text_surface, coins.font_fx_color)
     else
-      text_fx_helper:draw_text_with_stroke_and_shadow(coins.surface, coins.text_surface, coins.font_stroke_color, coins.font_shadow_color)
+      text_fx_helper:draw_text_with_shadow(coins.surface, coins.text_surface, coins.font_fx_color)
     end
   end
 
