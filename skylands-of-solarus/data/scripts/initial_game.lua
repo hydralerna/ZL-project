@@ -18,9 +18,11 @@ function initial_game:initialize_new_savegame(game)
 
   game:set_max_life(12)
   game:set_life(game:get_max_life())
-  game:set_value("possession_money_bag", 0)
+  game:set_value("possession_money_bag", 1)
   game:set_max_money(10)
   game:set_money(1)
+  game:set_value("max_rupee", 12)
+  game:set_value("current_rupee", 3)
   game:set_ability("lift", 1)
   game:set_ability("sword", 1)
 end
