@@ -3412,6 +3412,31 @@ separator{
   height = 16,
 }
 
+enemy{
+  layer = 0,
+  x = 24,
+  y = 205,
+  direction = 0,
+  breed = "e_fc_vitreous_child",
+}
+
+enemy{
+  name = "vc",
+  layer = 0,
+  x = 168,
+  y = 205,
+  direction = 0,
+  breed = "e_fc_vitreous_child",
+}
+
+enemy{
+  layer = 0,
+  x = 152,
+  y = 285,
+  direction = 0,
+  breed = "e_fc_vitreous_child",
+}
+
 tile{
   layer = 2,
   x = 208,
