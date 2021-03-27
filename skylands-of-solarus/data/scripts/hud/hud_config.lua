@@ -34,11 +34,25 @@ local hud_config = {
     y = -14,
   },
 
+  -- Rupees counter.
+  {
+    menu_script = "scripts/hud/rupee",
+    x = 42,
+    y = -14,
+  },
+
+  --Level and Experience Counter
+  {
+    menu_script = ("scripts/hud/lvl_and_exp"),
+    x = 128,
+    y = -14,
+  },
+
   -- Pause icon.
   {
     menu_script = "scripts/hud/pause_icon",
     x = 92,
-    y = 178,
+    y = -14,
   },
 
   -- Item icon for slot 1.
