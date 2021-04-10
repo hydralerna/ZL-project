@@ -240,9 +240,9 @@ local function initialize_hud_features(game)
       end
 
       -- Set the transparency on the hearts.
-      if hearts then
-        hearts:set_transparent(top_right_transparent)
-      end
+      -- if hearts then
+        -- hearts:set_transparent(top_right_transparent)
+      -- end
     end
 
     return true  -- Repeat the timer.
