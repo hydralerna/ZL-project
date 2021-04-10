@@ -75,8 +75,8 @@ function lvl_and_exp:initialize(game)
   --to fill in all the fields for each level up. You may stop at whatever
   --level you wish; that level will be the max level. That code is as follows:
 
-  --self.t_exp_to_levelup = {100, 200, 300, 400, 500, 600, 700, 800}
-  --self.max_level = #self.t_exp_to_levelup
+  self.t_exp_to_levelup = {100, 200, 300, 400, 500, 600, 700, 800}
+  self.max_level = #self.t_exp_to_levelup
 
 --============================================
 
@@ -85,19 +85,19 @@ function lvl_and_exp:initialize(game)
   --This requires you to define the max level yourself and input the experience
   --required to level up to level 2 into the exp_to_levelup table.
 
-  self.max_level = 20
-  self.t_exp_to_levelup = {150}
-  for key, value in ipairs(self.t_exp_to_levelup) do
-    local next_key = key + 1
-    if next_key <= self.max_level - 1 then
-      self.t_exp_to_levelup[next_key] = math.ceil((self.t_exp_to_levelup[1] * next_key) + ((value * next_key) / 100))
-      --Uncomment the print lines below to see the level and required experience to levelup in the console.
-      --print(#self.t_exp_to_levelup)
-      --print(self.t_exp_to_levelup[next_key])
-    else
-      break
-    end
-  end
+  -- self.max_level = 20
+  -- self.t_exp_to_levelup = {150}
+  -- for key, value in ipairs(self.t_exp_to_levelup) do
+    -- local next_key = key + 1
+    -- if next_key <= self.max_level - 1 then
+      -- self.t_exp_to_levelup[next_key] = math.ceil((self.t_exp_to_levelup[1] * next_key) + ((value * next_key) / 100))
+      ----Uncomment the print lines below to see the level and required experience to levelup in the console.
+      ----print(#self.t_exp_to_levelup)
+      ----print(self.t_exp_to_levelup[next_key])
+    -- else
+      -- break
+    -- end
+  -- end
 
   self.digits_text_for_exp_to_levelup:set_text(self.t_exp_to_levelup[self.current_lvl_displayed])
   self:rebuild_surface()
