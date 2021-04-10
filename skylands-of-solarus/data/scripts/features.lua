@@ -12,5 +12,6 @@ require("scripts/meta/bomb")
 require("scripts/meta/explosion")
 require("scripts/meta/game")
 require("scripts/meta/map")
+require("scripts/debug")
 
 return true
