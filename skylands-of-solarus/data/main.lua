@@ -10,7 +10,7 @@ local shader_manager = require("scripts/shader_manager")
 local info_manager = require("scripts/info_manager")
 local index_palette_shader = require("scripts/index_palette_shader")
 local palette_menu = require("scripts/menus/palette_menu")
-local console = require("scripts/console")
+-- local console = require("scripts/console")
 local sword_menu = require("scripts/menus/sword_menu")
 local initial_menus_config = require("scripts/menus/initial_menus_config")
 local initial_menus = {}
@@ -137,8 +137,8 @@ function sol.main:on_key_pressed(key, modifiers)
     -- F11 or Ctrl + return or Alt + Return: switch fullscreen.
     sol.video.set_fullscreen(not sol.video.is_fullscreen())
     handled = true
-  elseif key == "f12" and not console.enabled then
-    sol.menu.start(sol.main, console)
+  -- elseif key == "f12" and not console.enabled then
+    -- sol.menu.start(sol.main, console)
   elseif key == "f4" and modifiers.alt then
     -- Alt + F4: stop the program.
     sol.main.exit()
