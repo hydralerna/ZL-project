@@ -76,6 +76,7 @@ sprite{ id = "enemies/boss/e_fc_boss_skull", description = "enemies/boss/e_fc_bo
 sprite{ id = "enemies/boss/e_fc_boss_slime", description = "enemies/boss/e_fc_boss_slime" }
 sprite{ id = "enemies/bosses/e_fc_vitreous", description = "enemies/bosses/vitreous" }
 sprite{ id = "enemies/e_fc_bat_01", description = "enemies/e_fc_bat_01" }
+sprite{ id = "enemies/e_fc_eater", description = "enemies/e_fc_eater" }
 sprite{ id = "enemies/e_fc_ghost_01", description = "enemies/e_fc_ghost_01" }
 sprite{ id = "enemies/e_fc_haunted_tree_01", description = "enemies/e_fc_haunted_tree_01" }
 sprite{ id = "enemies/e_fc_maloney" }
@@ -233,6 +234,8 @@ language{ id = "en", description = "English" }
 
 font{ id = "8_bit", description = "8 bit" }
 font{ id = "enter_command", description = "enter_command" }
+font{ id = "minecraftia", description = "Minecraftia" }
+font{ id = "minecraftia_mono", description = "Minecraftia Mono" }
 
 shader{ id = "6xbrz", description = "6xbrz" }
 shader{ id = "gb", description = "gb" }
