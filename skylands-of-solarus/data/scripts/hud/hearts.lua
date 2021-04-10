@@ -15,7 +15,6 @@ function hearts_builder:new(game, config)
   hearts.nb_max_hearts_displayed = game:get_max_life() / 4
   hearts.nb_current_hearts_displayed = game:get_life()
   hearts.all_hearts_img = sol.surface.create("hud/hearts.png")
-  hearts.transparent = false
 
   function hearts:on_started()
 
@@ -27,6 +26,7 @@ function hearts_builder:new(game, config)
 
     -- After game-over don't show gradually getting the life back.
     hearts.nb_current_hearts_displayed = game:get_life()
+    hearts.danger_sound_timer = nil
     hearts:check()
     hearts:rebuild_surface()
   end
@@ -59,6 +59,31 @@ function hearts_builder:new(game, config)
         hearts.nb_current_hearts_displayed = hearts.nb_current_hearts_displayed - 1
       else
         hearts.nb_current_hearts_displayed = hearts.nb_current_hearts_displayed + 1
+        if game:is_started()
+            and hearts.nb_current_hearts_displayed % 4 == 0 then
+          sol.audio.play_sound("heart")
+        end
+      end
+    end
+
+    -- If we are in-game, play an animation and a sound if the life is low.
+    if game:is_started() then
+
+      if game:get_life() <= game:get_max_life() / 4
+          and not game:is_suspended() then
+        need_rebuild = true
+        if hearts.empty_heart_sprite:get_animation() ~= "danger" then
+          hearts.empty_heart_sprite:set_animation("danger")
+        end
+        if hearts.danger_sound_timer == nil then
+          hearts.danger_sound_timer = sol.timer.start(self, 250, function()
+            hearts:repeat_danger_sound()
+          end)
+          hearts.danger_sound_timer:set_suspended_with_map(true)
+        end
+      elseif hearts.empty_heart_sprite:get_animation() ~= "normal" then
+        need_rebuild = true
+        hearts.empty_heart_sprite:set_animation("normal")
       end
     end
 
@@ -71,6 +96,20 @@ function hearts_builder:new(game, config)
     sol.timer.start(hearts, 50, function()
       hearts:check()
     end)
+  end
+
+  function hearts:repeat_danger_sound()
+
+    if game:get_life() <= game:get_max_life() / 4 then
+
+      sol.audio.play_sound("danger")
+      hearts.danger_sound_timer = sol.timer.start(hearts, 750, function()
+        hearts:repeat_danger_sound()
+      end)
+      hearts.danger_sound_timer:set_suspended_with_map(true)
+    else
+      hearts.danger_sound_timer = nil
+    end
   end
 
   function hearts:rebuild_surface()
@@ -116,15 +155,7 @@ function hearts_builder:new(game, config)
     end
 
     -- Everything was already drawn on self.surface.
-    hearts.surface:set_opacity(hearts.transparent and 128 or 255)
     hearts.surface:draw(dst_surface, x, y)
-  end
-
-  -- Sets if the element is semi-transparent or not.
-  function hearts:set_transparent(transparent)
-    if transparent ~= hearts.transparent then
-      hearts.transparent = transparent
-    end
   end
 
   hearts:rebuild_surface()
