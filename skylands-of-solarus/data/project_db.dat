@@ -80,6 +80,7 @@ sprite{ id = "enemies/e_fc_eater", description = "enemies/e_fc_eater" }
 sprite{ id = "enemies/e_fc_ghost_01", description = "enemies/e_fc_ghost_01" }
 sprite{ id = "enemies/e_fc_haunted_tree_01", description = "enemies/e_fc_haunted_tree_01" }
 sprite{ id = "enemies/e_fc_maloney" }
+sprite{ id = "enemies/e_fc_onime", description = "enemies/e_fc_test" }
 sprite{ id = "enemies/e_fc_slime_01", description = "enemies/e_fc_slime_01" }
 sprite{ id = "enemies/e_fc_slime_02", description = "enemies/e_fc_slime_02" }
 sprite{ id = "enemies/e_fc_spider_01", description = "enemies/e_fc_spider_01" }
