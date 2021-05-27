@@ -67,6 +67,7 @@ function rupees_builder:new(game, config)
     end)
   end
 
+
   function rupees:rebuild_surface()
 
     rupees.surface:clear()
@@ -83,9 +84,12 @@ function rupees_builder:new(game, config)
     end
   end
 
+
   function rupees:get_surface()
+
     return rupees.surface
   end
+
 
   function rupees:on_draw(dst_surface)
 
@@ -97,11 +101,12 @@ function rupees_builder:new(game, config)
     if y < 0 then
       y = height + y
     end
-
     rupees.surface:draw(dst_surface, x, y)
   end
 
+
   function rupees:on_started()
+
     rupees:check()
     rupees:rebuild_surface()
   end
