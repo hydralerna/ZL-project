@@ -1,4 +1,4 @@
--- Script that creates a head-up display for a game.
+-- Script thcccat creates a head-up display for a game.
 
 -- Usage:
 -- require("scripts/hud/hud")
@@ -451,8 +451,8 @@ local function initialize_hud_features(game)
   -- Sets the additionnal info (hearts, rupees, keys) enabled or not.
   function hud:set_additionnal_info_enabled(enabled)
     hud:set_hearts_enabled(enabled)
-    -- hud:set_rupees_enabled(enabled)
-	hud:set_coins_enabled(enabled)
+    hud:set_rupees_enabled(enabled)
+    hud:set_coins_enabled(enabled)
     hud:set_keys_enabled(enabled)
   end
 
@@ -464,11 +464,11 @@ local function initialize_hud_features(game)
   end
 
   -- Enables or disables the life counter.
-  -- function hud:set_rupees_enabled(enabled)
-    -- if rupees then
-      -- set_menu_enabled(rupees, enabled)
-    -- end
-  -- end
+  function hud:set_rupees_enabled(enabled)
+    if rupees then
+      set_menu_enabled(rupees, enabled)
+    end
+  end
 
   -- Enables or disables the life counter.
   function hud:set_coins_enabled(enabled)
@@ -540,12 +540,12 @@ local function initialize_hud_features(game)
       hearts = element
     elseif element_config.menu_script == "scripts/hud/small_keys" then
       keys = element
-    -- elseif element_config.menu_script == "scripts/hud/rupees" then
-      -- rupees = element
-    -- elseif element_config.menu_script == "scripts/hud/coins" then
-      -- coins = element
-    -- elseif element_config.menu_script == "scripts/hud/lvl_and_exp" then
-      -- lvl_and_exp = element
+    elseif element_config.menu_script == "scripts/hud/rupees" then
+      rupees = element
+    elseif element_config.menu_script == "scripts/hud/coins" then
+      coins = element
+    elseif element_config.menu_script == "scripts/hud/lvl_and_exp" then
+      lvl_and_exp = element
     end
   end
 
