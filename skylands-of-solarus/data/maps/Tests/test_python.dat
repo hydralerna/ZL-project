@@ -1,0 +1,19 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 208,
+  height = 192,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 16,
+  width = 176,
+  height = 160,
+  pattern = "77",
+}
+
