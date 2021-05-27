@@ -67,6 +67,7 @@ function coins_builder:new(game, config)
     end)
   end
 
+
   function coins:rebuild_surface()
 
     coins.surface:clear()
@@ -83,9 +84,12 @@ function coins_builder:new(game, config)
     end
   end
 
+
   function coins:get_surface()
+
     return coins.surface
   end
+
 
   function coins:on_draw(dst_surface)
 
@@ -97,11 +101,12 @@ function coins_builder:new(game, config)
     if y < 0 then
       y = height + y
     end
-
     coins.surface:draw(dst_surface, x, y)
   end
 
+
   function coins:on_started()
+
     coins:check()
     coins:rebuild_surface()
   end
