@@ -7,6 +7,7 @@ require("scripts/multi_events")
 -- Edit scripts/menus/initial_menus_config.lua to add or change menus before starting a game.
 local game_manager = require("scripts/game_manager")
 local shader_manager = require("scripts/shader_manager")
+-- local util = require("scripts/util")
 local info_manager = require("scripts/info_manager")
 local index_palette_shader = require("scripts/index_palette_shader")
 local palette_menu = require("scripts/menus/palette_menu")
@@ -91,6 +92,7 @@ local gb = require('scripts/maps/gb_effect')
 function sol.main:on_key_pressed(key, modifiers)
 
   local handled = false
+
   if key == "f5" then
 	local game = sol.main.get_game()
   -- F5: change the video mode.
@@ -115,6 +117,7 @@ function sol.main:on_key_pressed(key, modifiers)
 			 game:set_paused(true)
 		  end
     end
+
   elseif key == "f6" then
 	local game = sol.main.get_game()
     if not sol.menu.is_started(palette_menu) then
@@ -132,6 +135,7 @@ function sol.main:on_key_pressed(key, modifiers)
 		    end
       end
     end
+
   elseif key == "f11" or
     (key == "return" and (modifiers.alt or modifiers.control)) then
     -- F11 or Ctrl + return or Alt + Return: switch fullscreen.
