@@ -21,5 +21,5 @@ function bomb_meta:on_created()
   local sprite = bomb:get_sprite()
   sprite:set_animation("stopped_on_floor")
   sprite:set_direction(math.random(0, 3))
-
 end
+
