@@ -85,6 +85,7 @@ sprite{ id = "enemies/e_fc_slime_01", description = "enemies/e_fc_slime_01" }
 sprite{ id = "enemies/e_fc_slime_02", description = "enemies/e_fc_slime_02" }
 sprite{ id = "enemies/e_fc_spider_01", description = "enemies/e_fc_spider_01" }
 sprite{ id = "enemies/e_fc_spiderskull_01", description = "enemies/e_fc_spiderskull_01" }
+sprite{ id = "enemies/e_fc_spiderskull_02", description = "enemies/e_fc_spiderskull_02" }
 sprite{ id = "enemies/e_fc_vitreous_child" }
 sprite{ id = "enemies/enemy_killed", description = "enemies/enemy_killed" }
 sprite{ id = "entities/arrow", description = "entities/arrow" }
@@ -93,6 +94,7 @@ sprite{ id = "entities/crystal", description = "entities/crystal" }
 sprite{ id = "entities/crystal_block", description = "entities/crystal_block" }
 sprite{ id = "entities/explosion", description = "entities/explosion" }
 sprite{ id = "entities/items", description = "entities/items" }
+sprite{ id = "entities/megabomb", description = "entities/megabomb" }
 sprite{ id = "entities/rupee_icon", description = "entities/rupee_icon" }
 sprite{ id = "entities/shadow", description = "entities/shadow" }
 sprite{ id = "entities/star", description = "entities/star" }
@@ -125,7 +127,9 @@ sprite{ id = "menus/solarus_logo/solarus_logo", description = "menus/solarus_log
 sprite{ id = "menus/title_screen/sword", description = "menus/title_screen/sword" }
 sprite{ id = "npc/fool" }
 sprite{ id = "npc/kaepora_gaebora" }
+sprite{ id = "npc/mister_time" }
 sprite{ id = "npc/old_man" }
+sprite{ id = "shadows/shadow", description = "shadows/shadow" }
 
 
 sound{ id = "arrow_hit", description = "arrow_hit" }
@@ -228,8 +232,13 @@ item{ id = "bomb", description = "bomb" }
 item{ id = "money_bag", description = "money_bag" }
 
 enemy{ id = "bosses/e_fc_vitreous", description = "Vitreous" }
+enemy{ id = "e_fc_onime" }
+enemy{ id = "e_fc_spiderskull_01", description = "Spiderskull" }
+enemy{ id = "e_fc_spiderskull_02", description = "Black Spiderskull" }
 enemy{ id = "e_fc_vitreous_child", description = "Vitreous child" }
+enemy{ id = "projectiles/generic_projectile", description = "generic_projectile" }
 
+entity{ id = "megabomb", description = "megabomb" }
 
 language{ id = "en", description = "English" }
 
