@@ -55,6 +55,13 @@ local hud_config = {
     y = -14,
   },
 
+  -- Chrono counter.
+  {
+    menu_script = "scripts/hud/chrono",
+    x = 87,
+    y = 177,
+  },
+
   -- Item icon for slot 1.
   {
     menu_script = "scripts/hud/item_icon",
