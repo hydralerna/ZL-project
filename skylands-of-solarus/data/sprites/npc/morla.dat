@@ -1,0 +1,66 @@
+animation{
+  name = "appearing0",
+  src_image = "npc/morla.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80 },
+    { x = 0, y = 0, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80 },
+    { x = 0, y = 0, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80 },
+    { x = 0, y = 0, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80 },
+  },
+}
+animation{
+  name = "appearing1",
+  src_image = "npc/morla.png",
+  frame_delay = 270,
+  directions = {
+    { x = 0, y = 0, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 6 },
+    { x = 0, y = 0, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 6 },
+    { x = 0, y = 0, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 6 },
+    { x = 0, y = 0, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 6 },
+  },
+}
+animation{
+  name = "appearing2",
+  src_image = "npc/morla.png",
+  directions = {
+    { x = 0, y = 96, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80 },
+    { x = 0, y = 96, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80 },
+    { x = 0, y = 96, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80 },
+    { x = 0, y = 96, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80 },
+  },
+}
+animation{
+  name = "appearing3",
+  src_image = "npc/morla.png",
+  frame_delay = 360,
+  directions = {
+    { x = 0, y = 96, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 12, num_columns = 6 },
+    { x = 0, y = 96, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 12, num_columns = 6 },
+    { x = 0, y = 96, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 12, num_columns = 6 },
+    { x = 0, y = 96, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 12, num_columns = 6 },
+  },
+}
+animation{
+  name = "stopped",
+  src_image = "npc/morla.png",
+  frame_delay = 720,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 288, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 6 },
+    { x = 0, y = 288, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 6 },
+    { x = 0, y = 288, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 6 },
+    { x = 0, y = 288, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 6 },
+  },
+}
+animation{
+  name = "walking",
+  src_image = "npc/morla.png",
+  frame_delay = 360,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 384, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 10, num_columns = 5 },
+    { x = 0, y = 384, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 10, num_columns = 5 },
+    { x = 0, y = 384, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 10, num_columns = 5 },
+    { x = 0, y = 384, frame_width = 64, frame_height = 96, origin_x = 32, origin_y = 80, num_frames = 10, num_columns = 5 },
+  },
+}
