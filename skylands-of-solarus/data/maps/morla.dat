@@ -1,0 +1,200 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 208,
+  height = 192,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "out/o_fc_wll_specials_01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 0,
+  width = 208,
+  height = 192,
+  pattern = "46",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "8",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "7",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "13",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "11",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 56,
+  width = 8,
+  height = 8,
+  pattern = "12",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 80,
+  width = 32,
+  height = 32,
+  pattern = "9",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "4",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 40,
+  width = 32,
+  height = 16,
+  pattern = "5",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "3",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 56,
+  width = 8,
+  height = 32,
+  pattern = "14",
+}
+
+tile{
+  layer = 0,
+  x = 40,
+  y = 56,
+  width = 24,
+  height = 24,
+  pattern = "10",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 32,
+  width = 48,
+  height = 8,
+  pattern = "6",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 56,
+  width = 24,
+  height = 24,
+  pattern = "1",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 56,
+  width = 8,
+  height = 8,
+  pattern = "15",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 64,
+  width = 8,
+  height = 16,
+  pattern = "2",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 64,
+  width = 8,
+  height = 16,
+  pattern = "16",
+}
+
+destination{
+  name = "starting_destination",
+  layer = 0,
+  x = 72,
+  y = 157,
+  direction = 3,
+}
+
+npc{
+  name = "morla",
+  layer = 0,
+  x = 168,
+  y = 112,
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/morla",
+}
+
+npc{
+  name = "rock",
+  layer = 0,
+  x = 72,
+  y = 109,
+  direction = 3,
+  subtype = 0,
+}
+
+npc{
+  name = "rock_2",
+  layer = 0,
+  x = 120,
+  y = 13,
+  direction = 3,
+  subtype = 0,
+}
+
