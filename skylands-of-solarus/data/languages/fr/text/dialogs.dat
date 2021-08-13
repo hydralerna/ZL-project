@@ -1,0 +1,264 @@
+dialog{
+  id = "generic_behavior.sleeping_rrr",
+  text = [[
+Rrrrrr... Rrr... Rrrrrr 
+]],
+}
+
+dialog{
+  id = "generic_behavior.sleeping_zzz",
+  text = [[
+ZZzzzz... Zzz... Zzzzzz 
+]],
+}
+
+dialog{
+  id = "generic_question.hero.WAY_0",
+  text = [[
+Yo! T'es qui toi?
+]],
+}
+
+dialog{
+  id = "generic_question.hero.WAY_1",
+  text = [[
+Qui es-tu?
+]],
+}
+
+dialog{
+  id = "generic_question.hero.WAY_2",
+  text = [[
+Qui êtes-vous? Je suis
+$v et vous?
+]],
+}
+
+dialog{
+  id = "generic_question.hero.WAY_3",
+  text = [[
+Je m'appelle $v.
+Et toi, comment 
+t'appelles-tu?
+]],
+}
+
+dialog{
+  id = "generic_question.hero.WAY_4",
+  text = [[
+Comment vous appelez-vous?
+]],
+}
+
+dialog{
+  id = "generic_question.npc.WAY_0",
+  text = [[
+Hep! T'es qui toi?
+$v
+Et toi?
+]],
+}
+
+dialog{
+  id = "generic_question.npc.WAY_1",
+  text = [[
+Qui es-tu?
+Je suis le héros de ce jeu.
+Ton pire cauchemard!
+]],
+}
+
+dialog{
+  id = "generic_question.npc.WAY_2",
+  text = [[
+Qui êtes-vous?
+Je suis $v
+]],
+}
+
+dialog{
+  id = "generic_question.npc.WAY_3",
+  text = [[
+Comment t'appelles-tu?
+$v
+Personne.
+]],
+}
+
+dialog{
+  id = "generic_question.npc.WAY_4",
+  text = [[
+Comment vous appelez-vous?
+$v et vous?
+$v
+]],
+}
+
+dialog{
+  id = "maps.out.morla.0.hero_calling_1",
+  icon = "1",
+  name = "1",
+  text = [[
+##Link
+MORLA!?
+]],
+}
+
+dialog{
+  id = "maps.out.morla.0.hero_calling_2",
+  icon = "1",
+  text = [[
+Morla? C'est vous?
+]],
+}
+
+dialog{
+  id = "maps.out.morla.0.hungry",
+  icon = "99",
+  text = [[
+Nous avons faim et nous 
+mangerions bien un petit
+morceau.
+]],
+}
+
+dialog{
+  id = "maps.out.morla.0.question",
+  icon = "99",
+  next = "maps.out.morla.0.question_yes",
+  next2 = "maps.out.morla.0.question_no",
+  question = "1",
+  text = [[
+Oui, le temps est venu...
+Cette chose agitée et
+bruyante ne serait-elle
+pas un petit homme?  
+Oui
+Non
+]],
+}
+
+dialog{
+  id = "maps.out.morla.0.question_no",
+  icon = "99",
+  next = "question_no_answer1",
+  next2 = "question_no_answer2",
+  question = "1",
+  text = [[
+Cela n'a pas vraiment 
+d'importance. Mais nous
+saurions tromper sur la
+prophétie.
+Si tu n'es pas un petit
+homme, es-tu une bonne
+chose à manger?
+En fait, je suis $v
+Non 
+]],
+}
+
+dialog{
+  id = "maps.out.morla.0.question_yes",
+  icon = "99",
+  next = "maps.out.morla.0.hero_calling_2",
+  text = [[
+Nous savions qu'un petit
+homme allait venir et
+vouloir nous parler.
+]],
+}
+
+dialog{
+  id = "maps.out.morla.0.waking_up_1",
+  icon = "99",
+  text = [[
+!? Quoi!? Hein?
+Que se passe-t-il?
+]],
+}
+
+dialog{
+  id = "maps.out.morla.0.waking_up_2",
+  icon = "99",
+  text = [[
+Nous sommes réveillés! 
+Inutile de faire plus de
+bruit.
+]],
+}
+
+dialog{
+  id = "maps.out.morla.DC_1",
+  icon = "12",
+  text = [[
+En vérité, cela nous est 
+égal.
+]],
+}
+
+dialog{
+  id = "maps.out.morla.DC_2",
+  icon = "12",
+  text = [[
+Cela n'a pas vraiment
+d'importance.
+]],
+}
+
+dialog{
+  id = "maps.out.morla.allergy",
+  icon = "12",
+  text = [[
+Nous sommes allergiques à
+la jeunesse.
+]],
+}
+
+dialog{
+  id = "maps.out.morla.alta",
+  icon = "12",
+  text = [[
+Nous n'avons parler à
+personne d'autres depuis
+fort longtemps.
+]],
+}
+
+dialog{
+  id = "maps.out.morla.crazy_1",
+  icon = "12",
+  text = [[
+D'habitude, nous nous
+parlons à nous même.
+]],
+}
+
+dialog{
+  id = "maps.out.morla.crazy_2",
+  icon = "12",
+  text = [[
+Nous radotons à forcer de
+rester tout le temps seuls
+dans ce marécage.
+]],
+}
+
+dialog{
+  id = "maps.out.morla.crazy_3",
+  icon = "12",
+  text = [[
+Nous avons commencer à
+nous parler à nous même
+dans notre jeunesse.
+]],
+}
+
+dialog{
+  id = "maps.out.morla.sneezing",
+  icon = "12",
+  text = [[
+A..A.ATCH...
+ATCHOUMMM!!!
+]],
+}
+
