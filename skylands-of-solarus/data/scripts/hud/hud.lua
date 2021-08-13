@@ -208,42 +208,42 @@ local function initialize_hud_features(game)
       return true
     end
 
-    local map = game:get_map()
-    if map ~= nil then
-      local top_left_transparent = false
-      local top_right_transparent = false
+    -- local map = game:get_map()
+    -- if map ~= nil then
+      -- local top_left_transparent = false
+      -- local top_right_transparent = false
 
       -- Check if the hero is below the top-left icons, make them semi-transparent.
-      if not game:is_suspended() then
-        local hero = map:get_entity("hero")
-        local hero_x, hero_y = hero:get_position()
-        local camera_x, camera_y = map:get_camera():get_position()
-        local x, y = hero_x - camera_x, hero_y - camera_y
-        top_left_transparent = x < 92 and y < 72
-        top_right_transparent = x > 224 and y < 40
-      end
+      -- if not game:is_suspended() then
+        -- local hero = map:get_entity("hero")
+        -- local hero_x, hero_y = hero:get_position()
+        -- local camera_x, camera_y = map:get_camera():get_position()
+        -- local x, y = hero_x - camera_x, hero_y - camera_y
+        -- top_left_transparent = x < 92 and y < 72
+        -- top_right_transparent = x > 224 and y < 40
+      -- end
 
       -- Set the transparency on the icons.
-      if action_icon then
-        action_icon:set_transparent(top_left_transparent)
-      end
-      if attack_icon then
-        attack_icon:set_transparent(top_left_transparent)
-      end
-      if pause_icon then
-        pause_icon:set_transparent(top_left_transparent)
-      end
-      for _, item_icon in pairs(item_icons) do
-        if item_icon then
-          item_icon:set_transparent(top_left_transparent)
-        end
-      end
+      -- if action_icon then
+        -- action_icon:set_transparent(top_left_transparent)
+      -- end
+      -- if attack_icon then
+        -- attack_icon:set_transparent(top_left_transparent)
+      -- end
+      -- if pause_icon then
+        -- pause_icon:set_transparent(top_left_transparent)
+      -- end
+      -- for _, item_icon in pairs(item_icons) do
+        -- if item_icon then
+          -- item_icon:set_transparent(top_left_transparent)
+        -- end
+      -- end
 
       -- Set the transparency on the hearts.
       -- if hearts then
         -- hearts:set_transparent(top_right_transparent)
       -- end
-    end
+    -- end
 
     return true  -- Repeat the timer.
   end
