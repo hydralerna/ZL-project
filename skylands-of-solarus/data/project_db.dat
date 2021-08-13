@@ -5,6 +5,7 @@ map{ id = "Tests/pavements" }
 map{ id = "Tests/test_map", description = "Test Map" }
 map{ id = "Tests/test_map_for_CrookiNari", description = "For CrookiNari" }
 map{ id = "Tests/test_python", description = "Test for Python" }
+map{ id = "morla" }
 
 tileset{ id = "8px_all_zcfc_01" }
 tileset{ id = "dungeon/d_fc_trv_carpets_01" }
@@ -38,6 +39,7 @@ tileset{ id = "out/o_fc_wll_houses_02" }
 tileset{ id = "out/o_fc_wll_houses_03" }
 tileset{ id = "out/o_fc_wll_mushrooms_01" }
 tileset{ id = "out/o_fc_wll_pillars_01" }
+tileset{ id = "out/o_fc_wll_specials_01" }
 tileset{ id = "out/o_fc_wll_stones_tombstones_statues_01" }
 tileset{ id = "out/o_fc_wll_store_signs_01" }
 tileset{ id = "out/o_fc_wll_temples_01" }
@@ -128,6 +130,7 @@ sprite{ id = "menus/title_screen/sword", description = "menus/title_screen/sword
 sprite{ id = "npc/fool" }
 sprite{ id = "npc/kaepora_gaebora" }
 sprite{ id = "npc/mister_time" }
+sprite{ id = "npc/morla" }
 sprite{ id = "npc/old_man" }
 sprite{ id = "shadows/shadow", description = "shadows/shadow" }
 
@@ -238,9 +241,9 @@ enemy{ id = "e_fc_spiderskull_02", description = "Black Spiderskull" }
 enemy{ id = "e_fc_vitreous_child", description = "Vitreous child" }
 enemy{ id = "projectiles/generic_projectile", description = "generic_projectile" }
 
-entity{ id = "megabomb", description = "megabomb" }
+entity{ id = "WIP_megabomb", description = "megabomb" }
 
-language{ id = "en", description = "English" }
+language{ id = "fr", description = "French" }
 
 font{ id = "8_bit", description = "8 bit" }
 font{ id = "enter_command", description = "enter_command" }
@@ -257,7 +260,6 @@ shader{ id = "sepia", description = "sepia" }
 
 file{ path = "fonts/8_bit.png", author = "usr_share, Christopho", license = "Public domain" }
 file{ path = "fonts/enter_command.ttf", author = "Jeti", license = "CC BY 4.0" }
-file{ path = "languages/en/text/strings.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "main.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/features.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/game_manager.lua", author = "Christopho", license = "GPL v3" }
@@ -274,7 +276,7 @@ file{ path = "scripts/hud/pause_icon.lua", author = "Olivier Cléro", license = 
 file{ path = "scripts/initial_game.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/language_manager.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus", license = "GPL v3" }
-file{ path = "scripts/menus/dialog_box.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/menus/dialog_box_OLD.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/initial_menus_config.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/palette_menu.lua", author = "froggy77, llamazing", }
 file{ path = "scripts/menus/solarus_logo.lua", author = "Maxs", license = "GPL v3" }
