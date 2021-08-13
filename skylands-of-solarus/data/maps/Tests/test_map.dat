@@ -5857,7 +5857,7 @@ custom_entity{
   height = 16,
   direction = 0,
   sprite = "entities/megabomb",
-  model = "megabomb",
+  model = "WIP_megabomb",
 }
 
 tile{
