@@ -14,7 +14,7 @@ function initial_game:initialize_new_savegame(game)
 
   -- You can modify this function to set the initial life and equipment
   -- and the starting location.
-  game:set_starting_location("Tests/test_map", nil)  -- Starting location.
+  game:set_starting_location("morla", nil)  -- Starting location.
 
   game:set_max_life(12)
   game:set_life(game:get_max_life())
@@ -25,6 +25,7 @@ function initial_game:initialize_new_savegame(game)
   game:set_value("current_rupee", 3)
   game:set_ability("lift", 1)
   game:set_ability("sword", 1)
+  game:set_value("player_name", "Link")
 end
 
 return initial_game
