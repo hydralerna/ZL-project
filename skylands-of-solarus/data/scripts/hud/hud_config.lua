@@ -56,11 +56,11 @@ local hud_config = {
   },
 
   -- Chrono counter.
-  {
-    menu_script = "scripts/hud/chrono",
-    x = 87,
-    y = 177,
-  },
+  --{
+  --  menu_script = "scripts/hud/chrono",
+   -- x = 87,
+   -- y = 177,
+  --},
 
   -- Item icon for slot 1.
   {
@@ -83,8 +83,8 @@ local hud_config = {
     menu_script = "scripts/hud/attack_icon",
     x = 24,
     y = 0,
-    dialog_x = 64,
-    dialog_y = 64,
+    dialog_x = 24,
+    dialog_y = 0,
   },
 
   -- Action icon.
@@ -92,8 +92,8 @@ local hud_config = {
     menu_script = "scripts/hud/action_icon",
     x = 92,
     y = 178,
-    dialog_x = 64,
-    dialog_y = 64,
+    dialog_x = 92,
+    dialog_y = 178,
   },
 }
 
