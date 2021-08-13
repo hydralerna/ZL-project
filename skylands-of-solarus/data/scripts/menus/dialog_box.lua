@@ -38,6 +38,9 @@ local function initialize_dialog_box_features(game)
     full = false,                -- Whether the 3 visible lines have shown all content.
     need_letter_sound = false,   -- Whether a sound should be played with the next character.
     gradual = true,              -- Whether text is displayed gradually.
+    is_name = nil,               -- Whether name box is visible
+    is_name_on_right = nil,      -- If true then name is drawn on right side of dialog box.
+    name_surface = nil,          -- Text surface for name text
 
     -- Graphics.
     dialog_surface = nil,
@@ -47,7 +50,8 @@ local function initialize_dialog_box_features(game)
     box_dst_position = nil,      -- Destination coordinates of the dialog box.
     question_dst_position = nil, -- Destination coordinates of the question icon.
     icon_dst_position = nil,     -- Destination coordinates of the icon.
-    text_color = { 115, 59, 22 } -- Text color.
+    text_color = { 224, 255, 208 }, -- Text color.
+    text_color2 = { 48, 111, 80 }-- Text color 2.
 
   }
 
@@ -59,7 +63,7 @@ local function initialize_dialog_box_features(game)
     fast = 20  -- Default.
   }
   local letter_sound_delay = 100
-  local box_width = 220
+  local box_width = 200
   local box_height = 60
 
   -- Initialize dialog box data.
@@ -74,6 +78,14 @@ local function initialize_dialog_box_features(game)
       color = dialog_box.text_color
     }
   end
+  dialog_box.name = ""
+  dialog_box.name_surface = sol.text_surface.create{
+    horizontal_alignment = "left",
+    vertical_alignment = "top",
+    font = dialog_box.font,
+    font_size = dialog_box.font_size,
+    color = dialog_box.text_color2
+  }
   dialog_box.dialog_surface = sol.surface.create(sol.video.get_quest_size())
   dialog_box.box_img = sol.surface.create("hud/dialog_box.png")
   dialog_box.icons_img = sol.surface.create("hud/dialog_icons.png")
@@ -92,6 +104,7 @@ local function initialize_dialog_box_features(game)
 
   -- Called by the engine when a dialog starts.
   game:register_event("on_dialog_started", function(game, dialog, info)
+
     dialog_box.dialog = dialog
     dialog_box.info = info
     sol.menu.start(game, dialog_box)
@@ -99,11 +112,14 @@ local function initialize_dialog_box_features(game)
 
   -- Called by the engine when a dialog finishes.
   game:register_event("on_dialog_finished", function(game, dialog)
+
     if sol.menu.is_started(dialog_box) then
       sol.menu.stop(dialog_box)
     end
     dialog_box.dialog = nil
     dialog_box.info = nil
+    dialog_box.is_name = nil
+    dialog_box.is_name_on_right = nil
   end)
 
   -- Sets the style of the dialog box for subsequent dialogs.
@@ -127,7 +143,7 @@ local function initialize_dialog_box_features(game)
   function dialog_box:set_position(vertical_position)
     dialog_box.vertical_position = vertical_position
   end
-  
+
   function dialog_box:get_position(vertical_position)
     return dialog_box.vertical_position
   end
@@ -193,8 +209,8 @@ local function initialize_dialog_box_features(game)
 
     -- Set the coordinates of graphic objects.
     local screen_width, screen_height = sol.video.get_quest_size()
-    local x = screen_width / 2 - 110
-    local y = top and 16 or (screen_height - 68)
+    local x = screen_width / 2 - 100
+    local y = top and 23 or (screen_height - 80)
 
     if self.style == "empty" then
       y = y + (top and -24 or 24)
@@ -202,7 +218,7 @@ local function initialize_dialog_box_features(game)
 
     self.box_dst_position = { x = x, y = y }
     self.question_dst_position = { x = x + 18, y = y + 27 }
-    self.icon_dst_position = { x = x + 18, y = y + 22 }
+    self.icon_dst_position = { x = x - 3, y = y + 1 }
 
     -- Show the dialog.
     self:show_dialog()
@@ -349,6 +365,23 @@ local function initialize_dialog_box_features(game)
         game:set_custom_command_effect("action", "next")
       else
         game:set_custom_command_effect("attack", nil)
+      end
+    end
+
+    -- Check if name should be displayed
+    if self:has_more_lines() then
+      local is_empty, is_right, is_special, name = self.next_line:match"^%s*##(#?)(>?)([@&]?)(.*)"
+      if name then
+        self.is_name = is_empty=="" --3rd # hides name
+        self.is_name_on_right = is_right==">"
+        if is_special=="&" then --use savegame value
+          self.name_surface:set_text(game:get_value(name) or "")
+        elseif is_special=="@" then --use strings.dat value
+          self.name_surface:set_text(sol.language.get_string(name) or "")
+        else
+          self.name_surface:set_text(name)
+        end
+        self.next_line = self.line_it()
       end
     end
 
@@ -536,14 +569,41 @@ local function initialize_dialog_box_features(game)
 
     if self.style == "empty" then
       -- Draw a dark rectangle.
-      dst_surface:fill_color({0, 0, 0}, x, y, 220, 60)
+      dst_surface:fill_color({15, 31, 32}, x, y, 200, 60)
     else
       -- Draw the dialog box.
       self.box_img:draw_region(0, 0, box_width, box_height, self.dialog_surface, x, y)
+
+      -- Draw the name box.
+      if self.is_name then
+        local text_width = self.name_surface:get_size()
+        text_width = math.max(text_width, 12)
+        local right_offset = self.is_name_on_right and (188 - text_width) or 0
+        self.box_img:draw_region( -- left side
+          184, 60, 4, 16, self.dialog_surface,
+          x + 0 + right_offset, y - 8
+        )
+        local x_offset = 0
+        while x_offset < text_width do
+          self.box_img:draw_region(
+            188, 60,
+            math.min(8, text_width - x_offset), 16,
+            self.dialog_surface,
+            x + 4 + x_offset + right_offset,
+            y - 8
+          )
+          x_offset = x_offset + 8
+        end
+        self.box_img:draw_region( -- right side
+          196, 60, 4, 16, self.dialog_surface,
+          x + 4 + text_width + right_offset, y - 8
+        )
+        self.name_surface:draw(self.dialog_surface, x + 4 + right_offset, y - 8)
+      end
     end
 
     -- Draw the text.
-    local left_padding = 8
+    local left_padding = 4
     local text_x = x + (self.icon_index == nil and 16 or 48) + left_padding
     local text_y = y - 6
     local line_spacing = 14
@@ -561,7 +621,7 @@ local function initialize_dialog_box_features(game)
     -- Draw the icon.
     if self.icon_index ~= nil then
       local row, column = math.floor(self.icon_index / 10), self.icon_index % 10
-      self.icons_img:draw_region(16 * column, 16 * row, 16, 16,
+      self.icons_img:draw_region(56 * column, 56 * row, 56, 56,
       self.dialog_surface,
       self.icon_dst_position.x + left_padding / 2, self.icon_dst_position.y)
       self.question_dst_position.x = x + 50
@@ -581,7 +641,7 @@ local function initialize_dialog_box_features(game)
 
     -- Draw the end message arrow.
     if self:is_full() then
-      self.end_lines_sprite:draw(self.dialog_surface, x + 103, y + 56)
+      self.end_lines_sprite:draw(self.dialog_surface, x + 92, y + 56)
     end
 
     -- Final blit.
