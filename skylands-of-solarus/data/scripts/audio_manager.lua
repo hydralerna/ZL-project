@@ -97,7 +97,7 @@ function audio_manager:get_directory()
 
   local game = sol.main.get_game()
   local mode = (game ~= nil) and game:get_value("mode") or "snes"
-  local directory = (mode == "gb") and "gb" or "gb" -- Todo Force GB musics
+  local directory = (mode == "gb") and "gb" or "snes" -- Todo Force GB musics
 
   return directory
 
