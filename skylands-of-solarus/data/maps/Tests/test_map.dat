@@ -1,11 +1,39 @@
 properties{
   x = 0,
   y = 0,
-  width = 624,
+  width = 720,
   height = 640,
   min_layer = 0,
   max_layer = 2,
   tileset = "dungeon/d_fc_wll_walls_01",
+}
+
+tile{
+  layer = 0,
+  x = 432,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "46",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "46",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 496,
+  width = 16,
+  height = 16,
+  pattern = "102",
+  tileset = "dungeon/d_fc_trv_entrances_01",
 }
 
 tile{
@@ -20,17 +48,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 480,
-  y = 496,
-  width = 16,
-  height = 16,
-  pattern = "102",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 448,
+  x = 512,
   y = 352,
   width = 16,
   height = 96,
@@ -40,7 +58,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 576,
+  x = 672,
   y = 352,
   width = 16,
   height = 96,
@@ -50,7 +68,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 480,
   width = 16,
   height = 16,
@@ -59,9 +77,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 216,
+  x = 256,
   y = 32,
-  width = 192,
+  width = 208,
   height = 16,
   pattern = "43",
   tileset = "dungeon/d_fc_trv_floors_01",
@@ -69,9 +87,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 216,
+  x = 256,
   y = 64,
-  width = 192,
+  width = 208,
   height = 16,
   pattern = "43",
   tileset = "dungeon/d_fc_trv_floors_01",
@@ -79,9 +97,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 216,
+  x = 256,
   y = 96,
-  width = 192,
+  width = 208,
   height = 16,
   pattern = "43",
   tileset = "dungeon/d_fc_trv_floors_01",
@@ -89,9 +107,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 232,
+  x = 272,
   y = 128,
-  width = 160,
+  width = 176,
   height = 16,
   pattern = "43",
   tileset = "dungeon/d_fc_trv_floors_01",
@@ -99,7 +117,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 176,
   width = 16,
   height = 48,
@@ -108,7 +126,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 128,
+  x = 160,
   y = 176,
   width = 16,
   height = 16,
@@ -126,25 +144,25 @@ tile{
 
 tile{
   layer = 0,
-  x = 320,
+  x = 368,
   y = 160,
-  width = 80,
+  width = 96,
   height = 16,
   pattern = "12",
 }
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 160,
-  width = 80,
+  width = 96,
   height = 16,
   pattern = "12",
 }
 
 tile{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 272,
   width = 16,
   height = 16,
@@ -154,7 +172,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
+  x = 144,
   y = 176,
   width = 16,
   height = 16,
@@ -181,7 +199,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 160,
   width = 16,
   height = 16,
@@ -210,14 +228,14 @@ tile{
   layer = 0,
   x = 64,
   y = 288,
-  width = 32,
+  width = 48,
   height = 16,
   pattern = "35",
 }
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 304,
   width = 16,
   height = 16,
@@ -226,7 +244,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 256,
   width = 16,
   height = 48,
@@ -246,7 +264,7 @@ tile{
   layer = 0,
   x = 64,
   y = 160,
-  width = 80,
+  width = 112,
   height = 16,
   pattern = "129",
 }
@@ -262,7 +280,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 144,
+  x = 176,
   y = 160,
   width = 16,
   height = 16,
@@ -280,7 +298,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 160,
   width = 32,
   height = 16,
@@ -334,7 +352,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 144,
+  x = 176,
   y = 176,
   width = 16,
   height = 16,
@@ -343,7 +361,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 168,
+  x = 200,
   y = 160,
   width = 16,
   height = 16,
@@ -352,7 +370,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 256,
   width = 16,
   height = 16,
@@ -362,7 +380,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 80,
+  x = 96,
   y = 256,
   width = 16,
   height = 16,
@@ -372,7 +390,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
+  x = 128,
   y = 256,
   width = 16,
   height = 16,
@@ -382,7 +400,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 288,
   width = 16,
   height = 16,
@@ -392,7 +410,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
+  x = 128,
   y = 288,
   width = 32,
   height = 16,
@@ -401,7 +419,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 88,
+  x = 104,
   y = 288,
   width = 8,
   height = 16,
@@ -411,7 +429,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
+  x = 128,
   y = 288,
   width = 8,
   height = 16,
@@ -439,7 +457,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 304,
   width = 32,
   height = 16,
@@ -448,7 +466,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 144,
+  x = 176,
   y = 304,
   width = 16,
   height = 16,
@@ -457,7 +475,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 144,
+  x = 176,
   y = 288,
   width = 16,
   height = 16,
@@ -477,16 +495,16 @@ tile{
   layer = 0,
   x = 64,
   y = 304,
-  width = 32,
+  width = 48,
   height = 16,
   pattern = "129",
 }
 
 tile{
   layer = 0,
-  x = 112,
+  x = 128,
   y = 304,
-  width = 32,
+  width = 48,
   height = 16,
   pattern = "129",
 }
@@ -502,7 +520,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 128,
+  x = 160,
   y = 288,
   width = 16,
   height = 16,
@@ -563,7 +581,7 @@ tile{
   layer = 0,
   x = 32,
   y = 208,
-  width = 144,
+  width = 176,
   height = 48,
   pattern = "86",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -571,7 +589,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 176,
   width = 16,
   height = 16,
@@ -581,7 +599,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 176,
+  x = 208,
   y = 176,
   width = 16,
   height = 16,
@@ -591,7 +609,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 176,
+  x = 208,
   y = 288,
   width = 16,
   height = 16,
@@ -601,7 +619,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 288,
   width = 16,
   height = 16,
@@ -611,7 +629,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 176,
+  x = 208,
   y = 192,
   width = 16,
   height = 96,
@@ -623,7 +641,7 @@ tile{
   layer = 0,
   x = 48,
   y = 192,
-  width = 112,
+  width = 144,
   height = 16,
   pattern = "82",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -641,7 +659,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 192,
   width = 16,
   height = 16,
@@ -653,7 +671,7 @@ tile{
   layer = 0,
   x = 32,
   y = 256,
-  width = 48,
+  width = 64,
   height = 16,
   pattern = "86",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -661,9 +679,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 128,
+  x = 144,
   y = 256,
-  width = 48,
+  width = 64,
   height = 16,
   pattern = "86",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -673,7 +691,7 @@ tile{
   layer = 0,
   x = 48,
   y = 272,
-  width = 32,
+  width = 48,
   height = 16,
   pattern = "90",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -681,7 +699,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 80,
+  x = 96,
   y = 272,
   width = 16,
   height = 16,
@@ -691,7 +709,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
+  x = 128,
   y = 272,
   width = 16,
   height = 16,
@@ -701,7 +719,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 280,
   width = 16,
   height = 8,
@@ -711,9 +729,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 128,
+  x = 144,
   y = 272,
-  width = 32,
+  width = 48,
   height = 16,
   pattern = "90",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -731,7 +749,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 272,
   width = 16,
   height = 16,
@@ -741,7 +759,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 280,
   width = 8,
   height = 8,
@@ -761,7 +779,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 264,
   width = 16,
   height = 16,
@@ -801,7 +819,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 184,
+  x = 216,
   y = 176,
   width = 8,
   height = 8,
@@ -811,7 +829,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 296,
   width = 8,
   height = 8,
@@ -821,7 +839,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 184,
+  x = 216,
   y = 296,
   width = 8,
   height = 8,
@@ -841,7 +859,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 176,
   width = 8,
   height = 8,
@@ -851,7 +869,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 224,
   width = 16,
   height = 8,
@@ -860,7 +878,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 248,
   width = 16,
   height = 8,
@@ -869,7 +887,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 160,
   width = 8,
   height = 16,
@@ -878,7 +896,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 184,
+  x = 216,
   y = 160,
   width = 8,
   height = 16,
@@ -897,7 +915,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 128,
+  x = 160,
   y = 280,
   width = 16,
   height = 8,
@@ -918,7 +936,7 @@ tile{
   layer = 0,
   x = 32,
   y = 0,
-  width = 144,
+  width = 176,
   height = 16,
   pattern = "46",
 }
@@ -961,7 +979,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 176,
+  x = 208,
   y = 0,
   width = 16,
   height = 16,
@@ -970,7 +988,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 16,
   width = 16,
   height = 16,
@@ -979,7 +997,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 176,
+  x = 208,
   y = 16,
   width = 16,
   height = 16,
@@ -999,7 +1017,7 @@ tile{
   layer = 0,
   x = 32,
   y = 144,
-  width = 64,
+  width = 80,
   height = 16,
   pattern = "73",
 }
@@ -1024,7 +1042,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 176,
+  x = 208,
   y = 128,
   width = 16,
   height = 16,
@@ -1033,7 +1051,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 176,
+  x = 208,
   y = 144,
   width = 16,
   height = 16,
@@ -1042,7 +1060,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 128,
   width = 16,
   height = 16,
@@ -1051,7 +1069,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 32,
   width = 16,
   height = 96,
@@ -1060,7 +1078,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 0,
   width = 16,
   height = 16,
@@ -1069,7 +1087,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 88,
+  x = 104,
   y = 0,
   width = 8,
   height = 16,
@@ -1078,7 +1096,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
+  x = 128,
   y = 0,
   width = 8,
   height = 16,
@@ -1087,16 +1105,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
+  x = 128,
   y = 144,
-  width = 64,
+  width = 48,
   height = 16,
   pattern = "73",
 }
 
 tile{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 144,
   width = 16,
   height = 16,
@@ -1105,7 +1123,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 88,
+  x = 104,
   y = 144,
   width = 8,
   height = 16,
@@ -1114,7 +1132,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
+  x = 128,
   y = 144,
   width = 8,
   height = 16,
@@ -1150,7 +1168,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 144,
+  x = 176,
   y = 0,
   width = 16,
   height = 16,
@@ -1159,7 +1177,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 136,
+  x = 168,
   y = 0,
   width = 8,
   height = 16,
@@ -1168,7 +1186,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 0,
   width = 8,
   height = 16,
@@ -1231,7 +1249,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 48,
   width = 16,
   height = 16,
@@ -1240,7 +1258,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 96,
   width = 16,
   height = 16,
@@ -1258,7 +1276,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 144,
+  x = 176,
   y = 144,
   width = 16,
   height = 16,
@@ -1285,7 +1303,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 144,
   width = 8,
   height = 16,
@@ -1294,7 +1312,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 136,
+  x = 168,
   y = 144,
   width = 8,
   height = 16,
@@ -1303,7 +1321,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 64,
   width = 16,
   height = 8,
@@ -1312,7 +1330,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 40,
   width = 16,
   height = 8,
@@ -1321,7 +1339,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 112,
   width = 16,
   height = 8,
@@ -1330,7 +1348,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 88,
   width = 16,
   height = 8,
@@ -1359,7 +1377,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 16,
   width = 16,
   height = 16,
@@ -1369,7 +1387,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 176,
+  x = 208,
   y = 32,
   width = 16,
   height = 16,
@@ -1399,7 +1417,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 160,
+  x = 192,
   y = 128,
   width = 16,
   height = 16,
@@ -1409,7 +1427,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 176,
+  x = 208,
   y = 112,
   width = 16,
   height = 16,
@@ -1421,7 +1439,7 @@ tile{
   layer = 0,
   x = 32,
   y = 32,
-  width = 144,
+  width = 176,
   height = 96,
   pattern = "102",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -1439,7 +1457,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 176,
+  x = 208,
   y = 48,
   width = 16,
   height = 64,
@@ -1451,7 +1469,7 @@ tile{
   layer = 0,
   x = 48,
   y = 16,
-  width = 112,
+  width = 144,
   height = 16,
   pattern = "98",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -1461,7 +1479,7 @@ tile{
   layer = 0,
   x = 48,
   y = 128,
-  width = 112,
+  width = 144,
   height = 16,
   pattern = "106",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -1469,7 +1487,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 136,
   width = 16,
   height = 8,
@@ -1489,7 +1507,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 168,
+  x = 200,
   y = 32,
   width = 8,
   height = 8,
@@ -1499,7 +1517,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 168,
+  x = 200,
   y = 120,
   width = 8,
   height = 8,
@@ -1528,7 +1546,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 144,
   width = 16,
   height = 16,
@@ -1546,7 +1564,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 0,
   width = 16,
   height = 16,
@@ -1555,7 +1573,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 304,
   width = 16,
   height = 16,
@@ -1565,7 +1583,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 304,
   width = 16,
   height = 16,
@@ -1575,7 +1593,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 160,
   width = 16,
   height = 16,
@@ -1584,7 +1602,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 160,
   width = 16,
   height = 16,
@@ -1593,7 +1611,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 256,
   width = 16,
   height = 48,
@@ -1602,7 +1620,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 304,
   width = 16,
   height = 16,
@@ -1611,7 +1629,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 304,
   width = 16,
   height = 16,
@@ -1620,7 +1638,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 272,
   width = 16,
   height = 32,
@@ -1629,7 +1647,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 208,
   width = 16,
   height = 16,
@@ -1638,7 +1656,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 224,
   width = 16,
   height = 8,
@@ -1647,7 +1665,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 248,
   width = 16,
   height = 8,
@@ -1656,7 +1674,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 256,
   width = 16,
   height = 16,
@@ -1665,16 +1683,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 304,
-  width = 176,
+  width = 208,
   height = 16,
   pattern = "35",
 }
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 176,
   width = 16,
   height = 16,
@@ -1684,7 +1702,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 192,
   width = 16,
   height = 96,
@@ -1694,7 +1712,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 288,
   width = 16,
   height = 16,
@@ -1704,7 +1722,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 176,
   width = 16,
   height = 16,
@@ -1714,7 +1732,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 288,
   width = 16,
   height = 16,
@@ -1724,7 +1742,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 368,
+  x = 432,
   y = 208,
   width = 16,
   height = 64,
@@ -1734,9 +1752,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 240,
+  x = 272,
   y = 176,
-  width = 144,
+  width = 176,
   height = 16,
   pattern = "82",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -1744,9 +1762,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 240,
+  x = 272,
   y = 288,
-  width = 144,
+  width = 176,
   height = 16,
   pattern = "90",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -1754,7 +1772,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 176,
   width = 8,
   height = 8,
@@ -1764,7 +1782,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 296,
   width = 8,
   height = 8,
@@ -1774,7 +1792,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 392,
+  x = 456,
   y = 176,
   width = 8,
   height = 8,
@@ -1784,7 +1802,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 392,
+  x = 456,
   y = 296,
   width = 8,
   height = 8,
@@ -1794,7 +1812,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 176,
   width = 16,
   height = 48,
@@ -1803,7 +1821,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 176,
   width = 16,
   height = 32,
@@ -1812,7 +1830,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 256,
   width = 16,
   height = 16,
@@ -1821,7 +1839,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 208,
   width = 16,
   height = 16,
@@ -1830,7 +1848,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 208,
   width = 16,
   height = 16,
@@ -1839,7 +1857,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 256,
   width = 16,
   height = 16,
@@ -1848,7 +1866,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 224,
   width = 16,
   height = 32,
@@ -1857,7 +1875,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 224,
   width = 16,
   height = 32,
@@ -1866,7 +1884,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 368,
+  x = 432,
   y = 192,
   width = 16,
   height = 16,
@@ -1876,7 +1894,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 368,
+  x = 432,
   y = 272,
   width = 16,
   height = 16,
@@ -1886,7 +1904,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 272,
   width = 16,
   height = 16,
@@ -1896,7 +1914,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 192,
   width = 16,
   height = 16,
@@ -1906,7 +1924,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 392,
+  x = 456,
   y = 200,
   width = 8,
   height = 8,
@@ -1916,7 +1934,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 392,
+  x = 456,
   y = 272,
   width = 8,
   height = 8,
@@ -1926,7 +1944,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 160,
   width = 16,
   height = 16,
@@ -1935,7 +1953,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 160,
   width = 16,
   height = 16,
@@ -1944,7 +1962,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 248,
   width = 16,
   height = 8,
@@ -1953,7 +1971,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 232,
   width = 16,
   height = 16,
@@ -1962,7 +1980,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 224,
   width = 16,
   height = 8,
@@ -1971,7 +1989,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 304,
   width = 16,
   height = 16,
@@ -1980,7 +1998,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 304,
   width = 16,
   height = 16,
@@ -1989,9 +2007,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 192,
-  width = 96,
+  width = 128,
   height = 16,
   pattern = "90",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -1999,9 +2017,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 272,
-  width = 96,
+  width = 128,
   height = 16,
   pattern = "82",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -2009,7 +2027,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 240,
+  x = 272,
   y = 192,
   width = 16,
   height = 16,
@@ -2019,7 +2037,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 240,
+  x = 272,
   y = 272,
   width = 16,
   height = 16,
@@ -2029,7 +2047,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 352,
+  x = 416,
   y = 272,
   width = 16,
   height = 16,
@@ -2039,7 +2057,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 352,
+  x = 416,
   y = 192,
   width = 16,
   height = 16,
@@ -2049,7 +2067,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 352,
+  x = 416,
   y = 208,
   width = 16,
   height = 64,
@@ -2059,7 +2077,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 240,
+  x = 272,
   y = 208,
   width = 16,
   height = 64,
@@ -2069,7 +2087,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 248,
+  x = 280,
   y = 200,
   width = 8,
   height = 8,
@@ -2079,7 +2097,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 352,
+  x = 416,
   y = 272,
   width = 8,
   height = 8,
@@ -2089,7 +2107,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 352,
+  x = 416,
   y = 200,
   width = 8,
   height = 8,
@@ -2099,7 +2117,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 248,
+  x = 280,
   y = 272,
   width = 8,
   height = 8,
@@ -2109,7 +2127,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 208,
   width = 16,
   height = 16,
@@ -2118,7 +2136,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 224,
   width = 16,
   height = 32,
@@ -2127,7 +2145,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 256,
   width = 16,
   height = 16,
@@ -2136,16 +2154,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 208,
-  width = 64,
+  width = 96,
   height = 16,
   pattern = "46",
 }
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 224,
   width = 16,
   height = 32,
@@ -2154,7 +2172,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 208,
   width = 16,
   height = 16,
@@ -2163,16 +2181,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 256,
-  width = 64,
+  width = 96,
   height = 16,
   pattern = "73",
 }
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 256,
   width = 16,
   height = 16,
@@ -2190,7 +2208,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 192,
   width = 64,
   height = 16,
@@ -2200,7 +2218,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 296,
   width = 16,
   height = 8,
@@ -2210,7 +2228,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 296,
   width = 16,
   height = 8,
@@ -2220,7 +2238,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 176,
   width = 16,
   height = 8,
@@ -2230,7 +2248,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 176,
   width = 16,
   height = 8,
@@ -2240,10 +2258,10 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 224,
   enabled_at_start = false,
-  width = 64,
+  width = 96,
   height = 32,
   pattern = "48",
   tileset = "8px_all_zcfc_01",
@@ -2251,7 +2269,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 72,
+  x = 88,
   y = 168,
   width = 16,
   height = 24,
@@ -2261,7 +2279,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 120,
+  x = 136,
   y = 168,
   width = 16,
   height = 24,
@@ -2271,7 +2289,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 88,
+  x = 104,
   y = 176,
   width = 32,
   height = 16,
@@ -2281,7 +2299,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 72,
+  x = 88,
   y = 192,
   width = 64,
   height = 8,
@@ -2291,7 +2309,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 296,
+  x = 344,
   y = 160,
   width = 8,
   height = 16,
@@ -2300,7 +2318,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 320,
+  x = 368,
   y = 160,
   width = 8,
   height = 16,
@@ -2309,7 +2327,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 240,
+  x = 288,
   y = 0,
   width = 144,
   height = 16,
@@ -2318,7 +2336,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 32,
   width = 16,
   height = 96,
@@ -2327,7 +2345,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 16,
   width = 16,
   height = 16,
@@ -2336,7 +2354,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 0,
   width = 16,
   height = 16,
@@ -2345,7 +2363,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 16,
   width = 16,
   height = 16,
@@ -2354,7 +2372,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 0,
   width = 16,
   height = 16,
@@ -2363,7 +2381,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 16,
   width = 16,
   height = 16,
@@ -2372,7 +2390,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 16,
   width = 16,
   height = 16,
@@ -2381,7 +2399,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 128,
   width = 16,
   height = 16,
@@ -2390,16 +2408,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 240,
+  x = 272,
   y = 144,
-  width = 64,
+  width = 80,
   height = 16,
   pattern = "73",
 }
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 144,
   width = 16,
   height = 16,
@@ -2408,7 +2426,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 224,
+  x = 256,
   y = 128,
   width = 16,
   height = 16,
@@ -2417,7 +2435,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 128,
   width = 16,
   height = 16,
@@ -2426,7 +2444,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 144,
   width = 16,
   height = 16,
@@ -2435,7 +2453,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 128,
   width = 16,
   height = 16,
@@ -2444,7 +2462,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 32,
   width = 16,
   height = 96,
@@ -2453,7 +2471,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 304,
+  x = 352,
   y = 0,
   width = 16,
   height = 16,
@@ -2462,7 +2480,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 296,
+  x = 344,
   y = 0,
   width = 8,
   height = 16,
@@ -2471,7 +2489,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 320,
+  x = 368,
   y = 0,
   width = 8,
   height = 16,
@@ -2480,16 +2498,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 320,
+  x = 368,
   y = 144,
-  width = 64,
+  width = 80,
   height = 16,
   pattern = "73",
 }
 
 tile{
   layer = 0,
-  x = 296,
+  x = 344,
   y = 144,
   width = 8,
   height = 16,
@@ -2498,7 +2516,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 320,
+  x = 368,
   y = 144,
   width = 8,
   height = 16,
@@ -2507,7 +2525,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 0,
   width = 16,
   height = 16,
@@ -2516,7 +2534,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 248,
+  x = 280,
   y = 0,
   width = 8,
   height = 16,
@@ -2525,7 +2543,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 352,
+  x = 416,
   y = 0,
   width = 16,
   height = 16,
@@ -2534,7 +2552,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 344,
+  x = 408,
   y = 0,
   width = 8,
   height = 16,
@@ -2543,7 +2561,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 368,
+  x = 432,
   y = 0,
   width = 8,
   height = 16,
@@ -2552,7 +2570,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 48,
   width = 16,
   height = 16,
@@ -2561,7 +2579,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 96,
   width = 16,
   height = 16,
@@ -2570,7 +2588,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 40,
   width = 16,
   height = 8,
@@ -2579,7 +2597,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 64,
   width = 16,
   height = 8,
@@ -2588,7 +2606,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 88,
   width = 16,
   height = 8,
@@ -2597,7 +2615,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 112,
   width = 16,
   height = 8,
@@ -2606,7 +2624,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 48,
   width = 16,
   height = 16,
@@ -2615,7 +2633,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 96,
   width = 16,
   height = 16,
@@ -2624,7 +2642,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 144,
   width = 16,
   height = 16,
@@ -2633,7 +2651,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 352,
+  x = 416,
   y = 144,
   width = 16,
   height = 16,
@@ -2642,7 +2660,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 144,
   width = 8,
   height = 16,
@@ -2651,7 +2669,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 248,
+  x = 280,
   y = 144,
   width = 8,
   height = 16,
@@ -2660,7 +2678,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 368,
+  x = 432,
   y = 144,
   width = 8,
   height = 16,
@@ -2669,7 +2687,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 344,
+  x = 408,
   y = 144,
   width = 8,
   height = 16,
@@ -2678,7 +2696,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 64,
   width = 16,
   height = 8,
@@ -2687,7 +2705,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 40,
   width = 16,
   height = 8,
@@ -2696,7 +2714,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 112,
   width = 16,
   height = 8,
@@ -2705,7 +2723,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 88,
   width = 16,
   height = 8,
@@ -2714,7 +2732,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 144,
   width = 16,
   height = 16,
@@ -2723,26 +2741,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 464,
   y = 144,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 400,
-  y = 0,
   width = 16,
   height = 16,
   pattern = "130",
@@ -2751,37 +2751,25 @@ tile{
 tile{
   layer = 0,
   x = 240,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "130",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "130",
+}
+
+tile{
+  layer = 0,
+  x = 272,
   y = 16,
-  width = 144,
-  height = 16,
-  pattern = "43",
-  tileset = "dungeon/d_fc_trv_floors_01",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 48,
-  width = 176,
-  height = 16,
-  pattern = "43",
-  tileset = "dungeon/d_fc_trv_floors_01",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 80,
-  width = 176,
-  height = 16,
-  pattern = "43",
-  tileset = "dungeon/d_fc_trv_floors_01",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 112,
   width = 176,
   height = 16,
   pattern = "43",
@@ -2791,6 +2779,36 @@ tile{
 tile{
   layer = 0,
   x = 256,
+  y = 48,
+  width = 208,
+  height = 16,
+  pattern = "43",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 80,
+  width = 192,
+  height = 16,
+  pattern = "43",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 112,
+  width = 176,
+  height = 16,
+  pattern = "43",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 288,
   y = 48,
   width = 16,
   height = 16,
@@ -2800,7 +2818,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 112,
   width = 16,
   height = 16,
@@ -2810,7 +2828,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 304,
+  x = 352,
   y = 16,
   width = 16,
   height = 128,
@@ -2820,7 +2838,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 320,
+  x = 368,
   y = 16,
   width = 16,
   height = 128,
@@ -2830,7 +2848,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 288,
+  x = 336,
   y = 16,
   width = 16,
   height = 128,
@@ -2840,7 +2858,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 248,
+  x = 288,
   y = 96,
   width = 16,
   height = 16,
@@ -2850,7 +2868,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 368,
+  x = 448,
   y = 112,
   width = 16,
   height = 16,
@@ -2860,7 +2878,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 352,
+  x = 416,
   y = 16,
   width = 16,
   height = 16,
@@ -2870,7 +2888,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 240,
+  x = 272,
   y = 80,
   width = 16,
   height = 16,
@@ -2880,7 +2898,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 80,
   width = 16,
   height = 16,
@@ -2890,7 +2908,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 280,
+  x = 312,
   y = 0,
   width = 8,
   height = 8,
@@ -2900,7 +2918,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 0,
   width = 8,
   height = 8,
@@ -2910,7 +2928,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 280,
+  x = 312,
   y = 152,
   width = 8,
   height = 8,
@@ -2920,7 +2938,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 152,
   width = 8,
   height = 8,
@@ -2930,7 +2948,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 280,
+  x = 312,
   y = 8,
   width = 8,
   height = 8,
@@ -2940,7 +2958,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 280,
+  x = 312,
   y = 144,
   width = 8,
   height = 8,
@@ -2950,7 +2968,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 144,
   width = 8,
   height = 8,
@@ -2960,7 +2978,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 8,
   width = 8,
   height = 8,
@@ -2970,7 +2988,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 0,
   width = 8,
   height = 16,
@@ -2979,7 +2997,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 280,
+  x = 312,
   y = 0,
   width = 8,
   height = 8,
@@ -2989,7 +3007,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 264,
+  x = 296,
   y = 40,
   width = 32,
   height = 32,
@@ -2999,7 +3017,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 264,
+  x = 296,
   y = 72,
   width = 32,
   height = 32,
@@ -3009,7 +3027,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 80,
   width = 16,
   height = 16,
@@ -3019,7 +3037,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 48,
   width = 16,
   height = 16,
@@ -3029,7 +3047,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 328,
+  x = 392,
   y = 40,
   width = 32,
   height = 32,
@@ -3039,7 +3057,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 328,
+  x = 392,
   y = 72,
   width = 32,
   height = 32,
@@ -3049,7 +3067,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 80,
   width = 16,
   height = 16,
@@ -3059,7 +3077,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 336,
+  x = 400,
   y = 48,
   width = 16,
   height = 16,
@@ -3069,7 +3087,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 16,
   width = 24,
   height = 8,
@@ -3079,7 +3097,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 272,
+  x = 304,
   y = 136,
   width = 24,
   height = 8,
@@ -3089,7 +3107,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 328,
+  x = 392,
   y = 16,
   width = 24,
   height = 8,
@@ -3099,7 +3117,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 328,
+  x = 392,
   y = 136,
   width = 24,
   height = 8,
@@ -3109,7 +3127,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 248,
+  x = 288,
   y = 128,
   width = 16,
   height = 16,
@@ -3119,7 +3137,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 376,
+  x = 432,
   y = 64,
   width = 16,
   height = 16,
@@ -3129,7 +3147,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 248,
+  x = 272,
   y = 32,
   width = 16,
   height = 16,
@@ -3139,7 +3157,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 240,
+  x = 256,
   y = 112,
   width = 16,
   height = 16,
@@ -3149,7 +3167,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 88,
+  x = 104,
   y = 312,
   width = 32,
   height = 8,
@@ -3159,7 +3177,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 304,
+  x = 352,
   y = 160,
   width = 16,
   height = 16,
@@ -3168,7 +3186,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 304,
+  x = 352,
   y = 144,
   width = 16,
   height = 16,
@@ -3177,7 +3195,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 304,
+  x = 352,
   y = 0,
   width = 16,
   height = 16,
@@ -3186,7 +3204,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 192,
+  x = 224,
   y = 232,
   width = 16,
   height = 16,
@@ -3195,7 +3213,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 208,
+  x = 240,
   y = 232,
   width = 16,
   height = 16,
@@ -3204,7 +3222,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 368,
+  x = 432,
   y = 48,
   width = 16,
   height = 16,
@@ -3214,7 +3232,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 288,
+  x = 320,
   y = 224,
   width = 8,
   height = 8,
@@ -3224,9 +3242,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 264,
+  x = 296,
   y = 216,
-  width = 80,
+  width = 112,
   height = 48,
   pattern = "165",
   tileset = "8px_all_zcfc_01",
@@ -3234,7 +3252,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 576,
+  x = 672,
   y = 480,
   width = 16,
   height = 16,
@@ -3243,7 +3261,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 512,
   width = 16,
   height = 96,
@@ -3252,7 +3270,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 496,
   width = 16,
   height = 16,
@@ -3261,7 +3279,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 480,
   width = 16,
   height = 16,
@@ -3270,7 +3288,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 496,
   width = 16,
   height = 16,
@@ -3279,7 +3297,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 480,
   width = 16,
   height = 16,
@@ -3288,7 +3306,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 496,
   width = 16,
   height = 16,
@@ -3297,7 +3315,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 496,
   width = 16,
   height = 16,
@@ -3306,7 +3324,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 608,
   width = 16,
   height = 16,
@@ -3315,16 +3333,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 624,
-  width = 64,
+  width = 80,
   height = 16,
   pattern = "73",
 }
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 624,
   width = 16,
   height = 16,
@@ -3333,7 +3351,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 608,
   width = 16,
   height = 16,
@@ -3342,7 +3360,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 608,
   width = 16,
   height = 16,
@@ -3351,7 +3369,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 624,
   width = 16,
   height = 16,
@@ -3360,7 +3378,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 608,
   width = 16,
   height = 16,
@@ -3369,7 +3387,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 512,
   width = 16,
   height = 96,
@@ -3378,16 +3396,16 @@ tile{
 
 tile{
   layer = 0,
-  x = 528,
+  x = 608,
   y = 624,
-  width = 64,
+  width = 80,
   height = 16,
   pattern = "73",
 }
 
 tile{
   layer = 0,
-  x = 512,
+  x = 592,
   y = 624,
   width = 16,
   height = 16,
@@ -3396,97 +3414,106 @@ tile{
 
 tile{
   layer = 0,
-  x = 504,
+  x = 584,
   y = 624,
   width = 8,
   height = 16,
   pattern = "99",
+}
+
+tile{
+  layer = 0,
+  x = 608,
+  y = 624,
+  width = 8,
+  height = 16,
+  pattern = "100",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 528,
+  width = 16,
+  height = 16,
+  pattern = "107",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 576,
+  width = 16,
+  height = 16,
+  pattern = "107",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 520,
+  width = 16,
+  height = 8,
+  pattern = "95",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 544,
+  width = 16,
+  height = 8,
+  pattern = "96",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 568,
+  width = 16,
+  height = 8,
+  pattern = "95",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 592,
+  width = 16,
+  height = 8,
+  pattern = "96",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 528,
+  width = 16,
+  height = 16,
+  pattern = "106",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 576,
+  width = 16,
+  height = 16,
+  pattern = "106",
 }
 
 tile{
   layer = 0,
   x = 528,
   y = 624,
-  width = 8,
-  height = 16,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 528,
   width = 16,
   height = 16,
-  pattern = "107",
+  pattern = "108",
 }
 
 tile{
   layer = 0,
-  x = 416,
-  y = 576,
-  width = 16,
-  height = 16,
-  pattern = "107",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 520,
-  width = 16,
-  height = 8,
-  pattern = "95",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 544,
-  width = 16,
-  height = 8,
-  pattern = "96",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 568,
-  width = 16,
-  height = 8,
-  pattern = "95",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 592,
-  width = 16,
-  height = 8,
-  pattern = "96",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 528,
-  width = 16,
-  height = 16,
-  pattern = "106",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 576,
-  width = 16,
-  height = 16,
-  pattern = "106",
-}
-
-tile{
-  layer = 0,
-  x = 464,
+  x = 656,
   y = 624,
   width = 16,
   height = 16,
@@ -3495,16 +3522,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 560,
-  y = 624,
-  width = 16,
-  height = 16,
-  pattern = "108",
-}
-
-tile{
-  layer = 0,
-  x = 480,
+  x = 544,
   y = 624,
   width = 8,
   height = 16,
@@ -3513,7 +3531,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 456,
+  x = 520,
   y = 624,
   width = 8,
   height = 16,
@@ -3522,7 +3540,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 576,
+  x = 672,
   y = 624,
   width = 8,
   height = 16,
@@ -3531,7 +3549,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 552,
+  x = 648,
   y = 624,
   width = 8,
   height = 16,
@@ -3540,7 +3558,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 544,
   width = 16,
   height = 8,
@@ -3549,7 +3567,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 520,
   width = 16,
   height = 8,
@@ -3558,7 +3576,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 592,
   width = 16,
   height = 8,
@@ -3567,7 +3585,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 568,
   width = 16,
   height = 8,
@@ -3576,7 +3594,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 512,
   width = 16,
   height = 16,
@@ -3586,7 +3604,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 496,
   width = 16,
   height = 16,
@@ -3596,7 +3614,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 576,
+  x = 672,
   y = 496,
   width = 16,
   height = 16,
@@ -3606,7 +3624,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 512,
   width = 16,
   height = 16,
@@ -3616,7 +3634,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 608,
   width = 16,
   height = 16,
@@ -3626,7 +3644,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 592,
   width = 16,
   height = 16,
@@ -3636,7 +3654,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 576,
+  x = 672,
   y = 608,
   width = 16,
   height = 16,
@@ -3646,7 +3664,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 592,
   width = 16,
   height = 16,
@@ -3656,9 +3674,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 512,
-  width = 144,
+  width = 176,
   height = 96,
   pattern = "102",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -3666,7 +3684,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 528,
   width = 16,
   height = 64,
@@ -3676,7 +3694,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 528,
   width = 16,
   height = 64,
@@ -3686,7 +3704,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 464,
+  x = 528,
   y = 496,
   width = 16,
   height = 16,
@@ -3696,9 +3714,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 464,
+  x = 528,
   y = 608,
-  width = 112,
+  width = 144,
   height = 16,
   pattern = "106",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -3706,7 +3724,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 512,
+  x = 592,
   y = 616,
   width = 16,
   height = 8,
@@ -3716,7 +3734,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 600,
   width = 8,
   height = 8,
@@ -3726,7 +3744,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 584,
+  x = 680,
   y = 512,
   width = 8,
   height = 8,
@@ -3736,7 +3754,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 584,
+  x = 680,
   y = 600,
   width = 8,
   height = 8,
@@ -3746,7 +3764,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 512,
   width = 8,
   height = 8,
@@ -3756,7 +3774,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 624,
   width = 16,
   height = 16,
@@ -3765,7 +3783,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 624,
   width = 16,
   height = 16,
@@ -3774,7 +3792,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 480,
   width = 16,
   height = 16,
@@ -3783,7 +3801,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 480,
   width = 16,
   height = 16,
@@ -3792,7 +3810,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 352,
   width = 16,
   height = 96,
@@ -3801,7 +3819,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 336,
   width = 16,
   height = 16,
@@ -3810,7 +3828,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 320,
   width = 16,
   height = 16,
@@ -3819,7 +3837,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 336,
   width = 16,
   height = 16,
@@ -3828,7 +3846,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 320,
   width = 16,
   height = 16,
@@ -3837,7 +3855,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 336,
   width = 16,
   height = 16,
@@ -3846,7 +3864,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 336,
   width = 16,
   height = 16,
@@ -3855,7 +3873,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 448,
   width = 16,
   height = 16,
@@ -3864,7 +3882,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 464,
   width = 16,
   height = 16,
@@ -3873,7 +3891,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 464,
   width = 16,
   height = 16,
@@ -3882,7 +3900,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 448,
   width = 16,
   height = 16,
@@ -3891,7 +3909,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 448,
   width = 16,
   height = 16,
@@ -3900,7 +3918,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 464,
   width = 16,
   height = 16,
@@ -3909,7 +3927,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 448,
   width = 16,
   height = 16,
@@ -3918,7 +3936,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 352,
   width = 16,
   height = 96,
@@ -3927,7 +3945,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 576,
+  x = 672,
   y = 464,
   width = 16,
   height = 16,
@@ -3936,7 +3954,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 368,
   width = 16,
   height = 16,
@@ -3945,7 +3963,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 416,
   width = 16,
   height = 16,
@@ -3954,7 +3972,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 360,
   width = 16,
   height = 8,
@@ -3963,7 +3981,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 384,
   width = 16,
   height = 8,
@@ -3972,7 +3990,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 408,
   width = 16,
   height = 8,
@@ -3981,7 +3999,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 432,
   width = 16,
   height = 8,
@@ -3990,7 +4008,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 368,
   width = 16,
   height = 16,
@@ -3999,7 +4017,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 416,
   width = 16,
   height = 16,
@@ -4008,7 +4026,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 384,
   width = 16,
   height = 8,
@@ -4017,7 +4035,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 360,
   width = 16,
   height = 8,
@@ -4026,7 +4044,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 432,
   width = 16,
   height = 8,
@@ -4035,7 +4053,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 408,
   width = 16,
   height = 8,
@@ -4044,7 +4062,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 352,
   width = 16,
   height = 16,
@@ -4054,7 +4072,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 352,
   width = 16,
   height = 16,
@@ -4064,7 +4082,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 432,
   width = 16,
   height = 16,
@@ -4074,7 +4092,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 432,
   width = 16,
   height = 16,
@@ -4084,7 +4102,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 432,
+  x = 496,
   y = 368,
   width = 16,
   height = 64,
@@ -4094,7 +4112,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 592,
+  x = 688,
   y = 368,
   width = 16,
   height = 64,
@@ -4104,7 +4122,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 440,
   width = 8,
   height = 8,
@@ -4114,7 +4132,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 584,
+  x = 680,
   y = 352,
   width = 8,
   height = 8,
@@ -4124,7 +4142,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 584,
+  x = 680,
   y = 440,
   width = 8,
   height = 8,
@@ -4134,7 +4152,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 464,
   width = 16,
   height = 16,
@@ -4143,7 +4161,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 464,
   width = 16,
   height = 16,
@@ -4152,7 +4170,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 320,
   width = 16,
   height = 16,
@@ -4161,7 +4179,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 608,
+  x = 704,
   y = 320,
   width = 16,
   height = 16,
@@ -4170,9 +4188,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 496,
+  x = 560,
   y = 0,
-  width = 48,
+  width = 80,
   height = 512,
   pattern = "102",
   tileset = "dungeon/d_fc_trv_entrances_01",
@@ -4180,7 +4198,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 464,
+  x = 528,
   y = 480,
   width = 16,
   height = 16,
@@ -4189,7 +4207,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 336,
   width = 16,
   height = 16,
@@ -4199,7 +4217,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 352,
   width = 8,
   height = 8,
@@ -4209,7 +4227,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 576,
+  x = 672,
   y = 336,
   width = 16,
   height = 16,
@@ -4219,7 +4237,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 560,
+  x = 656,
   y = 496,
   width = 16,
   height = 16,
@@ -4229,7 +4247,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 560,
+  x = 656,
   y = 480,
   width = 16,
   height = 16,
@@ -4238,7 +4256,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 560,
+  x = 656,
   y = 464,
   width = 16,
   height = 16,
@@ -4247,7 +4265,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 464,
+  x = 528,
   y = 464,
   width = 16,
   height = 16,
@@ -4256,7 +4274,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 320,
   width = 16,
   height = 16,
@@ -4265,7 +4283,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 576,
+  x = 672,
   y = 320,
   width = 16,
   height = 16,
@@ -4274,7 +4292,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 464,
+  x = 528,
   y = 320,
   width = 16,
   height = 16,
@@ -4283,7 +4301,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 560,
+  x = 656,
   y = 320,
   width = 16,
   height = 16,
@@ -4292,7 +4310,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 448,
+  x = 512,
   y = 448,
   width = 16,
   height = 16,
@@ -4302,7 +4320,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 576,
+  x = 672,
   y = 448,
   width = 16,
   height = 16,
@@ -4312,7 +4330,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 464,
+  x = 528,
   y = 336,
   width = 16,
   height = 128,
@@ -4322,22 +4340,12 @@ tile{
 
 tile{
   layer = 0,
-  x = 560,
+  x = 656,
   y = 336,
   width = 16,
   height = 128,
   pattern = "48",
   tileset = "8px_all_zcfc_01",
-}
-
-tile{
-  layer = 0,
-  x = 480,
-  y = 0,
-  width = 16,
-  height = 496,
-  pattern = "101",
-  tileset = "dungeon/d_fc_trv_entrances_01",
 }
 
 tile{
@@ -4346,53 +4354,63 @@ tile{
   y = 0,
   width = 16,
   height = 496,
+  pattern = "101",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 640,
+  y = 0,
+  width = 16,
+  height = 496,
   pattern = "103",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 544,
+  y = 496,
+  width = 8,
+  height = 8,
+  pattern = "160",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 648,
+  y = 496,
+  width = 8,
+  height = 8,
+  pattern = "161",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 192,
+  width = 16,
+  height = 96,
+  pattern = "103",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 192,
+  width = 16,
+  height = 96,
+  pattern = "101",
   tileset = "dungeon/d_fc_trv_entrances_01",
 }
 
 tile{
   layer = 0,
   x = 480,
-  y = 496,
-  width = 8,
-  height = 8,
-  pattern = "160",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 552,
-  y = 496,
-  width = 8,
-  height = 8,
-  pattern = "161",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 192,
-  width = 16,
-  height = 96,
-  pattern = "103",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 192,
-  width = 16,
-  height = 96,
-  pattern = "101",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 416,
   y = 192,
   width = 16,
   height = 96,
@@ -4401,1182 +4419,1182 @@ tile{
 
 tile{
   layer = 0,
-  x = 416,
+  x = 480,
   y = 176,
   width = 16,
   height = 16,
   pattern = "45",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 160,
-  width = 16,
-  height = 16,
-  pattern = "45",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 176,
-  width = 16,
-  height = 16,
-  pattern = "76",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 160,
-  width = 16,
-  height = 16,
-  pattern = "47",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 176,
-  width = 16,
-  height = 16,
-  pattern = "47",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 176,
-  width = 16,
-  height = 16,
-  pattern = "75",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 288,
-  width = 16,
-  height = 16,
-  pattern = "72",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 304,
-  width = 16,
-  height = 16,
-  pattern = "73",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 304,
-  width = 16,
-  height = 16,
-  pattern = "72",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 288,
-  width = 16,
-  height = 16,
-  pattern = "61",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 288,
-  width = 16,
-  height = 16,
-  pattern = "60",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 304,
-  width = 16,
-  height = 16,
-  pattern = "74",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 288,
-  width = 16,
-  height = 16,
-  pattern = "74",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 192,
-  width = 16,
-  height = 96,
-  pattern = "59",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 304,
-  width = 16,
-  height = 16,
-  pattern = "73",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 208,
-  width = 16,
-  height = 16,
-  pattern = "107",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 256,
-  width = 16,
-  height = 16,
-  pattern = "107",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 200,
-  width = 16,
-  height = 8,
-  pattern = "95",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 224,
-  width = 16,
-  height = 8,
-  pattern = "96",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 248,
-  width = 16,
-  height = 8,
-  pattern = "95",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 272,
-  width = 16,
-  height = 8,
-  pattern = "96",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 208,
-  width = 16,
-  height = 16,
-  pattern = "106",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 256,
-  width = 16,
-  height = 16,
-  pattern = "106",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 224,
-  width = 16,
-  height = 8,
-  pattern = "98",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 200,
-  width = 16,
-  height = 8,
-  pattern = "97",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 272,
-  width = 16,
-  height = 8,
-  pattern = "98",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 248,
-  width = 16,
-  height = 8,
-  pattern = "97",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 192,
-  width = 16,
-  height = 16,
-  pattern = "97",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 192,
-  width = 16,
-  height = 16,
-  pattern = "99",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 272,
-  width = 16,
-  height = 16,
-  pattern = "105",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 272,
-  width = 16,
-  height = 16,
-  pattern = "107",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 208,
-  width = 16,
-  height = 64,
-  pattern = "101",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 208,
-  width = 16,
-  height = 64,
-  pattern = "103",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 280,
-  width = 8,
-  height = 8,
-  pattern = "162",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 584,
-  y = 192,
-  width = 8,
-  height = 8,
-  pattern = "161",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 584,
-  y = 280,
-  width = 8,
-  height = 8,
-  pattern = "163",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 304,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 304,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 160,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 160,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 176,
-  width = 16,
-  height = 16,
-  pattern = "100",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 192,
-  width = 8,
-  height = 8,
-  pattern = "160",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 176,
-  width = 16,
-  height = 16,
-  pattern = "100",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 560,
-  y = 304,
-  width = 16,
-  height = 16,
-  pattern = "60",
-}
-
-tile{
-  layer = 0,
-  x = 464,
-  y = 304,
-  width = 16,
-  height = 16,
-  pattern = "61",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 160,
-  width = 16,
-  height = 16,
-  pattern = "46",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 160,
-  width = 16,
-  height = 16,
-  pattern = "46",
-}
-
-tile{
-  layer = 0,
-  x = 464,
-  y = 160,
-  width = 16,
-  height = 16,
-  pattern = "76",
-}
-
-tile{
-  layer = 0,
-  x = 560,
-  y = 160,
-  width = 16,
-  height = 16,
-  pattern = "75",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 288,
-  width = 16,
-  height = 16,
-  pattern = "108",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 288,
-  width = 16,
-  height = 16,
-  pattern = "108",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 464,
-  y = 176,
-  width = 16,
-  height = 128,
-  pattern = "48",
-  tileset = "8px_all_zcfc_01",
-}
-
-tile{
-  layer = 0,
-  x = 560,
-  y = 176,
-  width = 16,
-  height = 128,
-  pattern = "48",
-  tileset = "8px_all_zcfc_01",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 32,
-  width = 16,
-  height = 96,
-  pattern = "103",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 32,
-  width = 16,
-  height = 96,
-  pattern = "101",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 32,
-  width = 16,
-  height = 96,
-  pattern = "58",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "45",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "45",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "76",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "47",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "47",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "75",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "72",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "73",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "72",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "61",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "60",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "74",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "74",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 32,
-  width = 16,
-  height = 96,
-  pattern = "59",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "73",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 48,
-  width = 16,
-  height = 16,
-  pattern = "107",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 96,
-  width = 16,
-  height = 16,
-  pattern = "107",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 40,
-  width = 16,
-  height = 8,
-  pattern = "95",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 64,
-  width = 16,
-  height = 8,
-  pattern = "96",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 88,
-  width = 16,
-  height = 8,
-  pattern = "95",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 112,
-  width = 16,
-  height = 8,
-  pattern = "96",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 48,
-  width = 16,
-  height = 16,
-  pattern = "106",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 96,
-  width = 16,
-  height = 16,
-  pattern = "106",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 64,
-  width = 16,
-  height = 8,
-  pattern = "98",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 40,
-  width = 16,
-  height = 8,
-  pattern = "97",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 112,
-  width = 16,
-  height = 8,
-  pattern = "98",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 88,
-  width = 16,
-  height = 8,
-  pattern = "97",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 32,
-  width = 16,
-  height = 16,
-  pattern = "97",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 32,
-  width = 16,
-  height = 16,
-  pattern = "99",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 112,
-  width = 16,
-  height = 16,
-  pattern = "105",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 112,
-  width = 16,
-  height = 16,
-  pattern = "107",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 48,
-  width = 16,
-  height = 64,
-  pattern = "101",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 592,
-  y = 48,
-  width = 16,
-  height = 64,
-  pattern = "103",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 120,
-  width = 8,
-  height = 8,
-  pattern = "162",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 584,
-  y = 32,
-  width = 8,
-  height = 8,
-  pattern = "161",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 584,
-  y = 120,
-  width = 8,
-  height = 8,
-  pattern = "163",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 416,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 608,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "100",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 32,
-  width = 8,
-  height = 8,
-  pattern = "160",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "100",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 560,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "60",
-}
-
-tile{
-  layer = 0,
-  x = 464,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "61",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "46",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "46",
-}
-
-tile{
-  layer = 0,
-  x = 464,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "76",
-}
-
-tile{
-  layer = 0,
-  x = 560,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "75",
-}
-
-tile{
-  layer = 0,
-  x = 448,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "108",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "108",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 464,
-  y = 16,
-  width = 16,
-  height = 128,
-  pattern = "48",
-  tileset = "8px_all_zcfc_01",
-}
-
-tile{
-  layer = 0,
-  x = 560,
-  y = 16,
-  width = 16,
-  height = 128,
-  pattern = "48",
-  tileset = "8px_all_zcfc_01",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 32,
-  width = 32,
-  height = 32,
-  pattern = "3",
-  tileset = "dungeon/d_fc_trv_halo_01",
-}
-
-tile{
-  layer = 0,
-  x = 440,
-  y = 40,
-  width = 16,
-  height = 16,
-  pattern = "6",
-  tileset = "dungeon/d_fc_wll_braziers_01",
-}
-
-tile{
-  layer = 0,
-  x = 432,
-  y = 96,
-  width = 32,
-  height = 32,
-  pattern = "3",
-  tileset = "dungeon/d_fc_trv_halo_01",
-}
-
-tile{
-  layer = 0,
-  x = 440,
-  y = 104,
-  width = 16,
-  height = 16,
-  pattern = "6",
-  tileset = "dungeon/d_fc_wll_braziers_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 32,
-  width = 32,
-  height = 32,
-  pattern = "3",
-  tileset = "dungeon/d_fc_trv_halo_01",
-}
-
-tile{
-  layer = 0,
-  x = 584,
-  y = 40,
-  width = 16,
-  height = 16,
-  pattern = "6",
-  tileset = "dungeon/d_fc_wll_braziers_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 96,
-  width = 32,
-  height = 32,
-  pattern = "3",
-  tileset = "dungeon/d_fc_trv_halo_01",
-}
-
-tile{
-  layer = 0,
-  x = 584,
-  y = 104,
-  width = 16,
-  height = 16,
-  pattern = "6",
-  tileset = "dungeon/d_fc_wll_braziers_01",
-}
-
-tile{
-  layer = 0,
-  x = 456,
-  y = 168,
-  width = 8,
-  height = 8,
-  pattern = "7",
-  tileset = "dungeon/d_fc_wll_torches_01",
-}
-
-tile{
-  layer = 0,
-  x = 456,
-  y = 160,
-  width = 8,
-  height = 8,
-  pattern = "1",
-  tileset = "dungeon/d_fc_wll_torches_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 168,
-  width = 8,
-  height = 8,
-  pattern = "7",
-  tileset = "dungeon/d_fc_wll_torches_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 160,
-  width = 8,
-  height = 8,
-  pattern = "1",
-  tileset = "dungeon/d_fc_wll_torches_01",
-}
-
-tile{
-  layer = 0,
-  x = 456,
-  y = 304,
-  width = 8,
-  height = 8,
-  pattern = "12",
-  tileset = "dungeon/d_fc_wll_torches_01",
-}
-
-tile{
-  layer = 0,
-  x = 456,
-  y = 312,
-  width = 8,
-  height = 8,
-  pattern = "2",
-  tileset = "dungeon/d_fc_wll_torches_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 304,
-  width = 8,
-  height = 8,
-  pattern = "12",
-  tileset = "dungeon/d_fc_wll_torches_01",
-}
-
-tile{
-  layer = 0,
-  x = 576,
-  y = 312,
-  width = 8,
-  height = 8,
-  pattern = "2",
-  tileset = "dungeon/d_fc_wll_torches_01",
 }
 
 tile{
   layer = 0,
   x = 496,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "45",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "76",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "47",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "47",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "75",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "72",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "73",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "72",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "61",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "60",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "74",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "74",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 192,
+  width = 16,
+  height = 96,
+  pattern = "59",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "73",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "107",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 256,
+  width = 16,
+  height = 16,
+  pattern = "107",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 200,
+  width = 16,
+  height = 8,
+  pattern = "95",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 224,
+  width = 16,
+  height = 8,
+  pattern = "96",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 248,
+  width = 16,
+  height = 8,
+  pattern = "95",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 272,
+  width = 16,
+  height = 8,
+  pattern = "96",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 208,
+  width = 16,
+  height = 16,
+  pattern = "106",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 256,
+  width = 16,
+  height = 16,
+  pattern = "106",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 224,
+  width = 16,
+  height = 8,
+  pattern = "98",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 200,
+  width = 16,
+  height = 8,
+  pattern = "97",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 272,
+  width = 16,
+  height = 8,
+  pattern = "98",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 248,
+  width = 16,
+  height = 8,
+  pattern = "97",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 192,
+  width = 16,
+  height = 16,
+  pattern = "97",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 192,
+  width = 16,
+  height = 16,
+  pattern = "99",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 272,
+  width = 16,
+  height = 16,
+  pattern = "105",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 272,
+  width = 16,
+  height = 16,
+  pattern = "107",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 208,
+  width = 16,
+  height = 64,
+  pattern = "101",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 208,
+  width = 16,
+  height = 64,
+  pattern = "103",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "162",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "161",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 280,
+  width = 8,
+  height = 8,
+  pattern = "163",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "130",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "130",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "130",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "130",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "100",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 192,
+  width = 8,
+  height = 8,
+  pattern = "160",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 176,
+  width = 16,
+  height = 16,
+  pattern = "100",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "60",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 304,
+  width = 16,
+  height = 16,
+  pattern = "61",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "46",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "46",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "76",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 160,
+  width = 16,
+  height = 16,
+  pattern = "75",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "108",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 288,
+  width = 16,
+  height = 16,
+  pattern = "108",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 176,
+  width = 16,
+  height = 128,
+  pattern = "48",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 176,
+  width = 16,
+  height = 128,
+  pattern = "48",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 32,
+  width = 16,
+  height = 96,
+  pattern = "103",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 32,
+  width = 16,
+  height = 96,
+  pattern = "101",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 32,
+  width = 16,
+  height = 96,
+  pattern = "58",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "45",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "45",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "76",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "47",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "47",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "75",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "72",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "73",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "72",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "61",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "60",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "74",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "74",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 32,
+  width = 16,
+  height = 96,
+  pattern = "59",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "73",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "107",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "107",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 40,
+  width = 16,
+  height = 8,
+  pattern = "95",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 64,
+  width = 16,
+  height = 8,
+  pattern = "96",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 88,
+  width = 16,
+  height = 8,
+  pattern = "95",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 112,
+  width = 16,
+  height = 8,
+  pattern = "96",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "106",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "106",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 64,
+  width = 16,
+  height = 8,
+  pattern = "98",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 40,
+  width = 16,
+  height = 8,
+  pattern = "97",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 112,
+  width = 16,
+  height = 8,
+  pattern = "98",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 88,
+  width = 16,
+  height = 8,
+  pattern = "97",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "97",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "99",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "105",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "107",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 48,
+  width = 16,
+  height = 64,
+  pattern = "101",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 688,
+  y = 48,
+  width = 16,
+  height = 64,
+  pattern = "103",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 120,
+  width = 8,
+  height = 8,
+  pattern = "162",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "161",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 120,
+  width = 8,
+  height = 8,
+  pattern = "163",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "130",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "130",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "130",
+}
+
+tile{
+  layer = 0,
+  x = 704,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "130",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "100",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 32,
+  width = 8,
+  height = 8,
+  pattern = "160",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 16,
+  width = 16,
+  height = 16,
+  pattern = "100",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "60",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "61",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "46",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "46",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "76",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "75",
+}
+
+tile{
+  layer = 0,
+  x = 512,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "108",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "108",
+  tileset = "dungeon/d_fc_trv_entrances_01",
+}
+
+tile{
+  layer = 0,
+  x = 528,
+  y = 16,
+  width = 16,
+  height = 128,
+  pattern = "48",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 656,
+  y = 16,
+  width = 16,
+  height = 128,
+  pattern = "48",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 32,
+  width = 32,
+  height = 32,
+  pattern = "3",
+  tileset = "dungeon/d_fc_trv_halo_01",
+}
+
+tile{
+  layer = 0,
+  x = 504,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "6",
+  tileset = "dungeon/d_fc_wll_braziers_01",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 96,
+  width = 32,
+  height = 32,
+  pattern = "3",
+  tileset = "dungeon/d_fc_trv_halo_01",
+}
+
+tile{
+  layer = 0,
+  x = 504,
+  y = 104,
+  width = 16,
+  height = 16,
+  pattern = "6",
+  tileset = "dungeon/d_fc_wll_braziers_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 32,
+  width = 32,
+  height = 32,
+  pattern = "3",
+  tileset = "dungeon/d_fc_trv_halo_01",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "6",
+  tileset = "dungeon/d_fc_wll_braziers_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 96,
+  width = 32,
+  height = 32,
+  pattern = "3",
+  tileset = "dungeon/d_fc_trv_halo_01",
+}
+
+tile{
+  layer = 0,
+  x = 680,
+  y = 104,
+  width = 16,
+  height = 16,
+  pattern = "6",
+  tileset = "dungeon/d_fc_wll_braziers_01",
+}
+
+tile{
+  layer = 0,
+  x = 520,
+  y = 168,
+  width = 8,
+  height = 8,
+  pattern = "7",
+  tileset = "dungeon/d_fc_wll_torches_01",
+}
+
+tile{
+  layer = 0,
+  x = 520,
+  y = 160,
+  width = 8,
+  height = 8,
+  pattern = "1",
+  tileset = "dungeon/d_fc_wll_torches_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 168,
+  width = 8,
+  height = 8,
+  pattern = "7",
+  tileset = "dungeon/d_fc_wll_torches_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 160,
+  width = 8,
+  height = 8,
+  pattern = "1",
+  tileset = "dungeon/d_fc_wll_torches_01",
+}
+
+tile{
+  layer = 0,
+  x = 520,
+  y = 304,
+  width = 8,
+  height = 8,
+  pattern = "12",
+  tileset = "dungeon/d_fc_wll_torches_01",
+}
+
+tile{
+  layer = 0,
+  x = 520,
+  y = 312,
+  width = 8,
+  height = 8,
+  pattern = "2",
+  tileset = "dungeon/d_fc_wll_torches_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 304,
+  width = 8,
+  height = 8,
+  pattern = "12",
+  tileset = "dungeon/d_fc_wll_torches_01",
+}
+
+tile{
+  layer = 0,
+  x = 672,
+  y = 312,
+  width = 8,
+  height = 8,
+  pattern = "2",
+  tileset = "dungeon/d_fc_wll_torches_01",
+}
+
+tile{
+  layer = 0,
+  x = 592,
   y = 256,
   width = 64,
   height = 16,
@@ -5586,7 +5604,7 @@ tile{
 
 tile{
   layer = 0,
-  x = 512,
+  x = 576,
   y = 288,
   width = 16,
   height = 16,
@@ -5596,24 +5614,72 @@ tile{
 
 tile{
   layer = 0,
-  x = 512,
-  y = 192,
+  x = 592,
+  y = 208,
   width = 16,
   height = 48,
   pattern = "48",
   tileset = "8px_all_zcfc_01",
 }
 
+separator{
+  layer = 0,
+  x = 712,
+  y = 0,
+  width = 16,
+  height = 640,
+}
+
+separator{
+  layer = 0,
+  x = 472,
+  y = 0,
+  width = 16,
+  height = 640,
+}
+
+separator{
+  layer = 0,
+  x = -8,
+  y = 0,
+  width = 16,
+  height = 640,
+}
+
+separator{
+  layer = 0,
+  x = 480,
+  y = 632,
+  width = 240,
+  height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 240,
+  y = 312,
+  width = 240,
+  height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 0,
+  y = 312,
+  width = 240,
+  height = 16,
+}
+
 pickable{
   layer = 0,
-  x = 184,
-  y = 189,
+  x = 328,
+  y = 301,
   treasure_name = "bomb",
 }
 
 separator{
   layer = 0,
-  x = 200,
+  x = 232,
   y = 160,
   width = 16,
   height = 160,
@@ -5621,9 +5687,9 @@ separator{
 
 wall{
   layer = 0,
-  x = 264,
+  x = 296,
   y = 208,
-  width = 80,
+  width = 112,
   height = 8,
   stops_hero = true,
   stops_npcs = true,
@@ -5633,7 +5699,7 @@ wall{
 
 wall{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 216,
   width = 8,
   height = 48,
@@ -5645,7 +5711,7 @@ wall{
 
 wall{
   layer = 0,
-  x = 344,
+  x = 408,
   y = 216,
   width = 8,
   height = 48,
@@ -5657,9 +5723,9 @@ wall{
 
 wall{
   layer = 0,
-  x = 264,
+  x = 296,
   y = 264,
-  width = 80,
+  width = 112,
   height = 8,
   stops_hero = true,
   stops_npcs = true,
@@ -5669,9 +5735,9 @@ wall{
 
 jumper{
   layer = 0,
-  x = 264,
+  x = 296,
   y = 208,
-  width = 80,
+  width = 112,
   height = 8,
   direction = 6,
   jump_length = 32,
@@ -5679,9 +5745,9 @@ jumper{
 
 jumper{
   layer = 0,
-  x = 264,
+  x = 296,
   y = 264,
-  width = 80,
+  width = 112,
   height = 8,
   direction = 2,
   jump_length = 32,
@@ -5689,7 +5755,7 @@ jumper{
 
 jumper{
   layer = 0,
-  x = 344,
+  x = 408,
   y = 216,
   width = 8,
   height = 48,
@@ -5699,7 +5765,7 @@ jumper{
 
 jumper{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 264,
   width = 8,
   height = 8,
@@ -5709,7 +5775,7 @@ jumper{
 
 jumper{
   layer = 0,
-  x = 344,
+  x = 408,
   y = 264,
   width = 8,
   height = 8,
@@ -5719,7 +5785,7 @@ jumper{
 
 jumper{
   layer = 0,
-  x = 344,
+  x = 408,
   y = 208,
   width = 8,
   height = 8,
@@ -5729,7 +5795,7 @@ jumper{
 
 jumper{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 216,
   width = 8,
   height = 48,
@@ -5739,7 +5805,7 @@ jumper{
 
 jumper{
   layer = 0,
-  x = 256,
+  x = 288,
   y = 208,
   width = 8,
   height = 8,
@@ -5749,7 +5815,7 @@ jumper{
 
 teletransporter{
   layer = 0,
-  x = 88,
+  x = 104,
   y = 176,
   width = 32,
   height = 16,
@@ -5759,7 +5825,7 @@ teletransporter{
 
 door{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 176,
   direction = 3,
   sprite = "doors/dungeon/d_fc_door_02a_wide_door_nokey",
@@ -5768,7 +5834,7 @@ door{
 
 teletransporter{
   layer = 0,
-  x = 96,
+  x = 112,
   y = 296,
   width = 16,
   height = 16,
@@ -5777,7 +5843,7 @@ teletransporter{
 
 separator{
   layer = 0,
-  x = 200,
+  x = 232,
   y = 0,
   width = 16,
   height = 160,
@@ -5787,13 +5853,13 @@ separator{
   layer = 0,
   x = 0,
   y = 152,
-  width = 208,
+  width = 240,
   height = 16,
 }
 
 teletransporter{
   layer = 0,
-  x = 384,
+  x = 448,
   y = 232,
   width = 16,
   height = 16,
@@ -5803,66 +5869,83 @@ teletransporter{
 
 separator{
   layer = 0,
-  x = 408,
-  y = 0,
-  width = 16,
-  height = 640,
-}
-
-separator{
-  layer = 0,
-  x = 208,
+  x = 240,
   y = 152,
-  width = 208,
+  width = 240,
   height = 16,
-}
-
-separator{
-  layer = 0,
-  x = 616,
-  y = 0,
-  width = 16,
-  height = 640,
 }
 
 enemy{
   layer = 0,
-  x = 536,
+  x = 632,
   y = 181,
   direction = 3,
   breed = "e_fc_spiderskull_02",
 }
 
-destination{
-  name = "starting_destination",
-  layer = 0,
-  x = 520,
-  y = 589,
-  direction = 3,
-}
-
 enemy{
   layer = 0,
-  x = 520,
-  y = 397,
+  x = 600,
+  y = 445,
   direction = 1,
   breed = "e_fc_spiderskull_01",
 }
 
 custom_entity{
   layer = 0,
-  x = 520,
-  y = 541,
+  x = 600,
+  y = 525,
   width = 16,
   height = 16,
   direction = 0,
   sprite = "entities/megabomb",
-  model = "WIP_megabomb",
+  model = "megabomb_WIP",
+}
+
+destination{
+  name = "starting_destination",
+  layer = 0,
+  x = 120,
+  y = 237,
+  direction = 3,
+}
+
+separator{
+  layer = 0,
+  x = 240,
+  y = -8,
+  width = 240,
+  height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 480,
+  y = -8,
+  width = 240,
+  height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 0,
+  y = -8,
+  width = 240,
+  height = 16,
+}
+
+teletransporter{
+  layer = 0,
+  x = 192,
+  y = 176,
+  width = 16,
+  height = 16,
+  destination_map = "morla",
 }
 
 tile{
   layer = 2,
-  x = 208,
+  x = 240,
   y = 224,
   width = 8,
   height = 32,
@@ -5871,7 +5954,7 @@ tile{
 
 tile{
   layer = 2,
-  x = 88,
+  x = 104,
   y = 168,
   width = 32,
   height = 16,
@@ -5881,7 +5964,7 @@ tile{
 
 tile{
   layer = 2,
-  x = 200,
+  x = 232,
   y = 224,
   width = 8,
   height = 32,
@@ -5890,7 +5973,7 @@ tile{
 
 tile{
   layer = 2,
-  x = 296,
+  x = 344,
   y = 152,
   width = 32,
   height = 8,
@@ -5899,7 +5982,7 @@ tile{
 
 tile{
   layer = 2,
-  x = 296,
+  x = 344,
   y = 160,
   width = 32,
   height = 8,
@@ -5908,7 +5991,7 @@ tile{
 
 wall{
   layer = 2,
-  x = 200,
+  x = 232,
   y = 216,
   width = 16,
   height = 16,
@@ -5921,7 +6004,7 @@ wall{
 
 wall{
   layer = 2,
-  x = 200,
+  x = 232,
   y = 248,
   width = 16,
   height = 16,
@@ -5934,7 +6017,7 @@ wall{
 
 wall{
   layer = 2,
-  x = 288,
+  x = 336,
   y = 152,
   width = 16,
   height = 16,
@@ -5947,7 +6030,7 @@ wall{
 
 wall{
   layer = 2,
-  x = 320,
+  x = 368,
   y = 152,
   width = 16,
   height = 16,
