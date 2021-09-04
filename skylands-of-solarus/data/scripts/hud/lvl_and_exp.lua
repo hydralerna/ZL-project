@@ -1,7 +1,7 @@
 -- LEVEL (LVL) and EXPERIENCE (EXP) counters shown on the game screen.
 
 -- LVL AND EXP  version 1.6
--- from a script (for rupees) by christopho
+-- from a script (for rupees) by Christopho
 -- Modified by froGgy for a Zelda-like (ZL) project.
 -- v 1.0:  First version posted. It is just a draft.
 -- Modified by Kamigousu on 18/07/19.
