@@ -1,4 +1,4 @@
--- Script thcccat creates a head-up display for a game.
+-- Script that creates a head-up display for a game.
 
 -- Usage:
 -- require("scripts/hud/hud")
