@@ -63,7 +63,7 @@ local function initialize_dialog_box_features(game)
     fast = 20  -- Default.
   }
   local letter_sound_delay = 100
-  local box_width = 200
+  local box_width = 232
   local box_height = 60
 
   -- Initialize dialog box data.
@@ -209,8 +209,8 @@ local function initialize_dialog_box_features(game)
 
     -- Set the coordinates of graphic objects.
     local screen_width, screen_height = sol.video.get_quest_size()
-    local x = screen_width / 2 - 100
-    local y = top and 23 or (screen_height - 80)
+    local x = screen_width / 2 - 116
+    local y = top and 47 or (screen_height - 80)
 
     if self.style == "empty" then
       y = y + (top and -24 or 24)
@@ -569,7 +569,7 @@ local function initialize_dialog_box_features(game)
 
     if self.style == "empty" then
       -- Draw a dark rectangle.
-      dst_surface:fill_color({15, 31, 32}, x, y, 200, 60)
+      dst_surface:fill_color({15, 31, 32}, x, y, 232, 60)
     else
       -- Draw the dialog box.
       self.box_img:draw_region(0, 0, box_width, box_height, self.dialog_surface, x, y)
@@ -578,15 +578,15 @@ local function initialize_dialog_box_features(game)
       if self.is_name then
         local text_width = self.name_surface:get_size()
         text_width = math.max(text_width, 12)
-        local right_offset = self.is_name_on_right and (188 - text_width) or 0
+        local right_offset = self.is_name_on_right and (116 - text_width) or 0
         self.box_img:draw_region( -- left side
-          184, 60, 4, 16, self.dialog_surface,
+          112, 60, 4, 16, self.dialog_surface,
           x + 0 + right_offset, y - 8
         )
         local x_offset = 0
         while x_offset < text_width do
           self.box_img:draw_region(
-            188, 60,
+            116, 60,
             math.min(8, text_width - x_offset), 16,
             self.dialog_surface,
             x + 4 + x_offset + right_offset,
@@ -595,7 +595,7 @@ local function initialize_dialog_box_features(game)
           x_offset = x_offset + 8
         end
         self.box_img:draw_region( -- right side
-          196, 60, 4, 16, self.dialog_surface,
+          124, 60, 4, 16, self.dialog_surface,
           x + 4 + text_width + right_offset, y - 8
         )
         self.name_surface:draw(self.dialog_surface, x + 4 + right_offset, y - 8)
