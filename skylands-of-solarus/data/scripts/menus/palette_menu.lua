@@ -50,38 +50,69 @@ function palette_menu:on_started()
     })
   end
   --
-  self.palette_name = { "aa00aa", 
-                        "aa01aa",
-                        "aa02aa",
-                        "aa03aa",
-                        "aa04aa",
-                        "aa05aa",
-                        "aa06aa",
-                        "aa07aa",
-                        "bb08bb",
-                        "bb09bb",
-                        "bb10bb",
-                        "bb11bb",
-                        "bb12bb",
-                        "bb13bb",
-                        "bb14bb",
-                        "bb15bb",
-                        "cc16cc",
-                        "cc17cc",
-                        "cc18cc",
-                        "cc19cc",
-                        "cc20cc",
-                        "cc21cc",
-                        "cc22cc",
-                        "cc23cc",
-                        "dd24dd",
-                        "dd25dd",
-                        "dd26dd",
-                        "dd27dd",
-                        "dd28dd",
-                        "dd29dd",
-                        "dd30dd",
-                        "dd31dd"
+
+-- PALETTES (main source: https://lospec.com/palette-list/tag/gameboy/)
+
+-- Default palette (Created by VinnyVideo)
+-- Links Awakening (SGB) Palette (A palette used by The Legend of Zelda: Link's Awakening DX when played on the Super Gameboy.)
+-- Fantasy 16px - Tileset (From a tileset on OGA by Jerom)
+-- Kid Icarus (SGB) Palette (A palette used by Kid Icarus: Of Myths and Monsters when played on the Super Gameboy.)
+-- Crimson (Created by WildLeoKnight)
+-- SpaceHaze (Created by WildLeoKnight)
+-- Fantasy 16px - Mockup (From a tileset and a mockup on OGA by Jerom)
+
+-- Blue Seni (Created by WildLeoKnight)
+-- Mist GB (Created by Kerrie Lake)
+
+-- 
+-- AYY4 (Created by Polyducks)
+-- Ice Cream GB (Created by Kerrie Lake)
+-- Kirokaze Gameboy (Created by Kirokaze)
+-- Rustic GB (Created by Kerrie Lake)
+-- Wish GB (Created by Kerrie Lake)
+-- Nymph GB (Created by Kerrie Lake)
+
+-- Andrade Gameboy (Alternative Gameboy palette by Andrade)                
+
+
+-- Coldfire GB (Created by Kerrie Lake)
+
+-- Fantasy 16px - OFMG (From a tileset and a mockup on OGA by Jerom)
+
+-- Nostalgia (Created by WildLeoKnight)
+
+  self.palette_name = { "000 - Default palette", 
+                        "001 - Links Awakening (SGB)",
+                        "002 - Fantasy 16px - Tileset",
+                        "003 - Kid Icarus (SGB)",
+                        "004 - Crimson",
+                        "005 - SpaceHaze",
+                        "006 - Fantasy 16px - Mockup",
+                        "007 - ",
+                        "008 - Blue Seni",
+                        "009 - Mist GB",
+                        "010 - ",
+                        "011 - AYY4",
+                        "012 - Ice Cream GB",
+                        "013 - Kirokaze Gameboy",
+                        "014 - ",
+                        "015 - Wish GB",
+                        "016 - Nymph GB",
+                        "017 - ",
+                        "018 - Andrade Gameboy",
+                        "019 ",
+                        "020 - Coldfire GB",
+                        "021 - ",
+                        "022 - Fantasy 16px - OFMG",
+                        "023 - ",
+                        "024 - Nostalgia",
+                        "025 - ",
+                        "026 - ",
+                        "027 -",
+                        "028 - ",
+                        "029 - ",
+                        "030 - ",
+                        "031 - "
 }
 
   self.surface_w, self.surface_h = sol.video.get_quest_size()
