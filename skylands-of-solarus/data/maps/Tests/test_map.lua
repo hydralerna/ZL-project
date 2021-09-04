@@ -43,7 +43,7 @@ function map:on_draw(dst_surface)
     local x = row.start
     local width = row.stop - x + 1
     --surface:fill_color(LINE_COLOR, x, y, width, 20)
-    dst_surface:fill_color(LINE_COLOR, x, y, width, 20)
+    --dst_surface:fill_color(LINE_COLOR, x, y, width, 20)
   end
   ---------------------------
 
