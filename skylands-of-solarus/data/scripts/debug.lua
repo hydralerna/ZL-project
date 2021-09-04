@@ -11,7 +11,7 @@ end
 
 local console = require("scripts/console")
 local game_manager = require("scripts/game_manager")
-local statistics_manager = require("scripts/menus/statistics")
+-- local statistics_manager = require("scripts/menus/statistics")
 
 local debug = {}
 
@@ -101,13 +101,13 @@ function debug:on_key_pressed(key, modifiers)
         debug.normal_walking_speed = hero:get_walking_speed()
         hero:set_walking_speed(384)
       end
-    elseif key == "s" then
-      local statistics = statistics_manager:new(game)
-      game:set_suspended(true)
-      sol.menu.start(game, statistics)
-      function statistics:on_finished()
-        game:set_suspended(false)
-      end
+    --elseif key == "s" then
+      --local statistics = statistics_manager:new(game)
+      --game:set_suspended(true)
+      --sol.menu.start(game, statistics)
+      --function statistics:on_finished()
+       -- game:set_suspended(false)
+      --end
     else
       -- Not a known in-game debug key.
       handled = false
