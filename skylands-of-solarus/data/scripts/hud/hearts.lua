@@ -10,7 +10,7 @@ function hearts_builder:new(game, config)
     hearts.dst_x, hearts.dst_y = config.x, config.y
   end
 
-  hearts.surface = sol.surface.create(81, 18)
+  hearts.surface = sol.surface.create(100, 19)
   hearts.empty_heart_sprite = sol.sprite.create("hud/empty_heart")
   hearts.nb_max_hearts_displayed = game:get_max_life() / 4
   hearts.nb_current_hearts_displayed = game:get_life()
@@ -117,11 +117,11 @@ function hearts_builder:new(game, config)
 
     -- Display the hearts.
     for i = 0, hearts.nb_max_hearts_displayed - 1 do
-      local x, y = (i % 10) * 8, math.floor(i / 10) * 8
+      local x, y = (i % 10) * 10, math.floor(i / 10) * 10
       hearts.empty_heart_sprite:draw(hearts.surface, x, y)
       if i < math.floor(hearts.nb_current_hearts_displayed / 4) then
         -- This heart is full.
-        hearts.all_hearts_img:draw_region(27, 0, 9, 8, hearts.surface, x, y)
+        hearts.all_hearts_img:draw_region(27, 0, 9, 9, hearts.surface, x, y)
       end
     end
 
@@ -129,8 +129,8 @@ function hearts_builder:new(game, config)
     local i = math.floor(hearts.nb_current_hearts_displayed / 4)
     local remaining_fraction = hearts.nb_current_hearts_displayed % 4
     if remaining_fraction ~= 0 then
-      local x, y = (i % 10) * 8, math.floor(i / 10) * 8
-      hearts.all_hearts_img:draw_region((remaining_fraction - 1) * 9, 0, 9, 8, hearts.surface, x, y)
+      local x, y = (i % 10) * 10, math.floor(i / 10) * 10
+      hearts.all_hearts_img:draw_region((remaining_fraction - 1) * 9, 0, 9, 9, hearts.surface, x, y)
     end
   end
 
