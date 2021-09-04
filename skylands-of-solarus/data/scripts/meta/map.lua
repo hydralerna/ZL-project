@@ -10,6 +10,6 @@ require ("scripts/multi_events")
 map_meta:register_event("on_started", function(map)
 
   local camera = map:get_camera()
-  camera:set_position_on_screen(0, 16)
-  camera:set_size(208, 160)
+  camera:set_position_on_screen(72, 40)
+  camera:set_size(240, 160)
 end)
