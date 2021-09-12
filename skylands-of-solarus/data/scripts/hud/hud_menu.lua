@@ -26,10 +26,20 @@ function hud_menu_builder:new(game, config)
   hud_menu.surface_bot_left:fill_color(colors[hud_menu.choice])
   hud_menu.surface_top_right = sol.surface.create(48, 200)
   hud_menu.surface_top_right:fill_color(colors[hud_menu.choice])
+  hud_menu.submenus_icon_bg_sprite = sol.sprite.create("menus/pause/submenus_icon_bg")
+  hud_menu.inventory_icon = sol.surface.create("menus/pause/inventory_icon.png")
+  hud_menu.emoji_icon = sol.surface.create("menus/pause/emoji_icon.png")
 
+  -- 
   function hud_menu:check()
 
     local need_rebuild = false
+
+    --if game:is_paused() then
+    --    hud_menu.submenus_icon_bg_sprite:set_animation("activated")
+    --  else
+    --    hud_menu.submenus_icon_bg_sprite:set_animation("inactivated")
+    --end
 
     -- Redraw the surface only if something has changed.
     --if need_rebuild then
@@ -57,7 +67,6 @@ function hud_menu_builder:new(game, config)
 
   function hud_menu:on_draw(dst_surface)
 
-    --local sel_shader
     local xs = 8 -- x of slots
     local ys = 44 -- y of slots
     local x1 = 8
@@ -99,6 +108,10 @@ function hud_menu_builder:new(game, config)
         ys = ys + 16
       end
     end
+    hud_menu.submenus_icon_bg_sprite:draw(dst_surface, 32, 24)
+    hud_menu.submenus_icon_bg_sprite:draw(dst_surface, 352, 24)
+    hud_menu.inventory_icon:draw(dst_surface, 20, 13)
+    hud_menu.emoji_icon:draw(dst_surface, 340, 13)
   end
 
 
