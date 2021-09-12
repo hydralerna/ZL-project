@@ -23,14 +23,20 @@ local item_names_static = {
   --"drug"
 }
 
+
 function inventory_submenu:on_started()
 
   submenu.on_started(self)
-      
+
+  --print("inventory_submenu:on_started()")
+
   -- Set title
   self:set_title(sol.language.get_string("inventory.title"))
 
   self.cursor_sprite = sol.sprite.create("menus/pause/cursor")
+  self.arrow_top_sprite = sol.sprite.create("menus/pause/arrow_1")
+  self.arrow_top_sprite:set_direction(1)
+  self.arrow_top_sprite:set_animation("static")
   self.sprites_assignables = {}
   self.sprites_static = {}
   self.captions = {}
@@ -50,7 +56,17 @@ function inventory_submenu:on_started()
   local row = math.floor(index / 9)
   local column = index % 2
   self:set_cursor_position(row, column)
+  --TEST self:set_cursor_position(0, 1)
+
+  if self.cursor_row == 0 and self.cursor_column == 1 then
+    self.show_arrow = true
+  else
+    self.show_arrow = false
+  end
   
+  self.show_cursor = true
+
+
   -- Load Items
   for i,item_name in ipairs(item_names_assignable) do
     local item = self.game:get_item(item_name)
@@ -96,6 +112,8 @@ function inventory_submenu:on_draw(dst_surface)
 
   -- Draw the background.
   -- self:draw_background(dst_surface)
+  -- Draw the menu.
+  self:draw_menu(dst_surface)
   
   -- Draw the cursor caption.
   self:draw_caption(dst_surface)
@@ -171,7 +189,10 @@ function inventory_submenu:on_draw(dst_surface)
 
   -- Draw cursor only when the save dialog is not displayed.
   if not self.dialog_opened then
-    self.cursor_sprite:draw(dst_surface, menu_x + 8 + 16 * self.cursor_column, menu_y + 40 + 16 * self.cursor_row)
+    self.arrow_top_sprite:draw(dst_surface, 32, 42)
+    if self.show_cursor then
+      self.cursor_sprite:draw(dst_surface, menu_x + 8 + 16 * self.cursor_column, menu_y + 40 + 16 * self.cursor_row)
+    end
   end
 
   -- Draw the item being assigned if any.
@@ -206,40 +227,75 @@ function inventory_submenu:on_command_pressed(command)
         self:assign_item(2)
         handled = true
       end
-    elseif command == "left"  then
-      if self.cursor_column == 0 then
-        print("LEFT")
-        self:previous_submenu()
+    elseif command == "left" then
+      --TODO self:previous_submenu()
+      if self.show_cursor then
+        if submenu.sprite == 1 then
+          audio_manager:play_sound("menus/menu_cursor")
+          self:set_cursor_position(self.cursor_row, (self.cursor_column + 2) % 3)
+        end
       else
-        audio_manager:play_sound("menus/menu_cursor")
-        self:set_cursor_position(self.cursor_row, self.cursor_column - 1)
+        -- KO self:set_menu(submenu.sprite, "inactivated")
+        submenu.sprite = 1
+        audio_manager:play_sound("menus/solarus_logo")
+        -- KO self:set_menu(submenu.sprite, "appearing1")
+        self.arrow_top_sprite:set_animation("dynamic")
       end
       handled = true
 
-    elseif command == "right"  then
-      local limit = 2
-      if self.menu_ocarina == true and self.cursor_row == 0 then
-        limit = 6
-      end
-      if self.cursor_column == limit then
-        self:next_submenu()
+    elseif command == "right" then
+      -- TODO self.menu_ocarina
+      -- TODO self:next_submenu()
+      if self.show_cursor then
+        if submenu.sprite == 1 then
+          audio_manager:play_sound("menus/menu_cursor")
+          self:set_cursor_position(self.cursor_row, (self.cursor_column + 1) % 3)
+        end
       else
-        audio_manager:play_sound("menus/menu_cursor")
-        
-        self:set_cursor_position(self.cursor_row, self.cursor_column + 1)
+        -- KO self:set_menu(submenu.sprite, "inactivated")
+        submenu.sprite = 2
+        audio_manager:play_sound("menus/solarus_logo")
+        -- KO self:set_menu(submenu.sprite, "appearing1")
+        self.arrow_top_sprite:set_animation("static")
       end
       handled = true
 
-    elseif command == "up" and self.cursor_column < 10 then
-      audio_manager:play_sound("menus/menu_cursor")
-      self:set_cursor_position((self.cursor_row + 9) % 10, self.cursor_column)
+    elseif command == "up" then
+      if self.show_arrow then
+        audio_manager:play_sound("menus/solarus_logo")
+        self.arrow_top_sprite:set_direction(3)
+        self.show_cursor = false
+        self:set_menu(submenu.sprite, "appearing1")
+      else
+        if submenu.sprite == 1 then
+          audio_manager:play_sound("menus/menu_cursor")
+          self:set_cursor_position((self.cursor_row + 9) % 10, self.cursor_column)
+        end
+      end
       handled = true
 
-    elseif command == "down" and self.cursor_column < 10 then
+    elseif command == "down" then
       audio_manager:play_sound("menus/menu_cursor")
-      self:set_cursor_position((self.cursor_row + 1) % 10, self.cursor_column)
+      if self.show_cursor then
+        if submenu.sprite == 1 then
+          self:set_cursor_position((self.cursor_row + 1) % 10, self.cursor_column)
+        end
+      else
+        if submenu.sprite == 1 then
+          self.arrow_top_sprite:set_direction(1)
+          self.show_cursor = true
+          self:set_menu(submenu.sprite, "disappearing1")
+        end
+      end
       handled = true
 
+    end
+    if self.cursor_row == 0 and self.cursor_column == 1 and submenu.sprite == 1 then
+      self.arrow_top_sprite:set_animation("dynamic")
+      self.show_arrow = true
+    else
+      self.arrow_top_sprite:set_animation("static")
+      self.show_arrow = false
     end
   end
 
