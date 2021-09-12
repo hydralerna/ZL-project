@@ -7,6 +7,9 @@ local language_manager = require("scripts/language_manager")
 local text_fx_helper = require("scripts/text_fx_helper")
 local audio_manager = require("scripts/audio_manager")
 
+local submenus_icon_bg_sprites = {"submenu.submenus_icon_bg_sprite1", "submenu.submenus_icon_bg_sprite2"}
+
+
 function submenu:new(game)
   local o = { game = game }
   setmetatable(o, self)
@@ -15,6 +18,35 @@ function submenu:new(game)
 end
 
 function submenu:on_started()
+
+    submenu.sprite = 1
+    submenu.animation = ""
+    submenu.choice = self.game:get_value("hud")
+    local colors = {{15, 31, 31}, { 48, 111, 80 }, {143, 192, 112}, { 224, 255, 208 }}
+    -- submenu.dst_x, submenu.dst_y = config.x, config.y
+    submenu.dst_x, submenu.dst_y = 0, 0
+    submenu.dst_w, submenu.dst_h = sol.video.get_quest_size()
+    submenu.camera_w = 240
+    submenu.camera_h = 160
+    submenu.tile = 8
+    submenu.left_w = (submenu.dst_w - submenu.camera_w) / 2
+    -- Creation of surfaces
+    local file = "hud/menu_" .. submenu.choice .. ".png"
+    submenu.img = sol.surface.create(file)
+    submenu.surface = sol.surface.create(submenu.dst_w, submenu.dst_h)
+    submenu.surface_top_left = sol.surface.create(48, 44)
+    submenu.surface_top_left:fill_color(colors[submenu.choice])
+    submenu.surface_bot_left = sol.surface.create(48, 4)
+    submenu.surface_bot_left:fill_color(colors[submenu.choice])
+    submenu.surface_top_right = sol.surface.create(48, 200)
+    submenu.surface_top_right:fill_color(colors[submenu.choice])
+    submenus_icon_bg_sprites[1] = sol.sprite.create("menus/pause/submenus_icon_bg")
+    submenus_icon_bg_sprites[1]:set_animation("activated")
+    submenus_icon_bg_sprites[2] = sol.sprite.create("menus/pause/submenus_icon_bg")
+    submenus_icon_bg_sprites[2]:set_animation("inactivated")
+    submenu.inventory_icon = sol.surface.create("menus/pause/inventory_icon.png")
+    submenu.emoji_icon = sol.surface.create("menus/pause/emoji_icon.png")
+
   -- Fix the font shift (issue with some fonts)
   self.font_y_shift = 0
   
@@ -131,8 +163,10 @@ function submenu:draw_caption(dst_surface)
     local center_x, center_y = width / 2, height / 2
 
     -- Draw caption frame.
-    local caption_x, caption_y = center_x - self.caption_background_w / 2, center_y + self.height / 2 - self.caption_background_h
-    caption_y = math.min(caption_y, height - 8 - self.caption_background_h)
+    -- local caption_x, caption_y = center_x - self.caption_background_w / 2, center_y + self.height / 2 - self.caption_background_h
+    local caption_x = center_x - self.caption_background_w / 2
+    local caption_y = height - self.caption_background_h - 16 
+    -- caption_y = math.min(caption_y, height - 8 - self.caption_background_h)
     self.caption_background:draw(dst_surface, caption_x, caption_y)
     local caption_center_y = caption_y + self.caption_background_h / 2
 
@@ -286,6 +320,91 @@ function submenu:draw_background(dst_surface)
       title_x + title_w + arrow_spacing, title_y + arrow_y_shift)
   end
 end
+
+
+
+function submenu:set_menu(sprite, animation)
+
+  if animation == nil or animation == "" then
+    animation = "transition"
+    submenu.animation = "transition"
+  end
+  if animation ~= submenu.animation then
+    if animation == "appearing1" then
+      submenu.animation = "selected"
+      submenus_icon_bg_sprites[sprite]:set_animation("appearing1", function()
+        submenus_icon_bg_sprites[sprite]:set_animation(submenu.animation)
+        submenu.set_menu(sprite, submenu.animation)
+      end)
+    elseif animation == "disappearing1" then
+      submenu.animation = "activated"
+      submenus_icon_bg_sprites[sprite]:set_animation("disappearing1", function()
+        submenus_icon_bg_sprites[sprite]:set_animation(submenu.animation)
+        submenu.set_menu(sprite, submenu.animation)
+      end)
+    else
+      submenu.animation = animation
+      submenus_icon_bg_sprites[sprite]:set_animation(submenu.animation, animation)
+    end
+  end
+end
+
+
+
+function submenu:draw_menu(dst_surface)
+  local sprite1 = 1
+  local sprite2 = 2 
+  if submenu.sprite == 2 then
+    sprite1 = 2
+    sprite2 = 1
+  end
+  local xs = 8 -- x of slots
+  local ys = 44 -- y of slots
+  local x1 = 8
+  local x6 = 328
+  local y1 = 8
+  while y1 < 208 do
+    submenu.img:draw_region(0, 8, 8, 8, dst_surface, 0, y1)
+    submenu.img:draw_region(8, 0, 8, 8, dst_surface, 56, y1)
+    submenu.img:draw_region(0, 8, 8, 8, dst_surface, 320, y1)
+    submenu.img:draw_region(8, 0, 8, 8, dst_surface, 376, y1)
+    y1 = y1 + submenu.tile
+  end
+  submenu.img:draw_region(48, 0, 8, 8, dst_surface, 0, 0)
+  submenu.img:draw_region(56, 0, 8, 8, dst_surface, 56, 0)
+  submenu.img:draw_region(64, 0, 8, 8, dst_surface, 320, 0)
+  submenu.img:draw_region(72, 0, 8, 8, dst_surface, 376, 0)
+  while x1 < 56 do
+    submenu.img:draw_region(0, 0, 8, 8, dst_surface, x1, 0)
+    submenu.img:draw_region(8, 8, 8, 8, dst_surface, x1, 208)
+    x1 = x1 + submenu.tile
+  end
+  while x6 < 376 do
+    submenu.img:draw_region(0, 0, 8, 8, dst_surface, x6, 0)
+    submenu.img:draw_region(8, 8, 8, 8, dst_surface, x6, 208)
+    x6 = x6 + submenu.tile
+  end
+  submenu.img:draw_region(48, 8, 8, 8, dst_surface, 0, 208)
+  submenu.img:draw_region(56, 8, 8, 8, dst_surface, 56, 208)
+  submenu.img:draw_region(64, 8, 8, 8, dst_surface, 320, 208)
+  submenu.img:draw_region(72, 8, 8, 8, dst_surface, 376, 208)
+  submenu.surface_top_left:draw(dst_surface, 8, 8)
+  submenu.surface_bot_left:draw(dst_surface, 8, 204)
+  submenu.surface_top_right:draw(dst_surface, 328, 8)
+  while xs < 48 and ys < 204 do
+    submenu.img:draw_region(0, 16, 16, 16, dst_surface, xs, ys)
+    xs = xs + 16
+    if xs % 48 == 8 then
+    xs = 8
+    ys = ys + 16
+    end
+  end
+  submenus_icon_bg_sprites[sprite1]:draw(dst_surface, 32, 24)
+  submenus_icon_bg_sprites[sprite2]:draw(dst_surface, 352, 24)
+  submenu.inventory_icon:draw(dst_surface, 20, 13)
+  submenu.emoji_icon:draw(dst_surface, 340, 13)
+end
+
 
 function submenu:set_title(text)
   if text ~= self.title then
