@@ -125,6 +125,10 @@ sprite{ id = "hud/icon_item_1", description = "hud/icon_item_1" }
 sprite{ id = "hud/icon_item_2", description = "hud/icon_item_2" }
 sprite{ id = "hud/icon_pause", description = "hud/icon_pause" }
 sprite{ id = "menus/menu_tabs", description = "menus/menu_tabs" }
+sprite{ id = "menus/pause/arrow" }
+sprite{ id = "menus/pause/arrow_1" }
+sprite{ id = "menus/pause/cursor" }
+sprite{ id = "menus/pause/submenus_icon_bg" }
 sprite{ id = "menus/solarus_logo/solarus_logo", description = "menus/solarus_logo/solarus_logo" }
 sprite{ id = "menus/title_screen/sword", description = "menus/title_screen/sword" }
 sprite{ id = "npc/fool" }
@@ -516,6 +520,7 @@ file{ path = "scripts/hud/hud_bg.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "scripts/hud/hud_config.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/hud/hud_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/hud/hud_menu.lua", author = "froggy77", license = "GPL v3" }
+file{ path = "scripts/hud/hud_menu_OLD.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "scripts/hud/item_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/hud/money.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/hud/pause_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
@@ -530,6 +535,7 @@ file{ path = "scripts/menus/palette_menu.lua", author = "froggy77, llamazing", l
 file{ path = "scripts/menus/pause/pause.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/pause/pause_inventory.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/pause/pause_submenu.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/menus/pause/pause_submenu_OLD.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/solarus_logo.lua", author = "Maxs, Alex Gleason, froggy77", license = "GPL v3" }
 file{ path = "scripts/menus/start_game.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/sword_menu.lua", author = "froggy77 (just a test)", license = "GPL v3" }
