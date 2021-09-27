@@ -8,7 +8,7 @@ local hud_bg_builder = {}
 function hud_bg_builder:new(game, config)
 
   local hud_bg = {}
-  hud_bg.choice = game:get_value("hud")
+  hud_bg.color = game:get_value("color") or 1
   local colors = {{15, 31, 31}, { 48, 111, 80 }, {143, 192, 112}, { 224, 255, 208 }}
   hud_bg.dst_x, hud_bg.dst_y = config.x, config.y
   hud_bg.dst_w, hud_bg.dst_h = sol.video.get_quest_size()
@@ -25,12 +25,12 @@ function hud_bg_builder:new(game, config)
   hud_bg.y3 = hud_bg.top_h + hud_bg.camera_h
   hud_bg.y4 = hud_bg.top_h + hud_bg.camera_h + hud_bg.tile
   -- Creation of surfaces
-  local file = "hud/bg_" .. hud_bg.choice .. ".png"
+  local file = "hud/bg_" .. hud_bg.color .. ".png"
   hud_bg.img = sol.surface.create(file)
   hud_bg.surface_top = sol.surface.create(hud_bg.camera_w, hud_bg.top_h - hud_bg.tile)
-  hud_bg.surface_top:fill_color(colors[hud_bg.choice])
+  hud_bg.surface_top:fill_color(colors[hud_bg.color])
   hud_bg.surface_bot = sol.surface.create(hud_bg.camera_w, hud_bg.bot_h - hud_bg.tile)
-  hud_bg.surface_bot:fill_color(colors[hud_bg.choice])
+  hud_bg.surface_bot:fill_color(colors[hud_bg.color])
   hud_bg.surface = sol.surface.create(hud_bg.dst_w, hud_bg.dst_h)
 
 
