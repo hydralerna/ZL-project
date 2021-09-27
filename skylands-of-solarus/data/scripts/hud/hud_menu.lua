@@ -8,7 +8,7 @@ local hud_menu_builder = {}
 function hud_menu_builder:new(game, config)
 
   local hud_menu = {}
-  hud_menu.choice = game:get_value("hud")
+  hud_menu.color = game:get_value("color") or 1
   local colors = {{15, 31, 31}, { 48, 111, 80 }, {143, 192, 112}, { 224, 255, 208 }}
   hud_menu.dst_x, hud_menu.dst_y = config.x, config.y
   hud_menu.dst_w, hud_menu.dst_h = sol.video.get_quest_size()
@@ -17,16 +17,17 @@ function hud_menu_builder:new(game, config)
   hud_menu.tile = 8
   hud_menu.left_w = (hud_menu.dst_w - hud_menu.camera_w) / 2
   -- Creation of surfaces
-  local file = "hud/menu_" .. hud_menu.choice .. ".png"
+  local file = "hud/menu_" .. hud_menu.color .. ".png"
   hud_menu.img = sol.surface.create(file)
   hud_menu.surface = sol.surface.create(hud_menu.dst_w, hud_menu.dst_h)
-  hud_menu.surface_top_left = sol.surface.create(48, 44)
-  hud_menu.surface_top_left:fill_color(colors[hud_menu.choice])
-  hud_menu.surface_bot_left = sol.surface.create(48, 4)
-  hud_menu.surface_bot_left:fill_color(colors[hud_menu.choice])
-  hud_menu.surface_top_right = sol.surface.create(48, 200)
-  hud_menu.surface_top_right:fill_color(colors[hud_menu.choice])
+  hud_menu.surface_top = sol.surface.create(48, 44)
+  hud_menu.surface_top:fill_color(colors[hud_menu.color])
+  hud_menu.surface_mid = sol.surface.create(48, 48)
+  hud_menu.surface_mid:fill_color(colors[hud_menu.color])
+  hud_menu.surface_bot = sol.surface.create(48, 4)
+  hud_menu.surface_bot:fill_color(colors[hud_menu.color])
   hud_menu.submenus_icon_bg_sprite = sol.sprite.create("menus/pause/submenus_icon_bg")
+  hud_menu.submenus_icon_bg_sprite:set_animation("idle")
   hud_menu.inventory_icon = sol.surface.create("menus/pause/inventory_icon.png")
   hud_menu.emoji_icon = sol.surface.create("menus/pause/emoji_icon.png")
 
@@ -67,8 +68,6 @@ function hud_menu_builder:new(game, config)
 
   function hud_menu:on_draw(dst_surface)
 
-    local xs = 8 -- x of slots
-    local ys = 44 -- y of slots
     local x1 = 8
     local x6 = 328
     local y1 = 8
@@ -97,17 +96,30 @@ function hud_menu_builder:new(game, config)
     hud_menu.img:draw_region(56, 8, 8, 8, dst_surface, 56, 208)
     hud_menu.img:draw_region(64, 8, 8, 8, dst_surface, 320, 208)
     hud_menu.img:draw_region(72, 8, 8, 8, dst_surface, 376, 208)
-    hud_menu.surface_top_left:draw(dst_surface, 8, 8)
-    hud_menu.surface_bot_left:draw(dst_surface, 8, 204)
-    hud_menu.surface_top_right:draw(dst_surface, 328, 8)
-    while xs < 48 and ys < 204 do
-      hud_menu.img:draw_region(0, 16, 16, 16, dst_surface, xs, ys)
-      xs = xs + 16
-      if xs % 48 == 8 then
-        xs = 8
-        ys = ys + 16
+    -- Left
+    hud_menu.surface_top:draw(dst_surface, 8, 8)
+    hud_menu.surface_bot:draw(dst_surface, 8, 204)
+    -- Right
+    hud_menu.surface_top:draw(dst_surface, 328, 8)
+    hud_menu.surface_mid:draw(dst_surface, 328, 108)
+    hud_menu.surface_bot:draw(dst_surface, 328, 204)
+
+    -- Slots
+    for ys1 = 44, 188, 16 do
+      for xs1 = 8, 40, 16 do
+        hud_menu.img:draw_region(0, 16, 16, 16, dst_surface, xs1, ys1)
+        xs1 = xs1 + 16
       end
     end
+    for ys2 = 44, 188, 16 do
+      for xs2 = 328, 360, 16 do
+        if ys2 < 108 or ys2 > 140 then
+          hud_menu.img:draw_region(0, 16, 16, 16, dst_surface, xs2, ys2)
+        end
+        xs2 = xs2 + 16
+      end
+    end
+    --
     hud_menu.submenus_icon_bg_sprite:draw(dst_surface, 32, 24)
     hud_menu.submenus_icon_bg_sprite:draw(dst_surface, 352, 24)
     hud_menu.inventory_icon:draw(dst_surface, 20, 13)
