@@ -218,11 +218,11 @@ function palette_menu:on_draw(dst_surface)
     end
   end
 
-  self.menus_img:draw_region(48, 0, 8, 8, dst_surface, 8, 16)
-  self.menus_img:draw_region(56, 0, 8, 8, dst_surface, 192, 16)
+  --self.menus_img:draw_region(48, 0, 8, 8, dst_surface, 8, 16)
+  --self.menus_img:draw_region(56, 0, 8, 8, dst_surface, 192, 16)
 
-  self.menus_img:draw_region(48, 8, 8, 8, dst_surface, 8, 176)
-  self.menus_img:draw_region(56, 8, 8, 8, dst_surface, 192, 176)
+  --self.menus_img:draw_region(48, 8, 8, 8, dst_surface, 8, 176)
+  --self.menus_img:draw_region(56, 8, 8, 8, dst_surface, 192, 176)
   local borders_x = 16
   while borders_x  < (self.surface_w - 16) do
    self.menus_img:draw_region(0, 0, 8, 8, dst_surface, borders_x, 16)
@@ -236,51 +236,51 @@ function palette_menu:on_draw(dst_surface)
    self.menus_img:draw_region(8, 0, 8, 8, dst_surface, self.surface_w - 16, borders_y)
    borders_y = borders_y + 8
   end
-  self.menus_img:draw_region(16, 8, 8, 8, dst_surface, 8, 40)
-  self.menus_img:draw_region(24, 0, 8, 8, dst_surface, 192, 40)
+  --self.menus_img:draw_region(16, 8, 8, 8, dst_surface, 8, 40)
+  --self.menus_img:draw_region(24, 0, 8, 8, dst_surface, 192, 40)
 
 
 
-  self.info_surface:draw(dst_surface, 16, 152)
+  --self.info_surface:draw(dst_surface, 16, 152)
 
-  self.info_surface:fill_color(self.palette_array[self.palette_k][1], 6, 5, 41, 14)
-  self.info_surface:fill_color(self.palette_array[self.palette_k][2], 47, 5, 41, 14)
-  self.info_surface:fill_color(self.palette_array[self.palette_k][3], 88, 5, 41, 14)
-  self.info_surface:fill_color(self.palette_array[self.palette_k][4], 129, 5, 41, 14)
+  --self.info_surface:fill_color(self.palette_array[self.palette_k][1], 6, 5, 41, 14)
+  --self.info_surface:fill_color(self.palette_array[self.palette_k][2], 47, 5, 41, 14)
+  --self.info_surface:fill_color(self.palette_array[self.palette_k][3], 88, 5, 41, 14)
+  --self.info_surface:fill_color(self.palette_array[self.palette_k][4], 129, 5, 41, 14)
 
-  self.title_surface:draw(dst_surface, self.text_position_x, 24)
-  self.title_surface:fill_color(self.palette_array[self.active_palette_k][3])
-  --self.title_surface:clear()
-  text_fx_helper:draw_text(self.title_surface, self.text_surface)
+  --self.title_surface:draw(dst_surface, self.text_position_x, 24)
+  --self.title_surface:fill_color(self.palette_array[self.active_palette_k][3])
+  ----self.title_surface:clear()
+  --text_fx_helper:draw_text(self.title_surface, self.text_surface)
 
 
 
-  self.palette_surface:draw(dst_surface, 16, 48)
+  --self.palette_surface:draw(dst_surface, 16, 48)
 
-  self.offset_y = 5
-  self.id_surface:draw(dst_surface, 20, 156)
-  if self.palette_k < 8 then
-     self.k = 32
-  else
-    self.k = math.floor(self.palette_k / 8) * 8
-  end
-  for i=1, 8 do
-    if self.k == self.palette_k then
-      self.palette_surface:fill_color({255, 255, 255, 255}, 3, self.offset_y - 2, 68, 12)
-      self.palette_surface:fill_color({0, 0, 0, 255}, 4, self.offset_y - 1, 66, 10)
-    else
-      self.palette_surface:fill_color({0, 0, 0, 255}, 3, self.offset_y - 2, 68, 12)
-      if self.k == self.active_palette_k then
-        self.palette_surface:fill_color({255, 255, 255, 255}, 3, self.offset_y - 2, 68, 12)
-      end
-    end
-    self.palette_surface:fill_color(self.palette_array[self.k][1], 5, self.offset_y, 16, 8)
-    self.palette_surface:fill_color(self.palette_array[self.k][2], 21, self.offset_y, 16, 8)
-    self.palette_surface:fill_color(self.palette_array[self.k][3], 37, self.offset_y, 16, 8)
-    self.palette_surface:fill_color(self.palette_array[self.k][4], 53, self.offset_y, 16, 8)
-    self.k = ring_next(1, self.palette_h, self.k, false)
-    self.offset_y = self.offset_y + 12
-  end
+  --self.offset_y = 5
+  --self.id_surface:draw(dst_surface, 20, 156)
+  --if self.palette_k < 8 then
+  --   self.k = 32
+  --else
+  --  self.k = math.floor(self.palette_k / 8) * 8
+  --end
+  --for i=1, 8 do
+  --  if self.k == self.palette_k then
+  --    self.palette_surface:fill_color({255, 255, 255, 255}, 3, self.offset_y - 2, 68, 12)
+  --    self.palette_surface:fill_color({0, 0, 0, 255}, 4, self.offset_y - 1, 66, 10)
+  --  else
+  --    self.palette_surface:fill_color({0, 0, 0, 255}, 3, self.offset_y - 2, 68, 12)
+  --    if self.k == self.active_palette_k then
+  --      self.palette_surface:fill_color({255, 255, 255, 255}, 3, self.offset_y - 2, 68, 12)
+  --    end
+  --  end
+    --self.palette_surface:fill_color(self.palette_array[self.k][1], 5, self.offset_y, 16, 8)
+    --self.palette_surface:fill_color(self.palette_array[self.k][2], 21, self.offset_y, 16, 8)
+    --self.palette_surface:fill_color(self.palette_array[self.k][3], 37, self.offset_y, 16, 8)
+    --self.palette_surface:fill_color(self.palette_array[self.k][4], 53, self.offset_y, 16, 8)
+    --self.k = ring_next(1, self.palette_h, self.k, false)
+    --self.offset_y = self.offset_y + 12
+  --end
   -- self.id_surface:fill_color({255, 0, 255, 255})
 
   self.id_surface:clear()
