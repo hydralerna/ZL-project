@@ -8,7 +8,7 @@ local text_fx_helper = require("scripts/text_fx_helper")
 local audio_manager = require("scripts/audio_manager")
 
 local submenus_icon_bg_sprites = {"submenu.submenus_icon_bg_sprite1", "submenu.submenus_icon_bg_sprite2"}
-
+local submenus_icon_bg_animations = {"activated", "inactivated"}
 
 function submenu:new(game)
   local o = { game = game }
@@ -19,9 +19,8 @@ end
 
 function submenu:on_started()
 
-    submenu.sprite = 1
-    submenu.animation = ""
-    submenu.choice = self.game:get_value("hud")
+    submenu.color = self.game:get_value("color") or 1
+    submenu.sprite = self.game:get_value("submenu_bg_icon_sprite") or 1
     local colors = {{15, 31, 31}, { 48, 111, 80 }, {143, 192, 112}, { 224, 255, 208 }}
     -- submenu.dst_x, submenu.dst_y = config.x, config.y
     submenu.dst_x, submenu.dst_y = 0, 0
@@ -31,19 +30,19 @@ function submenu:on_started()
     submenu.tile = 8
     submenu.left_w = (submenu.dst_w - submenu.camera_w) / 2
     -- Creation of surfaces
-    local file = "hud/menu_" .. submenu.choice .. ".png"
+    local file = "hud/menu_" .. submenu.color .. ".png"
     submenu.img = sol.surface.create(file)
     submenu.surface = sol.surface.create(submenu.dst_w, submenu.dst_h)
-    submenu.surface_top_left = sol.surface.create(48, 44)
-    submenu.surface_top_left:fill_color(colors[submenu.choice])
-    submenu.surface_bot_left = sol.surface.create(48, 4)
-    submenu.surface_bot_left:fill_color(colors[submenu.choice])
-    submenu.surface_top_right = sol.surface.create(48, 200)
-    submenu.surface_top_right:fill_color(colors[submenu.choice])
+    submenu.surface_top = sol.surface.create(48, 44)
+    submenu.surface_top:fill_color(colors[submenu.color])
+    submenu.surface_mid = sol.surface.create(48, 48)
+    submenu.surface_mid:fill_color(colors[submenu.color])
+    submenu.surface_bot = sol.surface.create(48, 4)
+    submenu.surface_bot:fill_color(colors[submenu.color])
     submenus_icon_bg_sprites[1] = sol.sprite.create("menus/pause/submenus_icon_bg")
-    submenus_icon_bg_sprites[1]:set_animation("activated")
+    submenus_icon_bg_sprites[1]:set_animation(submenus_icon_bg_animations[1])
     submenus_icon_bg_sprites[2] = sol.sprite.create("menus/pause/submenus_icon_bg")
-    submenus_icon_bg_sprites[2]:set_animation("inactivated")
+    submenus_icon_bg_sprites[2]:set_animation(submenus_icon_bg_animations[2])
     submenu.inventory_icon = sol.surface.create("menus/pause/inventory_icon.png")
     submenu.emoji_icon = sol.surface.create("menus/pause/emoji_icon.png")
 
@@ -277,7 +276,9 @@ function submenu:on_command_pressed(command)
   return handled
 end
 
+
 function submenu:draw_background(dst_surface)
+
   local width, height = dst_surface:get_size()
   local center_x = width / 2
   local center_y = height / 2
@@ -323,28 +324,36 @@ end
 
 
 
-function submenu:set_menu(sprite, animation)
+function submenu:set_bg_icon(sprite, animation)
 
   if animation == nil or animation == "" then
     animation = "transition"
-    submenu.animation = "transition"
+    submenus_icon_bg_animations[sprite] = "transition"
   end
-  if animation ~= submenu.animation then
+  if animation ~= submenus_icon_bg_animations[sprite] then
     if animation == "appearing1" then
-      submenu.animation = "selected"
+      submenus_icon_bg_animations[sprite] = "selected"
       submenus_icon_bg_sprites[sprite]:set_animation("appearing1", function()
-        submenus_icon_bg_sprites[sprite]:set_animation(submenu.animation)
-        submenu.set_menu(sprite, submenu.animation)
+        submenus_icon_bg_sprites[sprite]:set_animation(submenus_icon_bg_animations[sprite])
       end)
     elseif animation == "disappearing1" then
-      submenu.animation = "activated"
+      submenus_icon_bg_animations[sprite] = "activated"
       submenus_icon_bg_sprites[sprite]:set_animation("disappearing1", function()
-        submenus_icon_bg_sprites[sprite]:set_animation(submenu.animation)
-        submenu.set_menu(sprite, submenu.animation)
+        submenus_icon_bg_sprites[sprite]:set_animation(submenus_icon_bg_animations[sprite])
+      end)
+    elseif animation == "appearing2" then
+      submenus_icon_bg_animations[sprite] = "selected"
+      submenus_icon_bg_sprites[sprite]:set_animation("appearing2", function()
+        submenus_icon_bg_sprites[sprite]:set_animation(submenus_icon_bg_animations[sprite])
+      end)
+    elseif animation == "disappearing2" then
+      submenus_icon_bg_animations[sprite] = "inactivated"
+      submenus_icon_bg_sprites[sprite]:set_animation("disappearing2", function()
+        submenus_icon_bg_sprites[sprite]:set_animation(submenus_icon_bg_animations[sprite])
       end)
     else
-      submenu.animation = animation
-      submenus_icon_bg_sprites[sprite]:set_animation(submenu.animation, animation)
+      submenus_icon_bg_animations[sprite] = animation
+      submenus_icon_bg_sprites[sprite]:set_animation(submenus_icon_bg_animations[sprite])
     end
   end
 end
@@ -352,14 +361,7 @@ end
 
 
 function submenu:draw_menu(dst_surface)
-  local sprite1 = 1
-  local sprite2 = 2 
-  if submenu.sprite == 2 then
-    sprite1 = 2
-    sprite2 = 1
-  end
-  local xs = 8 -- x of slots
-  local ys = 44 -- y of slots
+
   local x1 = 8
   local x6 = 328
   local y1 = 8
@@ -388,19 +390,31 @@ function submenu:draw_menu(dst_surface)
   submenu.img:draw_region(56, 8, 8, 8, dst_surface, 56, 208)
   submenu.img:draw_region(64, 8, 8, 8, dst_surface, 320, 208)
   submenu.img:draw_region(72, 8, 8, 8, dst_surface, 376, 208)
-  submenu.surface_top_left:draw(dst_surface, 8, 8)
-  submenu.surface_bot_left:draw(dst_surface, 8, 204)
-  submenu.surface_top_right:draw(dst_surface, 328, 8)
-  while xs < 48 and ys < 204 do
-    submenu.img:draw_region(0, 16, 16, 16, dst_surface, xs, ys)
-    xs = xs + 16
-    if xs % 48 == 8 then
-    xs = 8
-    ys = ys + 16
+  -- Left
+  submenu.surface_top:draw(dst_surface, 8, 8)
+  submenu.surface_bot:draw(dst_surface, 8, 204)
+  -- Right
+  submenu.surface_top:draw(dst_surface, 328, 8)
+  submenu.surface_mid:draw(dst_surface, 328, 108)
+  submenu.surface_bot:draw(dst_surface, 328, 204)
+  -- Slots
+  for ys1 = 44, 188, 16 do
+    for xs1 = 8, 40, 16 do
+      submenu.img:draw_region(0, 16, 16, 16, dst_surface, xs1, ys1)
+      xs1 = xs1 + 16
     end
   end
-  submenus_icon_bg_sprites[sprite1]:draw(dst_surface, 32, 24)
-  submenus_icon_bg_sprites[sprite2]:draw(dst_surface, 352, 24)
+  for ys2 = 44, 188, 16 do
+    for xs2 = 328, 360, 16 do
+      if ys2 < 108 or ys2 > 140 then
+        submenu.img:draw_region(0, 16, 16, 16, dst_surface, xs2, ys2)
+      end
+      xs2 = xs2 + 16
+    end
+  end
+  --
+  submenus_icon_bg_sprites[1]:draw(dst_surface, 32, 24)
+  submenus_icon_bg_sprites[2]:draw(dst_surface, 352, 24)
   submenu.inventory_icon:draw(dst_surface, 20, 13)
   submenu.emoji_icon:draw(dst_surface, 340, 13)
 end
