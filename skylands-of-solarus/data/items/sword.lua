@@ -1,6 +1,7 @@
 -- Lua script of item "sword".
 -- This script is executed only once for the whole game.
 
+
 -- Variables
 local item = ...
 
