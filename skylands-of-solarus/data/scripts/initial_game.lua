@@ -16,6 +16,7 @@ function initial_game:initialize_new_savegame(game)
   -- and the starting location.
   game:set_starting_location("Tests/test_map", nil)  -- Starting location.
 
+  game:set_value("mode", "gb")
   game:set_value("color", 1)
   game:set_value("submenu_bg_icon_sprite", 1)
   game:set_value("cursor_row", 0)
