@@ -26,10 +26,10 @@ function hud_menu_builder:new(game, config)
   hud_menu.surface_mid:fill_color(colors[hud_menu.color])
   hud_menu.surface_bot = sol.surface.create(48, 4)
   hud_menu.surface_bot:fill_color(colors[hud_menu.color])
-  hud_menu.submenus_icon_bg_sprite = sol.sprite.create("menus/pause/submenus_icon_bg")
+  hud_menu.submenus_icon_bg_sprite = sol.sprite.create("menus/pause/submenus_icon_bg_" .. hud_menu.color)
   hud_menu.submenus_icon_bg_sprite:set_animation("idle")
-  hud_menu.inventory_icon = sol.surface.create("menus/pause/inventory_icon.png")
-  hud_menu.emoji_icon = sol.surface.create("menus/pause/emoji_icon.png")
+  hud_menu.inventory_icon = sol.surface.create("menus/pause/inventory_icon_".. hud_menu.color .. ".png")
+  hud_menu.emoji_icon = sol.surface.create("menus/pause/emoji_icon_".. hud_menu.color .. ".png")
 
   -- 
   function hud_menu:check()
