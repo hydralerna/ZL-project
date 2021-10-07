@@ -33,10 +33,10 @@ function inventory_submenu:on_started()
   -- Set title
   self:set_title(sol.language.get_string("inventory.title"))
 
-  self.cursor_sprite1 = sol.sprite.create("menus/pause/cursor")
-  self.cursor_sprite2 = sol.sprite.create("menus/pause/cursor")
-  self.arrow_sprite1 = sol.sprite.create("menus/pause/arrow_1")
-  self.arrow_sprite2 = sol.sprite.create("menus/pause/arrow_1")
+  self.cursor_sprite1 = sol.sprite.create("menus/pause/cursor_"  .. submenu.color)
+  self.cursor_sprite2 = sol.sprite.create("menus/pause/cursor_"  .. submenu.color)
+  self.arrow_sprite1 = sol.sprite.create("menus/pause/arrow_"  .. submenu.color)
+  self.arrow_sprite2 = sol.sprite.create("menus/pause/arrow_" .. submenu.color)
 
   self.sprites_assignables = {}
   self.sprites_static = {}
