@@ -12,6 +12,7 @@ tileset{ id = "dungeon/d_fc_trv_carpets_01" }
 tileset{ id = "dungeon/d_fc_trv_entrances_01" }
 tileset{ id = "dungeon/d_fc_trv_entrances_02a" }
 tileset{ id = "dungeon/d_fc_trv_floors_01" }
+tileset{ id = "dungeon/d_fc_trv_floors_02" }
 tileset{ id = "dungeon/d_fc_trv_halo_01" }
 tileset{ id = "dungeon/d_fc_trv_pavement_01" }
 tileset{ id = "dungeon/d_fc_trv_pavement_02" }
@@ -125,12 +126,16 @@ sprite{ id = "hud/icon_item_1", description = "hud/icon_item_1" }
 sprite{ id = "hud/icon_item_2", description = "hud/icon_item_2" }
 sprite{ id = "hud/icon_pause", description = "hud/icon_pause" }
 sprite{ id = "menus/menu_tabs", description = "menus/menu_tabs" }
-sprite{ id = "menus/pause/arrow" }
 sprite{ id = "menus/pause/arrow_1" }
-sprite{ id = "menus/pause/cursor" }
-sprite{ id = "menus/pause/submenus_icon_bg" }
-sprite{ id = "menus/solarus_logo/solarus_logo", description = "menus/solarus_logo/solarus_logo" }
-sprite{ id = "menus/title_screen/sword", description = "menus/title_screen/sword" }
+sprite{ id = "menus/pause/arrow_2" }
+sprite{ id = "menus/pause/arrow_3" }
+sprite{ id = "menus/pause/arrow_4" }
+sprite{ id = "menus/pause/cursor_1" }
+sprite{ id = "menus/pause/cursor_4" }
+sprite{ id = "menus/pause/submenus_icon_bg_1" }
+sprite{ id = "menus/pause/submenus_icon_bg_4" }
+sprite{ id = "menus/solarus_logo/solarus_logo" }
+sprite{ id = "menus/title_screen/sword" }
 sprite{ id = "npc/fool" }
 sprite{ id = "npc/kaepora_gaebora" }
 sprite{ id = "npc/mister_time" }
