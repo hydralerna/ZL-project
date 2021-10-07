@@ -19,9 +19,9 @@ end
 
 function submenu:on_started()
 
+    local colors = {{15, 31, 31}, { 48, 111, 80 }, {143, 192, 112}, { 224, 255, 208 }}
     submenu.color = self.game:get_value("color") or 1
     submenu.sprite = self.game:get_value("submenu_bg_icon_sprite") or 1
-    local colors = {{15, 31, 31}, { 48, 111, 80 }, {143, 192, 112}, { 224, 255, 208 }}
     -- submenu.dst_x, submenu.dst_y = config.x, config.y
     submenu.dst_x, submenu.dst_y = 0, 0
     submenu.dst_w, submenu.dst_h = sol.video.get_quest_size()
@@ -39,12 +39,12 @@ function submenu:on_started()
     submenu.surface_mid:fill_color(colors[submenu.color])
     submenu.surface_bot = sol.surface.create(48, 4)
     submenu.surface_bot:fill_color(colors[submenu.color])
-    submenus_icon_bg_sprites[1] = sol.sprite.create("menus/pause/submenus_icon_bg")
+    submenus_icon_bg_sprites[1] = sol.sprite.create("menus/pause/submenus_icon_bg_" .. submenu.color)
     submenus_icon_bg_sprites[1]:set_animation(submenus_icon_bg_animations[1])
-    submenus_icon_bg_sprites[2] = sol.sprite.create("menus/pause/submenus_icon_bg")
+    submenus_icon_bg_sprites[2] = sol.sprite.create("menus/pause/submenus_icon_bg_" .. submenu.color)
     submenus_icon_bg_sprites[2]:set_animation(submenus_icon_bg_animations[2])
-    submenu.inventory_icon = sol.surface.create("menus/pause/inventory_icon.png")
-    submenu.emoji_icon = sol.surface.create("menus/pause/emoji_icon.png")
+    submenu.inventory_icon = sol.surface.create("menus/pause/inventory_icon_" .. submenu.color .. ".png")
+    submenu.emoji_icon = sol.surface.create("menus/pause/emoji_icon_".. submenu.color .. ".png")
 
   -- Fix the font shift (issue with some fonts)
   self.font_y_shift = 0
