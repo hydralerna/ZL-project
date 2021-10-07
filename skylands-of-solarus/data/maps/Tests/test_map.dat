@@ -11,9 +11,9 @@ properties{
 tile{
   layer = 0,
   x = 272,
-  y = 352,
+  y = 384,
   width = 176,
-  height = 96,
+  height = 64,
   pattern = "5",
   tileset = "dungeon/d_fc_trv_floors_02",
 }
@@ -6011,9 +6011,9 @@ tile{
 
 tile{
   layer = 0,
-  x = 400,
+  x = 416,
   y = 336,
-  width = 48,
+  width = 32,
   height = 16,
   pattern = "2",
   tileset = "dungeon/d_fc_trv_floors_02",
@@ -6026,6 +6026,86 @@ tile{
   width = 16,
   height = 96,
   pattern = "6",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "1",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "4",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 352,
+  width = 16,
+  height = 16,
+  pattern = "6",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 320,
+  y = 368,
+  width = 80,
+  height = 16,
+  pattern = "2",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 352,
+  width = 32,
+  height = 32,
+  pattern = "5",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 416,
+  y = 352,
+  width = 32,
+  height = 32,
+  pattern = "5",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "5",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "5",
   tileset = "dungeon/d_fc_trv_floors_02",
 }
 
