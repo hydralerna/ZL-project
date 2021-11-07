@@ -10,7 +10,7 @@ local shader_manager = require("scripts/shader_manager")
 -- local util = require("scripts/util")
 local info_manager = require("scripts/info_manager")
 local index_palette_shader = require("scripts/index_palette_shader")
-local palette_menu = require("scripts/menus/palette_menu")
+local palette_menu = require("scripts/menus/pause/palette_menu")
 -- local console = require("scripts/console")
 local sword_menu = require("scripts/menus/sword_menu")
 local initial_menus_config = require("scripts/menus/initial_menus_config")
@@ -53,9 +53,7 @@ function sol.main:on_started()
   local default_settings = {
 	palette_id = 1,
 	shift = 0,
-	offset = 0,
 	screenScale = 2,
-	noiseAlpha = 0,
   }
   info_manager:create_sol_file("palette.dat", default_settings)
 
