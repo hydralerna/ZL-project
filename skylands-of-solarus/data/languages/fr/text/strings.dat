@@ -16,3 +16,5 @@ text{ key = "hud.stop", value = "Stop" }
 text{ key = "hud.swim", value = "Swim" }
 text{ key = "hud.throw", value = "Throw" }
 text{ key = "hud.validate", value = "Confirm" }
+text{ key = "inventory.title", value = "INVENTAIRE" }
+text{ key = "palette.title", value = "PALETTE" }
