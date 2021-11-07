@@ -1,5 +1,6 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
 local audio_manager = require("scripts/audio_manager")
+--local index_palette_shader = require("scripts/index_palette_shader")
 
 local inventory_submenu = submenu:new()
 local item_names_assignable = {
@@ -27,16 +28,19 @@ local item_names_static = {
 function inventory_submenu:on_started()
 
   submenu.on_started(self)
-
+  
   --print("inventory_submenu:on_started()")
 
   -- Set title
   self:set_title(sol.language.get_string("inventory.title"))
 
-  self.cursor_sprite1 = sol.sprite.create("menus/pause/cursor_"  .. submenu.color)
-  self.cursor_sprite2 = sol.sprite.create("menus/pause/cursor_"  .. submenu.color)
-  self.arrow_sprite1 = sol.sprite.create("menus/pause/arrow_"  .. submenu.color)
-  self.arrow_sprite2 = sol.sprite.create("menus/pause/arrow_" .. submenu.color)
+  self.cursor_sprite1 = sol.sprite.create("menus/pause/cursor_"  .. submenu.color1)
+  self.cursor_sprite2 = sol.sprite.create("menus/pause/cursor_"  .. submenu.color1)
+  self.arrow_sprite1 = sol.sprite.create("menus/pause/arrow_"  .. submenu.color1)
+  self.arrow_sprite2 = sol.sprite.create("menus/pause/arrow_" .. submenu.color1)
+  self.slots1_surface = sol.surface.create(48, 200)
+  self.slots2_surface = sol.surface.create(48, 200)
+
 
   self.sprites_assignables = {}
   self.sprites_static = {}
@@ -144,15 +148,24 @@ function inventory_submenu:on_draw(dst_surface)
   -- local menu_x, menu_y = center_x - self.width / 2, center_y - self.height / 2
   local menu_x = 8
   local menu_y = 12
-
   -- Draw the background.
-  -- self:draw_background(dst_surface)
-  -- Draw the menu.
-  self:draw_menu(dst_surface)
-  
+  self:draw_background(dst_surface, 1)
+  self.slots1_surface:draw(dst_surface, 8, 8)
+  self.slots2_surface:draw(dst_surface, 328, 8)
+  -- Slots
+  for ys = 36, 180, 16 do
+    for xs = 0, 32, 16 do
+      self.slots1_surface:fill_color(submenu.colors[submenu.color2], xs + 2, ys + 1, 12, 14)
+      self.slots1_surface:fill_color(submenu.colors[submenu.color2], xs + 1, ys + 2, 14, 12)
+      if ys < 108 or ys > 140 then
+        self.slots2_surface:fill_color(submenu.colors[submenu.color2], xs + 2, ys + 1, 12, 14)
+        self.slots2_surface:fill_color(submenu.colors[submenu.color2], xs + 1, ys + 2, 14, 12)
+      end
+      xs = xs + 16
+    end
+  end 
   -- Draw the cursor caption.
   self:draw_caption(dst_surface)
-
   -- Draw each inventory static item.
   local y = menu_y
   local k = 0
@@ -307,7 +320,8 @@ function inventory_submenu:on_command_pressed(command)
         self.arrow_sprite2:set_direction(3)
         self:set_bg_icon(submenu.sprite, "appearing2")
       else
-        -- TODO self:next_submenu()
+        self:next_submenu()
+        --index_palette_shader:set_palette()
         self.show_cursor1 = false
         self.show_cursor2 = false
       end
