@@ -1,0 +1,4 @@
+shader{
+  fragment_file = "test.glsl",
+  scaling_factor = 3,
+}
