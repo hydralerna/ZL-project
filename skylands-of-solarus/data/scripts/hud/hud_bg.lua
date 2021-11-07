@@ -25,8 +25,7 @@ function hud_bg_builder:new(game, config)
   hud_bg.y3 = hud_bg.top_h + hud_bg.camera_h
   hud_bg.y4 = hud_bg.top_h + hud_bg.camera_h + hud_bg.tile
   -- Creation of surfaces
-  local file = "hud/bg_" .. hud_bg.color .. ".png"
-  hud_bg.img = sol.surface.create(file)
+  hud_bg.img = sol.surface.create("hud/bg_" .. hud_bg.color .. ".png")
   hud_bg.surface_top = sol.surface.create(hud_bg.camera_w, hud_bg.top_h - hud_bg.tile)
   hud_bg.surface_top:fill_color(colors[hud_bg.color])
   hud_bg.surface_bot = sol.surface.create(hud_bg.camera_w, hud_bg.bot_h - hud_bg.tile)
@@ -110,6 +109,7 @@ function hud_bg_builder:new(game, config)
 
 
   function hud_bg:on_started()
+
 
     hud_bg:check()
     hud_bg:rebuild_surface()
