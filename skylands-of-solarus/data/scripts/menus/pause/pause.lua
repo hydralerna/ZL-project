@@ -15,7 +15,7 @@ local function initialize_pause_features(game)
   end
 
   local inventory_builder = require("scripts/menus/pause/pause_inventory")
-  -- KO local palette_menu = require("scripts/menus/palette_menu")
+  local palette_menu = require("scripts/menus/pause/palette_menu")
   --local map_builder = require("scripts/menus/pause/pause_map")
   --local quest_builder = require("scripts/menus/pause/pause_quest")
   --local options_builder = require("scripts/menus/pause/pause_options")
@@ -41,7 +41,7 @@ local function initialize_pause_features(game)
     -- Array of submenus (inventory, map, etc.).
     game.pause_submenus = {
       inventory_builder:new(game),
-      --KO palette_menu:new(game),
+      palette_menu:new(game),
       --map_builder:new(game),
       --quest_builder:new(game),
       --options_builder:new(game),
