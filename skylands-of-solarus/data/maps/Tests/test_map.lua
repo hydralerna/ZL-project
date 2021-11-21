@@ -19,6 +19,38 @@ map:register_event("on_started", function()
   -- You can initialize the movement and sprites of various
   -- map entities here.
 
+  function collapse_sensor:on_activated()
+
+    print("collapse_sensor")
+    collapse_sensor:remove()
+    local index = 1
+    hero:save_solid_ground()
+    sol.timer.start(300, function()
+      local tile = map:get_entity("collapsible_floor_" .. index)
+      if tile == nil then
+        return false
+      end
+      tile:set_enabled(false)
+      sol.audio.play_sound("gb/misc/dungeon_shake")
+      index = index + 1
+      return true
+    end)
+
+  end
+
+
+
+ function test_button:on_activated()
+
+    print("test_button")
+    test_sensor:remove()
+    --hero:save_solid_ground()
+    local tile = map:get_entity("test_floor_1")
+    tile:set_enabled(false)
+    sol.audio.play_sound("gb/misc/dungeon_shake")
+
+  end
+
 
 
 end)
