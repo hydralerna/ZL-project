@@ -5,7 +5,7 @@ map{ id = "Tests/pavements" }
 map{ id = "Tests/test_map", description = "Test Map" }
 map{ id = "Tests/test_map_for_CrookiNari", description = "For CrookiNari" }
 map{ id = "Tests/test_python", description = "Test for Python" }
-map{ id = "morla" }
+map{ id = "map_morla" }
 
 tileset{ id = "8px_all_zcfc_01" }
 tileset{ id = "dungeon/d_fc_trv_carpets_01" }
@@ -57,6 +57,10 @@ tileset{ id = "out/o_zc_wll_houses_01" }
 tileset{ id = "out/o_zc_wll_pillars_01" }
 tileset{ id = "out/o_zc_wll_store_signs_01" }
 
+sprite{ id = "blocks/fc_statue1" }
+sprite{ id = "blocks/fc_statue2" }
+sprite{ id = "blocks/fc_statue3" }
+sprite{ id = "blocks/fc_statue4" }
 sprite{ id = "destructibles/jar" }
 sprite{ id = "destructibles/pot" }
 sprite{ id = "destructibles/pot2" }
@@ -80,9 +84,15 @@ sprite{ id = "doors/out/o_fc_door_slime_ok", description = "doors/out/o_fc_door_
 sprite{ id = "enemies/boss/e_fc_boss_monster", description = "enemies/boss/e_fc_boss_monster" }
 sprite{ id = "enemies/boss/e_fc_boss_skull", description = "enemies/boss/e_fc_boss_skull" }
 sprite{ id = "enemies/boss/e_fc_boss_slime", description = "enemies/boss/e_fc_boss_slime" }
+sprite{ id = "enemies/bosses/e_fc_boss_monster" }
+sprite{ id = "enemies/bosses/e_fc_boss_skull" }
+sprite{ id = "enemies/bosses/e_fc_boss_slime" }
+sprite{ id = "enemies/bosses/e_fc_eater", description = "enemies/e_fc_eater" }
 sprite{ id = "enemies/bosses/e_fc_vitreous", description = "enemies/bosses/vitreous" }
+sprite{ id = "enemies/bosses/papillosaur_king", description = "Enemy: Papillosaur King" }
+sprite{ id = "enemies/e_fc_baby_eater_egg_fixed" }
+sprite{ id = "enemies/e_fc_baby_eater_egg_thrown", description = "enemies/e_fc_baby_eater_egg_thrown" }
 sprite{ id = "enemies/e_fc_bat_01", description = "enemies/e_fc_bat_01" }
-sprite{ id = "enemies/e_fc_eater", description = "enemies/e_fc_eater" }
 sprite{ id = "enemies/e_fc_ghost_01", description = "enemies/e_fc_ghost_01" }
 sprite{ id = "enemies/e_fc_haunted_tree_01", description = "enemies/e_fc_haunted_tree_01" }
 sprite{ id = "enemies/e_fc_maloney" }
@@ -94,16 +104,20 @@ sprite{ id = "enemies/e_fc_spiderskull_01", description = "enemies/e_fc_spidersk
 sprite{ id = "enemies/e_fc_spiderskull_02", description = "enemies/e_fc_spiderskull_02" }
 sprite{ id = "enemies/e_fc_vitreous_child" }
 sprite{ id = "enemies/enemy_killed", description = "enemies/enemy_killed" }
-sprite{ id = "entities/arrow", description = "entities/arrow" }
-sprite{ id = "entities/bomb", description = "entities/bomb" }
-sprite{ id = "entities/crystal", description = "entities/crystal" }
-sprite{ id = "entities/crystal_block", description = "entities/crystal_block" }
-sprite{ id = "entities/explosion", description = "entities/explosion" }
-sprite{ id = "entities/items", description = "entities/items" }
-sprite{ id = "entities/megabomb", description = "entities/megabomb" }
-sprite{ id = "entities/rupee_icon", description = "entities/rupee_icon" }
-sprite{ id = "entities/shadow", description = "entities/shadow" }
-sprite{ id = "entities/star", description = "entities/star" }
+sprite{ id = "enemies/minillosaur_egg_fixed", description = "Enemy: Minillosaur Egg (thrown)" }
+sprite{ id = "enemies/minillosaur_egg_thrown", description = "Enemy: Minillosaur Egg (fixed)" }
+sprite{ id = "entities/arrow" }
+sprite{ id = "entities/bomb" }
+sprite{ id = "entities/crystal" }
+sprite{ id = "entities/crystal_block" }
+sprite{ id = "entities/explosion" }
+sprite{ id = "entities/items" }
+sprite{ id = "entities/lock" }
+sprite{ id = "entities/megabomb" }
+sprite{ id = "entities/morla" }
+sprite{ id = "entities/rupee_icon" }
+sprite{ id = "entities/shadow" }
+sprite{ id = "entities/star" }
 sprite{ id = "hero/fire_rod", description = "hero/fire_rod" }
 sprite{ id = "hero/ground1", description = "hero/ground1" }
 sprite{ id = "hero/ground2", description = "hero/ground2" }
@@ -142,9 +156,15 @@ sprite{ id = "menus/title_screen/sword" }
 sprite{ id = "npc/fool" }
 sprite{ id = "npc/kaepora_gaebora" }
 sprite{ id = "npc/mister_time" }
-sprite{ id = "npc/morla" }
 sprite{ id = "npc/old_man" }
+sprite{ id = "npc/sorcerer_statue" }
 sprite{ id = "shadows/shadow", description = "shadows/shadow" }
+sprite{ id = "switches/fc_switches_cross2" }
+sprite{ id = "switches/fc_switches_cross4" }
+sprite{ id = "switches/fc_switches_sun1" }
+sprite{ id = "switches/fc_switches_sun2" }
+sprite{ id = "switches/fc_switches_sun3" }
+sprite{ id = "switches/fc_switches_sun4" }
 
 
 sound{ id = "arrow_hit", description = "arrow_hit" }
@@ -489,7 +509,11 @@ item{ id = "bomb", description = "bomb" }
 item{ id = "money_bag", description = "money_bag" }
 item{ id = "sword", description = "sword" }
 
+enemy{ id = "bosses//e_fc_eater", description = "Papillosaur King" }
+enemy{ id = "bosses/e_fc_eater", description = "Eater" }
 enemy{ id = "bosses/e_fc_vitreous", description = "Vitreous" }
+enemy{ id = "e_fc_baby_eater_egg_fixed", description = "Minillosaur Egg (thrown)" }
+enemy{ id = "e_fc_baby_eater_egg_thrown", description = "Minillosaur Egg (fixed)" }
 enemy{ id = "e_fc_onime" }
 enemy{ id = "e_fc_spiderskull_01", description = "Spiderskull" }
 enemy{ id = "e_fc_spiderskull_02", description = "Black Spiderskull" }
@@ -497,6 +521,7 @@ enemy{ id = "e_fc_vitreous_child", description = "Vitreous child" }
 enemy{ id = "projectiles/generic_projectile", description = "generic_projectile" }
 
 entity{ id = "megabomb_WIP", description = "megabomb" }
+entity{ id = "morla" }
 
 language{ id = "fr", description = "French" }
 
@@ -514,6 +539,13 @@ shader{ id = "lcd", description = "lcd" }
 shader{ id = "sepia", description = "sepia" }
 shader{ id = "test" }
 
+file{ path = "enemies/bosses//e_fc_eater.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/bosses/e_fc_eater.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/e_fc_baby_eater_egg_fixed.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/e_fc_baby_eater_egg_thrown.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/generic_soldier.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/generic_towards_hero.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/generic_waiting_for_hero.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "fonts/8_bit.png", author = "usr_share, Christopho", license = "Public domain" }
 file{ path = "fonts/enter_command.ttf", author = "Jeti", license = "CC BY 4.0" }
 file{ path = "items/sword.lua", license = "GPL v3" }
@@ -905,6 +937,31 @@ file{ path = "sounds/victory.ogg", author = "Franck Jousseaume", license = "CC B
 file{ path = "sounds/walk_on_grass.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sounds/walk_on_water.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
 file{ path = "sounds/wrong.ogg", author = "Franck Jousseaume", license = "CC BY-SA 4.0" }
+file{ path = "sprites/blocks/fc_statue1.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_statue2.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_statue3.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_statue4.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/bosses/e_fc_boss_monster.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
+file{ path = "sprites/enemies/bosses/e_fc_boss_skull.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
+file{ path = "sprites/enemies/bosses/e_fc_boss_slime.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
+file{ path = "sprites/enemies/bosses/papillosaur_king.dat", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "sprites/enemies/bosses/papillosaur_king.png", author = "Newlink", license = "CC BY-SA 4.0" }
+file{ path = "sprites/enemies/e_fc_baby_eater_egg_fixed.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/e_fc_baby_eater_egg_thrown.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/minillosaur_egg.png", author = "Newlink", license = "CC BY-SA 4.0" }
+file{ path = "sprites/enemies/minillosaur_egg_fixed.dat", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "sprites/enemies/minillosaur_egg_thrown.dat", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/lock.dat", author = "froggy77", license = "GPV v3" }
+file{ path = "sprites/entities/lock.png", author = "froggy77", license = "GPV v3" }
+file{ path = "sprites/npc/kaepora_gaebora.dat", author = "Desgardes, froggy77", license = "GPL v3" }
+file{ path = "sprites/npc/sorcerer_statue.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/switches/fc_switches.png", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/switches/fc_switches_cross2.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/switches/fc_switches_cross4.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/switches/fc_switches_sun1.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/switches/fc_switches_sun2.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/switches/fc_switches_sun3.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/switches/fc_switches_sun4.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "tilesets/dungeon/d_fc_trv_halo_01.dat", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_fc_trv_halo_01.tiles.png", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_fc_trv_pavement_01.dat", author = "DragonDePlatino, froggy77", license = "CC-BY 4.0" }
