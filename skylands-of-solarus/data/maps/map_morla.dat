@@ -1,0 +1,295 @@
+properties{
+  x = 0,
+  y = 0,
+  width = 240,
+  height = 480,
+  min_layer = 0,
+  max_layer = 2,
+  tileset = "out/o_fc_wll_specials_01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 0,
+  width = 240,
+  height = 512,
+  pattern = "46",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 56,
+  width = 8,
+  height = 32,
+  pattern = "14",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 264,
+  width = 176,
+  height = 8,
+  pattern = "2",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 328,
+  width = 176,
+  height = 8,
+  pattern = "2",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 392,
+  width = 176,
+  height = 8,
+  pattern = "2",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 456,
+  width = 176,
+  height = 8,
+  pattern = "2",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 200,
+  width = 176,
+  height = 8,
+  pattern = "2",
+  tileset = "8px_all_zcfc_01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 368,
+  width = 104,
+  height = 16,
+  pattern = "148",
+  tileset = "8px_all_zcfc_01",
+}
+
+npc{
+  name = "rock",
+  layer = 0,
+  x = 88,
+  y = 109,
+  direction = 3,
+  subtype = 0,
+}
+
+npc{
+  name = "rock_2",
+  layer = 0,
+  x = 136,
+  y = 13,
+  direction = 3,
+  subtype = 0,
+}
+
+destination{
+  name = "destination",
+  layer = 0,
+  x = 120,
+  y = 141,
+  direction = 1,
+}
+
+teletransporter{
+  layer = 0,
+  x = 160,
+  y = 0,
+  width = 16,
+  height = 16,
+  destination_map = "Tests/test_map",
+}
+
+custom_entity{
+  name = "morla",
+  layer = 0,
+  x = 56,
+  y = 205,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "entities/morla",
+  model = "morla",
+}
+
+dynamic_tile{
+  name = "morla_hill_10",
+  layer = 0,
+  x = 104,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "8",
+}
+
+dynamic_tile{
+  name = "morla_hill_9",
+  layer = 0,
+  x = 56,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "7",
+}
+
+dynamic_tile{
+  name = "morla_hill_8",
+  layer = 0,
+  x = 104,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "13",
+}
+
+dynamic_tile{
+  name = "morla_hill_6",
+  layer = 0,
+  x = 56,
+  y = 80,
+  width = 16,
+  height = 16,
+  pattern = "11",
+}
+
+dynamic_tile{
+  name = "morla_hill_14",
+  layer = 0,
+  x = 112,
+  y = 56,
+  width = 8,
+  height = 8,
+  pattern = "12",
+}
+
+dynamic_tile{
+  name = "morla_hill_7",
+  layer = 0,
+  x = 72,
+  y = 80,
+  width = 32,
+  height = 32,
+  pattern = "9",
+}
+
+dynamic_tile{
+  name = "morla_hill_4",
+  layer = 0,
+  x = 104,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "4",
+}
+
+dynamic_tile{
+  name = "morla_hill_3",
+  layer = 0,
+  x = 72,
+  y = 40,
+  width = 32,
+  height = 16,
+  pattern = "5",
+}
+
+dynamic_tile{
+  name = "morla_hill_2",
+  layer = 0,
+  x = 56,
+  y = 40,
+  width = 16,
+  height = 16,
+  pattern = "3",
+}
+
+dynamic_tile{
+  name = "morla_hill_5",
+  layer = 0,
+  x = 56,
+  y = 56,
+  width = 24,
+  height = 24,
+  pattern = "10",
+}
+
+dynamic_tile{
+  name = "morla_hill_1",
+  layer = 0,
+  x = 64,
+  y = 32,
+  width = 48,
+  height = 8,
+  pattern = "6",
+}
+
+dynamic_tile{
+  name = "morla_hill_11",
+  layer = 0,
+  x = 80,
+  y = 56,
+  width = 24,
+  height = 24,
+  pattern = "1",
+}
+
+dynamic_tile{
+  name = "morla_hill_12",
+  layer = 0,
+  x = 104,
+  y = 56,
+  width = 8,
+  height = 8,
+  pattern = "15",
+}
+
+dynamic_tile{
+  name = "morla_hill_15",
+  layer = 0,
+  x = 112,
+  y = 64,
+  width = 8,
+  height = 16,
+  pattern = "2",
+}
+
+dynamic_tile{
+  name = "morla_hill_13",
+  layer = 0,
+  x = 104,
+  y = 64,
+  width = 8,
+  height = 16,
+  pattern = "16",
+}
+
+sensor{
+  name = "collapse_sensor",
+  layer = 0,
+  x = 104,
+  y = 61,
+  width = 16,
+  height = 32,
+}
+
