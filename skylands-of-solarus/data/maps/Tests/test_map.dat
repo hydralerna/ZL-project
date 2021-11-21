@@ -10,6 +10,43 @@ properties{
 
 tile{
   layer = 0,
+  x = 16,
+  y = 16,
+  width = 208,
+  height = 112,
+  pattern = "43",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 320,
+  width = 40,
+  height = 16,
+  pattern = "129",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 320,
+  width = 56,
+  height = 48,
+  pattern = "129",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 368,
+  width = 48,
+  height = 16,
+  pattern = "12",
+}
+
+tile{
+  layer = 0,
   x = 96,
   y = 576,
   width = 64,
@@ -60,9 +97,9 @@ tile{
 tile{
   layer = 0,
   x = 184,
-  y = 320,
+  y = 432,
   width = 56,
-  height = 160,
+  height = 48,
   pattern = "129",
 }
 
@@ -79,7 +116,7 @@ tile{
   layer = 0,
   x = 56,
   y = 320,
-  width = 128,
+  width = 40,
   height = 16,
   pattern = "129",
 }
@@ -88,7 +125,7 @@ tile{
   layer = 0,
   x = 56,
   y = 464,
-  width = 128,
+  width = 40,
   height = 16,
   pattern = "129",
 }
@@ -363,15 +400,6 @@ tile{
   width = 16,
   height = 16,
   pattern = "26",
-}
-
-tile{
-  layer = 0,
-  x = 64,
-  y = 160,
-  width = 112,
-  height = 16,
-  pattern = "129",
 }
 
 tile{
@@ -1035,645 +1063,6 @@ tile{
   width = 16,
   height = 16,
   pattern = "110",
-}
-
-tile{
-  layer = 0,
-  x = 32,
-  y = 0,
-  width = 176,
-  height = 16,
-  pattern = "46",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 32,
-  width = 16,
-  height = 96,
-  pattern = "58",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "45",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "45",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "76",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "47",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "47",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "75",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "72",
-}
-
-tile{
-  layer = 0,
-  x = 32,
-  y = 144,
-  width = 80,
-  height = 16,
-  pattern = "73",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "72",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "61",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "60",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "74",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "74",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 32,
-  width = 16,
-  height = 96,
-  pattern = "59",
-}
-
-tile{
-  layer = 0,
-  x = 112,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "117",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 0,
-  width = 8,
-  height = 16,
-  pattern = "93",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 0,
-  width = 8,
-  height = 16,
-  pattern = "94",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 144,
-  width = 80,
-  height = 16,
-  pattern = "73",
-}
-
-tile{
-  layer = 0,
-  x = 112,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "120",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 144,
-  width = 8,
-  height = 16,
-  pattern = "99",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 144,
-  width = 8,
-  height = 16,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 48,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "105",
-}
-
-tile{
-  layer = 0,
-  x = 40,
-  y = 0,
-  width = 8,
-  height = 16,
-  pattern = "93",
-}
-
-tile{
-  layer = 0,
-  x = 64,
-  y = 0,
-  width = 8,
-  height = 16,
-  pattern = "94",
-}
-
-tile{
-  layer = 0,
-  x = 176,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "105",
-}
-
-tile{
-  layer = 0,
-  x = 168,
-  y = 0,
-  width = 8,
-  height = 16,
-  pattern = "93",
-}
-
-tile{
-  layer = 0,
-  x = 192,
-  y = 0,
-  width = 8,
-  height = 16,
-  pattern = "94",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 48,
-  width = 16,
-  height = 16,
-  pattern = "107",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 96,
-  width = 16,
-  height = 16,
-  pattern = "107",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 40,
-  width = 16,
-  height = 8,
-  pattern = "95",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 64,
-  width = 16,
-  height = 8,
-  pattern = "96",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 88,
-  width = 16,
-  height = 8,
-  pattern = "95",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 112,
-  width = 16,
-  height = 8,
-  pattern = "96",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 48,
-  width = 16,
-  height = 16,
-  pattern = "106",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 96,
-  width = 16,
-  height = 16,
-  pattern = "106",
-}
-
-tile{
-  layer = 0,
-  x = 48,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "108",
-}
-
-tile{
-  layer = 0,
-  x = 176,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "108",
-}
-
-tile{
-  layer = 0,
-  x = 64,
-  y = 144,
-  width = 8,
-  height = 16,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 40,
-  y = 144,
-  width = 8,
-  height = 16,
-  pattern = "99",
-}
-
-tile{
-  layer = 0,
-  x = 192,
-  y = 144,
-  width = 8,
-  height = 16,
-  pattern = "100",
-}
-
-tile{
-  layer = 0,
-  x = 168,
-  y = 144,
-  width = 8,
-  height = 16,
-  pattern = "99",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 64,
-  width = 16,
-  height = 8,
-  pattern = "98",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 40,
-  width = 16,
-  height = 8,
-  pattern = "97",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 112,
-  width = 16,
-  height = 8,
-  pattern = "98",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 88,
-  width = 16,
-  height = 8,
-  pattern = "97",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 32,
-  width = 16,
-  height = 16,
-  pattern = "97",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 32,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "97",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 192,
-  y = 16,
-  width = 16,
-  height = 16,
-  pattern = "99",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 32,
-  width = 16,
-  height = 16,
-  pattern = "99",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 32,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "105",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 112,
-  width = 16,
-  height = 16,
-  pattern = "105",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 192,
-  y = 128,
-  width = 16,
-  height = 16,
-  pattern = "107",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 112,
-  width = 16,
-  height = 16,
-  pattern = "107",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 32,
-  y = 32,
-  width = 176,
-  height = 96,
-  pattern = "102",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 16,
-  y = 48,
-  width = 16,
-  height = 64,
-  pattern = "101",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 208,
-  y = 48,
-  width = 16,
-  height = 64,
-  pattern = "103",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 48,
-  y = 16,
-  width = 144,
-  height = 16,
-  pattern = "98",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 48,
-  y = 128,
-  width = 144,
-  height = 16,
-  pattern = "106",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 112,
-  y = 136,
-  width = 16,
-  height = 8,
-  pattern = "248",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 32,
-  y = 120,
-  width = 8,
-  height = 8,
-  pattern = "162",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 200,
-  y = 32,
-  width = 8,
-  height = 8,
-  pattern = "161",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 200,
-  y = 120,
-  width = 8,
-  height = 8,
-  pattern = "163",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 32,
-  y = 32,
-  width = 8,
-  height = 8,
-  pattern = "160",
-  tileset = "dungeon/d_fc_trv_entrances_01",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 0,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "130",
-}
-
-tile{
-  layer = 0,
-  x = 224,
-  y = 0,
-  width = 16,
-  height = 16,
-  pattern = "130",
 }
 
 tile{
@@ -2365,7 +1754,6 @@ tile{
   layer = 0,
   x = 304,
   y = 224,
-  enabled_at_start = false,
   width = 96,
   height = 32,
   pattern = "48",
@@ -6855,15 +6243,6 @@ tile{
 tile{
   layer = 0,
   x = 168,
-  y = 352,
-  width = 16,
-  height = 16,
-  pattern = "25",
-}
-
-tile{
-  layer = 0,
-  x = 168,
   y = 336,
   width = 16,
   height = 16,
@@ -6873,7 +6252,7 @@ tile{
 tile{
   layer = 0,
   x = 168,
-  y = 368,
+  y = 352,
   width = 8,
   height = 8,
   pattern = "282",
@@ -6882,7 +6261,7 @@ tile{
 tile{
   layer = 0,
   x = 176,
-  y = 368,
+  y = 352,
   width = 16,
   height = 8,
   pattern = "258",
@@ -6891,7 +6270,7 @@ tile{
 tile{
   layer = 0,
   x = 176,
-  y = 376,
+  y = 360,
   width = 8,
   height = 8,
   pattern = "282",
@@ -6900,19 +6279,10 @@ tile{
 tile{
   layer = 0,
   x = 184,
-  y = 376,
+  y = 360,
   width = 16,
   height = 8,
   pattern = "258",
-}
-
-tile{
-  layer = 0,
-  x = 184,
-  y = 384,
-  width = 16,
-  height = 32,
-  pattern = "25",
 }
 
 tile{
@@ -6989,15 +6359,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 168,
-  y = 432,
-  width = 16,
-  height = 16,
-  pattern = "25",
-}
-
-tile{
-  layer = 0,
   x = 152,
   y = 448,
   width = 16,
@@ -7008,7 +6369,7 @@ tile{
 tile{
   layer = 0,
   x = 176,
-  y = 416,
+  y = 432,
   width = 8,
   height = 8,
   pattern = "283",
@@ -7017,7 +6378,7 @@ tile{
 tile{
   layer = 0,
   x = 184,
-  y = 416,
+  y = 432,
   width = 16,
   height = 8,
   pattern = "259",
@@ -7026,7 +6387,7 @@ tile{
 tile{
   layer = 0,
   x = 168,
-  y = 424,
+  y = 440,
   width = 8,
   height = 8,
   pattern = "283",
@@ -7035,64 +6396,10 @@ tile{
 tile{
   layer = 0,
   x = 176,
-  y = 424,
+  y = 440,
   width = 16,
   height = 8,
   pattern = "259",
-}
-
-tile{
-  layer = 0,
-  x = 88,
-  y = 456,
-  width = 8,
-  height = 16,
-  pattern = "262",
-}
-
-tile{
-  layer = 0,
-  x = 144,
-  y = 456,
-  width = 8,
-  height = 16,
-  pattern = "263",
-}
-
-tile{
-  layer = 0,
-  x = 96,
-  y = 464,
-  width = 8,
-  height = 16,
-  pattern = "262",
-}
-
-tile{
-  layer = 0,
-  x = 96,
-  y = 456,
-  width = 8,
-  height = 8,
-  pattern = "286",
-}
-
-tile{
-  layer = 0,
-  x = 136,
-  y = 456,
-  width = 8,
-  height = 8,
-  pattern = "287",
-}
-
-tile{
-  layer = 0,
-  x = 136,
-  y = 464,
-  width = 8,
-  height = 16,
-  pattern = "263",
 }
 
 tile{
@@ -7107,250 +6414,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 104,
-  y = 416,
-  width = 8,
-  height = 8,
-  pattern = "281",
-}
-
-tile{
-  layer = 0,
-  x = 112,
-  y = 408,
-  width = 16,
-  height = 16,
-  pattern = "12",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 392,
-  width = 32,
-  height = 16,
-  pattern = "129",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 416,
-  width = 8,
-  height = 8,
-  pattern = "280",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 376,
-  width = 8,
-  height = 8,
-  pattern = "286",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 376,
-  width = 8,
-  height = 8,
-  pattern = "287",
-}
-
-tile{
-  layer = 0,
-  x = 112,
-  y = 376,
-  width = 16,
-  height = 16,
-  pattern = "35",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 400,
-  width = 8,
-  height = 16,
-  pattern = "257",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 400,
-  width = 8,
-  height = 16,
-  pattern = "256",
-}
-
-tile{
-  layer = 0,
-  x = 96,
-  y = 392,
-  width = 16,
-  height = 8,
-  pattern = "259",
-}
-
-tile{
-  layer = 0,
-  x = 88,
-  y = 392,
-  width = 8,
-  height = 8,
-  pattern = "283",
-}
-
-tile{
-  layer = 0,
-  x = 144,
-  y = 392,
-  width = 8,
-  height = 8,
-  pattern = "285",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 392,
-  width = 16,
-  height = 8,
-  pattern = "261",
-}
-
-tile{
-  layer = 0,
-  x = 144,
-  y = 400,
-  width = 8,
-  height = 8,
-  pattern = "284",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 400,
-  width = 16,
-  height = 8,
-  pattern = "260",
-}
-
-tile{
-  layer = 0,
-  x = 96,
-  y = 400,
-  width = 16,
-  height = 8,
-  pattern = "258",
-}
-
-tile{
-  layer = 0,
-  x = 88,
-  y = 400,
-  width = 8,
-  height = 8,
-  pattern = "282",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 384,
-  width = 8,
-  height = 16,
-  pattern = "262",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 384,
-  width = 8,
-  height = 16,
-  pattern = "263",
-}
-
-tile{
-  layer = 0,
-  x = 96,
-  y = 384,
-  width = 8,
-  height = 8,
-  pattern = "287",
-}
-
-tile{
-  layer = 0,
-  x = 136,
-  y = 384,
-  width = 8,
-  height = 8,
-  pattern = "286",
-}
-
-tile{
-  layer = 0,
-  x = 96,
-  y = 408,
-  width = 8,
-  height = 8,
-  pattern = "281",
-}
-
-tile{
-  layer = 0,
-  x = 136,
-  y = 408,
-  width = 8,
-  height = 8,
-  pattern = "280",
-}
-
-tile{
-  layer = 0,
-  x = 104,
-  y = 320,
-  width = 8,
-  height = 16,
-  pattern = "77",
-}
-
-tile{
-  layer = 0,
-  x = 112,
-  y = 320,
-  width = 16,
-  height = 16,
-  pattern = "109",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 320,
-  width = 8,
-  height = 16,
-  pattern = "78",
-}
-
-tile{
-  layer = 0,
-  x = 88,
-  y = 344,
-  width = 64,
-  height = 8,
-  pattern = "66",
-  tileset = "dungeon/d_fc_trv_floors_02",
-}
-
-tile{
-  layer = 0,
   x = 144,
   y = 344,
   width = 8,
@@ -7370,7 +6433,7 @@ tile{
 tile{
   layer = 0,
   x = 88,
-  y = 424,
+  y = 400,
   width = 64,
   height = 8,
   pattern = "66",
@@ -7380,9 +6443,9 @@ tile{
 tile{
   layer = 0,
   x = 88,
-  y = 432,
+  y = 408,
   width = 8,
-  height = 24,
+  height = 48,
   pattern = "66",
   tileset = "dungeon/d_fc_trv_floors_02",
 }
@@ -7390,9 +6453,9 @@ tile{
 tile{
   layer = 0,
   x = 144,
-  y = 432,
+  y = 408,
   width = 8,
-  height = 24,
+  height = 48,
   pattern = "66",
   tileset = "dungeon/d_fc_trv_floors_02",
 }
@@ -7422,16 +6485,6 @@ tile{
   width = 16,
   height = 16,
   pattern = "5",
-  tileset = "dungeon/d_fc_trv_floors_02",
-}
-
-tile{
-  layer = 0,
-  x = 168,
-  y = 400,
-  width = 16,
-  height = 16,
-  pattern = "23",
   tileset = "dungeon/d_fc_trv_floors_02",
 }
 
@@ -8097,6 +7150,702 @@ tile{
   pattern = "358",
 }
 
+tile{
+  layer = 0,
+  x = 200,
+  y = 416,
+  width = 48,
+  height = 16,
+  pattern = "35",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "26",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 416,
+  width = 16,
+  height = 16,
+  pattern = "14",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 384,
+  width = 48,
+  height = 16,
+  pattern = "20",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 400,
+  width = 48,
+  height = 16,
+  pattern = "26",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 184,
+  y = 384,
+  width = 8,
+  height = 32,
+  pattern = "66",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 456,
+  width = 16,
+  height = 24,
+  pattern = "71",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 136,
+  y = 456,
+  width = 16,
+  height = 24,
+  pattern = "72",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 464,
+  width = 32,
+  height = 16,
+  pattern = "129",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 320,
+  width = 8,
+  height = 16,
+  pattern = "79",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 320,
+  width = 16,
+  height = 16,
+  pattern = "110",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 320,
+  width = 8,
+  height = 16,
+  pattern = "80",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "125",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 336,
+  width = 16,
+  height = 16,
+  pattern = "125",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 448,
+  width = 16,
+  height = 16,
+  pattern = "128",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 448,
+  width = 16,
+  height = 16,
+  pattern = "128",
+}
+
+tile{
+  layer = 0,
+  x = 56,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 72,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 136,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 168,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 400,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 416,
+  width = 16,
+  height = 16,
+  pattern = "18",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 416,
+  width = 32,
+  height = 24,
+  pattern = "50",
+  tileset = "dungeon/d_fc_trv_specials_01",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "42",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 0,
+  width = 208,
+  height = 16,
+  pattern = "43",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 16,
+  width = 16,
+  height = 112,
+  pattern = "54",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "57",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "67",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "67",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 144,
+  width = 64,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 16,
+  width = 16,
+  height = 112,
+  pattern = "55",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 0,
+  width = 16,
+  height = 16,
+  pattern = "44",
+}
+
+tile{
+  layer = 0,
+  x = 224,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "69",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "56",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "69",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 144,
+  width = 64,
+  height = 16,
+  pattern = "68",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 144,
+  width = 32,
+  height = 16,
+  pattern = "339",
+}
+
+tile{
+  layer = 0,
+  x = 208,
+  y = 144,
+  width = 32,
+  height = 16,
+  pattern = "339",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 128,
+  width = 48,
+  height = 16,
+  pattern = "43",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 32,
+  width = 144,
+  height = 16,
+  pattern = "45",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "46",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 48,
+  width = 16,
+  height = 64,
+  pattern = "56",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 32,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "68",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 112,
+  width = 48,
+  height = 16,
+  pattern = "69",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 48,
+  width = 16,
+  height = 64,
+  pattern = "58",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 192,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "70",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 160,
+  y = 64,
+  width = 16,
+  height = 16,
+  pattern = "55",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 128,
+  width = 48,
+  height = 16,
+  pattern = "43",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "46",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 112,
+  width = 16,
+  height = 16,
+  pattern = "57",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 64,
+  y = 160,
+  width = 112,
+  height = 16,
+  pattern = "129",
+}
+
+tile{
+  layer = 0,
+  x = 16,
+  y = 32,
+  width = 16,
+  height = 16,
+  pattern = "55",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "27",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "27",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 48,
+  width = 16,
+  height = 16,
+  pattern = "27",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 176,
+  y = 96,
+  width = 16,
+  height = 16,
+  pattern = "27",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 48,
+  y = 112,
+  width = 48,
+  height = 16,
+  pattern = "69",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 96,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "56",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "58",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 128,
+  width = 16,
+  height = 16,
+  pattern = "57",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 112,
+  y = 144,
+  width = 16,
+  height = 16,
+  pattern = "120",
+}
+
+tile{
+  layer = 0,
+  x = 104,
+  y = 144,
+  width = 8,
+  height = 16,
+  pattern = "99",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 144,
+  width = 8,
+  height = 16,
+  pattern = "100",
+}
+
+separator{
+  layer = 0,
+  x = -8,
+  y = 0,
+  width = 16,
+  height = 640,
+}
+
 separator{
   layer = 0,
   x = 712,
@@ -8115,33 +7864,9 @@ separator{
 
 separator{
   layer = 0,
-  x = -8,
-  y = 0,
-  width = 16,
-  height = 640,
-}
-
-separator{
-  layer = 0,
-  x = 480,
-  y = 632,
-  width = 240,
-  height = 16,
-}
-
-separator{
-  layer = 0,
-  x = 240,
-  y = 312,
-  width = 240,
-  height = 16,
-}
-
-separator{
-  layer = 0,
   x = 0,
   y = 312,
-  width = 240,
+  width = 480,
   height = 16,
 }
 
@@ -8150,14 +7875,6 @@ pickable{
   x = 328,
   y = 301,
   treasure_name = "bomb",
-}
-
-separator{
-  layer = 0,
-  x = 232,
-  y = 160,
-  width = 16,
-  height = 160,
 }
 
 wall{
@@ -8309,26 +8026,18 @@ door{
 
 teletransporter{
   layer = 0,
-  x = 112,
-  y = 296,
-  width = 16,
+  x = 104,
+  y = 464,
+  width = 32,
   height = 16,
   destination_map = "Tests/test_map_for_CrookiNari",
 }
 
 separator{
   layer = 0,
-  x = 232,
-  y = 0,
-  width = 16,
-  height = 160,
-}
-
-separator{
-  layer = 0,
   x = 0,
   y = 152,
-  width = 240,
+  width = 480,
   height = 16,
 }
 
@@ -8340,14 +8049,6 @@ teletransporter{
   height = 16,
   destination_map = "Tests/test_map",
   destination = "destination_essai",
-}
-
-separator{
-  layer = 0,
-  x = 240,
-  y = 152,
-  width = 240,
-  height = 16,
 }
 
 enemy{
@@ -8380,32 +8081,16 @@ custom_entity{
 destination{
   name = "starting_destination",
   layer = 0,
-  x = 360,
-  y = 461,
+  x = 120,
+  y = 141,
   direction = 1,
-}
-
-separator{
-  layer = 0,
-  x = 240,
-  y = -8,
-  width = 240,
-  height = 16,
-}
-
-separator{
-  layer = 0,
-  x = 480,
-  y = -8,
-  width = 240,
-  height = 16,
 }
 
 separator{
   layer = 0,
   x = 0,
   y = -8,
-  width = 240,
+  width = 720,
   height = 16,
 }
 
@@ -8415,23 +8100,7 @@ teletransporter{
   y = 176,
   width = 16,
   height = 16,
-  destination_map = "morla",
-}
-
-separator{
-  layer = 0,
-  x = 232,
-  y = 320,
-  width = 16,
-  height = 160,
-}
-
-separator{
-  layer = 0,
-  x = 240,
-  y = 472,
-  width = 240,
-  height = 16,
+  destination_map = "map_morla",
 }
 
 teletransporter{
@@ -8464,20 +8133,211 @@ destination{
   direction = 3,
 }
 
+separator{
+  layer = 0,
+  x = 0,
+  y = 472,
+  width = 480,
+  height = 16,
+}
+
+dynamic_tile{
+  name = "collapsible_floor_1",
+  layer = 0,
+  x = 56,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
 destination{
   name = "warp__dest_1",
   layer = 0,
   x = 120,
-  y = 461,
-  direction = 3,
+  y = 301,
+  direction = 1,
+}
+
+dynamic_tile{
+  name = "collapsible_floor_2",
+  layer = 0,
+  x = 72,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+dynamic_tile{
+  name = "collapsible_floor_3",
+  layer = 0,
+  x = 88,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+dynamic_tile{
+  name = "collapsible_floor_4",
+  layer = 0,
+  x = 104,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+dynamic_tile{
+  name = "collapsible_floor_5",
+  layer = 0,
+  x = 120,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+dynamic_tile{
+  name = "collapsible_floor_6",
+  layer = 0,
+  x = 136,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+dynamic_tile{
+  name = "collapsible_floor_7",
+  layer = 0,
+  x = 152,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+dynamic_tile{
+  name = "collapsible_floor_8",
+  layer = 0,
+  x = 168,
+  y = 384,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+dynamic_tile{
+  name = "collapsible_floor_9",
+  layer = 0,
+  x = 152,
+  y = 400,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+dynamic_tile{
+  name = "collapsible_floor_10",
+  layer = 0,
+  x = 168,
+  y = 368,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+dynamic_tile{
+  name = "test_floor_1",
+  layer = 0,
+  x = 80,
+  y = 416,
+  width = 16,
+  height = 16,
+  pattern = "44",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
+sensor{
+  name = "test_sensor",
+  layer = 0,
+  x = 64,
+  y = 437,
+  width = 16,
+  height = 16,
+}
+
+sensor{
+  name = "collapse_sensor",
+  layer = 0,
+  x = 144,
+  y = 437,
+  width = 16,
+  height = 16,
+}
+
+block{
+  layer = 0,
+  x = 408,
+  y = 429,
+  sprite = "blocks/fc_statue1",
+  pushable = true,
+  pullable = true,
+}
+
+switch{
+  name = "test_button",
+  layer = 0,
+  x = 72,
+  y = 352,
+  subtype = "walkable",
+  sprite = "switches/fc_switches_sun4",
+  needs_block = false,
+  inactivate_when_leaving = false,
 }
 
 separator{
   layer = 0,
   x = 0,
-  y = 472,
-  width = 240,
+  y = 632,
+  width = 720,
   height = 16,
+}
+
+separator{
+  layer = 0,
+  x = 232,
+  y = 0,
+  width = 16,
+  height = 640,
+}
+
+enemy{
+  name = "boss",
+  layer = 0,
+  x = 120,
+  y = 53,
+  direction = 0,
+  breed = "bosses/e_fc_eater",
+}
+
+pickable{
+  layer = 0,
+  x = 152,
+  y = 141,
+  treasure_name = "bomb",
 }
 
 tile{
