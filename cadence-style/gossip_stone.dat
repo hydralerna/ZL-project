@@ -1,0 +1,25 @@
+animation{
+  name = "stopped",
+  src_image = "npc/gossip_stone_dancing.png",
+  directions = {
+    { x = 48, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45 },
+  },
+}
+animation{
+  name = "blast_off",
+  src_image = "npc/gossip_stone.png",
+  frame_delay = 100,
+  frame_to_loop_on = 28,
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 80, origin_x = 24, origin_y = 67, num_frames = 32, num_columns = 8 },
+  },
+}
+animation{
+  name = "dancing",
+  src_image = "npc/gossip_stone_dancing.png",
+  frame_delay = 200,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 45, num_frames = 4 },
+  },
+}
