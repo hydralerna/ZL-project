@@ -18,6 +18,7 @@ function bomb_meta:on_created()
   --  print(k, v)
   --end
   -- print(properties[1]["value"])
+  sol.audio.play_sound("items/bomb_drop")
   local sprite = bomb:get_sprite()
   sprite:set_animation("stopped_on_floor")
   sprite:set_direction(math.random(0, 3))
