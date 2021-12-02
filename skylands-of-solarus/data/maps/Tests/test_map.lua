@@ -31,7 +31,7 @@ map:register_event("on_started", function()
         return false
       end
       tile:set_enabled(false)
-      sol.audio.play_sound("gb/misc/dungeon_shake")
+      sol.audio.play_sound("misc/dungeon_shake")
       index = index + 1
       return true
     end)
@@ -47,7 +47,7 @@ map:register_event("on_started", function()
     --hero:save_solid_ground()
     local tile = map:get_entity("test_floor_1")
     tile:set_enabled(false)
-    sol.audio.play_sound("gb/misc/dungeon_shake")
+    sol.audio.play_sound("misc/dungeon_shake")
 
   end
 
