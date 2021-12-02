@@ -7,9 +7,6 @@
 local map_meta = sol.main.get_metatable("map")
 local enemy_meta = sol.main.get_metatable("enemy")
 
--- Include scripts
-local audio_manager = require("scripts/audio_manager")
-
 -- Create ground effect.
 function map_meta:create_ground_effect(effect, x, y, layer, sound_id)
 
@@ -22,7 +19,7 @@ function map_meta:create_ground_effect(effect, x, y, layer, sound_id)
     effect:remove()
   end
   if sound_id then -- Play sound.
-    audio_manager:play_sound(sound_id)
+    sol.audio.play_sound(sound_id)
   end  
   return ground_effect
 end
@@ -77,7 +74,7 @@ function map_meta:ground_collision(entity, collision_sound, callback_bad_ground)
       self:create_ground_effect("leaves", x, y, layer, "walk_on_grass")
     elseif ground ~= "empty" then -- Normal traversable ground. No ground effect, just a sound.
       local sound = collision_sound or "hero_lands"
-      audio_manager:play_sound(sound)
+      sol.audio.play_sound(sound)
     end
   end
 end
