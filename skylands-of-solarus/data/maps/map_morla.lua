@@ -22,7 +22,7 @@ map:register_event("on_started", function()
   function collapse_sensor:on_activated()
 
     local count = 0
-    sol.audio.play_sound("gb/misc/dungeon_shake")
+    sol.audio.play_sound("misc/dungeon_shake")
     hero:freeze()
     hero:set_direction(0)
     hero:set_animation("walking")
@@ -36,7 +36,7 @@ map:register_event("on_started", function()
       hero:set_animation("stopped")
     end)
     sol.timer.start(map, 1000, function()
-       sol.audio.play_sound("gb/misc/dungeon_shake")
+       sol.audio.play_sound("misc/dungeon_shake")
        count = count + 1
        if count < 8 then
           return true
