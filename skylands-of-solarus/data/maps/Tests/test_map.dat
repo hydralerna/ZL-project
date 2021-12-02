@@ -8330,7 +8330,7 @@ enemy{
   x = 120,
   y = 53,
   direction = 0,
-  breed = "bosses/e_fc_eater",
+  breed = "bosses/e_fc_jelleggtric",
 }
 
 pickable{
