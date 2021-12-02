@@ -3,7 +3,6 @@
 -- Include scripts
 local enemy_meta = sol.main.get_metatable("enemy")
 local enemy_manager = require("scripts/maps/enemy_manager")
-local audio_manager = require("scripts/audio_manager")
 local entity_manager= require("scripts/maps/entity_manager") 
 
 -- Get reaction to all weapons.
@@ -91,9 +90,9 @@ function enemy_meta:on_hurt(attack)
 
   if not self.is_hurt_silently then
     if self:get_hurt_style() == "boss" then
-      audio_manager:play_sound("enemies/boss_hit")
+      sol.audio.play_sound("enemies/boss_hit")
     else
-      audio_manager:play_sound("enemies/enemy_hit")
+      sol.audio.play_sound("enemies/enemy_hit")
     end
   end
 
@@ -104,12 +103,12 @@ function enemy_meta:on_dying()
   local game = self:get_game()
   if not self.is_hurt_silently then
     if self:get_hurt_style() == "boss" then
-      audio_manager:play_sound("enemies/boss_die")
+      sol.audio.play_sound("enemies/boss_die")
       sol.timer.start(self, 200, function()
-          audio_manager:play_sound("items/bomb_explode")
+          sol.audio.play_sound("items/bomb_explode")
         end)
     else
-      audio_manager:play_sound("enemies/enemy_die")
+      sol.audio.play_sound("enemies/enemy_die")
     end
   end
   local death_count = game:get_value("stats_enemy_death_count") or 0
@@ -253,7 +252,7 @@ function enemy_meta:receive_attack_consequence(attack, reaction)
       self:immobilize()
     elseif reaction == "protected" then
       on_protected(self, attack)
-      audio_manager:play_sound("items/sword_tap")
+      sol.audio.play_sound("items/sword_tap")
     elseif reaction == "custom" then
       if self.on_custom_attack_received ~= nil then
         self:on_custom_attack_received(attack)
@@ -274,7 +273,7 @@ function enemy_meta:launch_small_boss_dead()
   local savegame = "dungeon_" .. dungeon .. "_small_boss"
   local door_prefix = "door_group_small_boss"
   local music = dungeon_info.music
-  audio_manager:play_music(music)
+  sol.audio.play_music(music)
   game:set_value(savegame, true)
   map:open_doors(door_prefix)
   enemy_manager:create_teletransporter_if_small_boss_dead(map, true)
@@ -300,7 +299,7 @@ function enemy_meta:launch_boss_dead()
   local dungeon = game:get_dungeon_index()
   local savegame = "dungeon_" .. dungeon .. "_boss"
   local door_prefix = "door_group_boss"
-  audio_manager:play_music("23_boss_defeated")
+  sol.audio.play_music("23_boss_defeated")
   game:set_value(savegame, true)
   map:open_doors(door_prefix)
   local heart_container = map:get_entity("heart_container")
@@ -330,7 +329,7 @@ function enemy_meta:create_symbol_exclamation(sound)
   local map = self:get_map()
   local x, y, layer = self:get_position()
   if sound then
-    audio_manager:play_sound("menus/menu_select")
+    sol.audio.play_sound("menus/menu_select")
   end
   local symbol = map:create_custom_entity({
       sprite = "entities/symbols/exclamation",
@@ -352,7 +351,7 @@ function enemy_meta:create_symbol_interrogation(sound)
   local map = self:get_map()
   local x, y, layer = self:get_position()
   if sound then
-    audio_manager:play_sound("menus/menu_select")
+    sol.audio.play_sound("menus/menu_select")
   end
   local symbol = map:create_custom_entity({
       sprite = "entities/symbols/interrogation",
