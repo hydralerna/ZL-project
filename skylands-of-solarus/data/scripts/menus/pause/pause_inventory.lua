@@ -1,5 +1,4 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
-local audio_manager = require("scripts/audio_manager")
 --local index_palette_shader = require("scripts/index_palette_shader")
 
 local inventory_submenu = submenu:new()
@@ -284,15 +283,15 @@ function inventory_submenu:on_command_pressed(command)
     elseif command == "left" then
       --TODO self:previous_submenu()
       if submenu.sprite == 1 and self.show_cursor1 then
-        audio_manager:play_sound("menus/menu_cursor")
+        sol.audio.play_sound("menus/menu_cursor")
         self:set_cursor1_position(self.cursor1_row, (self.cursor1_column + 2) % 3)
       elseif submenu.sprite == 2 and self.show_cursor2 then
-        audio_manager:play_sound("menus/menu_cursor")
+        sol.audio.play_sound("menus/menu_cursor")
         self:set_cursor2_position(self.cursor2_row, (self.cursor2_column + 2) % 3)
       elseif submenu.sprite == 2 and not self.show_cursor2 then
         self.arrow_sprite2:set_direction(1)
         self:set_bg_icon(submenu.sprite, "disappearing2")
-        audio_manager:play_sound("menus/solarus_logo")
+        sol.audio.play_sound("menus/solarus_logo")
         self.show_cursor1 = false
         submenu.sprite = 1
         self.arrow_sprite1:set_direction(3)
@@ -306,15 +305,15 @@ function inventory_submenu:on_command_pressed(command)
     elseif command == "right" then
       -- TODO self.menu_ocarina
       if submenu.sprite == 1 and self.show_cursor1 then
-        audio_manager:play_sound("menus/menu_cursor")
+        sol.audio.play_sound("menus/menu_cursor")
         self:set_cursor1_position(self.cursor1_row, (self.cursor1_column + 1) % 3)
       elseif submenu.sprite == 2 and self.show_cursor2 then
-        audio_manager:play_sound("menus/menu_cursor")
+        sol.audio.play_sound("menus/menu_cursor")
         self:set_cursor2_position(self.cursor2_row, (self.cursor2_column + 1) % 3)
       elseif submenu.sprite == 1 and not self.show_cursor1 then
         self.arrow_sprite1:set_direction(1)
         self:set_bg_icon(submenu.sprite, "disappearing2")
-        audio_manager:play_sound("menus/solarus_logo")
+        sol.audio.play_sound("menus/solarus_logo")
         self.show_cursor2 = false
         submenu.sprite = 2
         self.arrow_sprite2:set_direction(3)
@@ -330,22 +329,22 @@ function inventory_submenu:on_command_pressed(command)
     elseif command == "up" then
       if submenu.sprite == 1 and self.show_cursor1 then
         if self.show_arrow1 then
-          audio_manager:play_sound("menus/solarus_logo")
+          sol.audio.play_sound("menus/solarus_logo")
           self.arrow_sprite1:set_direction(3)
           self.show_cursor1 = false
           self:set_bg_icon(submenu.sprite, "appearing1")
         else
-          audio_manager:play_sound("menus/menu_cursor")
+          sol.audio.play_sound("menus/menu_cursor")
           self:set_cursor1_position((self.cursor1_row + 9) % 10, self.cursor1_column)
         end
       elseif submenu.sprite == 2 and self.show_cursor2 then
         if self.show_arrow2 then
-          audio_manager:play_sound("menus/solarus_logo")
+          sol.audio.play_sound("menus/solarus_logo")
           self.arrow_sprite2:set_direction(3)
           self.show_cursor2 = false
           self:set_bg_icon(submenu.sprite, "appearing1")
         else
-          audio_manager:play_sound("menus/menu_cursor")
+          sol.audio.play_sound("menus/menu_cursor")
           local offset = 9
           if self.cursor2_row > 3 and self.cursor2_row <= 7 then
             offset = 6
@@ -356,7 +355,7 @@ function inventory_submenu:on_command_pressed(command)
       handled = true
 
     elseif command == "down" then
-      audio_manager:play_sound("menus/menu_cursor")
+      sol.audio.play_sound("menus/menu_cursor")
       if submenu.sprite == 1 and not self.show_cursor1 then
           self.arrow_sprite1:set_direction(1)
           self.show_cursor1 = true
@@ -529,7 +528,7 @@ function inventory_submenu:assign_item(slot)
       self.item_assigned_destination = slot
 
       -- Play the sound.
-      audio_manager:play_sound("menus/menu_select")
+      sol.audio.play_sound("menus/menu_select")
 
       -- Compute the movement.
       local x1 = 8 + 16 * self.cursor1_column
