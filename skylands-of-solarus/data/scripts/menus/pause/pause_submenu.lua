@@ -5,7 +5,6 @@ local submenu = {}
 local language_manager = require("scripts/language_manager")
 --local messagebox = require("scripts/menus/messagebox")
 local text_fx_helper = require("scripts/text_fx_helper")
-local audio_manager = require("scripts/audio_manager")
 
 local submenus_icon_bg_sprites = {"submenu.submenus_icon_bg_sprite1", "submenu.submenus_icon_bg_sprite2"}
 local submenus_icon_bg_animations = {"activated", "inactivated"}
@@ -175,7 +174,7 @@ end
 
 -- Goes to the next pause screen.
 function submenu:next_submenu()
-  audio_manager:play_sound("menus/pause_menu_close")
+  sol.audio.play_sound("menus/pause_menu_close")
   sol.menu.stop(self)
   local submenus = self.game.pause_submenus
   local submenu_index = self.game:get_value("pause_last_submenu")
@@ -186,7 +185,7 @@ end
 
 -- Goes to the previous pause screen.
 function submenu:previous_submenu()
-  audio_manager:play_sound("menus/pause_menu_close")
+  sol.audio.play_sound("menus/pause_menu_close")
   sol.menu.stop(self)
   local submenus = self.game.pause_submenus
   local submenu_index = self.game:get_value("pause_last_submenu")
