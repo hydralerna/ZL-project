@@ -3,12 +3,16 @@
 local enemy = ...
 
 
+require("scripts/hud/lvl_and_exp")
+
+local game = enemy:get_game()
 local nb_eggs_to_create = 0
 local nb_eggs_created = 0
 local boss_starting_life = 6
 local boss_movement_starting_speed = 20  -- Starting speed in pixels per second, it will gain 5 per life point lost.
 local boss_movement_speed = boss_movement_starting_speed
 local protected = false
+
 
 function enemy:on_created()
 
@@ -38,6 +42,7 @@ function enemy:on_created()
   self:go()
 end
 
+
 function enemy:on_restarted()
 
   sol.timer.start(self, 2000, function() self:egg_phase_soon() end)
@@ -47,6 +52,7 @@ function enemy:on_restarted()
     self:go()
   end
 end
+
 
 function enemy:on_hurt(attack)
 
@@ -68,6 +74,7 @@ end
 
 --  local sprite = self:get_sprite("boss")
 --end
+
 
 function enemy:go()
 
@@ -106,6 +113,7 @@ function enemy:egg_phase_soon()
   end
 end
 
+
 function enemy:egg_phase()
 
   protected = false
@@ -118,6 +126,7 @@ function enemy:egg_phase()
   -- The more the boss is hurt, the more it will throw eggs...
   nb_eggs_to_create = boss_starting_life - self:get_life() + 1
 end
+
 
 function enemy:throw_egg()
 
@@ -178,4 +187,10 @@ function enemy:run_away()
   end
   local duration = 3500 + (math.random(3) * 1000)
   sol.timer.start(self, duration, function() self:egg_phase_soon() end)
+end
+
+
+function enemy:on_dying()
+
+  game:add_exp(30)
 end
