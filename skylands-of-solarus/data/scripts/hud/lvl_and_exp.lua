@@ -7,7 +7,7 @@
 -- Modified by Kamigousu on 18/07/19.
 -- v 1.6:  Updated for use with Solarus 1.6; basic with lots of potential, mostly just froggy77's original draft.
 -- Modified by D MAS and Kamigousu on 16/01/21.
---v 1.6.4: Updated for clarity and ease of use.
+-- v 1.6.4: Updated for clarity and ease of use.
 -- Modified by froggy77 on 03/21 for the project.
 
 local text_fx_helper = require("scripts/text_fx_helper")
@@ -138,11 +138,9 @@ function lvl_and_exp:check()
 		  -- Play a sound if we have just reached the final value.
 		  if self.current_lvl_displayed == current_level then
 		    if increment == 1 then
-		    	sol.audio.play_sound("victory")
-		    	sol.audio.play_sound("treasure")
+		    	sol.audio.play_sound("items/get_power_up")
 		    else
-		    	sol.audio.play_sound("switch")
-		    	sol.audio.play_sound("hero_falls")
+		    	sol.audio.play_sound("misc/error")
 		    end
 		  end
 	  end
