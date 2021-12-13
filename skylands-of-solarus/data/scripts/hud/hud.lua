@@ -29,6 +29,7 @@ local function initialize_hud_features(game)
   local attack_icon
   local pause_icon
   local hearts
+  local e_hearts
   -- local rupees
   local coins
   local keys
@@ -451,6 +452,7 @@ local function initialize_hud_features(game)
   -- Sets the additionnal info (hearts, rupees, keys) enabled or not.
   function hud:set_additionnal_info_enabled(enabled)
     hud:set_hearts_enabled(enabled)
+    hud:set_e_hearts_enabled(enabled)
     hud:set_rupees_enabled(enabled)
     hud:set_coins_enabled(enabled)
     hud:set_keys_enabled(enabled)
@@ -460,6 +462,13 @@ local function initialize_hud_features(game)
   function hud:set_hearts_enabled(enabled)
     if hearts then
       set_menu_enabled(hearts, enabled)
+    end
+  end
+
+  -- Enables or disables the life counter of the enemy
+  function hud:set_e_hearts_enabled(enabled)
+    if e_hearts then
+      set_menu_enabled(e_hearts, enabled)
     end
   end
 
