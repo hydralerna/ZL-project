@@ -15,9 +15,9 @@ precision mediump float;
 #define COMPAT_PRECISION
 #endif
 
+
 uniform sampler2D sol_texture; // The main input texture (the screen.)
 uniform sampler2D palette; // The palette texture.
-//palette = "shaders/palette.png";
 COMPAT_VARYING vec2 sol_vtex_coord;
 COMPAT_VARYING vec4 sol_vcolor;
 uniform float shift; // The shift amount on the palette texture.
@@ -26,8 +26,10 @@ uniform float screenScale; // The current scale of the screen. (1x, 2x, etc)
 #define screenScale 1
 uniform vec2 sol_input_size; // The size of the core game screen (for example: 320 x 240)
 
- 
+
 void main() {
+
+
     // The size of the game window.
     vec2 screenSizeScaled = screenScale * sol_input_size;
     // The pixel coordinate being operated on.
