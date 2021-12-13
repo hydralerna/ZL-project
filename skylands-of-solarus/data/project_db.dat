@@ -51,10 +51,13 @@ tileset{ id = "out/o_fc_wll_trees_01" }
 tileset{ id = "out/o_fc_wll_wells_01" }
 tileset{ id = "out/o_zc_blocks_01" }
 tileset{ id = "out/o_zc_lav_lava_01" }
+tileset{ id = "out/o_zc_water_01" }
 tileset{ id = "out/o_zc_wll_castles_01" }
 tileset{ id = "out/o_zc_wll_cliffs_01" }
 tileset{ id = "out/o_zc_wll_houses_01" }
 tileset{ id = "out/o_zc_wll_pillars_01" }
+tileset{ id = "out/o_zc_wll_roofs_01" }
+tileset{ id = "out/o_zc_wll_specials_01" }
 tileset{ id = "out/o_zc_wll_store_signs_01" }
 
 sprite{ id = "blocks/fc_statue1" }
@@ -93,6 +96,7 @@ sprite{ id = "enemies/bosses/e_fc_vitreous", description = "enemies/bosses/vitre
 sprite{ id = "enemies/e_fc_baby_jelleggtric_egg_fixed" }
 sprite{ id = "enemies/e_fc_baby_jelleggtric_egg_thrown", description = "enemies/e_fc_baby_eater_egg_thrown" }
 sprite{ id = "enemies/e_fc_bat_01", description = "enemies/e_fc_bat_01" }
+sprite{ id = "enemies/e_fc_electricity" }
 sprite{ id = "enemies/e_fc_ghost_01", description = "enemies/e_fc_ghost_01" }
 sprite{ id = "enemies/e_fc_haunted_tree_01", description = "enemies/e_fc_haunted_tree_01" }
 sprite{ id = "enemies/e_fc_maloney" }
@@ -137,6 +141,7 @@ sprite{ id = "hero/tunic2", description = "hero/tunic2" }
 sprite{ id = "hero/tunic3", description = "hero/tunic3" }
 sprite{ id = "hud/dialog_box_message_end", description = "hud/dialog_box_message_end" }
 sprite{ id = "hud/empty_heart", description = "hud/empty_heart" }
+sprite{ id = "hud/empty_heart_enemy", description = "hud/empty_heart_enemy" }
 sprite{ id = "hud/icon_action", description = "hud/icon_action" }
 sprite{ id = "hud/icon_attack", description = "hud/icon_attack" }
 sprite{ id = "hud/icon_item_1", description = "hud/icon_item_1" }
@@ -710,6 +715,7 @@ file{ path = "sprites/enemies/bosses/e_fc_boss_skull.dat", author = "froggy77, L
 file{ path = "sprites/enemies/bosses/e_fc_boss_slime.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/enemies/bosses/e_fc_jelleggtric.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/e_fc_baby_jelleggtric_egg_fixed.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/e_fc_electricity.dat", author = "froggy77", license = "GPV L3" }
 file{ path = "sprites/enemies/shadows/shadow_16x12.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/shadows/shadow_8x5.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/lock.dat", author = "froggy77", license = "GPV v3" }
@@ -756,3 +762,9 @@ file{ path = "tilesets/out/o_fc_wll_mushrooms_01_TEST_COLORS.tiles.png", author 
 file{ path = "tilesets/out/o_fc_wll_store_signs_01.dat", author = "froggy77", }
 file{ path = "tilesets/out/o_fc_wll_store_signs_01.tiles.png", author = "froggy77", }
 file{ path = "tilesets/out/o_fc_wll_temples_01.dat", author = "DragonDePlatino, froggy77", license = "CC-BY 4.0" }
+file{ path = "tilesets/out/o_zc_water_01.dat", author = "Nintendo", }
+file{ path = "tilesets/out/o_zc_water_01.entities.png", author = "Nintendo", }
+file{ path = "tilesets/out/o_zc_water_01.tiles.png", author = "Nintendo", }
+file{ path = "tilesets/out/o_zc_wll_specials_01.dat", author = "Nintendo", }
+file{ path = "tilesets/out/o_zc_wll_specials_01.entities.png", author = "Nintendo", }
+file{ path = "tilesets/out/o_zc_wll_specials_01.tiles.png", author = "Nintendo", }
