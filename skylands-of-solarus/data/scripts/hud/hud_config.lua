@@ -33,8 +33,16 @@ local hud_config = {
   {
     menu_script = "scripts/hud/hearts",
     x = -177,
-    y = 16,
+    y = 8,
   },
+
+  -- Hearts meter for the enemy
+  {
+    menu_script = "scripts/hud/hearts_enemy",
+    x = -177,
+    y = 24,
+  },
+
 
   -- Money counter.
   {
