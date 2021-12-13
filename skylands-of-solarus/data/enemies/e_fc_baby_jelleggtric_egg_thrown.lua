@@ -7,13 +7,13 @@ local enemy = ...
 
 local sprite = enemy:create_sprite("enemies/e_fc_baby_jelleggtric_egg_thrown")
 local in_egg = true
-
+local hit = false
 
 
 function enemy:on_created()
 
   -- Enemy
-  enemy:set_life(2)
+  enemy:set_life(1)
   enemy:set_damage(2)
   enemy:set_size(16, 16)
   enemy:set_origin(8, 13)
@@ -74,11 +74,13 @@ function enemy:on_movement_finished(movement)
   self:on_obstacle_reached(movement)
 end
 
+
 -- The enemy receives an attack whose consequence is "custom".
 function enemy:on_custom_attack_received(attack, sprite)
 
   if attack == "sword" and sprite:get_animation() == "egg" then
     -- The egg is hit by the sword.
+    hit = true
     self:break_egg()
     sol.audio.play_sound("enemies/genie_bottle_smash")
   else
@@ -99,13 +101,19 @@ end
 --  The animation of the sprite is finished.
 function sprite:on_animation_finished(animation)
 
-  -- If the egg was breaking, make the Jelleggtric go.
+  -- If the egg was breaking, make the Jelleggtric go unless it's been hit
   if animation == "egg_breaking" then
-    self:set_animation("walking")
-    enemy:set_push_hero_on_sword(false)
-    enemy:set_size(8, 16)
-    enemy:set_origin(4, 13)
-    enemy:go_hero()
+    if hit then
+      enemy:set_life(0)
+    else
+      self:set_animation("walking")
+      enemy:set_push_hero_on_sword(false)
+      enemy:set_size(8, 13)
+      enemy:set_origin(4, 13)
+      enemy:set_life(2)
+      enemy:set_damage(1)
+      enemy:go_hero()
+    end
   end
 end
 
