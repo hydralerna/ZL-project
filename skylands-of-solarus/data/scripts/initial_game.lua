@@ -14,7 +14,8 @@ function initial_game:initialize_new_savegame(game)
 
   -- You can modify this function to set the initial life and equipment
   -- and the starting location.
-  game:set_starting_location("Tests/test_map", nil)  -- Starting location.
+  local map_id = "Tests/test_map"
+  game:set_starting_location(map_id, nil)  -- Starting location.
 
   game:set_value("mode", "gb")
   game:set_value("color_1", 1)
@@ -33,6 +34,7 @@ function initial_game:initialize_new_savegame(game)
   game:set_ability("lift", 1)
   game:set_ability("sword", 1)
   game:set_value("player_name", "Link")
+  game:set_value("last_map", "")
 end
 
 return initial_game
