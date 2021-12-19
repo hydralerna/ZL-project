@@ -59,9 +59,8 @@ function hearts_builder:new(game, config)
         hearts.nb_current_hearts_displayed = hearts.nb_current_hearts_displayed - 1
       else
         hearts.nb_current_hearts_displayed = hearts.nb_current_hearts_displayed + 1
-        if game:is_started()
-            and hearts.nb_current_hearts_displayed % 4 == 0 then
-          sol.audio.play_sound("heart")
+        if game:is_started() and hearts.nb_current_hearts_displayed % 4 == 0 then
+          sol.audio.play_sound("items/get_item")
         end
       end
     end
@@ -102,7 +101,7 @@ function hearts_builder:new(game, config)
 
     if game:get_life() <= game:get_max_life() / 4 then
 
-      sol.audio.play_sound("misc/low_health") --danger
+      sol.audio.play_sound("misc/low_health") -- danger
       hearts.danger_sound_timer = sol.timer.start(hearts, 750, function()
         hearts:repeat_danger_sound()
       end)
