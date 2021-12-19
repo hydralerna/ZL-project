@@ -2,6 +2,7 @@ map{ id = "Tests/Champiville", description = "Champiville (outside)" }
 map{ id = "Tests/Temple", description = "Temple" }
 map{ id = "Tests/cliffs_and_dungeons", description = "Cliffs & Dungeons" }
 map{ id = "Tests/pavements" }
+map{ id = "Tests/test_cliffs" }
 map{ id = "Tests/test_map", description = "Test Map" }
 map{ id = "Tests/test_map_for_CrookiNari", description = "For CrookiNari" }
 map{ id = "Tests/test_python", description = "Test for Python" }
@@ -140,8 +141,8 @@ sprite{ id = "hero/tunic1", description = "hero/tunic1" }
 sprite{ id = "hero/tunic2", description = "hero/tunic2" }
 sprite{ id = "hero/tunic3", description = "hero/tunic3" }
 sprite{ id = "hud/dialog_box_message_end", description = "hud/dialog_box_message_end" }
+sprite{ id = "hud/empty_b_heart", description = "hud/empty_b_heart" }
 sprite{ id = "hud/empty_heart", description = "hud/empty_heart" }
-sprite{ id = "hud/empty_heart_enemy", description = "hud/empty_heart_enemy" }
 sprite{ id = "hud/icon_action", description = "hud/icon_action" }
 sprite{ id = "hud/icon_attack", description = "hud/icon_attack" }
 sprite{ id = "hud/icon_item_1", description = "hud/icon_item_1" }
@@ -763,8 +764,6 @@ file{ path = "tilesets/out/o_fc_wll_store_signs_01.dat", author = "froggy77", }
 file{ path = "tilesets/out/o_fc_wll_store_signs_01.tiles.png", author = "froggy77", }
 file{ path = "tilesets/out/o_fc_wll_temples_01.dat", author = "DragonDePlatino, froggy77", license = "CC-BY 4.0" }
 file{ path = "tilesets/out/o_zc_water_01.dat", author = "Nintendo", }
-file{ path = "tilesets/out/o_zc_water_01.entities.png", author = "Nintendo", }
 file{ path = "tilesets/out/o_zc_water_01.tiles.png", author = "Nintendo", }
 file{ path = "tilesets/out/o_zc_wll_specials_01.dat", author = "Nintendo", }
-file{ path = "tilesets/out/o_zc_wll_specials_01.entities.png", author = "Nintendo", }
 file{ path = "tilesets/out/o_zc_wll_specials_01.tiles.png", author = "Nintendo", }
