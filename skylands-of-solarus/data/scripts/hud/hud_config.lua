@@ -38,7 +38,7 @@ local hud_config = {
 
   -- Hearts meter for the enemy
   {
-    menu_script = "scripts/hud/hearts_enemy",
+    menu_script = "scripts/hud/b_hearts",
     x = -177,
     y = 24,
   },
