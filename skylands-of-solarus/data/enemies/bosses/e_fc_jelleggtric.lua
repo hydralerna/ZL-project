@@ -8,7 +8,7 @@ require("scripts/hud/lvl_and_exp")
 local game = enemy:get_game()
 local nb_eggs_to_create = 0
 local nb_eggs_created = 0
-local boss_starting_life = 6
+local boss_starting_life = 12
 local boss_movement_starting_speed = 20  -- Starting speed in pixels per second, it will gain 5 per life point lost.
 local boss_movement_speed = boss_movement_starting_speed
 local protected = false
@@ -103,7 +103,7 @@ function enemy:egg_phase_soon()
     local animation = self:get_sprite("boss"):get_animation()
     if protected then
         set_egg_phase(7000)
-        print("set_egg_phase")
+        --print("set_egg_phase")
     else
       -- Delay the egg phase if there are already too much sons.
       sol.timer.start(self, 5000, function() self:egg_phase_soon() end)
@@ -181,7 +181,7 @@ function enemy:run_away()
   if self:get_life() > 1 then
     m = sol.movement.create("straight")
     m:set_angle(angle)
-    print(angle)
+    --print(angle)
     m:set_speed(boss_movement_speed)
     m:start(self)
   end
