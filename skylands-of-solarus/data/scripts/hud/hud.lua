@@ -547,6 +547,8 @@ local function initialize_hud_features(game)
       pause_icon = element
     elseif element_config.menu_script == "scripts/hud/hearts" then
       hearts = element
+    elseif element_config.menu_script == "scripts/hud/e_hearts" then
+      e_hearts = element
     elseif element_config.menu_script == "scripts/hud/small_keys" then
       keys = element
     elseif element_config.menu_script == "scripts/hud/rupees" then
