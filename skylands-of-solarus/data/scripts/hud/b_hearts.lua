@@ -9,7 +9,6 @@ function b_hearts_builder:new(game, config)
   if config ~= nil then
     b_hearts.dst_x, b_hearts.dst_y = config.x, config.y
   end
-
   b_hearts.surface = sol.surface.create(100, 19)
   b_hearts.empty_heart_sprite = sol.sprite.create("hud/empty_b_heart")
   b_hearts.nb_max_hearts_displayed = 4
@@ -17,6 +16,7 @@ function b_hearts_builder:new(game, config)
   b_hearts.all_hearts_img = sol.surface.create("hud/b_hearts.png")
   b_hearts.last_map = game:get_value("last_map")
   b_hearts.is_restarted = false
+  b_hearts.is_dying = false
   b_hearts.display = false
 
 
@@ -35,6 +35,7 @@ function b_hearts_builder:new(game, config)
       b_hearts.is_restarted = true
     end
     b_hearts.danger_sound_timer = nil
+    b_hearts.display_timer = nil
     b_hearts:check()
     b_hearts:rebuild_surface()
   end
@@ -46,7 +47,7 @@ function b_hearts_builder:new(game, config)
 
     local need_rebuild = false
 
-    -- Test
+    -- Display is activated if there is a boss in the map
     local map = game:get_map()
     if map == nil then
       need_rebuild = true
@@ -60,6 +61,7 @@ function b_hearts_builder:new(game, config)
             b_hearts.starting_life = b_hearts.boss:get_life()
             b_hearts.nb_max_hearts_displayed = b_hearts.starting_life
             b_hearts.nb_current_hearts_displayed = b_hearts.starting_life
+            b_hearts.count = math.floor(b_hearts.starting_life / 4)
             b_hearts.display = true
             if b_hearts.is_restarted then
               b_hearts.is_restarted = false
@@ -69,12 +71,11 @@ function b_hearts_builder:new(game, config)
       end
     end
 
+    -- If display is activated...
     if b_hearts.display then
-
       -- Current life of the boss.
       local nb_current_hearts = b_hearts.boss:get_life()
       if nb_current_hearts ~= b_hearts.nb_current_hearts_displayed then
-
         need_rebuild = true
         if nb_current_hearts < b_hearts.nb_current_hearts_displayed then
           b_hearts.nb_current_hearts_displayed = b_hearts.nb_current_hearts_displayed - 1
@@ -85,11 +86,16 @@ function b_hearts_builder:new(game, config)
           end
         end
       end
+      if nb_current_hearts == 0 and not b_hearts.is_dying then
+        b_hearts.is_dying = true
+        -- print("b_hearts.is_dying", b_hearts.is_dying)
+        need_rebuild = true
+      end
 
       -- If we are in-game, play an animation and a sound if the life is low.
       if game:is_started() then
-
         if b_hearts.boss:get_life() <= (b_hearts.nb_max_hearts_displayed / 4)
+            and b_hearts.boss:get_life() ~= 0
             and not game:is_suspended() then
           need_rebuild = true
           if b_hearts.empty_heart_sprite:get_animation() ~= "danger" then
@@ -105,6 +111,15 @@ function b_hearts_builder:new(game, config)
           need_rebuild = true
           b_hearts.empty_heart_sprite:set_animation("normal")
         end
+      end
+      if b_hearts.is_dying and b_hearts.display_timer == nil
+          and b_hearts.count > 0 and not game:is_suspended() then
+          b_hearts.display_timer = sol.timer.start(self, 1500, function()
+            b_hearts.count = b_hearts.count - 1
+            b_hearts.display_timer = nil
+            b_hearts:rebuild_surface()
+          end)
+          b_hearts.display_timer:set_suspended_with_map(true)
       end
     end -- (Display)
 
@@ -137,29 +152,37 @@ function b_hearts_builder:new(game, config)
 
   function b_hearts:rebuild_surface()
 
+    b_hearts.surface:clear()
     if b_hearts.display then
 
-      b_hearts.surface:clear()
-
-      -- Display the hearts.
-      for i = 0, (b_hearts.nb_max_hearts_displayed / 4) - 1 do
-        local x, y = (i % 10) * 10, math.floor(i / 10) * 10
-        b_hearts.empty_heart_sprite:draw(b_hearts.surface, x, y)
-        if i < math.floor(b_hearts.nb_current_hearts_displayed / 4) then
-          -- This heart is full.
-          b_hearts.all_hearts_img:draw_region(27, 0, 9, 9, b_hearts.surface, x, y)
+      -- Gradually remove empty hearts while the boss is dying.
+      if b_hearts.is_dying then
+        local count = b_hearts.count
+        for i = 0, count - 1 do
+          local x, y = (i % 10) * 10, math.floor(i / 10) * 10
+          b_hearts.empty_heart_sprite:draw(b_hearts.surface, x, y)
         end
-      end
-
-      -- Last fraction of heart.
-      local i = math.floor(b_hearts.nb_current_hearts_displayed / 4)
-      local remaining_fraction = b_hearts.nb_current_hearts_displayed % 4
-      if remaining_fraction ~= 0 then
-        local x, y = (i % 10) * 10, math.floor(i / 10) * 10
-        b_hearts.all_hearts_img:draw_region((remaining_fraction - 1) * 9, 0, 9, 9, b_hearts.surface, x, y)
+      else
+        -- Display the hearts.
+        for i = 0, (b_hearts.nb_max_hearts_displayed / 4) - 1 do
+          local x, y = (i % 10) * 10, math.floor(i / 10) * 10
+          b_hearts.empty_heart_sprite:draw(b_hearts.surface, x, y)
+          if i < math.floor(b_hearts.nb_current_hearts_displayed / 4) then
+            -- This heart is full.
+            b_hearts.all_hearts_img:draw_region(27, 0, 9, 9, b_hearts.surface, x, y)
+          end
+        end
+        -- Last fraction of heart.
+        local i = math.floor(b_hearts.nb_current_hearts_displayed / 4)
+        local remaining_fraction = b_hearts.nb_current_hearts_displayed % 4
+        if remaining_fraction ~= 0 then
+          local x, y = (i % 10) * 10, math.floor(i / 10) * 10
+          b_hearts.all_hearts_img:draw_region((remaining_fraction - 1) * 9, 0, 9, 9, b_hearts.surface, x, y)
+        end
       end
     end
   end
+
 
   function b_hearts:set_dst_position(x, y)
 
