@@ -10,6 +10,7 @@
 require("scripts/multi_events")
 require("scripts/ground_effects")
 
+
 local map = ...
 local game = map:get_game()
 
@@ -38,6 +39,15 @@ map:register_event("on_started", function()
 
   end
 
+
+  function in_boss_room_sensor:on_activated()
+
+    require("scripts/hud/b_hearts")
+    print("in_boss_room_sensor")
+    game:set_value("in_boss_room", true)
+    b_hearts:check()
+    in_boss_room_sensor:remove()
+  end
 
 
  function test_button:on_activated()
