@@ -21,6 +21,7 @@ function initial_game:initialize_new_savegame(game)
   game:set_value("color_1", 1)
   game:set_value("color_2", 2)
   game:set_value("color_3", 3)
+  game:set_value("color_4", 4)
   game:set_value("submenu_bg_icon_sprite", 1)
   game:set_value("cursor_row", 0)
   game:set_value("cursor_column", 1)
@@ -35,6 +36,7 @@ function initial_game:initialize_new_savegame(game)
   game:set_ability("sword", 1)
   game:set_value("player_name", "Link")
   game:set_value("last_map", "")
+  game:set_value("in_boss_room", false)
 end
 
 return initial_game
