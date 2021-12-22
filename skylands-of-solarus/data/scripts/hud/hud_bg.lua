@@ -8,7 +8,7 @@ local hud_bg_builder = {}
 function hud_bg_builder:new(game, config)
 
   local hud_bg = {}
-  hud_bg.color = game:get_value("color") or 1
+  hud_bg.color = game:get_value("color_4") or 1
   local colors = {{15, 31, 31}, { 48, 111, 80 }, {143, 192, 112}, { 224, 255, 208 }}
   hud_bg.dst_x, hud_bg.dst_y = config.x, config.y
   hud_bg.dst_w, hud_bg.dst_h = sol.video.get_quest_size()
