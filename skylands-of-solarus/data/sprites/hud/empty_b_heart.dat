@@ -14,3 +14,11 @@ animation{
     { x = 0, y = 9, frame_width = 9, frame_height = 9, origin_x = 0, origin_y = 0, num_frames = 4 },
   },
 }
+animation{
+  name = "explosion",
+  src_image = "hud/b_hearts.png",
+  frame_delay = 200,
+  directions = {
+    { x = 0, y = 18, frame_width = 9, frame_height = 9, origin_x = 0, origin_y = 0, num_frames = 8, num_columns = 4 },
+  },
+}
