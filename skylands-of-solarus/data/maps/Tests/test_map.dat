@@ -8082,7 +8082,7 @@ destination{
   name = "starting_destination",
   layer = 0,
   x = 120,
-  y = 141,
+  y = 125,
   direction = 1,
 }
 
@@ -8335,9 +8335,18 @@ enemy{
 
 pickable{
   layer = 0,
-  x = 152,
+  x = 168,
   y = 141,
   treasure_name = "bomb",
+}
+
+sensor{
+  name = "in_boss_room_sensor",
+  layer = 0,
+  x = 88,
+  y = 141,
+  width = 80,
+  height = 16,
 }
 
 tile{
