@@ -35,8 +35,6 @@ function initial_game:initialize_new_savegame(game)
   game:set_ability("lift", 1)
   game:set_ability("sword", 1)
   game:set_value("player_name", "Link")
-  game:set_value("last_map", "")
-  game:set_value("in_boss_room", false)
 end
 
 return initial_game
