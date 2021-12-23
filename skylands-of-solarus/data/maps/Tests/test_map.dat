@@ -8341,7 +8341,7 @@ pickable{
 }
 
 sensor{
-  name = "in_boss_room_sensor",
+  name = "boss_sensor",
   layer = 0,
   x = 88,
   y = 141,
