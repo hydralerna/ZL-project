@@ -40,13 +40,11 @@ map:register_event("on_started", function()
   end
 
 
-  function in_boss_room_sensor:on_activated()
+  function boss_sensor:on_activated()
 
     require("scripts/hud/b_hearts")
-    print("in_boss_room_sensor")
-    game:set_value("in_boss_room", true)
-    b_hearts:check()
-    in_boss_room_sensor:remove()
+    game:set_b_hearts_hud_enabled(true)
+    boss_sensor:remove()
   end
 
 
