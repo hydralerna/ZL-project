@@ -1,10 +1,11 @@
 -- Hearts view for the boss used in game screen
+-- WIP
 
 local b_hearts_builder = {}
 
 function b_hearts_builder:new(game, config)
 
-  b_hearts = {} -- TODO: LOCAL
+  local b_hearts = {}
 
   if config ~= nil then
     b_hearts.dst_x, b_hearts.dst_y = config.x, config.y
@@ -12,8 +13,8 @@ function b_hearts_builder:new(game, config)
   b_hearts.surface = sol.surface.create(100, 19)
   b_hearts.empty_heart_sprite = sol.sprite.create("hud/empty_b_heart")
   b_hearts.all_hearts_img = sol.surface.create("hud/b_hearts.png")
-  b_hearts.is_restarted = false
-  b_hearts.display = false
+  b_hearts.is_restarted = true
+  b_hearts.enabled = false
 
 
   function b_hearts:on_started()
@@ -25,10 +26,9 @@ function b_hearts_builder:new(game, config)
     -- (this is because the hearts are also used in the savegame menu).
 
     -- After game-over don't show gradually getting the life back.
-    b_hearts.last_map = game:get_value("last_map")
     if b_hearts.starting_life ~= nil then
       b_hearts.boss:set_life(b_hearts.starting_life)
-      b_hearts.display = true
+      b_hearts.enabled = true
       b_hearts.is_restarted = true
     end
     b_hearts:check()
@@ -48,21 +48,13 @@ function b_hearts_builder:new(game, config)
       need_rebuild = true
     else
       local map_id = map:get_id()
-      if b_hearts.last_map ~= map_id or b_hearts.is_restarted then
-        local in_boss_room = game:get_value("in_boss_room")
-        if in_boss_room == false then
-          return true
-        else
-          game:set_value("last", map_id)
-        end
-        print(in_boss_room)
-        b_hearts.last_map = map_id
-        if map:has_entity("boss") and in_boss_room then
+      if b_hearts.is_restarted then
+        if map:has_entity("boss") then
             b_hearts.boss = map:get_entity("boss")
             b_hearts.starting_life = b_hearts.boss:get_life()
             b_hearts.nb_max_hearts_displayed = b_hearts.starting_life
             b_hearts.nb_current_hearts_displayed = b_hearts.starting_life
-            b_hearts.display = true
+            --b_hearts.enabled = true
             if b_hearts.is_restarted then
               b_hearts.is_restarted = false
             end
@@ -72,7 +64,7 @@ function b_hearts_builder:new(game, config)
     end
 
     -- If display is activated...
-    if b_hearts.display then
+    if b_hearts.enabled then
       -- Current life of the boss.
       local nb_current_hearts = b_hearts.boss:get_life()
       if nb_current_hearts ~= b_hearts.nb_current_hearts_displayed then
@@ -98,7 +90,7 @@ function b_hearts_builder:new(game, config)
                   b_hearts.empty_heart_sprite:set_animation("explosion")
                 end
               end)
-            b_hearts.timer:set_suspended_with_map(true)
+              b_hearts.timer:set_suspended_with_map(true)
             end
           elseif b_hearts.empty_heart_sprite:get_animation() ~= "danger" then
               b_hearts.empty_heart_sprite:set_animation("danger")
@@ -122,10 +114,25 @@ function b_hearts_builder:new(game, config)
   end
 
 
+  function game:set_b_hearts_hud_enabled(enabled)
+
+    if enabled then
+      b_hearts.enabled = true
+    else
+      b_hearts.enabled = false
+    end
+  end
+
+
+  function game:get_b_hearts_hud_enabled()
+
+      return b_hearts.enabled
+  end
+
   function b_hearts:rebuild_surface()
 
     b_hearts.surface:clear()
-    if b_hearts.display then
+    if b_hearts.enabled then
 
       -- Display the hearts.
       for i = 0, (b_hearts.nb_max_hearts_displayed / 4) - 1 do
