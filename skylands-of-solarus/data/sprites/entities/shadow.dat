@@ -16,6 +16,6 @@ animation{
   name = "smallest",
   src_image = "entities/shadow.png",
   directions = {
-    { x = 6, y = 6, frame_width = 4, frame_height = 3, origin_x = 2, origin_y = 1 },
+    { x = 12, y = 3, frame_width = 4, frame_height = 3, origin_x = 2, origin_y = 1 },
   },
 }
