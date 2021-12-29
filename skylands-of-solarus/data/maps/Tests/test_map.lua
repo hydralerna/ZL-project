@@ -39,12 +39,14 @@ map:register_event("on_started", function()
 
   end
 
+  print(game:get_b_hearts_hud_enabled())
 
   function boss_sensor:on_activated()
 
     require("scripts/hud/b_hearts")
     game:set_b_hearts_hud_enabled(true)
     boss_sensor:remove()
+    --game:start_dialog("Hey")
   end
 
 
