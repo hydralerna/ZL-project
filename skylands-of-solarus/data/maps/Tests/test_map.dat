@@ -7813,29 +7813,12 @@ tile{
 
 tile{
   layer = 0,
-  x = 112,
-  y = 144,
-  width = 16,
-  height = 16,
-  pattern = "120",
-}
-
-tile{
-  layer = 0,
   x = 104,
   y = 144,
-  width = 8,
+  width = 32,
   height = 16,
-  pattern = "99",
-}
-
-tile{
-  layer = 0,
-  x = 128,
-  y = 144,
-  width = 8,
-  height = 16,
-  pattern = "100",
+  pattern = "1",
+  tileset = "8px_all_zcfc_01",
 }
 
 separator{
@@ -8015,15 +7998,6 @@ teletransporter{
   destination = "destination_test",
 }
 
-door{
-  layer = 0,
-  x = 112,
-  y = 176,
-  direction = 3,
-  sprite = "doors/dungeon/d_fc_door_02a_wide_door_nokey",
-  opening_method = "explosion",
-}
-
 teletransporter{
   layer = 0,
   x = 104,
@@ -8082,7 +8056,7 @@ destination{
   name = "starting_destination",
   layer = 0,
   x = 120,
-  y = 125,
+  y = 157,
   direction = 1,
 }
 
@@ -8345,6 +8319,15 @@ sensor{
   layer = 0,
   x = 88,
   y = 141,
+  width = 80,
+  height = 16,
+}
+
+sensor{
+  name = "boss_stop_sensor",
+  layer = 0,
+  x = 88,
+  y = 29,
   width = 80,
   height = 16,
 }
