@@ -21,10 +21,6 @@ function b_hearts_builder:new(game, config)
 
     -- This function is called when the HUD starts or
     -- was disabled and gets enabled again.
-    -- Unlike other HUD elements, the timers were canceled because they
-    -- are attached to the menu and not to the game
-    -- (this is because the hearts are also used in the savegame menu).
-
     -- After game-over don't show gradually getting the life back.
     if b_hearts.starting_life ~= nil then
       b_hearts.boss:set_life(b_hearts.starting_life)
@@ -54,7 +50,6 @@ function b_hearts_builder:new(game, config)
             b_hearts.starting_life = b_hearts.boss:get_life()
             b_hearts.nb_max_hearts_displayed = b_hearts.starting_life
             b_hearts.nb_current_hearts_displayed = b_hearts.starting_life
-            --b_hearts.enabled = true
             if b_hearts.is_restarted then
               b_hearts.is_restarted = false
             end
@@ -79,7 +74,7 @@ function b_hearts_builder:new(game, config)
         end
       end
 
-      -- If we are in-game, play an animation if the life is low.
+      -- If we are in-game, play a different animation according to the points of life.
       if game:is_started() then
         if b_hearts.boss:get_life() <= (b_hearts.nb_max_hearts_displayed / 4) then
           need_rebuild = true
@@ -114,6 +109,7 @@ function b_hearts_builder:new(game, config)
   end
 
 
+  -- Function to enable or disable the boss's hud
   function game:set_b_hearts_hud_enabled(enabled)
 
     if enabled then
@@ -121,14 +117,16 @@ function b_hearts_builder:new(game, config)
     else
       b_hearts.enabled = false
     end
+    b_hearts:rebuild_surface()
   end
 
-
+  -- Function to get the status (true or false) of the boss's hud
   function game:get_b_hearts_hud_enabled()
 
       return b_hearts.enabled
   end
 
+  -- Function to rebuild the surface
   function b_hearts:rebuild_surface()
 
     b_hearts.surface:clear()
@@ -154,19 +152,21 @@ function b_hearts_builder:new(game, config)
   end
 
 
-  function b_hearts:set_dst_position(x, y)
+  
+  -- function b_hearts:set_dst_position(x, y)
 
-    b_hearts.dst_x = x
-    b_hearts.dst_y = y
-  end
-
-
-  function b_hearts:get_surface()
-
-    return b_hearts.surface
-  end
+   --  b_hearts.dst_x = x
+   --  b_hearts.dst_y = y
+  -- end
 
 
+  -- function b_hearts:get_surface()
+
+   --  return b_hearts.surface
+  -- end
+
+
+  -- Function to draw the surface
   function b_hearts:on_draw(dst_surface)
 
     local x, y = b_hearts.dst_x, b_hearts.dst_y
