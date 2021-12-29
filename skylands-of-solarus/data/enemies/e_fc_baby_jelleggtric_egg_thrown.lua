@@ -108,6 +108,7 @@ function sprite:on_animation_finished(animation)
     else
       self:set_animation("walking")
       enemy:set_push_hero_on_sword(false)
+      enemy:set_treasure("heart")
       enemy:set_size(8, 13)
       enemy:set_origin(4, 13)
       enemy:set_life(2)
