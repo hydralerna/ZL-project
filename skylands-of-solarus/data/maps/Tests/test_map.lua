@@ -39,7 +39,6 @@ map:register_event("on_started", function()
 
   end
 
-  print(game:get_b_hearts_hud_enabled())
 
   function boss_sensor:on_activated()
 
