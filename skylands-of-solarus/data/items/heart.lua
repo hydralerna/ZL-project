@@ -11,7 +11,6 @@ function item:on_created()
   item:set_can_disappear(true)
   item:set_brandish_when_picked(false)
   item:set_sound_when_picked(nil) 
-
 end
 
 
@@ -24,7 +23,6 @@ function item:on_obtaining(variant, savegame_variable)
     -- Life
     item:get_game():add_life(4)
   end
-
 end
 
 
@@ -101,29 +99,28 @@ function item:on_pickable_created(pickable)
     sprite:set_animation("heart_falling")
     sprite:set_direction(random)
     -- Shadow
+    local shadow_sprite = pickable:create_sprite("entities/shadow")
+    pickable:bring_sprite_to_back(shadow_sprite)
     local step = 0
     function sprite:on_frame_changed(animation, frame)
       if animation == "heart_falling" then
         if frame >= 0 and step == 0 then
-          shadow_p_sprite = pickable:create_sprite("entities/shadow")
-          pickable:bring_sprite_to_back(shadow_p_sprite)
-          shadow_p_sprite:set_animation("smallest")
-          shadow_p_sprite:set_xy(0, 8)
+          shadow_sprite:set_animation("smallest")
+          shadow_sprite:set_xy(0, 8)
           step = 1
         elseif frame >= 8 and step == 1 then
-          shadow_p_sprite:set_xy(0, 6)
+          shadow_sprite:set_xy(0, 6)
           step = 2
         elseif frame >= 16 and step == 2 then
-          shadow_p_sprite:set_xy(0, 4)
+          shadow_sprite:set_xy(0, 4)
           step = 3
         elseif frame >= 22 and step == 3 then
-          shadow_p_sprite:set_animation("small")
-          shadow_p_sprite:set_xy(0, 2)
+          shadow_sprite:set_animation("small")
+          shadow_sprite:set_xy(0, 2)
           sprite:set_frame_delay(300)
           step = 4
         end
       end
     end
   end --(endif pickable:get_falling_height())
-
 end
