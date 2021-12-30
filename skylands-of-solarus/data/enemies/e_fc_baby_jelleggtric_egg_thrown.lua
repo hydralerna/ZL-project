@@ -26,7 +26,7 @@ function enemy:on_created()
 
   -- Shadow
   local sprite = self:get_sprite()
-  shadow_sprite = enemy:create_sprite("enemies/shadows/shadow_8x5")
+  local shadow_sprite = enemy:create_sprite("enemies/shadows/shadow_8x5")
   function shadow_sprite:on_animation_changed(animation)
     local next_animation = sprite:get_animation()
     if animation ~= next_animation and shadow_sprite:has_animation(next_animation) then
@@ -108,7 +108,9 @@ function sprite:on_animation_finished(animation)
     else
       self:set_animation("walking")
       enemy:set_push_hero_on_sword(false)
-      enemy:set_treasure("heart")
+      if math.random(5) == 1 then
+        enemy:set_treasure("heart")
+      end
       enemy:set_size(8, 13)
       enemy:set_origin(4, 13)
       enemy:set_life(2)
