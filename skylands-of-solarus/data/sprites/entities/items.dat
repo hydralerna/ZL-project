@@ -28,6 +28,13 @@ animation{
   },
 }
 animation{
+  name = "heart_container",
+  src_image = "items/heart_container.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "heart_falling",
   src_image = "items/heart.png",
   frame_delay = 100,
@@ -35,6 +42,15 @@ animation{
   directions = {
     { x = 0, y = 0, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5, num_frames = 30, num_columns = 10 },
     { x = 0, y = 24, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 5, num_frames = 30, num_columns = 10 },
+  },
+}
+animation{
+  name = "piece_of_heart",
+  src_image = "items/piece_of_heart.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 7 },
   },
 }
 animation{
