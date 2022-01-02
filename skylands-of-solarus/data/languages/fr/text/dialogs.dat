@@ -1,4 +1,60 @@
 dialog{
+  id = "_treasure.heart_container.1",
+  icon = "98",
+  text = [[
+Tu as trouvé un 
+Réceptacle de Coeur. Tu obtiens 
+un Coeur supplémentaire !
+]],
+}
+
+dialog{
+  id = "_treasure.piece_of_heart.1",
+  icon = "94",
+  text = [[
+Tu as trouvé un 
+Fragment de Coeur !
+]],
+}
+
+dialog{
+  id = "_treasure.piece_of_heart.2",
+  icon = "95",
+  text = [[
+Il en faut encore trois pour
+obtenir un Coeur supplémentaire.
+]],
+}
+
+dialog{
+  id = "_treasure.piece_of_heart.3",
+  icon = "96",
+  text = [[
+Un coeur à demi vide ou à
+demi plein, cela reste à méditer.
+]],
+}
+
+dialog{
+  id = "_treasure.piece_of_heart.4",
+  icon = "97",
+  text = [[
+Mais, il ne sert à rien si tu n'en
+trouves pas un autre.
+]],
+}
+
+dialog{
+  id = "_treasure.piece_of_heart.5",
+  icon = "98",
+  text = [[
+Avec le quatrième fragment,
+cela te fait un Coeur
+supplémentaire. Formidable !!!
+]],
+}
+
+dialog{
   id = "generic_behavior.sleeping_rrr",
   text = [[
 Rrrrrr... Rrr... Rrrrrr 
