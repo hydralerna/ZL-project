@@ -209,7 +209,7 @@ local function initialize_dialog_box_features(game)
 
     -- Set the coordinates of graphic objects.
     local screen_width, screen_height = sol.video.get_quest_size()
-    local x = screen_width / 2 - 116
+    local x = (screen_width - box_width) / 2
     local y = top and 47 or (screen_height - 80)
 
     if self.style == "empty" then
@@ -569,7 +569,7 @@ local function initialize_dialog_box_features(game)
 
     if self.style == "empty" then
       -- Draw a dark rectangle.
-      dst_surface:fill_color({15, 31, 32}, x, y, 232, 60)
+      dst_surface:fill_color({15, 31, 32}, x, y, box_width, box_height)
     else
       -- Draw the dialog box.
       self.box_img:draw_region(0, 0, box_width, box_height, self.dialog_surface, x, y)
@@ -578,15 +578,15 @@ local function initialize_dialog_box_features(game)
       if self.is_name then
         local text_width = self.name_surface:get_size()
         text_width = math.max(text_width, 12)
-        local right_offset = self.is_name_on_right and (116 - text_width) or 0
+        local right_offset = self.is_name_on_right and (box_width / 2 - text_width) or 0
         self.box_img:draw_region( -- left side
-          112, 60, 4, 16, self.dialog_surface,
-          x + 0 + right_offset, y - 8
+          box_width / 2 - 4, box_height, 4, 16, self.dialog_surface,
+          x + right_offset, y - 8
         )
         local x_offset = 0
         while x_offset < text_width do
           self.box_img:draw_region(
-            116, 60,
+            box_width / 2, box_height,
             math.min(8, text_width - x_offset), 16,
             self.dialog_surface,
             x + 4 + x_offset + right_offset,
@@ -595,7 +595,7 @@ local function initialize_dialog_box_features(game)
           x_offset = x_offset + 8
         end
         self.box_img:draw_region( -- right side
-          124, 60, 4, 16, self.dialog_surface,
+          box_width / 2  + 8, box_height, 4, 16, self.dialog_surface,
           x + 4 + text_width + right_offset, y - 8
         )
         self.name_surface:draw(self.dialog_surface, x + 4 + right_offset, y - 8)
@@ -635,13 +635,13 @@ local function initialize_dialog_box_features(game)
         and not self:has_more_lines() then
       self.question_dst_position.y = self.box_dst_position.y +
           (self.selected_answer == 1 and 27 or 40)
-      self.box_img:draw_region(96, 60, 8, 8, self.dialog_surface,
+      self.box_img:draw_region(96, box_height, 8, 8, self.dialog_surface,
           self.question_dst_position.x, self.question_dst_position.y)
     end
 
     -- Draw the end message arrow.
     if self:is_full() then
-      self.end_lines_sprite:draw(self.dialog_surface, x + 92, y + 56)
+      self.end_lines_sprite:draw(self.dialog_surface, x + (box_width / 2 - 8), y + 56)
     end
 
     -- Final blit.
