@@ -21,24 +21,25 @@ function item:on_obtained(variant, savegame_variable)
   hero:set_animation("brandish")
   sol.audio.play_sound("items/fanfare_heart_container")
   local heart_container_entity = map:create_custom_entity({
-    name = "brandish_sword",
+    name = "brandish",
     sprite = "entities/items",
     x = x_hero,
-    y = y_hero - 24,
+    y = y_hero - 13,
     width = 16,
     height = 16,
-    layer = layer_hero,
+    layer = layer_hero + 1,
     direction = 0
     })
-  heart_container_entity:get_sprite():set_animation("heart_container")
-  heart_container_entity:get_sprite():set_direction(0)
-  sol.timer.start(heart_container_entity, 2000, function()
+  local sprite = heart_container_entity:get_sprite()
+  sprite:set_animation("heart_container")
+  sprite:set_direction(0)
+  local game = self:get_game()
+  game:start_dialog("_treasure.heart_container.1", function()
+    game:add_max_life(4)
+    game:set_life(game:get_max_life())
     hero:set_animation("stopped")
     map:remove_entities("brandish")
     hero:unfreeze()
-    local game = self:get_game()
-    game:add_max_life(4)
-    game:set_life(game:get_max_life())
   end)
 
 end
