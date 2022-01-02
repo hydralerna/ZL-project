@@ -8305,6 +8305,7 @@ enemy{
   y = 53,
   direction = 0,
   breed = "bosses/e_fc_jelleggtric",
+  treasure_name = "heart_container",
 }
 
 pickable{
@@ -8323,13 +8324,39 @@ sensor{
   height = 16,
 }
 
-sensor{
-  name = "boss_stop_sensor",
+pickable{
   layer = 0,
-  x = 88,
+  x = 216,
   y = 29,
-  width = 80,
-  height = 16,
+  treasure_name = "piece_of_heart",
+}
+
+pickable{
+  layer = 0,
+  x = 184,
+  y = 29,
+  treasure_name = "piece_of_heart",
+}
+
+pickable{
+  layer = 0,
+  x = 184,
+  y = 125,
+  treasure_name = "piece_of_heart",
+}
+
+pickable{
+  layer = 0,
+  x = 216,
+  y = 125,
+  treasure_name = "piece_of_heart",
+}
+
+pickable{
+  layer = 0,
+  x = 152,
+  y = 125,
+  treasure_name = "heart_container",
 }
 
 tile{
