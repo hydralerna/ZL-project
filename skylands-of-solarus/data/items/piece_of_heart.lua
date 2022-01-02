@@ -34,30 +34,58 @@ function item:get_max_pieces_of_heart()
   
 end
 
+-- Start the dialog and set life
+function item:set_dialog_and_life(id)
+
+    local dialog_id = "_treasure.piece_of_heart."..id
+    game:start_dialog(dialog_id, function()
+      if id ~= 5 then
+        game:add_life(game:get_max_life())
+      else
+        game:add_max_life(4)
+        game:set_life(game:get_max_life())
+      end
+    end)
+
+end
+
+
 function item:on_obtaining()
   
-  -- Sound
+  local map = self:get_map()
+  local hero = map:get_entity("hero")
+  local x_hero,y_hero, layer_hero = hero:get_position()
+  hero:freeze()
+  hero:set_animation("brandish")
   sol.audio.play_sound("items/fanfare_item")
-        
+  local piece_of_heart_entity = map:create_custom_entity({
+    name = "brandish",
+    sprite = "entities/items",
+    x = x_hero,
+    y = y_hero - 13,
+    width = 16,
+    height = 16,
+    layer = layer_hero + 1,
+    direction = 0
+    })
+  local sprite = piece_of_heart_entity:get_sprite()
+  sprite:set_animation("piece_of_heart")
+  sprite:set_direction(0)
+       
 end
+
 
 function item:on_obtained(variant)
 
+  local map = item:get_map()
+  local hero = map:get_entity("hero")
   local num_pieces_of_heart = item:get_num_pieces_of_heart()
+  local id = num_pieces_of_heart % 4 + 2
   game:set_value("num_pieces_of_heart", (num_pieces_of_heart + 1) % 4)
   game:set_value("total_pieces_of_heart", item:get_total_pieces_of_heart() + 1)
-  if num_pieces_of_heart == 0 then
-    game:start_dialog("_treasure.piece_of_heart.2")
-  elseif num_pieces_of_heart == 1 then
-    game:start_dialog("_treasure.piece_of_heart.3")
-  elseif num_pieces_of_heart == 2 then
-    game:start_dialog("_treasure.piece_of_heart.4")
-  else
-    game:start_dialog("_treasure.piece_of_heart.5", function()
-        game:add_max_life(4)
-        game:set_life(game:get_max_life())
-    end)
-  end
-  game:add_life(game:get_max_life())
+  item:set_dialog_and_life(id)
+  hero:set_animation("stopped")
+  map:remove_entities("brandish")
+  hero:unfreeze()
 
 end
