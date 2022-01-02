@@ -3,6 +3,7 @@
 
 -- Variables
 local item = ...
+local game = item:get_game()
 
 -- Event called when the game is initialized.
 function item:on_created()
@@ -33,7 +34,6 @@ function item:on_obtained(variant, savegame_variable)
   local sprite = heart_container_entity:get_sprite()
   sprite:set_animation("heart_container")
   sprite:set_direction(0)
-  local game = self:get_game()
   game:start_dialog("_treasure.heart_container.1", function()
     game:add_max_life(4)
     game:set_life(game:get_max_life())
@@ -43,4 +43,3 @@ function item:on_obtained(variant, savegame_variable)
   end)
 
 end
-
