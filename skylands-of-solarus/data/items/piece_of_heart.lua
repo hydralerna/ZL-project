@@ -34,21 +34,6 @@ function item:get_max_pieces_of_heart()
   
 end
 
--- Start the dialog and set life
-function item:set_dialog_and_life(id)
-
-    local dialog_id = "_treasure.piece_of_heart."..id
-    game:start_dialog(dialog_id, function()
-      if id ~= 5 then
-        game:add_life(game:get_max_life())
-      else
-        game:add_max_life(4)
-        game:set_life(game:get_max_life())
-      end
-    end)
-
-end
-
 
 function item:on_obtaining()
   
@@ -83,7 +68,14 @@ function item:on_obtained(variant)
   local id = num_pieces_of_heart % 4 + 2
   game:set_value("num_pieces_of_heart", (num_pieces_of_heart + 1) % 4)
   game:set_value("total_pieces_of_heart", item:get_total_pieces_of_heart() + 1)
-  item:set_dialog_and_life(id)
+  game:start_dialog("_treasure.piece_of_heart."..id, function()
+    if id == 5 then
+      game:add_max_life(4)
+      game:set_life(game:get_max_life())
+    else
+      game:add_life(game:get_max_life())
+    end
+  end)
   hero:set_animation("stopped")
   map:remove_entities("brandish")
   hero:unfreeze()
