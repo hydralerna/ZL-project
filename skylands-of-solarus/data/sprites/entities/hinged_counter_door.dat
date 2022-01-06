@@ -1,0 +1,26 @@
+animation{
+  name = "open",
+  src_image = "entities/hinged_counter_door.png",
+  directions = {
+    { x = 112, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 112, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "closed",
+  src_image = "entities/hinged_counter_door.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 0, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
+  name = "opening",
+  src_image = "entities/hinged_counter_door.png",
+  frame_delay = 50,
+  frame_to_loop_on = 7,
+  directions = {
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 8 },
+    { x = 0, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 8 },
+  },
+}
