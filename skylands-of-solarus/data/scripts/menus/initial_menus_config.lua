@@ -8,6 +8,7 @@
 local initial_menus = {
   --KO--"scripts/menus/palette_menu",
   "scripts/menus/solarus_logo",
+  "scripts/menus/title_screen/title_screen",
   "scripts/menus/start_game",
 }
 
