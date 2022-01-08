@@ -116,6 +116,7 @@ sprite{ id = "entities/bomb" }
 sprite{ id = "entities/crystal" }
 sprite{ id = "entities/crystal_block" }
 sprite{ id = "entities/explosion" }
+sprite{ id = "entities/hinged_counter_door" }
 sprite{ id = "entities/items" }
 sprite{ id = "entities/lock" }
 sprite{ id = "entities/megabomb" }
@@ -402,6 +403,8 @@ item{ id = "heart", description = "Heart" }
 item{ id = "heart_container", description = "Heart container" }
 item{ id = "money_bag", description = "money_bag" }
 item{ id = "piece_of_heart", description = "Piece of heart" }
+item{ id = "rupee", description = "Rupee" }
+item{ id = "rupee_bag", description = "Ruppe bag" }
 item{ id = "sword", description = "sword" }
 
 enemy{ id = "bosses//e_fc_eater", description = "Papillosaur King" }
@@ -446,6 +449,8 @@ file{ path = "fonts/enter_command.ttf", author = "Jeti", license = "CC BY 4.0" }
 file{ path = "items/heart.lua", license = "GPL v3" }
 file{ path = "items/heart_container.lua", license = "GPL v3" }
 file{ path = "items/piece_of_heart.lua", license = "GPL v3" }
+file{ path = "items/rupee.lua", license = "GPL v3" }
+file{ path = "items/rupee_bag.lua", license = "GPL v3" }
 file{ path = "items/sword.lua", license = "GPL v3" }
 file{ path = "main.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/features.lua", author = "Christopho", license = "GPL v3" }
@@ -477,6 +482,7 @@ file{ path = "scripts/menus/pause/pause_submenu.lua", author = "Christopho", lic
 file{ path = "scripts/menus/solarus_logo.lua", author = "Maxs, Alex Gleason, froggy77", license = "GPL v3" }
 file{ path = "scripts/menus/start_game.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/sword_menu.lua", author = "froggy77 (just a test)", license = "GPL v3" }
+file{ path = "scripts/menus/title_screen/title_screen.lua", author = "Olivier Clero, froggy77", }
 file{ path = "scripts/multi_events.lua", author = "Christopho, std::gregwar", license = "GPL v3" }
 file{ path = "scripts/text_fx_helper.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "shaders/grayscale.dat", author = "Christopho", license = "GPL v3" }
@@ -727,6 +733,16 @@ file{ path = "sprites/enemies/shadows/shadow_16x12.dat", author = "froggy77", li
 file{ path = "sprites/enemies/shadows/shadow_8x5.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/lock.dat", author = "froggy77", license = "GPV v3" }
 file{ path = "sprites/entities/lock.png", author = "froggy77", license = "GPV v3" }
+file{ path = "sprites/menus/title_screen/clouds.png", author = "ansimuz", }
+file{ path = "sprites/menus/title_screen/foreground_trees.png", author = "ansimuz", }
+file{ path = "sprites/menus/title_screen/horizon.png", author = "ansimuz, froggy77", }
+file{ path = "sprites/menus/title_screen/mountains.png", author = "ansimuz, froggy77", }
+file{ path = "sprites/menus/title_screen/mountains_far.png", author = "ansimuz, froggy77", }
+file{ path = "sprites/menus/title_screen/sun.png", author = "froggy77", }
+file{ path = "sprites/menus/title_screen/sword.dat", author = "froggy77", }
+file{ path = "sprites/menus/title_screen/sword.png", author = "froggy77", }
+file{ path = "sprites/menus/title_screen/title.png", author = "froggy77", }
+file{ path = "sprites/menus/title_screen/trees.png", author = "ansimuz", }
 file{ path = "sprites/npc/kaepora_gaebora.dat", author = "Desgardes, froggy77", license = "GPL v3" }
 file{ path = "sprites/npc/sorcerer_statue.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/switches/fc_switches.png", author = "froggy77", license = "GPL v3" }
