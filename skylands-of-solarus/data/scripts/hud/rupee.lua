@@ -1,4 +1,4 @@
--- The rupee counter shown in the game screen.
+-- The counter of rupees shown in the game screen.
 
 local text_fx_helper = require("scripts/text_fx_helper")
 
@@ -20,14 +20,14 @@ function rupees_builder:new(game, config)
   rupees.font_fx_color = {143, 192, 112}
   rupees.text_surface:set_text(game:get_rupee())
   rupees.rupee_icons_img = sol.surface.create("hud/rupee_icon.png")
-  rupees.rupee_bag_displayed = game:get_item("money_bag"):get_variant()
-  rupees.rupee_displayed = game:get_rupee()
+  rupees.rupee_bag_displayed = game:get_item("coin_bag"):get_variant()
+  rupees.amount_displayed = game:get_rupee()
 
   function rupees:check()
 
     local need_rebuild = false
-    local rupee_bag = game:get_item("money_bag"):get_variant()
-    local rupee = game:get_rupee()
+    local rupee_bag = game:get_item("coin_bag"):get_variant()
+    local amount = game:get_rupee()
 
     -- Max rupee.
     if rupee_bag ~= rupees.rupee_bag_displayed then
@@ -35,24 +35,24 @@ function rupees_builder:new(game, config)
       rupees.rupee_bag_displayed = rupee_bag
     end
 
-    -- Current rupee.
-    if rupee ~= rupees.rupee_displayed then
+    -- Current amount of rupees.
+    if amount ~= rupees.amount_displayed then
       need_rebuild = true
       local increment
-      if rupee > rupees.rupee_displayed then
+      if amount > rupees.amount_displayed then
         increment = 1
       else
         increment = -1
       end
-      rupees.rupee_displayed = rupees.rupee_displayed + increment
+      rupees.amount_displayed = rupees.amount_displayed + increment
 
       -- Play a sound if we have just reached the final value.
-      if rupees.rupee_displayed == rupee then
-        sol.audio.play_sound("picked_rupee")
+      if rupees.amount_displayed == amount then
+        sol.audio.play_sound("items/get_rupee")
 
       -- While the counter is scrolling, play a sound every 3 values.
-      elseif rupees.rupee_displayed % 3 == 0 then
-        sol.audio.play_sound("picked_rupee")
+      elseif rupees.amount_displayed % 3 == 0 then
+        sol.audio.play_sound("items/get_rupee")
       end
     end
 
@@ -71,13 +71,13 @@ function rupees_builder:new(game, config)
   function rupees:rebuild_surface()
 
     rupees.surface:clear()
-    -- Max rupee (icon).
+    -- Max amount (icon).
     rupees.rupee_icons_img:draw_region(0, 0, 7, 13, rupees.surface)
     -- Current rupee (counter).
     local max_rupee = game:get_max_rupee()
-    rupees.text_surface:set_text(rupees.rupee_displayed)
+    rupees.text_surface:set_text(rupees.amount_displayed)
     rupees.text_surface:set_xy(10, 6)
-    if rupees.rupee_displayed == max_rupee then
+    if rupees.amount_displayed == max_rupee then
       text_fx_helper:draw_text_with_stroke(rupees.surface, rupees.text_surface, rupees.font_fx_color)
     else
       text_fx_helper:draw_text_with_shadow(rupees.surface, rupees.text_surface, rupees.font_fx_color)
