@@ -44,4 +44,3 @@ function item:on_using()
 
   self:set_finished()
 end
-
