@@ -121,9 +121,7 @@ sprite{ id = "entities/items" }
 sprite{ id = "entities/lock" }
 sprite{ id = "entities/megabomb" }
 sprite{ id = "entities/morla" }
-sprite{ id = "entities/rupee_icon" }
 sprite{ id = "entities/shadow" }
-sprite{ id = "entities/star" }
 sprite{ id = "hero/fire_rod", description = "hero/fire_rod" }
 sprite{ id = "hero/ground1", description = "hero/ground1" }
 sprite{ id = "hero/ground2", description = "hero/ground2" }
@@ -398,14 +396,15 @@ sound{ id = "sword_tapping_weak_wall", description = "Sword - tap bombable (engi
 sound{ id = "throw", description = "Hero - throw (engine)" }
 sound{ id = "wrong", description = "Misc - error (engine)" }
 
-item{ id = "bomb", description = "bomb" }
+item{ id = "bomb", description = "Bomb" }
+item{ id = "coin", description = "Coin" }
+item{ id = "coin_bag", description = "Coin bag" }
 item{ id = "heart", description = "Heart" }
 item{ id = "heart_container", description = "Heart container" }
-item{ id = "money_bag", description = "money_bag" }
 item{ id = "piece_of_heart", description = "Piece of heart" }
 item{ id = "rupee", description = "Rupee" }
-item{ id = "rupee_bag", description = "Ruppe bag" }
-item{ id = "sword", description = "sword" }
+item{ id = "rupee_bag", description = "Rupee bag" }
+item{ id = "sword", description = "Sword" }
 
 enemy{ id = "bosses//e_fc_eater", description = "Papillosaur King" }
 enemy{ id = "bosses/e_fc_jelleggtric", description = "Jelleggtric" }
@@ -458,6 +457,7 @@ file{ path = "scripts/game_manager.lua", author = "Christopho", license = "GPL v
 file{ path = "scripts/hud", license = "GPL v3" }
 file{ path = "scripts/hud/action_icon.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/hud/attack_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
+file{ path = "scripts/hud/coin.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/hud/hearts.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/hud/hud.lua", author = "Christopho, Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/hud/hud_bg.lua", author = "froggy77", license = "GPL v3" }
@@ -465,7 +465,6 @@ file{ path = "scripts/hud/hud_config.lua", author = "Christopho", license = "GPL
 file{ path = "scripts/hud/hud_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/hud/hud_menu.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "scripts/hud/item_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
-file{ path = "scripts/hud/money.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/hud/pause_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/index_palette_shader.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "scripts/info_manager.lua", author = "froggy77, Zefk", }
@@ -733,6 +732,7 @@ file{ path = "sprites/enemies/shadows/shadow_16x12.dat", author = "froggy77", li
 file{ path = "sprites/enemies/shadows/shadow_8x5.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/lock.dat", author = "froggy77", license = "GPV v3" }
 file{ path = "sprites/entities/lock.png", author = "froggy77", license = "GPV v3" }
+file{ path = "sprites/items/coin.png", author = "ansimuz, froggy77", }
 file{ path = "sprites/menus/title_screen/clouds.png", author = "ansimuz", }
 file{ path = "sprites/menus/title_screen/foreground_trees.png", author = "ansimuz", }
 file{ path = "sprites/menus/title_screen/horizon.png", author = "ansimuz, froggy77", }
