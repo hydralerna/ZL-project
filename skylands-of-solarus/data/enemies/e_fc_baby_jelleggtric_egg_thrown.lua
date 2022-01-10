@@ -111,8 +111,13 @@ function sprite:on_animation_finished(animation)
     else
       self:set_animation("walking")
       enemy:set_push_hero_on_sword(false)
-      if math.random(5) == 1 then
+      local random = math.random(7)
+      if random == 1 then
         enemy:set_treasure("heart")
+      elseif random == 2 then
+        enemy:set_treasure("coin")
+      elseif random == 3 then
+        enemy:set_treasure("rupee")
       end
       enemy:set_size(8, 13)
       enemy:set_origin(4, 13)
