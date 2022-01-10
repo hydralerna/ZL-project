@@ -44,9 +44,9 @@ local hud_config = {
   },
 
 
-  -- Money counter.
+  -- Counter of coins
   {
-    menu_script = "scripts/hud/money",
+    menu_script = "scripts/hud/coin",
     x = 90,
     y = -14,
   },
