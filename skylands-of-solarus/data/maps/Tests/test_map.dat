@@ -8387,6 +8387,87 @@ pickable{
   treasure_name = "bomb",
 }
 
+pickable{
+  layer = 0,
+  x = 152,
+  y = 77,
+  treasure_name = "coin",
+  treasure_variant = 2,
+}
+
+pickable{
+  layer = 0,
+  x = 40,
+  y = 29,
+  treasure_name = "coin",
+  treasure_variant = 2,
+}
+
+pickable{
+  layer = 0,
+  x = 184,
+  y = 29,
+  treasure_name = "coin",
+}
+
+pickable{
+  layer = 0,
+  x = 136,
+  y = 77,
+  treasure_name = "coin",
+}
+
+pickable{
+  layer = 0,
+  x = 152,
+  y = 109,
+  treasure_name = "coin_bag",
+  treasure_variant = 6,
+}
+
+pickable{
+  layer = 0,
+  x = 72,
+  y = 93,
+  treasure_name = "coin_bag",
+}
+
+pickable{
+  layer = 0,
+  x = 88,
+  y = 77,
+  treasure_name = "coin_bag",
+  treasure_variant = 3,
+}
+
+pickable{
+  layer = 0,
+  x = 24,
+  y = 77,
+  treasure_name = "rupee",
+}
+
+pickable{
+  layer = 0,
+  x = 216,
+  y = 29,
+  treasure_name = "rupee",
+}
+
+pickable{
+  layer = 0,
+  x = 216,
+  y = 45,
+  treasure_name = "rupee",
+}
+
+pickable{
+  layer = 0,
+  x = 216,
+  y = 61,
+  treasure_name = "rupee",
+}
+
 tile{
   layer = 1,
   x = 400,
