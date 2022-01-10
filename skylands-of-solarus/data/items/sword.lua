@@ -20,4 +20,3 @@ function item:on_variant_changed(variant)
   item:get_game():set_value("force_sword", variant)
 
 end
-
