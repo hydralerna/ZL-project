@@ -1,4 +1,92 @@
 dialog{
+  id = "_treasure.coin_bag.1",
+  icon = "60",
+  text = [[
+Tu as trouvé une bourse
+contenant quelques pièces!
+]],
+}
+
+dialog{
+  id = "_treasure.coin_bag.2",
+  icon = "61",
+  text = [[
+Tu as trouvé une bourse
+contenant quelques pièces!
+Tu pourras mettre plus de
+pièces dans celle-ci.
+]],
+}
+
+dialog{
+  id = "_treasure.coin_bag.3",
+  icon = "62",
+  text = [[
+Tu as trouvé une bourse
+contenant quelques pièces!
+Tu pourras mettre plus de
+pièces dans celle-ci.
+]],
+}
+
+dialog{
+  id = "_treasure.coin_bag.4",
+  icon = "63",
+  text = [[
+Tu as trouvé une bourse
+contenant quelques pièces!
+Tu pourras mettre plus de
+pièces dans celle-ci.
+]],
+}
+
+dialog{
+  id = "_treasure.coin_bag.5",
+  icon = "64",
+  text = [[
+Tu as trouvé une bourse
+contenant quelques pièces!
+Tu pourras mettre plus de
+pièces dans celle-ci.
+]],
+}
+
+dialog{
+  id = "_treasure.coin_bag.6",
+  icon = "65",
+  text = [[
+Tu as reçu une bourse
+tricotée par Mamie.
+Quel beau cadeau! Elle contient
+en plus ... ah non, elle ne contient
+rien. Mais tu pourras y mettre 
+encore plus de pièces.
+]],
+}
+
+dialog{
+  id = "_treasure.coin_bag.7",
+  icon = "66",
+  text = [[
+Tu as trouvé une bourse
+contenant quelques pièces!
+Tu pourras mettre plus de
+pièces dans celle-ci.
+]],
+}
+
+dialog{
+  id = "_treasure.coin_bag.8",
+  icon = "67",
+  text = [[
+Tu as trouvé une bourse
+contenant quelques pièces!
+Tu pourras mettre plus de
+pièces dans celle-ci.
+]],
+}
+
+dialog{
   id = "_treasure.heart_container.1",
   icon = "98",
   text = [[
