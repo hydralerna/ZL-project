@@ -15,6 +15,7 @@ function item:on_created()
   
 end
 
+
 function item:on_obtaining(variant, savegame_variable)
 
   local map = item:get_map()
@@ -30,6 +31,30 @@ function item:on_obtaining(variant, savegame_variable)
   if amount == nil then
     error("Invalid variant '" .. variant .. "' for item 'coin'")
   end
-  self:get_game():add_money(amount)
+  item:get_game():add_money(amount)
   
+end
+
+
+-- Event called when a pickable treasure representing this item
+-- is created on the map.
+function item:on_pickable_created(pickable)
+
+  local shadow_sprite = pickable:get_sprite("shadow")
+  if pickable:get_falling_height() == 0 then
+    shadow_sprite:set_xy(0, 3)
+  else
+    local sprite = pickable:get_sprite()
+    sprite:set_animation("coin_falling")
+    local count = 0
+    function sprite:on_frame_changed(animation, frame)
+      count = count + 1
+      if animation == "coin_falling" and count >= 16 then
+        sprite:set_animation("coin")
+        sprite:set_frame(frame)
+        shadow_sprite:set_xy(0, 3)
+      end
+    end
+  end
+
 end
