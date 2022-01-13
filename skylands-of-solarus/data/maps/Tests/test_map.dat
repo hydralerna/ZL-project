@@ -8329,8 +8329,8 @@ separator{
 enemy{
   name = "boss",
   layer = 0,
-  x = 120,
-  y = 53,
+  x = 200,
+  y = 61,
   direction = 0,
   breed = "bosses/e_fc_jelleggtric",
   treasure_name = "heart_container",
@@ -8347,13 +8347,6 @@ sensor{
 
 pickable{
   layer = 0,
-  x = 184,
-  y = 61,
-  treasure_name = "piece_of_heart",
-}
-
-pickable{
-  layer = 0,
   x = 56,
   y = 61,
   treasure_name = "piece_of_heart",
@@ -8362,21 +8355,28 @@ pickable{
 pickable{
   layer = 0,
   x = 56,
-  y = 109,
+  y = 29,
   treasure_name = "piece_of_heart",
 }
 
 pickable{
   layer = 0,
-  x = 184,
-  y = 109,
+  x = 56,
+  y = 45,
   treasure_name = "piece_of_heart",
 }
 
 pickable{
   layer = 0,
-  x = 120,
+  x = 56,
   y = 77,
+  treasure_name = "piece_of_heart",
+}
+
+pickable{
+  layer = 0,
+  x = 56,
+  y = 93,
   treasure_name = "heart_container",
 }
 
@@ -8389,16 +8389,8 @@ pickable{
 
 pickable{
   layer = 0,
-  x = 152,
-  y = 77,
-  treasure_name = "coin",
-  treasure_variant = 2,
-}
-
-pickable{
-  layer = 0,
-  x = 40,
-  y = 29,
+  x = 24,
+  y = 53,
   treasure_name = "coin",
   treasure_variant = 2,
 }
@@ -8406,66 +8398,140 @@ pickable{
 pickable{
   layer = 0,
   x = 184,
-  y = 29,
+  y = 21,
+  treasure_name = "coin",
+  treasure_variant = 2,
+}
+
+pickable{
+  layer = 0,
+  x = 168,
+  y = 21,
   treasure_name = "coin",
 }
 
 pickable{
   layer = 0,
-  x = 136,
-  y = 77,
+  x = 24,
+  y = 69,
   treasure_name = "coin",
 }
 
 pickable{
   layer = 0,
-  x = 152,
-  y = 109,
+  x = 120,
+  y = 125,
   treasure_name = "coin_bag",
-  treasure_variant = 6,
 }
 
 pickable{
   layer = 0,
-  x = 72,
+  x = 24,
   y = 93,
-  treasure_name = "coin_bag",
-}
-
-pickable{
-  layer = 0,
-  x = 88,
-  y = 77,
   treasure_name = "coin_bag",
   treasure_variant = 3,
 }
 
 pickable{
   layer = 0,
-  x = 24,
-  y = 77,
+  x = 40,
+  y = 21,
   treasure_name = "rupee",
 }
 
 pickable{
   layer = 0,
-  x = 216,
+  x = 24,
   y = 29,
   treasure_name = "rupee",
 }
 
 pickable{
   layer = 0,
-  x = 216,
-  y = 45,
+  x = 72,
+  y = 53,
   treasure_name = "rupee",
 }
 
 pickable{
   layer = 0,
-  x = 216,
+  x = 40,
+  y = 69,
+  treasure_name = "rupee",
+}
+
+pickable{
+  layer = 0,
+  x = 80,
   y = 61,
   treasure_name = "rupee",
+}
+
+pickable{
+  layer = 0,
+  x = 104,
+  y = 69,
+  treasure_name = "rupee",
+}
+
+pickable{
+  layer = 0,
+  x = 72,
+  y = 69,
+  treasure_name = "rupee",
+}
+
+pickable{
+  layer = 0,
+  x = 96,
+  y = 61,
+  treasure_name = "rupee",
+}
+
+pickable{
+  layer = 0,
+  x = 88,
+  y = 69,
+  treasure_name = "rupee",
+}
+
+pickable{
+  layer = 0,
+  x = 88,
+  y = 53,
+  treasure_name = "rupee",
+}
+
+pickable{
+  layer = 0,
+  x = 120,
+  y = 69,
+  treasure_name = "rupee",
+  treasure_variant = 2,
+}
+
+pickable{
+  layer = 0,
+  x = 152,
+  y = 85,
+  treasure_name = "rupee",
+  treasure_variant = 2,
+}
+
+pickable{
+  layer = 0,
+  x = 40,
+  y = 53,
+  treasure_name = "rupee",
+  treasure_variant = 2,
+}
+
+pickable{
+  layer = 0,
+  x = 136,
+  y = 29,
+  treasure_name = "coin",
+  treasure_variant = 2,
 }
 
 tile{
