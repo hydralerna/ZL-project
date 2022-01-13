@@ -122,5 +122,5 @@ function item:on_pickable_created(pickable)
         end
       end
     end
-  end --(endif pickable:get_falling_height())
+  end
 end
