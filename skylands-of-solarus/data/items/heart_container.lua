@@ -8,8 +8,8 @@ local game = item:get_game()
 -- Event called when the game is initialized.
 function item:on_created()
 
-  self:set_sound_when_picked(nil)
-  self:set_brandish_when_picked(false)
+  item:set_sound_when_picked(nil)
+  item:set_brandish_when_picked(false)
 
 end
 
