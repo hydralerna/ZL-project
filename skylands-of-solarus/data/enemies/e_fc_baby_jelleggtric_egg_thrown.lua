@@ -44,8 +44,6 @@ function enemy:on_created()
 end
 
 
-
-
 -- The enemy was stopped for some reason and should restart.
 function enemy:on_restarted()
 
@@ -61,7 +59,9 @@ function enemy:on_restarted()
   else
     self:go_hero()
   end
+
 end
+
 
 -- An obstacle is reached: in the egg state, break the egg.
 function enemy:on_obstacle_reached(movement)
@@ -69,12 +69,16 @@ function enemy:on_obstacle_reached(movement)
   if sprite:get_animation() == "egg" then
     self:break_egg()
   end
+
 end
+
 
 -- The movement is finished: in the egg state, break the egg.
 function enemy:on_movement_finished(movement)
+
   -- Same thing as when an obstacle is reached.
   self:on_obstacle_reached(movement)
+
 end
 
 
@@ -89,6 +93,7 @@ function enemy:on_custom_attack_received(attack, sprite)
   else
     sol.audio.play_sound("enemies/enemy_hit")
   end
+
 end
 
 
@@ -99,7 +104,9 @@ function enemy:break_egg()
   sprite:set_direction(math.random(0, 3))
   sol.audio.play_sound("enemies/genie_bottle_smash") 
   sprite:set_animation("egg_breaking")
+
 end
+
 
 --  The animation of the sprite is finished.
 function sprite:on_animation_finished(animation)
@@ -111,7 +118,7 @@ function sprite:on_animation_finished(animation)
     else
       self:set_animation("walking")
       enemy:set_push_hero_on_sword(false)
-      local random = math.random(7)
+      local random = math.random(6)
       if random == 1 then
         enemy:set_treasure("heart")
       elseif random == 2 then
@@ -126,7 +133,9 @@ function sprite:on_animation_finished(animation)
       enemy:go_hero()
     end
   end
+
 end
+
 
 function enemy:go_hero()
 
@@ -136,9 +145,12 @@ function enemy:go_hero()
   m:start(self)
   self:set_default_attack_consequences()
   in_egg = false
+
 end
+
 
 function enemy:on_dying()
 
   game:add_exp(2)
+
 end
