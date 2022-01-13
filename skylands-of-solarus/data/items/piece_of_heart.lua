@@ -37,7 +37,7 @@ end
 
 function item:on_obtaining()
   
-  local map = self:get_map()
+  local map = item:get_map()
   local hero = map:get_entity("hero")
   local x_hero,y_hero, layer_hero = hero:get_position()
   hero:freeze()
