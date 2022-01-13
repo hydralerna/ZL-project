@@ -38,8 +38,8 @@ function enemy:on_created()
   enemy:bring_sprite_to_back(shadow_sprite)
   enemy:set_invincible_sprite(shadow_sprite)
   enemy:set_sprite_damage(shadow_sprite, 0)
-  --shadow_sprite:set_xy(0, 0)
   self:go()
+
 end
 
 
@@ -51,6 +51,7 @@ function enemy:on_restarted()
   else
     self:go()
   end
+
 end
 
 
@@ -67,12 +68,14 @@ function enemy:on_hurt(attack)
       + (boss_starting_life - life) * 5
   end
   protected = true
+
 end
 
 
 --function enemy:on_hurt_by_sword(hero, enemy_sprite)
 
---  local sprite = self:get_sprite("boss")
+
+
 --end
 
 
@@ -87,6 +90,7 @@ function enemy:go()
   end
   m:set_speed(boss_movement_speed)
   m:start(self)
+
 end
 
 
@@ -111,6 +115,7 @@ function enemy:egg_phase_soon()
   else
     set_egg_phase(500)
   end
+
 end
 
 
@@ -125,6 +130,7 @@ function enemy:egg_phase()
 
   -- The more the boss is hurt, the more it will throw eggs...
   nb_eggs_to_create = boss_starting_life - self:get_life() + 1
+
 end
 
 
@@ -159,6 +165,7 @@ function enemy:throw_egg()
     end
     self:go()
   end
+
 end
 
 
@@ -181,16 +188,17 @@ function enemy:run_away()
   if self:get_life() > 1 then
     m = sol.movement.create("straight")
     m:set_angle(angle)
-    --print(angle)
     m:set_speed(boss_movement_speed)
     m:start(self)
   end
   local duration = 3500 + (math.random(3) * 1000)
   sol.timer.start(self, duration, function() self:egg_phase_soon() end)
+
 end
 
 
 function enemy:on_dying()
 
   game:add_exp(30)
+
 end
