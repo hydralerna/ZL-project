@@ -397,10 +397,13 @@ sound{ id = "throw", description = "Hero - throw (engine)" }
 sound{ id = "wrong", description = "Misc - error (engine)" }
 
 item{ id = "bomb", description = "Bomb" }
+item{ id = "bottle_1_EXAMPLE", description = "Bottle 1" }
 item{ id = "coin", description = "Coin" }
 item{ id = "coin_bag", description = "Coin bag" }
 item{ id = "heart", description = "Heart" }
 item{ id = "heart_container", description = "Heart container" }
+item{ id = "library/potion" }
+item{ id = "life_potion", description = "Potion - Life potion" }
 item{ id = "piece_of_heart", description = "Piece of heart" }
 item{ id = "rupee", description = "Rupee" }
 item{ id = "rupee_bag", description = "Rupee bag" }
@@ -445,8 +448,10 @@ file{ path = "enemies/generic_towards_hero.lua", author = "Christopho", license 
 file{ path = "enemies/generic_waiting_for_hero.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "fonts/8_bit.png", author = "usr_share, Christopho", license = "Public domain" }
 file{ path = "fonts/enter_command.ttf", author = "Jeti", license = "CC BY 4.0" }
+file{ path = "items/bottle_1_EXAMPLE.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "items/heart.lua", license = "GPL v3" }
 file{ path = "items/heart_container.lua", license = "GPL v3" }
+file{ path = "items/library/bottle_EXAMPLE.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "items/piece_of_heart.lua", license = "GPL v3" }
 file{ path = "items/rupee.lua", license = "GPL v3" }
 file{ path = "items/rupee_bag.lua", license = "GPL v3" }
