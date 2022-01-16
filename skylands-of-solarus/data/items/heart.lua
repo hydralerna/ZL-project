@@ -14,6 +14,7 @@ function item:on_created()
 end
 
 
+-- Event called when the hero gets this item.
 function item:on_obtaining(variant, savegame_variable)
 
   -- Sound
