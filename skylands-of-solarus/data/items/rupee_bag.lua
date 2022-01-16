@@ -14,6 +14,9 @@ function item:on_created()
 
 end
 
+
+-- Event called when the hero gets a different variant of this item
+-- (i.e. another bag). 
 function item:on_variant_changed(variant)
 
   -- Obtaining a rupee bag changes the max amount of rupees.
@@ -27,6 +30,7 @@ function item:on_variant_changed(variant)
 end
 
 
+-- Event called when the hero gets this item.
 function item:on_obtaining()
   
   local map = self:get_map()
@@ -53,6 +57,7 @@ function item:on_obtaining()
 end
 
 
+-- Event called when the hero has obtained this item.
 function item:on_obtained(variant)
 
   local rupee_bonus = {7, 23, 58, 91, 173, 0, 856, 2485}
