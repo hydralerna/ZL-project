@@ -20,10 +20,10 @@ function item:on_obtaining(variant, savegame_variable)
   -- Sound
   if item:get_game():get_life() == item:get_game():get_max_life() then
     sol.audio.play_sound("items/get_item")
-  else
-    -- Life
-    item:get_game():add_life(4)
   end
+  -- Life
+  item:get_game():add_life(4) -- One heart
+
 end
 
 
