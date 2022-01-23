@@ -143,6 +143,33 @@ supplémentaire. Formidable !!!
 }
 
 dialog{
+  id = "_treasure.potions_healing_potion.1",
+  icon = "99",
+  text = [[
+Tu as trouvé une potion
+de soin !
+]],
+}
+
+dialog{
+  id = "_treasure.potions_life_potion.1",
+  icon = "99",
+  text = [[
+Tu as trouvé une potion
+de vie !
+]],
+}
+
+dialog{
+  id = "_treasure.potions_magic_potion.1",
+  icon = "99",
+  text = [[
+Tu as trouvé une potion
+magique !
+]],
+}
+
+dialog{
   id = "generic_behavior.sleeping_rrr",
   text = [[
 Rrrrrr... Rrr... Rrrrrr 
@@ -235,6 +262,41 @@ dialog{
 Comment vous appelez-vous?
 $v et vous?
 $v
+]],
+}
+
+dialog{
+  id = "item_empty_potion",
+  icon = "14",
+  text = [[
+Cette fiole est vide.
+]],
+}
+
+dialog{
+  id = "item_healing_potion_not_needed",
+  icon = "14",
+  text = [[
+Hey! Mais, tu as déjà tous tes
+points de vie et de magie!
+]],
+}
+
+dialog{
+  id = "item_life_potion_not_needed",
+  icon = "14",
+  text = [[
+Hey! Mais, tu as déjà tous tes
+points de vie!
+]],
+}
+
+dialog{
+  id = "item_magic_potion_not_needed",
+  icon = "14",
+  text = [[
+Hey! Mais, tu as déjà tous tes
+points de magie!
 ]],
 }
 
