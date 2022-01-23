@@ -125,6 +125,8 @@ function sprite:on_animation_finished(animation)
         enemy:set_treasure("coin")
       elseif random == 3 then
         enemy:set_treasure("rupee")
+      else
+        enemy:set_treasure("potions/life_potion", 2)
       end
       enemy:set_size(8, 13)
       enemy:set_origin(4, 13)
