@@ -65,6 +65,13 @@ sprite{ id = "blocks/fc_statue1" }
 sprite{ id = "blocks/fc_statue2" }
 sprite{ id = "blocks/fc_statue3" }
 sprite{ id = "blocks/fc_statue4" }
+sprite{ id = "chests/chest01", description = "Chest 01" }
+sprite{ id = "chests/chest02", description = "Chest 02" }
+sprite{ id = "chests/chest03", description = "Chest 03" }
+sprite{ id = "chests/chest04", description = "Chest 04" }
+sprite{ id = "chests/chest05", description = "Chest 05" }
+sprite{ id = "chests/chest06", description = "Chest 06" }
+sprite{ id = "chests/chest07", description = "Chest 07" }
 sprite{ id = "destructibles/jar" }
 sprite{ id = "destructibles/pot" }
 sprite{ id = "destructibles/pot2" }
@@ -402,9 +409,11 @@ item{ id = "coin", description = "Coin" }
 item{ id = "coin_bag", description = "Coin bag" }
 item{ id = "heart", description = "Heart" }
 item{ id = "heart_container", description = "Heart container" }
-item{ id = "library/potion" }
-item{ id = "life_potion", description = "Potion - Life potion" }
+item{ id = "library/potions" }
 item{ id = "piece_of_heart", description = "Piece of heart" }
+item{ id = "potions/healing_potion", description = "Healing potion" }
+item{ id = "potions/life_potion", description = "Life potion" }
+item{ id = "potions/magic_potion", description = "Magic potion" }
 item{ id = "rupee", description = "Rupee" }
 item{ id = "rupee_bag", description = "Rupee bag" }
 item{ id = "sword", description = "Sword" }
@@ -420,6 +429,7 @@ enemy{ id = "e_fc_spiderskull_02", description = "Black Spiderskull" }
 enemy{ id = "e_fc_vitreous_child", description = "Vitreous child" }
 enemy{ id = "projectiles/generic_projectile", description = "generic_projectile" }
 
+entity{ id = "library/chest", description = "chest/chest" }
 entity{ id = "megabomb_WIP", description = "megabomb" }
 entity{ id = "morla" }
 
@@ -452,11 +462,17 @@ file{ path = "items/bottle_1_EXAMPLE.lua", author = "Christopho", license = "GPL
 file{ path = "items/heart.lua", license = "GPL v3" }
 file{ path = "items/heart_container.lua", license = "GPL v3" }
 file{ path = "items/library/bottle_EXAMPLE.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "items/library/potions.lua", author = "froggy77, Christopho", license = "GPL v3" }
 file{ path = "items/piece_of_heart.lua", license = "GPL v3" }
+file{ path = "items/potions/healing_potion.lua", author = "froggy77", license = "GPL v33" }
+file{ path = "items/potions/life_potion.lua", author = "froggy77", license = "GPL v3" }
+file{ path = "items/potions/magic_potion.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "items/rupee.lua", license = "GPL v3" }
 file{ path = "items/rupee_bag.lua", license = "GPL v3" }
 file{ path = "items/sword.lua", license = "GPL v3" }
 file{ path = "main.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/automation/automation.lua", author = "Olivier Cléro", license = "GPL v3" }
+file{ path = "scripts/automation/easing.lua", author = "Robert Penner, Olivier Cléro", license = "BSD" }
 file{ path = "scripts/features.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/game_manager.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/hud", license = "GPL v3" }
@@ -478,6 +494,7 @@ file{ path = "scripts/language_manager.lua", author = "Christopho", license = "G
 file{ path = "scripts/menus", license = "GPL v3" }
 file{ path = "scripts/menus/dialog_box_OLD.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/initial_menus_config.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/menus/messagebox.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/menus/pause/palette_menu.lua", author = "froggy77, llamazing", license = "GPL v3" }
 file{ path = "scripts/menus/pause/pause.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/pause/pause_inventory.lua", author = "Christopho", license = "GPL v3" }
