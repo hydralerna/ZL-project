@@ -1,8 +1,12 @@
 local submenu = require("scripts/menus/pause/pause_submenu")
+local text_fx_helper = require("scripts/text_fx_helper")
 --local index_palette_shader = require("scripts/index_palette_shader")
 
 local inventory_submenu = submenu:new()
 local item_names_assignable = {
+  "potions/life_potion",
+  "potions/healing_potion",
+  "potions/magic_potion",
   --"shield",
   --"mushroom",
   --"ocarina",
@@ -37,9 +41,19 @@ function inventory_submenu:on_started()
   self.cursor_sprite2 = sol.sprite.create("menus/pause/cursor_"  .. submenu.color1)
   self.arrow_sprite1 = sol.sprite.create("menus/pause/arrow_"  .. submenu.color1)
   self.arrow_sprite2 = sol.sprite.create("menus/pause/arrow_" .. submenu.color1)
-  self.slots1_surface = sol.surface.create(48, 200)
-  self.slots2_surface = sol.surface.create(48, 200)
 
+  self.cell_size = 18
+  self.cell_spacing = 2
+  local cell = self.cell_size + self.cell_spacing 
+  self.nb_cells_x = 3
+  self.nb_cells_y = 8
+  self.cells1_surface = sol.surface.create(cell * self.nb_cells_x - self.cell_spacing , cell * self.nb_cells_y - self.cell_spacing )
+  self.cells2_surface = sol.surface.create(cell * self.nb_cells_x - self.cell_spacing , cell * self.nb_cells_y - self.cell_spacing )
+   -- DEBUG self.cells1_surface:fill_color({224, 255, 208}) -- DEBUG 
+
+  self.font_color = {224, 255, 208}
+  self.font_fx_color = {143, 192, 112}
+  self.stroke_color = {48, 111, 80}
 
   self.sprites_assignables = {}
   self.sprites_static = {}
@@ -105,10 +119,13 @@ function inventory_submenu:on_started()
       local amount = item:get_amount()
       local maximum = item:get_max_amount()
       self.counters[i] = sol.text_surface.create{
-        horizontal_alignment = "center",
-        vertical_alignment = "top",
+        horizontal_alignment = "right",
+        vertical_alignment = "bottom",
         text = item:get_amount(),
-        font = (amount == maximum) and "green_digits" or "white_digits",
+        --font = (amount == maximum) and "green_digits" or "white_digits",
+        font = "enter_command",
+        color = (amount == maximum) and self.font_fx_color or self.font_color,
+        font_size = 16
       }
     end
   end
@@ -138,29 +155,35 @@ end
 
 function inventory_submenu:on_draw(dst_surface)
 
-  local cell_size = 16
-  local cell_spacing = 0
+  local sz = self.cell_size
+  local sp = self.cell_spacing
+  local ss = self.cell_size + self.cell_spacing
+  local xn = self.nb_cells_x - 1
+  local yn = self.nb_cells_y - 1
+  local dst_x = 0
+  local dst_y = 44
 
   -- local width, height = dst_surface:get_size()
   -- local center_x = width / 2
   -- local center_y = height / 2
   -- local menu_x, menu_y = center_x - self.width / 2, center_y - self.height / 2
-  local menu_x = 8
-  local menu_y = 12
+  local menu_x = 0
+  local menu_y = 0
+
   -- Draw the background.
   self:draw_background(dst_surface, 1)
-  self.slots1_surface:draw(dst_surface, 8, 8)
-  self.slots2_surface:draw(dst_surface, 328, 8)
-  -- Slots
-  for ys = 36, 180, 16 do
-    for xs = 0, 32, 16 do
-      self.slots1_surface:fill_color(submenu.colors[submenu.color2], xs + 2, ys + 1, 12, 14)
-      self.slots1_surface:fill_color(submenu.colors[submenu.color2], xs + 1, ys + 2, 14, 12)
-      if ys < 108 or ys > 140 then
-        self.slots2_surface:fill_color(submenu.colors[submenu.color2], xs + 2, ys + 1, 12, 14)
-        self.slots2_surface:fill_color(submenu.colors[submenu.color2], xs + 1, ys + 2, 14, 12)
+  self.cells1_surface:draw(dst_surface, dst_x, dst_y)
+  self.cells2_surface:draw(dst_surface, dst_x + 320, dst_y)
+  -- Cells
+  for yc = 0, ss * yn, ss do
+    for xc = 0, ss * xn, ss do
+      self.cells1_surface:fill_color(submenu.colors[submenu.color2], xc + 1, yc, sz - 2, sz)
+      self.cells1_surface:fill_color(submenu.colors[submenu.color2], xc, yc + 1, sz, sz - 2)
+      if yc < (ss * 3) or yc > (ss * 4) then
+        self.cells2_surface:fill_color(submenu.colors[submenu.color2], xc + 1, yc, sz - 2, sz)
+        self.cells2_surface:fill_color(submenu.colors[submenu.color2], xc, yc + 1, sz, sz - 2)
       end
-      xs = xs + 16
+      xc = xc + ss
     end
   end 
   -- Draw the cursor caption.
@@ -179,22 +202,22 @@ function inventory_submenu:on_draw(dst_surface)
     end
     -- Next item position (they are on the same column).
     if j < 3 then
-      y = y + cell_size + cell_spacing
+      y = y + sz + sp
     else
-      x = x + cell_size + cell_spacing
+      x = x + sz + sp
     end
 
   end
 
   -- Draw each inventory assignable item.
-  local y = menu_y + 32
+  local y = dst_y
   local k = 0
 
   for i = 0, 3 do
-    local x = menu_x
+    local x = dst_x + 2
     for j = 0, 2 do
       if i == 3 and j == 0 then
-        x = x + cell_size + cell_spacing
+        x = x + sz + sp
       end
       k = k + 1
       if item_names_assignable[k] ~= nil then
@@ -204,13 +227,15 @@ function inventory_submenu:on_draw(dst_surface)
           self.sprites_assignables[k]:set_direction(item:get_variant() - 1)
           self.sprites_assignables[k]:draw(dst_surface, x, y)
           if self.counters[k] ~= nil then
-            self.counters[k]:draw(dst_surface, x + 8, y)
+            --self.counters[k]:draw(dst_surface, x + 8, y + 6)
+            self.counters[k]:set_xy(x + 8, y + 6)
+            text_fx_helper:draw_text_with_stroke(dst_surface, self.counters[k], self.stroke_color)
           end
         end
       end
-      x = x + cell_size + cell_spacing
+      x = x + sz + sp
     end
-    y = y + cell_size + cell_spacing
+    y = y + sz + sp
   end
 
   -- Draw ocarina menu.
@@ -239,10 +264,10 @@ function inventory_submenu:on_draw(dst_surface)
     self.arrow_sprite1:draw(dst_surface, 32, 42)
     self.arrow_sprite2:draw(dst_surface, 352, 42)
     if self.show_cursor1 then
-      self.cursor_sprite1:draw(dst_surface, menu_x + 8 + 16 * self.cursor1_column, menu_y + 40 + 16 * self.cursor1_row)
+      self.cursor_sprite1:draw(dst_surface, menu_x + sz * self.cursor1_column, menu_y + dst_y + sz * self.cursor1_row)
     end
     if self.show_cursor2 then
-      self.cursor_sprite2:draw(dst_surface, menu_x + 328 + 16 * self.cursor2_column, menu_y + 40 + 16 * self.cursor2_row)
+      self.cursor_sprite2:draw(dst_surface, menu_x + 326 + sz * self.cursor2_column, menu_y + dst_y + sz * self.cursor2_row)
     end
   end
 
@@ -445,17 +470,22 @@ end
 
 function inventory_submenu:get_item_name(row, column)
 
+    print("debug: ------------inventory_submenu:get_item_name------------")
     if column > 0 and column < 4 then
       if row == 3 and column == 1 then
         item_name = item_names_static[5]
+        print("item_name (static) : ")
       elseif row == 3 and column > 1 then
         index = row * 3 + column - 1
         item_name = item_names_assignable[index]
+        print("item_name (assignable) : ")
       else
         index = row * 3 + column - 1
         item_name = item_names_assignable[index + 1]
+        print("item_name (assignable + 1) : ")
       end
-      
+   local name = item_name or "NIL"
+   print("item_name: " .. name .. ", row: " .. row .. ", column: " .. column)
    elseif column == 4 then
       item_name = "melody_1"
    elseif column == 5 then
@@ -473,17 +503,18 @@ end
 
 function inventory_submenu:is_item_selected()
 
+  print("debug: ------------inventory_submenu:is_item_selected------------")
   local item_name = self:get_item_name(self.cursor1_row, self.cursor1_column)
-
+  print(item_name)
   return self.game:get_item(item_name):get_variant() > 0
 
 end
 
--- Assigns the selected item to a slot (1 or 2).
+-- Assigns the selected item to a cell (1 or 2).
 -- The operation does not take effect immediately: the item picture is thrown to
 -- its destination icon, then the assignment is done.
 -- Nothing is done if the item is not assignable.
-function inventory_submenu:assign_item(slot)
+function inventory_submenu:assign_item(cell)
 
   local item_name = self:get_item_name(self.cursor1_row, self.cursor1_column)
   local item = self.game:get_item(item_name)
@@ -525,7 +556,7 @@ function inventory_submenu:assign_item(slot)
       self.item_assigned_sprite = sol.sprite.create("entities/items")
       self.item_assigned_sprite:set_animation(item_name)
       self.item_assigned_sprite:set_direction(item:get_variant() - 1)
-      self.item_assigned_destination = slot
+      self.item_assigned_destination = cell
 
       -- Play the sound.
       sol.audio.play_sound("menus/menu_select")
@@ -534,7 +565,7 @@ function inventory_submenu:assign_item(slot)
       local x1 = 8 + 16 * self.cursor1_column
       local y1 = 12 + 16 * self.cursor1_row
 
-      local x2 = (slot == 1) and 8 or 40
+      local x2 = (cell == 1) and 8 or 40
       local y2 = 188
 
       self.item_assigned_sprite:set_xy(x1, y1)
@@ -562,14 +593,14 @@ end
 function inventory_submenu:finish_assigning_item()
 
   -- If the item to assign is already assigned to the other icon, switch both items.
-  local slot = self.item_assigned_destination
-  local current_item = self.game:get_item_assigned(slot)
-  local other_item = self.game:get_item_assigned(3 - slot)
+  local cell = self.item_assigned_destination
+  local current_item = self.game:get_item_assigned(cell)
+  local other_item = self.game:get_item_assigned(3 - cell)
 
   if other_item == self.item_assigned then
-    self.game:set_item_assigned(3 - slot, current_item)
+    self.game:set_item_assigned(3 - cell, current_item)
   end
-  self.game:set_item_assigned(slot, self.item_assigned)
+  self.game:set_item_assigned(cell, self.item_assigned)
 
   self.item_assigned_sprite:stop_movement()
   self.item_assigned_sprite = nil
