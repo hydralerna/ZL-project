@@ -4,6 +4,6 @@ animation{
   frame_delay = 120,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 18, frame_height = 18, origin_x = 9, origin_y = 9, num_frames = 4 },
   },
 }
