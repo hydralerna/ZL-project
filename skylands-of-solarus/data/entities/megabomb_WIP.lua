@@ -6,7 +6,7 @@
 ----------------------------------
 
 local megabomb = ...
-local carriable_behavior = require("entities/lib/carriable")
+local carriable_behavior = require("entities/library/carriable")
 carriable_behavior.apply(megabomb, {bounce_sound = "shield", respawn_delay = 2000})
 
 local map = megabomb:get_map()
