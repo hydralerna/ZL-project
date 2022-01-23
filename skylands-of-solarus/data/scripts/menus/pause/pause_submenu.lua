@@ -3,7 +3,7 @@
 local submenu = {}
 
 local language_manager = require("scripts/language_manager")
---local messagebox = require("scripts/menus/messagebox")
+local messagebox = require("scripts/menus/messagebox")
 local text_fx_helper = require("scripts/text_fx_helper")
 
 local submenus_icon_bg_sprites = {"submenu.submenus_icon_bg_sprite1", "submenu.submenus_icon_bg_sprite2"}
@@ -294,10 +294,10 @@ function submenu:draw_background(dst_surface, design)
   if design == 1 then
   -- Borders
     while y1 < 208 do
-      submenu.img:draw_region(0, 8, 8, 8, dst_surface, 0, y1)
-      submenu.img:draw_region(8, 0, 8, 8, dst_surface, 56, y1)
-      submenu.img:draw_region(0, 8, 8, 8, dst_surface, 320, y1)
-      submenu.img:draw_region(8, 0, 8, 8, dst_surface, 376, y1)
+     -- submenu.img:draw_region(0, 8, 8, 8, dst_surface, 0, y1)
+     -- submenu.img:draw_region(8, 0, 8, 8, dst_surface, 56, y1)
+     -- submenu.img:draw_region(0, 8, 8, 8, dst_surface, 320, y1)
+     -- submenu.img:draw_region(8, 0, 8, 8, dst_surface, 376, y1)
       y1 = y1 + submenu.tile
     end
   -- Icons
