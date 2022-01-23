@@ -27,7 +27,7 @@ function item:on_obtaining(variant, savegame_variable)
   else
     sol.audio.play_sound("items/get_rupee")
   end
-  local amounts = {1, 5, 20, 50, 100, 200}
+  local amounts = {1, 5, 10, 20, 50, 100, 200, 500}
   local amount = amounts[variant]
   if amount == nil then
     error("Invalid variant '" .. variant .. "' for item 'coin'")
