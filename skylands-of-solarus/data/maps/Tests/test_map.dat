@@ -8329,8 +8329,8 @@ separator{
 enemy{
   name = "boss",
   layer = 0,
-  x = 200,
-  y = 61,
+  x = 280,
+  y = 77,
   direction = 0,
   breed = "bosses/e_fc_jelleggtric",
   treasure_name = "heart_container",
@@ -8382,8 +8382,8 @@ pickable{
 
 pickable{
   layer = 0,
-  x = 120,
-  y = 157,
+  x = 56,
+  y = 109,
   treasure_name = "bomb",
 }
 
@@ -8393,21 +8393,6 @@ pickable{
   y = 53,
   treasure_name = "coin",
   treasure_variant = 2,
-}
-
-pickable{
-  layer = 0,
-  x = 184,
-  y = 21,
-  treasure_name = "coin",
-  treasure_variant = 2,
-}
-
-pickable{
-  layer = 0,
-  x = 168,
-  y = 21,
-  treasure_name = "coin",
 }
 
 pickable{
@@ -8435,103 +8420,75 @@ pickable{
 pickable{
   layer = 0,
   x = 40,
-  y = 21,
-  treasure_name = "rupee",
-}
-
-pickable{
-  layer = 0,
-  x = 24,
-  y = 29,
-  treasure_name = "rupee",
-}
-
-pickable{
-  layer = 0,
-  x = 72,
-  y = 53,
-  treasure_name = "rupee",
-}
-
-pickable{
-  layer = 0,
-  x = 40,
   y = 69,
   treasure_name = "rupee",
 }
 
 pickable{
   layer = 0,
-  x = 80,
-  y = 61,
+  x = 40,
+  y = 53,
   treasure_name = "rupee",
+  treasure_variant = 2,
+}
+
+pickable{
+  layer = 0,
+  x = 72,
+  y = 21,
+  treasure_name = "potions/life_potion",
+  treasure_variant = 2,
+}
+
+pickable{
+  layer = 0,
+  x = 88,
+  y = 21,
+  treasure_name = "potions/healing_potion",
+  treasure_variant = 2,
+}
+
+pickable{
+  layer = 0,
+  x = 88,
+  y = 61,
+  treasure_name = "potions/life_potion",
 }
 
 pickable{
   layer = 0,
   x = 104,
-  y = 69,
-  treasure_name = "rupee",
+  y = 21,
+  treasure_name = "potions/magic_potion",
+  treasure_variant = 2,
 }
 
-pickable{
+chest{
   layer = 0,
-  x = 72,
-  y = 69,
-  treasure_name = "rupee",
-}
-
-pickable{
-  layer = 0,
-  x = 96,
+  x = 168,
   y = 61,
-  treasure_name = "rupee",
+  treasure_name = "potions/magic_potion",
+  sprite = "chests/chest05",
+  opening_condition = "test_map_chest_01",
 }
 
-pickable{
+chest{
   layer = 0,
-  x = 88,
-  y = 69,
-  treasure_name = "rupee",
+  x = 200,
+  y = 61,
+  treasure_name = "coin",
+  sprite = "chests/chest03",
+  opening_condition = "test_map_chest_01",
 }
 
-pickable{
-  layer = 0,
-  x = 88,
-  y = 53,
-  treasure_name = "rupee",
-}
-
-pickable{
-  layer = 0,
-  x = 120,
-  y = 69,
-  treasure_name = "rupee",
-  treasure_variant = 2,
-}
-
-pickable{
-  layer = 0,
-  x = 152,
-  y = 85,
-  treasure_name = "rupee",
-  treasure_variant = 2,
-}
-
-pickable{
-  layer = 0,
-  x = 40,
-  y = 53,
-  treasure_name = "rupee",
-  treasure_variant = 2,
-}
-
-pickable{
+chest{
   layer = 0,
   x = 136,
-  y = 29,
+  y = 61,
   treasure_name = "coin",
   treasure_variant = 2,
+  sprite = "chests/chest05",
+  opening_condition = "test_map_chest_01",
 }
 
 tile{
