@@ -1,5 +1,8 @@
 -- An icon that shows the inventory item assigned to a slot.
 
+local text_fx_helper = require("scripts/text_fx_helper")
+
+
 local hud_icon_builder = require("scripts/hud/hud_icon")
 
 local item_icon_builder = {}
@@ -18,9 +21,16 @@ function item_icon_builder:new(game, config)
   item_icon.item_sprite_w, item_icon.item_sprite_h = item_icon.item_sprite:get_size()
   item_icon.item_displayed = nil
   item_icon.item_variant_displayed = 0
+  item_icon.font_color = {224, 255, 208}
+  item_icon.font_fx_color = {143, 192, 112}
+  item_icon.stroke_color = {48, 111, 80}
+  item_icon.shadow_color = {143, 192, 112}
   item_icon.amount_text = sol.text_surface.create{
     horizontal_alignment = "right",
-    vertical_alignment = "top"
+    vertical_alignment = "bottom",
+    font = "enter_command",
+    color = item_icon.font_color,
+    font_size = 16
   }
   item_icon.amount_displayed = nil
   item_icon.max_amount_displayed = nil
@@ -29,13 +39,18 @@ function item_icon_builder:new(game, config)
   item_icon.foreground = sol.surface.create(32, 24)
   item_icon.hud_icon:set_foreground(item_icon.foreground)
 
+
   -- Draws the icon surface.
   function item_icon:on_draw(dst_surface)
+
     item_icon.hud_icon:on_draw(dst_surface)
+
   end
 
+
   -- Rebuild the foreground (called only when needed).
-  function item_icon:rebuild_foreground()    
+  function item_icon:rebuild_foreground()
+
     if item_icon.item_displayed ~= nil then
       -- Clear the surface.
       item_icon.foreground:clear()
@@ -43,55 +58,74 @@ function item_icon_builder:new(game, config)
       -- Item.
       local foreground_w, foreground_h = item_icon.foreground:get_size()
       item_icon.item_sprite:draw(item_icon.foreground, foreground_w / 2, foreground_h / 2 + 4)
-
       -- Amount.
       if item_icon.amount_displayed ~= nil then
         item_icon.amount_text:set_text(tostring(item_icon.amount_displayed))
-
+        item_icon.amount_text:set_xy(foreground_w - 4, foreground_h - 2)
         -- The font color changes according to the amount.
         if item_icon.amount_displayed == item_icon.max_amount_displayed then
-          item_icon.amount_text:set_font("green_digits")
+          item_icon.amount_text:set_color(item_icon.font_fx_color)
         else
-          item_icon.amount_text:set_font("white_digits")
+          item_icon.amount_text:set_color(item_icon.font_color)
         end
-
-        item_icon.amount_text:draw(item_icon.foreground, foreground_w, foreground_h - 8)
+        text_fx_helper:draw_text_with_stroke_and_shadow(item_icon.foreground, item_icon.amount_text, item_icon.stroke_color, item_icon.shadow_color)
       end
     end
+
   end
   
+
   -- Returns if the icon is enabled or disabled.
   function item_icon:is_enabled(active)
+
     return item_icon.hud_icon:is_enabled()
+
   end
+
 
   -- Set if the icon is enabled or disabled.
   function item_icon:set_enabled(enabled)
+
     item_icon.hud_icon:set_enabled(enabled)
+
   end
-          
+
+ 
   -- Returns if the icon is active or inactive.
   function item_icon:is_active(active)
+
     return item_icon.hud_icon:is_active()
+
   end
+
 
   -- Set if the icon is active or inactive.
   function item_icon:set_active(active)
+
     item_icon.hud_icon:set_active(active)
+
   end
+
 
   -- Returns if the icon is transparent or not.
   function item_icon:is_transparent()
+
     return item_icon.hud_icon:set_transparent()
+
   end
+
 
   -- Sets if the icon is transparent or not.
   function item_icon:set_transparent(transparent)
+
     item_icon.hud_icon:set_transparent(transparent)
+
   end
   
+
   -- Checks periodically if the icon needs to be redrawn.
   function item_icon:check()
+
     local need_rebuild = false
 
     -- Item assigned.
@@ -143,36 +177,56 @@ function item_icon_builder:new(game, config)
     sol.timer.start(item_icon, 50, function()
       item_icon:check()
     end)
+
   end
   
+
   -- Update the surface each time the sprite change.
   function item_icon.item_sprite:on_frame_changed()
+
     item_icon:rebuild_foreground()
+
   end
+
 
   function item_icon:on_mouse_pressed(button, x, y)
+
     return item_icon.hud_icon:on_mouse_pressed(button, x, y)
+
   end
+
 
   function item_icon:on_mouse_released(button, x, y)
+
     return item_icon.hud_icon:on_mouse_released(button, x, y)
+
   end
+
 
   function item_icon:on_finger_pressed(finger, x, y, pressure)
+
     return item_icon.hud_icon:on_finger_pressed(finger, x, y, pressure)
+
   end
 
+
   function item_icon:on_finger_released(finger, x, y, pressure)
+
     return item_icon.hud_icon:on_finger_released(finger, x, y, pressure)
+
   end
+
 
   -- Called when the menu is started.
   function item_icon:on_started()
+
     item_icon:check()
+
   end
 
   -- Returns the menu.
   return item_icon
+
 end
 
 return item_icon_builder
