@@ -3,7 +3,7 @@ dialog{
   icon = "60",
   text = [[
 Tu as trouvé une bourse
-contenant quelques pièces!
+contenant quelques pièces !
 ]],
 }
 
@@ -83,6 +83,32 @@ Tu as trouvé une bourse
 contenant quelques pièces!
 Tu pourras mettre plus de
 pièces dans celle-ci.
+]],
+}
+
+dialog{
+  id = "_treasure.heart.1",
+  icon = "91",
+  text = [[
+Tu as trouvé un Coeur !
+Tu récupéres jusqu'à 4 points
+de vie si tu les as perdus.
+]],
+}
+
+dialog{
+  id = "_treasure.heart.2",
+  icon = "92",
+  text = [[
+Tu as trouvé trois Coeurs !
+]],
+}
+
+dialog{
+  id = "_treasure.heart.3",
+  icon = "93",
+  text = [[
+Tu as trouvé cinq Coeurs !
 ]],
 }
 
