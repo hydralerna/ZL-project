@@ -38,6 +38,7 @@ function entity:create()
   entity:set_drawn_in_y_order(true)
   entity:set_can_traverse("hero", false)
   entity:set_traversable_by("hero", false)
+  entity:set_traversable_by("enemy", false)
   entity:set_traversable_by("custom_entity", false)
      
   if entity:is_open() then
