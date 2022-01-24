@@ -52,7 +52,7 @@ return function(item)
         name = "brandish",
         sprite = "entities/items",
         x = x_hero,
-        y = y_hero - 13,
+        y = y_hero - 15,
         width = 16,
         height = 16,
         layer = layer_hero + 1,
@@ -61,9 +61,11 @@ return function(item)
       local sprite = potion_entity:get_sprite()
       sprite:set_animation(item_name .. "_falling")
       sprite:set_direction(1)
+      sprite:set_ignore_suspend(true)
       game:start_dialog("_treasure." .. save_name .. ".1", function()
         add_potion()
         hero:set_animation("stopped")
+        sprite:set_ignore_suspend(false)
         map:remove_entities("brandish")
         hero:unfreeze()
       end)
@@ -71,7 +73,6 @@ return function(item)
       add_potion()
       sol.audio.play_sound("items/get_rupee")
     end
-
     
   end
 
