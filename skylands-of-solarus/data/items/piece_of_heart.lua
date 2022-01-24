@@ -8,8 +8,10 @@ local game = item:get_game()
 -- Event called when the game is initialized.
 function item:on_created()
 
+  item:set_brandish_when_picked(false)
   item:set_sound_when_picked(nil)
   item:set_sound_when_brandished(nil)
+
   
 end
 
@@ -56,6 +58,7 @@ function item:on_obtaining()
   local sprite = piece_of_heart_entity:get_sprite()
   sprite:set_animation("piece_of_heart")
   sprite:set_direction(0)
+  sprite:set_ignore_suspend(true)
        
 end
 
@@ -64,6 +67,7 @@ function item:on_obtained(variant)
 
   local map = item:get_map()
   local hero = map:get_entity("hero")
+  local sprite = hero:get_sprite()
   local num_pieces_of_heart = item:get_num_pieces_of_heart()
   local id = num_pieces_of_heart % 4 + 2
   game:set_value("num_pieces_of_heart", (num_pieces_of_heart + 1) % 4)
@@ -77,6 +81,7 @@ function item:on_obtained(variant)
     end
   end)
   hero:set_animation("stopped")
+  sprite:set_ignore_suspend(false)
   map:remove_entities("brandish")
   hero:unfreeze()
 
