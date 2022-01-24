@@ -4,27 +4,78 @@
 -- Variables
 local item = ...
 
+local game = item:get_game()
+
+
 -- Event called when the game is initialized.
 function item:on_created()
 
   item:set_shadow(nil)
   item:set_can_disappear(true)
   item:set_brandish_when_picked(false)
-  item:set_sound_when_picked(nil) 
+  item:set_sound_when_picked(nil)
+  item:set_sound_when_brandished(nil)
+
 end
+
 
 
 -- Event called when the hero gets this item.
 function item:on_obtaining(variant, savegame_variable)
 
-  -- Sound
-  if item:get_game():get_life() == item:get_game():get_max_life() then
-    sol.audio.play_sound("items/get_item")
-  end
-  -- Life
-  item:get_game():add_life(4) -- One heart
+
+    local map = item:get_map()
+    local hero = map:get_hero()
+
+    if hero:get_state() == "treasure" then
+      local x_hero,y_hero, layer_hero = hero:get_position()
+      hero:freeze()
+      hero:set_animation("brandish")
+      sol.audio.play_sound("items/fanfare_item")
+      local heart_entity = map:create_custom_entity({
+        name = "brandish",
+        sprite = "entities/items",
+        x = x_hero,
+        y = y_hero - 15,
+        width = 16,
+        height = 16,
+        layer = layer_hero + 1,
+        direction = 0
+        })
+      local sprite = heart_entity:get_sprite()
+      sprite:set_animation("heart")
+      sprite:set_direction(0)
+      sprite:set_ignore_suspend(true)
+    end
+
+    ------------------
+    --  Add life
+    ------------------
+    game:add_life(4) -- One heart
+    -- Sound
+    if game:get_life() == game:get_max_life() then
+      sol.audio.play_sound("items/get_item")
+    end
+
 
 end
+
+
+
+function item:on_obtained(variant)
+
+    local map = item:get_map()
+    local hero = map:get_hero()
+    if hero:get_state() == "frozen" then
+      local sprite = map:get_entity("brandish"):get_sprite()
+      hero:set_animation("stopped")
+      sprite:set_ignore_suspend(false)
+      map:remove_entities("brandish")
+      hero:unfreeze()
+    end
+
+end
+
 
 
 -- Event called when a pickable treasure representing this item
