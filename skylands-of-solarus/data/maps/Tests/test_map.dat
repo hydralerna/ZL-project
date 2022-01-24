@@ -8329,8 +8329,8 @@ separator{
 enemy{
   name = "boss",
   layer = 0,
-  x = 280,
-  y = 77,
+  x = 168,
+  y = 109,
   direction = 0,
   breed = "bosses/e_fc_jelleggtric",
   treasure_name = "heart_container",
@@ -8467,7 +8467,7 @@ chest{
   layer = 0,
   x = 168,
   y = 61,
-  treasure_name = "potions/magic_potion",
+  treasure_name = "heart_container",
   sprite = "chests/chest05",
   opening_condition = "test_map_chest_01",
 }
@@ -8476,7 +8476,7 @@ chest{
   layer = 0,
   x = 200,
   y = 61,
-  treasure_name = "coin",
+  treasure_name = "piece_of_heart",
   sprite = "chests/chest03",
   opening_condition = "test_map_chest_01",
 }
@@ -8485,9 +8485,17 @@ chest{
   layer = 0,
   x = 136,
   y = 61,
-  treasure_name = "coin",
-  treasure_variant = 2,
-  sprite = "chests/chest05",
+  treasure_name = "heart",
+  sprite = "chests/chest02",
+  opening_condition = "test_map_chest_01",
+}
+
+chest{
+  layer = 0,
+  x = 104,
+  y = 61,
+  treasure_name = "heart",
+  sprite = "chests/chest07",
   opening_condition = "test_map_chest_01",
 }
 
