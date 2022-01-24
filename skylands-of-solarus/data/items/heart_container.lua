@@ -8,14 +8,17 @@ local game = item:get_game()
 -- Event called when the game is initialized.
 function item:on_created()
 
-  item:set_sound_when_picked(nil)
   item:set_brandish_when_picked(false)
+  item:set_sound_when_picked(nil)
+  item:set_sound_when_brandished(nil)
 
 end
 
-function item:on_obtained(variant, savegame_variable)
 
-  local map = self:get_map()
+
+function item:on_obtaining()
+  
+  local map = item:get_map()
   local hero = map:get_entity("hero")
   local x_hero,y_hero, layer_hero = hero:get_position()
   hero:freeze()
@@ -34,12 +37,22 @@ function item:on_obtained(variant, savegame_variable)
   local sprite = heart_container_entity:get_sprite()
   sprite:set_animation("heart_container")
   sprite:set_direction(0)
-  game:start_dialog("_treasure.heart_container.1", function()
-    game:add_max_life(4)
-    game:set_life(game:get_max_life())
-    hero:set_animation("stopped")
-    map:remove_entities("brandish")
-    hero:unfreeze()
-  end)
+  sprite:set_ignore_suspend(true)
+       
+end
+
+
+
+function item:on_obtained(variant)
+
+  local map = item:get_map()
+  local hero = map:get_entity("hero")
+  local sprite = hero:get_sprite()
+  game:add_max_life(4)
+  game:set_life(game:get_max_life())
+  hero:set_animation("stopped")
+  sprite:set_ignore_suspend(false)
+  map:remove_entities("brandish")
+  hero:unfreeze()
 
 end
