@@ -8467,7 +8467,8 @@ chest{
   layer = 0,
   x = 168,
   y = 61,
-  treasure_name = "heart_container",
+  treasure_name = "coin",
+  treasure_variant = 2,
   sprite = "chests/chest05",
   opening_condition = "test_map_chest_01",
 }
@@ -8476,7 +8477,8 @@ chest{
   layer = 0,
   x = 200,
   y = 61,
-  treasure_name = "piece_of_heart",
+  treasure_name = "rupee",
+  treasure_variant = 2,
   sprite = "chests/chest03",
   opening_condition = "test_map_chest_01",
 }
@@ -8485,7 +8487,7 @@ chest{
   layer = 0,
   x = 136,
   y = 61,
-  treasure_name = "heart",
+  treasure_name = "coin",
   sprite = "chests/chest02",
   opening_condition = "test_map_chest_01",
 }
@@ -8494,7 +8496,7 @@ chest{
   layer = 0,
   x = 104,
   y = 61,
-  treasure_name = "heart",
+  treasure_name = "rupee",
   sprite = "chests/chest07",
   opening_condition = "test_map_chest_01",
 }
