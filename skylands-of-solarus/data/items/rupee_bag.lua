@@ -40,7 +40,7 @@ function item:on_obtaining()
   hero:set_animation("brandish")
   sol.audio.play_sound("items/fanfare_item")
   local direction = self:get_variant() - 1
-  local rupee_bag_entity = map:create_custom_entity({
+  local custom_entity = map:create_custom_entity({
     name = "brandish",
     sprite = "entities/items",
     x = x_hero,
@@ -50,7 +50,7 @@ function item:on_obtaining()
     layer = layer_hero + 1,
     direction = direction
     })
-  local sprite = rupee_bag_entity:get_sprite()
+  local sprite = custom_entity:get_sprite()
   sprite:set_animation("rupee_bag")
   sprite:set_direction(direction)
 
