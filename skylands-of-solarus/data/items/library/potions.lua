@@ -48,7 +48,7 @@ return function(item)
       hero:freeze()
       hero:set_animation("brandish")
       sol.audio.play_sound("items/fanfare_item")
-      local potion_entity = map:create_custom_entity({
+      local custom_entity = map:create_custom_entity({
         name = "brandish",
         sprite = "entities/items",
         x = x_hero,
@@ -58,7 +58,7 @@ return function(item)
         layer = layer_hero + 1,
         direction = 1
         })
-      local sprite = potion_entity:get_sprite()
+      local sprite = custom_entity:get_sprite()
       sprite:set_animation(item_name .. "_falling")
       sprite:set_direction(1)
       sprite:set_ignore_suspend(true)
