@@ -24,7 +24,7 @@ function item:on_obtaining()
   hero:freeze()
   hero:set_animation("brandish")
   sol.audio.play_sound("items/fanfare_heart_container")
-  local heart_container_entity = map:create_custom_entity({
+  local custom_entity = map:create_custom_entity({
     name = "brandish",
     sprite = "entities/items",
     x = x_hero,
@@ -34,7 +34,7 @@ function item:on_obtaining()
     layer = layer_hero + 1,
     direction = 0
     })
-  local sprite = heart_container_entity:get_sprite()
+  local sprite = custom_entity:get_sprite()
   sprite:set_animation("heart_container")
   sprite:set_direction(0)
   sprite:set_ignore_suspend(true)
