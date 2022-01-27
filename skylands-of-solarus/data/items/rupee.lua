@@ -79,11 +79,15 @@ end
 -- is created on the map.
 function item:on_pickable_created(pickable)
 
+  local sprite = pickable:get_sprite()
   local shadow_sprite = pickable:get_sprite("shadow")
+  local direction = sprite:get_direction()
+  local y = direction == 0 and 1 or 3
+  local size = direction == 0 and "smallest" or "small"
+  shadow_sprite:set_animation(size)
   if pickable:get_falling_height() == 0 then
-    shadow_sprite:set_xy(0, 3)
+      shadow_sprite:set_xy(0, y)
   else
-    local sprite = pickable:get_sprite()
     sprite:set_animation("rupee_falling")
     local count = 0
     function sprite:on_frame_changed(animation, frame)
@@ -91,7 +95,7 @@ function item:on_pickable_created(pickable)
       if animation == "rupee_falling" and count >= 16 then
         sprite:set_animation("rupee")
         sprite:set_frame(frame)
-        shadow_sprite:set_xy(0, 3)
+        shadow_sprite:set_xy(0, y)
       end
     end
   end
