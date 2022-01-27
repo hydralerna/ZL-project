@@ -1,6 +1,6 @@
 dialog{
   id = "_treasure.coin.1",
-  icon = "99",
+  icon = "50",
   text = [[
 Tu as trouvé une pièce !
 ]],
@@ -8,7 +8,7 @@ Tu as trouvé une pièce !
 
 dialog{
   id = "_treasure.coin.2",
-  icon = "99",
+  icon = "51",
   text = [[
 Tu as trouvé cinq pièces !
 ]],
@@ -16,7 +16,7 @@ Tu as trouvé cinq pièces !
 
 dialog{
   id = "_treasure.coin.3",
-  icon = "99",
+  icon = "52",
   text = [[
 Tu as trouvé dix pièces !
 ]],
