@@ -237,7 +237,7 @@ supplémentaire. Formidable !!!
 
 dialog{
   id = "_treasure.potions_healing_potion.1",
-  icon = "99",
+  icon = "41",
   text = [[
 Tu as trouvé une potion
 de soin !
@@ -246,7 +246,7 @@ de soin !
 
 dialog{
   id = "_treasure.potions_life_potion.1",
-  icon = "99",
+  icon = "40",
   text = [[
 Tu as trouvé une potion
 de vie !
@@ -255,7 +255,7 @@ de vie !
 
 dialog{
   id = "_treasure.potions_magic_potion.1",
-  icon = "99",
+  icon = "42",
   text = [[
 Tu as trouvé une potion
 magique !
