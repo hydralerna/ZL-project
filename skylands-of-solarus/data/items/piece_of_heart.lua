@@ -4,11 +4,14 @@
 -- Variables
 local item = ...
 local game = item:get_game()
+local item_name = item:get_name()
 
 -- Event called when the game is initialized.
 function item:on_created()
 
-  item:set_brandish_when_picked(false)
+  item:set_savegame_variable("possession_" .. item_name)
+  item:set_amount_savegame_variable("amount_" .. item_name)
+  item:set_shadow("small")
   item:set_sound_when_picked(nil)
   item:set_sound_when_brandished(nil)
 
@@ -37,6 +40,7 @@ function item:get_max_pieces_of_heart()
 end
 
 
+
 function item:on_obtaining()
   
   local map = item:get_map()
@@ -45,7 +49,7 @@ function item:on_obtaining()
   hero:freeze()
   hero:set_animation("brandish")
   sol.audio.play_sound("items/fanfare_item")
-  local piece_of_heart_entity = map:create_custom_entity({
+  local custom_entity = map:create_custom_entity({
     name = "brandish",
     sprite = "entities/items",
     x = x_hero,
@@ -55,15 +59,17 @@ function item:on_obtaining()
     layer = layer_hero + 1,
     direction = 0
     })
-  local sprite = piece_of_heart_entity:get_sprite()
-  sprite:set_animation("piece_of_heart")
+  local sprite = custom_entity:get_sprite()
+  sprite:set_animation(item_name)
   sprite:set_direction(0)
   sprite:set_ignore_suspend(true)
+
        
 end
 
 
-function item:on_obtained(variant)
+
+function item:on_obtained()
 
   local map = item:get_map()
   local hero = map:get_entity("hero")
@@ -86,3 +92,4 @@ function item:on_obtained(variant)
   hero:unfreeze()
 
 end
+
