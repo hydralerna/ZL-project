@@ -10,7 +10,7 @@ require ("scripts/multi_events")
 function bomb_meta:on_created()
 
   local bomb = self
-  -- Just a test to get a value from an array. See in /items/bomb.lua, self:get_map():create_bomb{ ...
+  -- Just a test to get a value from an array. See in /items/bomb.lua, item:get_map():create_bomb{ ...
   ----local map = bomb:get_map()
   -- local properties = bomb:get_properties()
   -- local direction = properties[1]["value"]
