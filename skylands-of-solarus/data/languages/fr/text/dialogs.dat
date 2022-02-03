@@ -1,4 +1,13 @@
 dialog{
+  id = "_treasure.bomb.1",
+  icon = "99",
+  text = [[
+Tu as trouvé une bombe !
+Wow ! C'est ...c'est dangereux !
+]],
+}
+
+dialog{
   id = "_treasure.coin.1",
   icon = "50",
   text = [[
@@ -264,7 +273,7 @@ magique !
 
 dialog{
   id = "_treasure.rupee.1",
-  icon = "99",
+  icon = "53",
   text = [[
 Tu as trouvé un rubis !
 ]],
@@ -272,7 +281,7 @@ Tu as trouvé un rubis !
 
 dialog{
   id = "_treasure.rupee.2",
-  icon = "99",
+  icon = "54",
   text = [[
 Tu as trouvé cinq rubis !
 ]],
@@ -280,7 +289,7 @@ Tu as trouvé cinq rubis !
 
 dialog{
   id = "_treasure.rupee.3",
-  icon = "99",
+  icon = "55",
   text = [[
 Tu as trouvé dix rubis !
 ]],
