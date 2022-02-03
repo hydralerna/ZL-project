@@ -27,6 +27,15 @@ animation{
   },
 }
 animation{
+  name = "bomb_falling",
+  src_image = "items/bomb.png",
+  frame_delay = 300,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 64, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 8 },
+  },
+}
+animation{
   name = "coin_bag",
   src_image = "items/coin_bag.png",
   directions = {
