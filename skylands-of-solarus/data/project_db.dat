@@ -281,6 +281,7 @@ sound{ id = "hero/throw", description = "Throw" }
 sound{ id = "hero/wade1", description = "Wade 1" }
 sound{ id = "hero/wade2", description = "Wade 2" }
 sound{ id = "hero_dying", description = "Hero - dying (engine)" }
+sound{ id = "hero_falls", description = "Hero - fall (engine)" }
 sound{ id = "hero_hurt", description = "Hero - hit (engine)" }
 sound{ id = "hero_lands", description = "Hero - land (engine)" }
 sound{ id = "items/bomb_drop", description = "Bomb drop" }
@@ -615,6 +616,7 @@ file{ path = "sounds/hero/throw.ogg", author = "Nintendo", license = "Proprietar
 file{ path = "sounds/hero/wade1.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/hero/wade2.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/hero_dying.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
+file{ path = "sounds/hero_falls.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/hero_hurt.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/hero_lands.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/items", author = "Nintendo", license = "Proprietary, Fair use" }
