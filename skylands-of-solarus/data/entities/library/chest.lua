@@ -10,15 +10,15 @@ local hero = game:get_hero()
 
 
 
-function entity:set_treasure(item_name, variant, savegame_var)
+function entity:set_treasure(item_name, variant, savegame_variable)
 
   local x, y, layer = entity:get_position()
   local custom_id = "x" .. x .. "y" .. y .. "l" .. layer
   entity.data.item_name = item_name
   entity.data.variant  = variant
-  entity.data.savegame_var = savegame_var
-  if savegame_var == nil then
-    entity.data.savegame_var = entity:get_map():get_id():gsub("/", "_") .. "_chest_" .. custom_id
+  entity.data.savegame_variable = savegame_variable
+  if savegame_variable == nil then
+    entity.data.savegame_variable = entity:get_map():get_id():gsub("/", "_") .. "_chest_" .. custom_id
   end
 
 end
@@ -27,7 +27,7 @@ end
 
 function entity:is_open()
 
-  return game:get_value(entity.data.savegame_var)
+  return game:get_value(entity.data.savegame_variable)
 
 end
 
@@ -35,7 +35,7 @@ end
      
 function entity:create()
 
-  entity:set_drawn_in_y_order(true)
+  entity:set_drawn_in_y_order(false)
   entity:set_can_traverse("hero", false)
   entity:set_traversable_by("hero", false)
   entity:set_traversable_by("enemy", false)
@@ -74,7 +74,7 @@ function entity:on_interaction()
     game:set_pause_allowed(false)
     entity:get_sprite():set_animation("opening", function()
       entity:get_sprite():set_animation("open")
-      hero:start_treasure(entity.data.item_name, entity.data.variant, entity.data.savegame_var, function()
+      hero:start_treasure(entity.data.item_name, entity.data.variant, entity.data.savegame_variable, function()
         -- After the treasure has been obtained
         hero:unfreeze()
         game:set_pause_allowed(true)
