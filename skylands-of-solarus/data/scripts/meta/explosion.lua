@@ -10,7 +10,9 @@ require ("scripts/multi_events")
 function explosion_meta:on_created()
   
   local explosion = self
-  sol.audio.play_sound("items/bomb_explode")
   local sprite = explosion:get_sprite()
-  sprite:set_direction(math.random(0, 1))
+  --sprite:set_direction(math.random(0, 1))
+  sprite:set_direction(0)
+  sol.audio.play_sound("items/bomb_explode")
+
 end
