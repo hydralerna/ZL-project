@@ -19,7 +19,7 @@ function chest_meta:on_created()
         height = 16,
         direction = 1,
         sprite = graphic
-  } 
+  }
   local entity = self:get_map():create_custom_entity(setup)
   entity:set_treasure(item_name, variant, savegame_var)
   entity:create()
