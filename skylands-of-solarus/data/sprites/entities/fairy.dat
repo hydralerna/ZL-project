@@ -1,0 +1,9 @@
+animation{
+  name = "flying",
+  src_image = "entities/fairy.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 4, frame_height = 4, origin_x = 2, origin_y = 2, num_frames = 16 },
+  },
+}
