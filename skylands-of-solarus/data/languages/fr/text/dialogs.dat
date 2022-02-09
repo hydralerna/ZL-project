@@ -1,4 +1,14 @@
 dialog{
+  id = "_crystal",
+  icon = "90",
+  text = [[
+C'est un interrrupteur de
+cristal ! Frappes-le avec 
+quelque chose...
+]],
+}
+
+dialog{
   id = "_treasure.bomb.1",
   icon = "99",
   text = [[
