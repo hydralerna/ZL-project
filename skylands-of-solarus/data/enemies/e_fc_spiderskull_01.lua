@@ -193,7 +193,7 @@ function enemy:throw_acidball()
     enemy:restart()
   end)
   sol.timer.start(enemy, 800, function()
-    sol.audio.play_sound("walk_on_water")
+    sol.audio.play_sound("hero/wade1")
     -- Create acidball projectile.
     local x, y, layer = enemy:get_position()
     local dir = sprite:get_direction()
