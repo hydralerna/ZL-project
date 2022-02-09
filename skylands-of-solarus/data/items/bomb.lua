@@ -24,7 +24,7 @@ function item:on_obtaining()
   local hero = map:get_hero()
 
   if hero:get_state() == "treasure" then
-    local x_hero,y_hero, layer_hero = hero:get_position()
+    local x_hero, y_hero, layer_hero = hero:get_position()
     hero:freeze()
     hero:set_animation("brandish")
     sol.audio.play_sound("items/fanfare_item")
@@ -122,7 +122,7 @@ function item:on_pickable_created(pickable)
   local shadow_sprite = pickable:get_sprite("shadow")
   -- The bomb is on the ground. It did not fall. 
   if pickable:get_falling_height() == 0 then
-    shadow_sprite:set_xy(0, 3)
+    shadow_sprite:set_xy(0, 2)
   -- The bomb is falling.
   else
     local name_falling = item_name .. "_falling"
@@ -131,7 +131,7 @@ function item:on_pickable_created(pickable)
       count = count + 1
       if count == 16 then
         sprite:set_animation(name_falling)
-        shadow_sprite:set_xy(0, 3)
+        shadow_sprite:set_xy(0, 2)
       end
     end
   end
