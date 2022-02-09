@@ -123,12 +123,14 @@ sprite{ id = "entities/bomb" }
 sprite{ id = "entities/crystal" }
 sprite{ id = "entities/crystal_block" }
 sprite{ id = "entities/explosion" }
+sprite{ id = "entities/fairy" }
 sprite{ id = "entities/hinged_counter_door" }
 sprite{ id = "entities/items" }
 sprite{ id = "entities/lock" }
 sprite{ id = "entities/megabomb" }
 sprite{ id = "entities/morla" }
 sprite{ id = "entities/shadow" }
+sprite{ id = "entities/star", description = "Star" }
 sprite{ id = "hero/fire_rod", description = "hero/fire_rod" }
 sprite{ id = "hero/ground1", description = "hero/ground1" }
 sprite{ id = "hero/ground2", description = "hero/ground2" }
@@ -406,7 +408,7 @@ sound{ id = "wrong", description = "Misc - error (engine)" }
 
 item{ id = "bomb", description = "Bomb" }
 item{ id = "bottle_1_EXAMPLE", description = "Bottle 1" }
-item{ id = "coin", description = "Coin" }
+item{ id = "coin", description = "Coin (x1, x5, x10)" }
 item{ id = "coin_bag", description = "Coin bag" }
 item{ id = "heart", description = "Heart" }
 item{ id = "heart_container", description = "Heart container" }
@@ -415,7 +417,7 @@ item{ id = "piece_of_heart", description = "Piece of heart" }
 item{ id = "potions/healing_potion", description = "Healing potion" }
 item{ id = "potions/life_potion", description = "Life potion" }
 item{ id = "potions/magic_potion", description = "Magic potion" }
-item{ id = "rupee", description = "Rupee" }
+item{ id = "rupee", description = "Rupee (x1, x5, x10)" }
 item{ id = "rupee_bag", description = "Rupee bag" }
 item{ id = "sword", description = "Sword" }
 
@@ -430,6 +432,7 @@ enemy{ id = "e_fc_spiderskull_02", description = "Black Spiderskull" }
 enemy{ id = "e_fc_vitreous_child", description = "Vitreous child" }
 enemy{ id = "projectiles/generic_projectile", description = "generic_projectile" }
 
+entity{ id = "fairy", description = "Fairy" }
 entity{ id = "library/chest", description = "chest/chest" }
 entity{ id = "megabomb_WIP", description = "megabomb" }
 entity{ id = "morla" }
@@ -457,6 +460,7 @@ file{ path = "enemies/e_fc_baby_jelleggtric_egg_thrown.lua", author = "Christoph
 file{ path = "enemies/generic_soldier.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/generic_towards_hero.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/generic_waiting_for_hero.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "entities/fairy.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "fonts/8_bit.png", author = "usr_share, Christopho", license = "Public domain" }
 file{ path = "fonts/enter_command.ttf", author = "Jeti", license = "CC BY 4.0" }
 file{ path = "items/bottle_1_EXAMPLE.lua", author = "Christopho", license = "GPL v3" }
@@ -754,8 +758,12 @@ file{ path = "sprites/enemies/e_fc_baby_jelleggtric_egg_fixed.dat", author = "fr
 file{ path = "sprites/enemies/e_fc_electricity.dat", author = "froggy77", license = "GPV L3" }
 file{ path = "sprites/enemies/shadows/shadow_16x12.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/shadows/shadow_8x5.dat", author = "froggy77", license = "GPL v3" }
-file{ path = "sprites/entities/lock.dat", author = "froggy77", license = "GPV v3" }
-file{ path = "sprites/entities/lock.png", author = "froggy77", license = "GPV v3" }
+file{ path = "sprites/entities/crystal.dat", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/crystal_block.dat", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/fairy.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/lock.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/lock.png", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/star.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/items/coin.png", author = "ansimuz, froggy77", }
 file{ path = "sprites/menus/title_screen/clouds.png", author = "ansimuz", }
 file{ path = "sprites/menus/title_screen/foreground_trees.png", author = "ansimuz", }
