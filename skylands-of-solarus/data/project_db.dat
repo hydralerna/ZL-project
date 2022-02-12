@@ -764,6 +764,7 @@ file{ path = "sprites/entities/fairy.dat", author = "froggy77", license = "GPL v
 file{ path = "sprites/entities/lock.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/lock.png", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/star.dat", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "sprites/hud/dialog_icons.png", author = "froggy77, Romi, 7Soul1, OptimusDu", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/items/coin.png", author = "ansimuz, froggy77", }
 file{ path = "sprites/menus/title_screen/clouds.png", author = "ansimuz", }
 file{ path = "sprites/menus/title_screen/foreground_trees.png", author = "ansimuz", }
