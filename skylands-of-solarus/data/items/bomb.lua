@@ -18,10 +18,12 @@ function item:on_created()
 
 end
 
-function item:on_obtaining()
+function item:on_obtaining(variant)
 
   local map = item:get_map()
   local hero = map:get_hero()
+  local amounts = {1, 3, 5, 8}
+  local amount = amounts[variant]
 
   if hero:get_state() == "treasure" then
     local x_hero, y_hero, layer_hero = hero:get_position()
@@ -46,7 +48,7 @@ function item:on_obtaining()
   ------------------
   --  Add bomb
   ------------------
-  item:add_amount(1)
+  item:add_amount(amount)
   -- Automatically assign the item to a command slot
   -- because it is the only existing item for now.
   game:set_item_assigned(1, item)
