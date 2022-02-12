@@ -10,10 +10,38 @@ quelque chose...
 
 dialog{
   id = "_treasure.bomb.1",
-  icon = "99",
+  icon = "35",
   text = [[
 Tu as trouvé une bombe !
-Wow ! C'est ...c'est dangereux !
+C'est peu, mais dangeureux
+tout de même ! 
+]],
+}
+
+dialog{
+  id = "_treasure.bomb.2",
+  icon = "36",
+  text = [[
+Tu as trouvé trois bombes !
+Attention quand ça explose !
+]],
+}
+
+dialog{
+  id = "_treasure.bomb.3",
+  icon = "37",
+  text = [[
+Tu as trouvé cinq bombes !
+Wow ! C'est ...c'est explosif !
+]],
+}
+
+dialog{
+  id = "_treasure.bomb.4",
+  icon = "38",
+  text = [[
+Tu as trouvé huit bombes !
+Ca va péter !!!
 ]],
 }
 
