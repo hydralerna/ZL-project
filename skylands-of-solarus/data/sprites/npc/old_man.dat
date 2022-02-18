@@ -1,13 +1,13 @@
 animation{
-  name = "walking",
+  name = "stopped",
   src_image = "npc/old_man.png",
-  frame_delay = 180,
+  frame_delay = 720,
   frame_to_loop_on = 0,
   directions = {
-    { x = 48, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
-    { x = 48, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
-    { x = 48, y = 48, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
-    { x = 48, y = 72, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
+    { x = 0, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
+    { x = 0, y = 48, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
+    { x = 0, y = 72, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
   },
 }
 animation{
@@ -53,14 +53,14 @@ animation{
   },
 }
 animation{
-  name = "stopped",
+  name = "walking",
   src_image = "npc/old_man.png",
-  frame_delay = 720,
+  frame_delay = 180,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
-    { x = 0, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
-    { x = 0, y = 48, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
-    { x = 0, y = 72, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
+    { x = 48, y = 0, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
+    { x = 48, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
+    { x = 48, y = 48, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
+    { x = 48, y = 72, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
   },
 }
