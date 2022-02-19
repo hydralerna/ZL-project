@@ -602,8 +602,19 @@ local function initialize_dialog_box_features(game)
       end
     end
 
-    -- Draw the text.
+    -- Draw the icon.
     local left_padding = 4
+    if self.icon_index ~= nil then
+      local row, column = math.floor(self.icon_index / 10), self.icon_index % 10
+      self.icons_img:draw_region(56 * column, 56 * row, 56, 56,
+      self.dialog_surface,
+      self.icon_dst_position.x + left_padding / 2, self.icon_dst_position.y)
+      self.question_dst_position.x = x + 50
+    else
+      self.question_dst_position.x = x + 18
+    end
+
+    -- Draw the text.
     local text_x = x + (self.icon_index == nil and 16 or 48) + left_padding
     local text_y = y - 6
     local line_spacing = 14
@@ -616,17 +627,6 @@ local function initialize_dialog_box_features(game)
         text_x = text_x + 24
       end
       self.line_surfaces[i]:draw(self.dialog_surface, text_x, text_y)
-    end
-
-    -- Draw the icon.
-    if self.icon_index ~= nil then
-      local row, column = math.floor(self.icon_index / 10), self.icon_index % 10
-      self.icons_img:draw_region(56 * column, 56 * row, 56, 56,
-      self.dialog_surface,
-      self.icon_dst_position.x + left_padding / 2, self.icon_dst_position.y)
-      self.question_dst_position.x = x + 50
-    else
-      self.question_dst_position.x = x + 18
     end
 
     -- Draw the question arrow.
