@@ -36,4 +36,13 @@ function enemy_meta:on_attacking_hero(hero, enemy_sprite)
   end
 end
 
+
+function enemy_meta:on_hurt()
+
+  local enemy = self
+  if enemy:get_life() == 0 then
+    enemy:get_sprite():set_animation("dying")
+  end
+end
+
 return true
