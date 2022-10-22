@@ -99,6 +99,9 @@ sprite{ id = "enemies/bosses/e_fc_boss_monster" }
 sprite{ id = "enemies/bosses/e_fc_boss_skull" }
 sprite{ id = "enemies/bosses/e_fc_boss_slime" }
 sprite{ id = "enemies/bosses/e_fc_eater", description = "enemies/e_fc_eater" }
+sprite{ id = "enemies/bosses/e_fc_hideous" }
+sprite{ id = "enemies/bosses/e_fc_hideous_eye" }
+sprite{ id = "enemies/bosses/e_fc_hideous_mouth" }
 sprite{ id = "enemies/bosses/e_fc_jelleggtric" }
 sprite{ id = "enemies/bosses/e_fc_vitreous", description = "enemies/bosses/vitreous" }
 sprite{ id = "enemies/e_fc_baby_jelleggtric_egg_fixed" }
@@ -109,6 +112,7 @@ sprite{ id = "enemies/e_fc_ghost_01", description = "enemies/e_fc_ghost_01" }
 sprite{ id = "enemies/e_fc_haunted_tree_01", description = "enemies/e_fc_haunted_tree_01" }
 sprite{ id = "enemies/e_fc_maloney" }
 sprite{ id = "enemies/e_fc_onime", description = "enemies/e_fc_test" }
+sprite{ id = "enemies/e_fc_skeleton_01", description = "enemies/e_fc_skeleton_01" }
 sprite{ id = "enemies/e_fc_slime_01", description = "enemies/e_fc_slime_01" }
 sprite{ id = "enemies/e_fc_slime_02", description = "enemies/e_fc_slime_02" }
 sprite{ id = "enemies/e_fc_spider_01", description = "enemies/e_fc_spider_01" }
@@ -122,6 +126,7 @@ sprite{ id = "entities/arrow" }
 sprite{ id = "entities/bomb" }
 sprite{ id = "entities/crystal" }
 sprite{ id = "entities/crystal_block" }
+sprite{ id = "entities/custom_pot", description = "custom_pot" }
 sprite{ id = "entities/explosion" }
 sprite{ id = "entities/fairy" }
 sprite{ id = "entities/hinged_counter_door" }
@@ -129,6 +134,7 @@ sprite{ id = "entities/items" }
 sprite{ id = "entities/lock" }
 sprite{ id = "entities/megabomb" }
 sprite{ id = "entities/morla" }
+sprite{ id = "entities/npc_target", description = "NPC target" }
 sprite{ id = "entities/shadow" }
 sprite{ id = "entities/star", description = "Star" }
 sprite{ id = "hero/fire_rod", description = "hero/fire_rod" }
@@ -157,6 +163,7 @@ sprite{ id = "hud/icon_item_1", description = "hud/icon_item_1" }
 sprite{ id = "hud/icon_item_2", description = "hud/icon_item_2" }
 sprite{ id = "hud/icon_pause", description = "hud/icon_pause" }
 sprite{ id = "menus/menu_tabs", description = "menus/menu_tabs" }
+sprite{ id = "menus/messagebox/messagebox_cursor", description = "Message Box cursor" }
 sprite{ id = "menus/pause/arrow_1" }
 sprite{ id = "menus/pause/arrow_2" }
 sprite{ id = "menus/pause/arrow_3" }
@@ -170,6 +177,7 @@ sprite{ id = "menus/title_screen/sword" }
 sprite{ id = "npc/fool" }
 sprite{ id = "npc/kaepora_gaebora" }
 sprite{ id = "npc/mister_time" }
+sprite{ id = "npc/npc" }
 sprite{ id = "npc/old_man" }
 sprite{ id = "npc/sorcerer_statue" }
 sprite{ id = "shadows/shadow", description = "shadows/shadow" }
@@ -181,12 +189,13 @@ sprite{ id = "switches/fc_switches_sun3" }
 sprite{ id = "switches/fc_switches_sun4" }
 
 
-sound{ id = "arrow", description = "Bow arrow (engine)" }
-sound{ id = "boomerang", description = "Boomerang (engine)" }
-sound{ id = "boss_hurt", description = "Boss - hit (engine)" }
-sound{ id = "boss_killed", description = "Boss - die (engine)" }
-sound{ id = "bush", description = "Bush - cut (engine)" }
-sound{ id = "chest_open", description = "Chest - open (engine)" }
+sound{ id = "arrow", description = "(engine) Items - bow_arrow" }
+sound{ id = "boomerang", description = "(engine) Items - boomerang" }
+sound{ id = "boss_hurt", description = "(engine) Enemies - boss_hit" }
+sound{ id = "boss_killed", description = "(engine) Enemies - boss_die" }
+sound{ id = "bush", description = "(engine) Misc - bush_cut" }
+sound{ id = "chest_open", description = "(engine) Misc - chest_open" }
+sound{ id = "cursor", description = "(engine) Menus - cursor" }
 sound{ id = "enemies/angler_fish_lunge", description = "Angler fish lunge" }
 sound{ id = "enemies/anti_kirby", description = "Anti kirby" }
 sound{ id = "enemies/blade_trap", description = "Blade trap" }
@@ -262,9 +271,9 @@ sound{ id = "enemies/turtlerock_blink2", description = "Turtlerock blink 2" }
 sound{ id = "enemies/turtlerock_shed", description = "Turtlerock shed" }
 sound{ id = "enemies/vacuum_mouth", description = "Vacuum mouth" }
 sound{ id = "enemies/wizzrobe", description = "Empty sound" }
-sound{ id = "enemy_hurt", description = "Enemy - hit (engine)" }
-sound{ id = "enemy_killed", description = "Enemy - die (engine)" }
-sound{ id = "explosion", description = "Bomb - explode (engine)" }
+sound{ id = "enemy_hurt", description = "(engine) Enemies - enemy_hit" }
+sound{ id = "enemy_killed", description = "(engine) Enemies - enemy_die" }
+sound{ id = "explosion", description = "(engine) Items - bomb_explode" }
 sound{ id = "hero/bounce", description = "Bounce" }
 sound{ id = "hero/cliff_jump", description = "hero/cliff_jump" }
 sound{ id = "hero/dizzy", description = "Dizzy" }
@@ -282,10 +291,11 @@ sound{ id = "hero/swim", description = "Swim" }
 sound{ id = "hero/throw", description = "Throw" }
 sound{ id = "hero/wade1", description = "Wade 1" }
 sound{ id = "hero/wade2", description = "Wade 2" }
-sound{ id = "hero_dying", description = "Hero - dying (engine)" }
-sound{ id = "hero_falls", description = "Hero - fall (engine)" }
-sound{ id = "hero_hurt", description = "Hero - hit (engine)" }
-sound{ id = "hero_lands", description = "Hero - land (engine)" }
+sound{ id = "hero_dying", description = "(engine) Hero - dying" }
+sound{ id = "hero_falls", description = "(engine) Hero - fall" }
+sound{ id = "hero_hurt", description = "(engine) Hero - hit" }
+sound{ id = "hero_lands", description = "(engine) Hero - land" }
+sound{ id = "hero_pushes", description = "(engine) Hero - pushes,  Misc - rock_push" }
 sound{ id = "items/bomb_drop", description = "Bomb drop" }
 sound{ id = "items/bomb_explode", description = "Bomb explode" }
 sound{ id = "items/boomerang", description = "Boomerang" }
@@ -321,8 +331,8 @@ sound{ id = "items/sword_slash4", description = "Sword slash 4" }
 sound{ id = "items/sword_spin", description = "Sword spin" }
 sound{ id = "items/sword_tap", description = "Sword tap" }
 sound{ id = "items/sword_tap_bombable", description = "Sword tap bombable" }
-sound{ id = "jump", description = "Hero - jump (engine)" }
-sound{ id = "lift", description = "Hero - pickup (engine)" }
+sound{ id = "jump", description = "(engine) Hero - jump" }
+sound{ id = "lift", description = "(engine) Hero - pickup" }
 sound{ id = "menus/menu_cursor", description = "Menu cursor" }
 sound{ id = "menus/menu_select", description = "Menu select" }
 sound{ id = "menus/pause_menu_close", description = "Pause menu close" }
@@ -332,8 +342,8 @@ sound{ id = "menus/solarus_team_logo", description = "Solarus team logo" }
 sound{ id = "menus/text_done", description = "Text done" }
 sound{ id = "menus/text_letter", description = "Text letter" }
 sound{ id = "menus/title_appear", description = "Title appear" }
-sound{ id = "message_end", description = "Menus - text_done (engine)" }
-sound{ id = "message_letter", description = "Menus - text_letter (engine)" }
+sound{ id = "message_end", description = "(engine) Menus - text_done" }
+sound{ id = "message_letter", description = "(engine) Menus - text_letter" }
 sound{ id = "misc/beehive_bees", description = "Beehive bees" }
 sound{ id = "misc/beehive_fall", description = "Beehive fall" }
 sound{ id = "misc/beehive_poke1", description = "Beehive poke 1" }
@@ -393,18 +403,21 @@ sound{ id = "misc/wind_fish_cry_clear", description = "Winf fish cry clear" }
 sound{ id = "misc/windfish_appear", description = "Wind fish appear" }
 sound{ id = "misc/windfish_cry", description = "Wind fish cry" }
 sound{ id = "misc/zap", description = "Zap" }
-sound{ id = "monster_hurt", description = "Enemy - hit power (engine)" }
-sound{ id = "picked_item", description = "Hero - Get item (engine)" }
-sound{ id = "running", description = "Hero - run (engine)" }
-sound{ id = "shield", description = "Hero - shiled (engine)" }
-sound{ id = "swim", description = "Hero - swim (engine)" }
-sound{ id = "sword1", description = "Sword - slash 1 (engine)" }
-sound{ id = "sword_spin_attack_load", description = "Sword - charge (engine)" }
-sound{ id = "sword_spin_attack_release", description = "Sword - spin (engine)" }
-sound{ id = "sword_tapping", description = "Sword- tap (engine)" }
-sound{ id = "sword_tapping_weak_wall", description = "Sword - tap bombable (engine)" }
-sound{ id = "throw", description = "Hero - throw (engine)" }
-sound{ id = "wrong", description = "Misc - error (engine)" }
+sound{ id = "monster_hurt", description = "(engine) Enemy - hit power" }
+sound{ id = "picked_item", description = "(engine) Hero - get_item" }
+sound{ id = "running", description = "(engine) Hero - run" }
+sound{ id = "shield", description = "(engine) Hero - shield" }
+sound{ id = "stone", description = "(engine) Misc - rock_shatter" }
+sound{ id = "swim", description = "(engine) Hero - swim" }
+sound{ id = "switch", description = "(engine) Misc - dungeon_switch" }
+sound{ id = "sword1", description = "(engine) Sword - slash 1" }
+sound{ id = "sword_spin_attack_load", description = "(engine) Sword - charge" }
+sound{ id = "sword_spin_attack_release", description = "(engine) Sword - spin" }
+sound{ id = "sword_tapping", description = "(engine) Sword- tap" }
+sound{ id = "sword_tapping_weak_wall", description = "(engine) Sword - tap bombable" }
+sound{ id = "throw", description = "(engine) Hero - throw" }
+sound{ id = "treasure", description = "(engine) Hero - get_sword" }
+sound{ id = "wrong", description = "(engine) Misc - error" }
 
 item{ id = "bomb", description = "Bomb" }
 item{ id = "bottle_1_EXAMPLE", description = "Bottle 1" }
@@ -422,20 +435,26 @@ item{ id = "rupee_bag", description = "Rupee bag" }
 item{ id = "sword", description = "Sword" }
 
 enemy{ id = "bosses//e_fc_eater", description = "Papillosaur King" }
+enemy{ id = "bosses/e_fc_hideous", description = "Hideous" }
+enemy{ id = "bosses/e_fc_hideous_eye", description = "Hideous - eye" }
+enemy{ id = "bosses/e_fc_hideous_mouth", description = "Hideous - mouth" }
 enemy{ id = "bosses/e_fc_jelleggtric", description = "Jelleggtric" }
 enemy{ id = "bosses/e_fc_vitreous", description = "Vitreous" }
 enemy{ id = "e_fc_baby_jelleggtric_egg_fixed", description = "Jelleggtric Egg (thrown)" }
 enemy{ id = "e_fc_baby_jelleggtric_egg_thrown", description = "Jelleggtric Egg (fixed)" }
 enemy{ id = "e_fc_onime" }
+enemy{ id = "e_fc_skeleton_01", description = "Skeleton" }
 enemy{ id = "e_fc_spiderskull_01", description = "Spiderskull" }
 enemy{ id = "e_fc_spiderskull_02", description = "Black Spiderskull" }
 enemy{ id = "e_fc_vitreous_child", description = "Vitreous child" }
 enemy{ id = "projectiles/generic_projectile", description = "generic_projectile" }
 
+entity{ id = "custom_pot", description = "custom_pot" }
 entity{ id = "fairy", description = "Fairy" }
 entity{ id = "library/chest", description = "chest/chest" }
 entity{ id = "megabomb_WIP", description = "megabomb" }
 entity{ id = "morla" }
+entity{ id = "npc_target", description = "NPC target" }
 
 language{ id = "fr", description = "French" }
 
@@ -454,13 +473,21 @@ shader{ id = "sepia", description = "sepia" }
 shader{ id = "test" }
 
 file{ path = "enemies/bosses//e_fc_eater.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/bosses/e_fc_hideous.lua", author = "froggy77", license = "GPL v3" }
+file{ path = "enemies/bosses/e_fc_hideous_eye.lua", author = "froggy77", license = "GPL v3" }
+file{ path = "enemies/bosses/e_fc_hideous_mouth.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "enemies/bosses/e_fc_jelleggtric.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/bosses/e_fc_vitreous.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "enemies/e_fc_baby_jelleggtric_egg_fixed.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/e_fc_baby_jelleggtric_egg_thrown.lua", author = "Christopho", license = "GPL v3" }
-file{ path = "enemies/generic_soldier.lua", author = "Christopho", license = "GPL v3" }
-file{ path = "enemies/generic_towards_hero.lua", author = "Christopho", license = "GPL v3" }
-file{ path = "enemies/generic_waiting_for_hero.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/e_fc_skeleton_01.lua", author = "froggy77", license = "GPL v3" }
+file{ path = "enemies/library/generic_soldier.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/library/generic_towards_hero.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/library/generic_waiting_for_hero.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/library/misc.lua", author = "froggy77", license = "GPL v3" }
+file{ path = "entities/custom_pot.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "entities/fairy.lua", author = "froggy77", license = "GPL v3" }
+file{ path = "entities/npc_target.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "fonts/8_bit.png", author = "usr_share, Christopho", license = "Public domain" }
 file{ path = "fonts/enter_command.ttf", author = "Jeti", license = "CC BY 4.0" }
 file{ path = "items/bottle_1_EXAMPLE.lua", author = "Christopho", license = "GPL v3" }
@@ -511,6 +538,7 @@ file{ path = "scripts/menus/sword_menu.lua", author = "froggy77 (just a test)", 
 file{ path = "scripts/menus/title_screen/title_screen.lua", author = "Olivier Clero, froggy77", }
 file{ path = "scripts/multi_events.lua", author = "Christopho, std::gregwar", license = "GPL v3" }
 file{ path = "scripts/text_fx_helper.lua", author = "Olivier Cléro", license = "GPL v3" }
+file{ path = "scripts/utility/savegame_tables.lua", author = "Max Mraz", license = "MIT" }
 file{ path = "shaders/grayscale.dat", author = "Christopho", license = "GPL v3" }
 file{ path = "shaders/grayscale.frag.glsl", author = "Vlag", license = "GPL v3" }
 file{ path = "shaders/hq2x.dat", author = "Christopho", license = "GPL v3" }
@@ -522,6 +550,7 @@ file{ path = "sounds/boss_hurt.ogg", author = "Nintendo", license = "Proprietary
 file{ path = "sounds/boss_killed.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/bush.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/chest_open.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
+file{ path = "sounds/cursor.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/enemies", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/enemies/angler_fish_lunge.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/enemies/anti_kirby.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
@@ -623,6 +652,7 @@ file{ path = "sounds/hero_dying.ogg", author = "Nintendo", license = "Proprietar
 file{ path = "sounds/hero_falls.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/hero_hurt.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/hero_lands.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
+file{ path = "sounds/hero_pushes.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/items", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/items/bomb_drop.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/items/bomb_explode.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
@@ -738,13 +768,16 @@ file{ path = "sounds/monster_hurt.ogg", author = "Nintendo", license = "Propriet
 file{ path = "sounds/picked_item.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/running.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/shield.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
+file{ path = "sounds/stone.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/swim.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
+file{ path = "sounds/switch.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/sword1.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/sword_spin_attack_load.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/sword_spin_attack_release.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/sword_tapping.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/sword_tapping_weak_wall.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/throw.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
+file{ path = "sounds/treasure.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/wrong.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sprites/blocks/fc_statue1.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/blocks/fc_statue2.dat", author = "froggy77", license = "GPL v3" }
@@ -753,16 +786,23 @@ file{ path = "sprites/blocks/fc_statue4.dat", author = "froggy77", license = "GP
 file{ path = "sprites/enemies/bosses/e_fc_boss_monster.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/enemies/bosses/e_fc_boss_skull.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/enemies/bosses/e_fc_boss_slime.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
+file{ path = "sprites/enemies/bosses/e_fc_hideous.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/bosses/e_fc_hideous.png", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/bosses/e_fc_hideous_eye.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/bosses/e_fc_hideous_mouth.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_jelleggtric.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/e_fc_baby_jelleggtric_egg_fixed.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/e_fc_electricity.dat", author = "froggy77", license = "GPV L3" }
+file{ path = "sprites/enemies/e_fc_skeleton_01.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/shadows/shadow_16x12.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/shadows/shadow_8x5.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/crystal.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/crystal_block.dat", author = "Christopho", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/custom_pot.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/fairy.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/lock.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/lock.png", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/npc_target.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/star.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hud/dialog_icons.png", author = "froggy77, Romi, 7Soul1, OptimusDu", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/items/coin.png", author = "ansimuz, froggy77", }
