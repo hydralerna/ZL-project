@@ -118,7 +118,6 @@ animation{
   name = "potions/healing_potion",
   src_image = "items/potions.png",
   directions = {
-    { x = 0, y = 16, frame_width = 10, frame_height = 16, origin_x = 5, origin_y = 13 },
     { x = 10, y = 16, frame_width = 10, frame_height = 16, origin_x = 5, origin_y = 13 },
   },
 }
@@ -128,7 +127,6 @@ animation{
   frame_delay = 300,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 16, frame_width = 10, frame_height = 16, origin_x = 5, origin_y = 13 },
     { x = 10, y = 16, frame_width = 10, frame_height = 16, origin_x = 5, origin_y = 13, num_frames = 8 },
   },
 }
@@ -136,7 +134,6 @@ animation{
   name = "potions/life_potion",
   src_image = "items/potions.png",
   directions = {
-    { x = 0, y = 0, frame_width = 8, frame_height = 16, origin_x = 4, origin_y = 13 },
     { x = 8, y = 0, frame_width = 8, frame_height = 16, origin_x = 4, origin_y = 13 },
   },
 }
@@ -146,7 +143,6 @@ animation{
   frame_delay = 300,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 0, frame_width = 8, frame_height = 16, origin_x = 4, origin_y = 13 },
     { x = 8, y = 0, frame_width = 8, frame_height = 16, origin_x = 4, origin_y = 13, num_frames = 11 },
   },
 }
@@ -154,7 +150,6 @@ animation{
   name = "potions/magic_potion",
   src_image = "items/potions.png",
   directions = {
-    { x = 0, y = 32, frame_width = 12, frame_height = 16, origin_x = 6, origin_y = 13 },
     { x = 12, y = 32, frame_width = 12, frame_height = 16, origin_x = 6, origin_y = 13 },
   },
 }
@@ -164,7 +159,6 @@ animation{
   frame_delay = 300,
   frame_to_loop_on = 0,
   directions = {
-    { x = 0, y = 32, frame_width = 12, frame_height = 16, origin_x = 6, origin_y = 13 },
     { x = 12, y = 32, frame_width = 12, frame_height = 16, origin_x = 6, origin_y = 13, num_frames = 6 },
   },
 }
