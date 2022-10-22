@@ -374,6 +374,14 @@ Tu as trouvé cinq cents rubis !
 }
 
 dialog{
+  id = "_treasure.sword.1",
+  icon = "25",
+  text = [[
+Tu as trouvé une épée !!!
+]],
+}
+
+dialog{
   id = "generic_behavior.sleeping_rrr",
   text = [[
 Rrrrrr... Rrr... Rrrrrr 
@@ -453,6 +461,7 @@ Je suis $v
 
 dialog{
   id = "generic_question.npc.WAY_3",
+  question = "1",
   text = [[
 Comment t'appelles-tu?
 $v
@@ -669,6 +678,87 @@ dialog{
   text = [[
 A..A.ATCH...
 ATCHOUMMM!!!
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.potions/healing_potion.1",
+  icon = "42",
+  skip = "all",
+  text = [[
+Permet de récupérer des points de vie et de magie.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.potions/healing_potion.2",
+  icon = "42",
+  skip = "all",
+  text = [[
+Permet de récupérer des points de vie et de magie.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.potions/healing_potion.3",
+  icon = "42",
+  skip = "all",
+  text = [[
+Permet de récupérer des points de vie et de magie.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.potions/life_potion.1",
+  icon = "40",
+  skip = "all",
+  text = [[
+Permet de récupérer des points de vie..
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.potions/life_potion.2",
+  icon = "40",
+  skip = "all",
+  text = [[
+Permet de récupérer des points de vie..
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.potions/life_potion.3",
+  icon = "40",
+  skip = "all",
+  text = [[
+Permet de récupérer des points de vie..
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.potions/magic_potion.1",
+  icon = "41",
+  skip = "all",
+  text = [[
+Permet de récupérer des points de magie.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.potions/magic_potion.2",
+  icon = "41",
+  skip = "all",
+  text = [[
+Permet de récupérer des points de magie.
+]],
+}
+
+dialog{
+  id = "scripts.menus.pause_inventory.potions/magic_potion.3",
+  icon = "41",
+  skip = "all",
+  text = [[
+Permet de récupérer des points de magie.
 ]],
 }
 
