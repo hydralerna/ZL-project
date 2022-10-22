@@ -3,9 +3,12 @@ local item = ...
 
 local game = item:get_game()
 local item_name = item:get_name()
+local cooldown_name = "cooldown_active_" .. item_name
 
 function item:on_created()
 
+  item:set_savegame_variable(cooldown_name)
+  game:set_value(cooldown_name, false)
   item:set_savegame_variable("possession_" .. item_name)
   item:set_amount_savegame_variable("amount_" .. item_name)
   item:set_max_amount(10)
@@ -75,43 +78,53 @@ end
 -- the corresponding item key.
 function item:on_using()
 
-  ------------------
-  --  No more bombs
-  ------------------
-  if item:get_amount() == 0 then
-    sol.audio.play_sound("misc/error")
-  ------------------
-  --  Bomb
-  ------------------
+  local cooldown_active = game:get_value(cooldown_name)
+  if cooldown_active then
+    item:set_finished()
+    return
   else
-    local hero = item:get_map():get_entity("hero")
-    local x, y, layer = hero:get_position()
-    local direction = hero:get_direction()
-    if direction == 0 then
-      x = x + 16
-      y = y - 5
-    elseif direction == 1 then
-      y = y - 16
-    elseif direction == 2 then
-      x = x - 16
-      y = y - 5
-    elseif direction == 3 then
-      y = y + 11
+    game:set_value(cooldown_name, true)
+    local map = item:get_map()
+    sol.timer.start(map, 6000, function()
+      game:set_value(cooldown_name, false)
+    end)
+    ------------------
+    --  No more bombs
+    ------------------
+    if item:get_amount() == 0 then
+      sol.audio.play_sound("misc/error")
+    ------------------
+    --  Bomb
+    ------------------
+    else
+      local hero = item:get_map():get_entity("hero")
+      local x, y, layer = hero:get_position()
+      local direction = hero:get_direction()
+      if direction == 0 then
+        x = x + 16
+        y = y - 5
+      elseif direction == 1 then
+        y = y - 16
+      elseif direction == 2 then
+        x = x - 16
+        y = y - 5
+      elseif direction == 3 then
+        y = y + 11
+      end
+
+      item:get_map():create_bomb{
+        x = x,
+        y = y,
+        layer = layer,
+        -- properties = {{key = "test", value = "3",}, {key = "essai", value = "8",}}
+      }
+      ------------------
+      --  Remove bomb
+      ------------------
+      item:remove_amount(1)
     end
-
-    item:get_map():create_bomb{
-      x = x,
-      y = y,
-      layer = layer,
-      -- properties = {{key = "test", value = "3",}, {key = "essai", value = "8",}}
-    }
-    ------------------
-    --  Remove bomb
-    ------------------
-    item:remove_amount(1)
+    item:set_finished()
   end
-  item:set_finished()
-
 end
 
 
