@@ -1,0 +1,9 @@
+animation{
+  name = "normal",
+  src_image = "menus/messagebox/messagebox_cursor.png",
+  frame_delay = 120,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 72, frame_height = 24, origin_x = 36, origin_y = 12, num_frames = 4, num_columns = 1 },
+  },
+}
