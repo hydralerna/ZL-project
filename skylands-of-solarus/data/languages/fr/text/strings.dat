@@ -17,4 +17,12 @@ text{ key = "hud.swim", value = "Swim" }
 text{ key = "hud.throw", value = "Throw" }
 text{ key = "hud.validate", value = "Confirm" }
 text{ key = "inventory.title", value = "INVENTAIRE" }
+text{ key = "messagebox.no", value = "Non" }
+text{ key = "messagebox.yes", value = "Oui" }
 text{ key = "palette.title", value = "PALETTE" }
+text{ key = "save_dialog.continue_question_0", value = "Voulez-vous continuer" }
+text{ key = "save_dialog.continue_question_1", value = "la partie ?" }
+text{ key = "save_dialog.no", value = "Non" }
+text{ key = "save_dialog.save_question_0", value = "Voulez-vous sauvegarder" }
+text{ key = "save_dialog.save_question_1", value = "votre progression ?" }
+text{ key = "save_dialog.yes", value = "Oui" }
