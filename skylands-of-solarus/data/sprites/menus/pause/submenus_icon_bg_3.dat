@@ -1,0 +1,85 @@
+animation{
+  name = "inactivated",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  directions = {
+    { x = 192, y = 32, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16 },
+  },
+}
+animation{
+  name = "activated",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  directions = {
+    { x = 0, y = 64, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16 },
+  },
+}
+animation{
+  name = "appearing1",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  frame_delay = 60,
+  directions = {
+    { x = 192, y = 0, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16, num_frames = 5 },
+  },
+}
+animation{
+  name = "appearing2",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  frame_delay = 60,
+  directions = {
+    { x = 192, y = 32, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16, num_frames = 5 },
+  },
+}
+animation{
+  name = "appearing3",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  frame_delay = 60,
+  directions = {
+    { x = 192, y = 64, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16, num_frames = 5 },
+  },
+}
+animation{
+  name = "disappearing1",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  frame_delay = 60,
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16, num_frames = 5 },
+  },
+}
+animation{
+  name = "disappearing2",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  frame_delay = 60,
+  directions = {
+    { x = 0, y = 32, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16, num_frames = 5 },
+  },
+}
+animation{
+  name = "disappearing3",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  frame_delay = 60,
+  directions = {
+    { x = 0, y = 64, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16, num_frames = 5 },
+  },
+}
+animation{
+  name = "idle",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  directions = {
+    { x = 192, y = 96, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16 },
+  },
+}
+animation{
+  name = "selected",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  frame_delay = 120,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 96, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16, num_frames = 4 },
+  },
+}
+animation{
+  name = "transition",
+  src_image = "menus/pause/submenus_icon_bg_3.png",
+  directions = {
+    { x = 48, y = 64, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16 },
+  },
+}
