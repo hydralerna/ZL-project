@@ -23,7 +23,7 @@ function sol.main:on_started()
   math.randomseed(os.time())
 
 
-  index_palette_shader:set_palette()
+  --index_palette_shader:set_palette()
   
   -- Show the initial menus.
   if #initial_menus_config == 0 then
@@ -98,7 +98,7 @@ function sol.main:on_key_pressed(key, modifiers)
     if sol.menu.is_started(palette_menu) then
       sol.menu.stop(palette_menu)
       --sol.video.set_shader(nil)
-      index_palette_shader:set_palette()
+      --index_palette_shader:set_palette()
   	  if game and not sol.menu.is_started(sword_menu) then
         game:set_paused(false)
       end
