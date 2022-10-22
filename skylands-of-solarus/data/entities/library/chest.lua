@@ -17,8 +17,9 @@ function entity:set_treasure(item_name, variant, savegame_variable)
   entity.data.item_name = item_name
   entity.data.variant  = variant
   entity.data.savegame_variable = savegame_variable
+  -- print("item_name: " .. item_name .. ", variant: " .. variant)
   if savegame_variable == nil then
-    entity.data.savegame_variable = entity:get_map():get_id():gsub("/", "_") .. "_chest_" .. custom_id
+    entity.data.savegame_variable = "chest_" .. entity:get_map():get_id():gsub("/", "_") .. "_" .. custom_id
   end
 
 end
