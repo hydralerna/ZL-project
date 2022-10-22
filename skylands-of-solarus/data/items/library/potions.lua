@@ -56,11 +56,11 @@ return function(item)
         width = 16,
         height = 16,
         layer = layer_hero + 1,
-        direction = 1
+        direction = 0
         })
       local sprite = custom_entity:get_sprite()
       sprite:set_animation(item_name .. "_falling")
-      sprite:set_direction(1)
+      sprite:set_direction(0)
       sprite:set_ignore_suspend(true)
       game:start_dialog("_treasure." .. save_name .. ".1", function()
         add_potion()
@@ -125,12 +125,13 @@ return function(item)
     if item:get_amount() == 0 then
       sol.audio.play_sound("misc/error")
     else
-      if  variant == 1 then
+      --if  variant == 1 then
         ------------------
         --  Empty potion
         ------------------
-        game:start_dialog("item_empty_potion")
-      else
+       -- game:start_dialog("item_empty_potion")
+      if  variant == 1 then
+      --else
         ------------------
         --  Life potion
         ------------------
@@ -140,7 +141,8 @@ return function(item)
           else
             remove_potion()
             local amounts = {3, 5, 7} -- Hearts
-            game:add_life(amounts[variant - 1] * 4)
+            --game:add_life(amounts[variant - 1] * 4)
+            game:add_life(amounts[variant] * 4)
           end
         ------------------
         --  Healing potion
@@ -152,7 +154,8 @@ return function(item)
             remove_potion()
             local rate = 3000
             local durations = {36000, 60000, 84000} -- One heart every 12 seconds. So 3, 5, 7 hearts, idem for magic
-            local duration = durations[variant - 1]
+            --local duration = durations[variant - 1]
+            local duration = durations[variant]
             local elapsed_time = 0
             sol.timer.start(game, rate, function()
               elapsed_time = elapsed_time + rate
@@ -172,7 +175,8 @@ return function(item)
           else
             remove_potion()
             local amounts = {3, 5, 7} -- Magic
-            game:add_magic(amounts[variant - 1] * 4)
+            --game:add_magic(amounts[variant - 1] * 4)
+            game:add_magic(amounts[variant] * 4)
           end
         end
       end
