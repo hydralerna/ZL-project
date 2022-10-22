@@ -14,11 +14,60 @@ require("scripts/ground_effects")
 local map = ...
 local game = map:get_game()
 
+
+local function custom_walk(npc)
+
+  -- Speed
+  local speed = npc:get_property("speed") or 16
+
+  -- Positions
+  local positions = npc:get_property("positions")
+  positions = string.gsub(positions, "%s+", "") -- Remove spaces
+  -- Create a table from it
+  local tbl_positions = {}
+  local key, count = 0, 0
+  local x, y, layer
+  for i in string.gmatch(positions, '([^,}]+)') do
+    if string.sub(i, 1, 1) == "{" then
+      count = 1
+      key = key + 1
+      tbl_positions[key] = {}
+      tbl_positions[key].x = string.sub(i, 2, #i)
+      print(tbl_positions[key].x)
+    else
+      count = count + 1
+      if count == 2 then
+        tbl_positions[key].y = i
+        print(tbl_positions[key].y)
+      elseif count == 3 then
+        tbl_positions[key].layer = i
+      end
+    end
+  end
+  local random = math.random(1, #tbl_positions)
+  local x, y, layer = tbl_positions[random].x, tbl_positions[random].y, tbl_positions[random].layer or 0
+  npc:set_position(x, y, layer)
+
+  -- Create the movement
+  local sprite = npc:get_sprite()
+  sprite:set_animation("walking")
+  --local m = sol.movement.create("random_path")
+  --local m = sol.movement.create("path_finding")
+  --m:set_target(entity)
+  --m:set_speed(speed)
+  --m:start(npc)
+
+end
+
+
+
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
 
   -- You can initialize the movement and sprites of various
   -- map entities here.
+
+  custom_walk(old_man)
 
   function collapse_sensor:on_activated()
 
@@ -94,8 +143,21 @@ function map:on_draw(dst_surface)
 end
 
 
+
 -- Event called after the opening transition effect of the map,
 -- that is, when the player takes control of the hero.
+
+
 function map:on_opening_transition_finished()
+
+  -- Test sprites of NPCs with the hero.
+  --[[
+  for npc in self:get_entities_by_type("npc") do
+    function npc:on_interaction()
+      local sprite_id = npc:get_sprite():get_animation_set()
+      hero:set_tunic_sprite_id(sprite_id)
+    end
+  end
+  --]]
 
 end
