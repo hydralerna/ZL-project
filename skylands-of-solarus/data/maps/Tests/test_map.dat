@@ -10,6 +10,44 @@ properties{
 
 tile{
   layer = 0,
+  x = 256,
+  y = 496,
+  width = 208,
+  height = 128,
+  pattern = "71",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 592,
+  width = 16,
+  height = 16,
+  pattern = "184",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 624,
+  width = 192,
+  height = 16,
+  pattern = "427",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 608,
+  width = 16,
+  height = 32,
+  pattern = "473",
+}
+
+tile{
+  layer = 0,
   x = 344,
   y = 480,
   width = 32,
@@ -5986,16 +6024,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
-  y = 384,
-  width = 8,
-  height = 32,
-  pattern = "66",
-  tileset = "dungeon/d_fc_trv_floors_02",
-}
-
-tile{
-  layer = 0,
   x = 344,
   y = 448,
   width = 32,
@@ -6688,15 +6716,6 @@ tile{
 tile{
   layer = 0,
   x = 128,
-  y = 528,
-  width = 16,
-  height = 16,
-  pattern = "71",
-}
-
-tile{
-  layer = 0,
-  x = 128,
   y = 496,
   width = 48,
   height = 16,
@@ -6884,15 +6903,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 120,
-  y = 528,
-  width = 8,
-  height = 16,
-  pattern = "328",
-}
-
-tile{
-  layer = 0,
   x = 96,
   y = 528,
   width = 8,
@@ -6907,15 +6917,6 @@ tile{
   width = 16,
   height = 16,
   pattern = "43",
-}
-
-tile{
-  layer = 0,
-  x = 120,
-  y = 544,
-  width = 8,
-  height = 8,
-  pattern = "364",
 }
 
 tile{
@@ -7881,97 +7882,6 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
-  y = 496,
-  width = 208,
-  height = 128,
-  pattern = "71",
-  tileset = "dungeon/d_fc_trv_floors_01",
-}
-
-tile{
-  layer = 0,
-  x = 240,
-  y = 480,
-  width = 16,
-  height = 16,
-  pattern = "1",
-}
-
-tile{
-  layer = 0,
-  x = 256,
-  y = 480,
-  width = 80,
-  height = 16,
-  pattern = "2",
-}
-
-tile{
-  layer = 0,
-  x = 240,
-  y = 496,
-  width = 16,
-  height = 128,
-  pattern = "16",
-}
-
-tile{
-  layer = 0,
-  x = 240,
-  y = 624,
-  width = 16,
-  height = 16,
-  pattern = "28",
-}
-
-tile{
-  layer = 0,
-  x = 256,
-  y = 624,
-  width = 208,
-  height = 16,
-  pattern = "29",
-}
-
-tile{
-  layer = 0,
-  x = 464,
-  y = 624,
-  width = 16,
-  height = 16,
-  pattern = "30",
-}
-
-tile{
-  layer = 0,
-  x = 464,
-  y = 496,
-  width = 16,
-  height = 128,
-  pattern = "17",
-}
-
-tile{
-  layer = 0,
-  x = 464,
-  y = 480,
-  width = 16,
-  height = 16,
-  pattern = "3",
-}
-
-tile{
-  layer = 0,
-  x = 384,
-  y = 480,
-  width = 80,
-  height = 16,
-  pattern = "2",
-}
-
-tile{
-  layer = 0,
   x = 296,
   y = 528,
   width = 8,
@@ -7985,7 +7895,7 @@ tile{
   x = 256,
   y = 504,
   width = 8,
-  height = 120,
+  height = 88,
   pattern = "162",
   tileset = "dungeon/d_fc_trv_floors_01",
 }
@@ -8442,30 +8352,12 @@ tile{
 
 tile{
   layer = 0,
-  x = 256,
+  x = 264,
   y = 496,
   width = 200,
   height = 8,
   pattern = "151",
   tileset = "dungeon/d_fc_trv_floors_01",
-}
-
-tile{
-  layer = 0,
-  x = 328,
-  y = 480,
-  width = 16,
-  height = 16,
-  pattern = "19",
-}
-
-tile{
-  layer = 0,
-  x = 376,
-  y = 480,
-  width = 16,
-  height = 16,
-  pattern = "18",
 }
 
 tile{
@@ -8488,10 +8380,488 @@ tile{
   tileset = "dungeon/d_fc_trv_floors_01",
 }
 
+tile{
+  layer = 0,
+  x = 256,
+  y = 480,
+  width = 80,
+  height = 16,
+  pattern = "418",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 480,
+  width = 80,
+  height = 16,
+  pattern = "418",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 496,
+  width = 16,
+  height = 96,
+  pattern = "422",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 496,
+  width = 16,
+  height = 128,
+  pattern = "423",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "428",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "419",
+}
+
+tile{
+  layer = 0,
+  x = 328,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "425",
+}
+
+tile{
+  layer = 0,
+  x = 376,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "424",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "441",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "441",
+}
+
+tile{
+  layer = 0,
+  x = 432,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "441",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "441",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 496,
+  width = 16,
+  height = 16,
+  pattern = "445",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 528,
+  width = 16,
+  height = 16,
+  pattern = "445",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 496,
+  width = 16,
+  height = 16,
+  pattern = "442",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 528,
+  width = 16,
+  height = 16,
+  pattern = "442",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 576,
+  width = 16,
+  height = 16,
+  pattern = "442",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 608,
+  width = 16,
+  height = 16,
+  pattern = "442",
+}
+
+tile{
+  layer = 0,
+  x = 304,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "446",
+}
+
+tile{
+  layer = 0,
+  x = 432,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "446",
+}
+
+tile{
+  layer = 0,
+  x = 400,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "446",
+}
+
+tile{
+  layer = 0,
+  x = 336,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "446",
+}
+
+tile{
+  layer = 0,
+  x = 368,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "446",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "417",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 592,
+  width = 16,
+  height = 8,
+  pattern = "414",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 600,
+  width = 8,
+  height = 8,
+  pattern = "473",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 608,
+  width = 16,
+  height = 16,
+  pattern = "422",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "446",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "426",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 576,
+  width = 16,
+  height = 16,
+  pattern = "445",
+}
+
+tile{
+  layer = 0,
+  x = 272,
+  y = 608,
+  width = 8,
+  height = 16,
+  pattern = "162",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 320,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "550",
+}
+
+tile{
+  layer = 0,
+  x = 384,
+  y = 624,
+  width = 16,
+  height = 16,
+  pattern = "550",
+}
+
+tile{
+  layer = 0,
+  x = 288,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "532",
+}
+
+tile{
+  layer = 0,
+  x = 416,
+  y = 480,
+  width = 16,
+  height = 16,
+  pattern = "532",
+}
+
+tile{
+  layer = 0,
+  x = 240,
+  y = 512,
+  width = 16,
+  height = 16,
+  pattern = "538",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 592,
+  width = 16,
+  height = 16,
+  pattern = "544",
+}
+
+tile{
+  layer = 0,
+  x = 248,
+  y = 600,
+  width = 16,
+  height = 8,
+  pattern = "414",
+}
+
+tile{
+  layer = 0,
+  x = 264,
+  y = 600,
+  width = 8,
+  height = 8,
+  pattern = "285",
+}
+
+tile{
+  layer = 0,
+  x = 256,
+  y = 592,
+  width = 8,
+  height = 8,
+  pattern = "285",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 536,
+  width = 16,
+  height = 16,
+  pattern = "187",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 128,
+  y = 528,
+  width = 16,
+  height = 16,
+  pattern = "71",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 528,
+  width = 8,
+  height = 16,
+  pattern = "328",
+}
+
+tile{
+  layer = 0,
+  x = 120,
+  y = 544,
+  width = 8,
+  height = 8,
+  pattern = "364",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 528,
+  width = 8,
+  height = 8,
+  pattern = "153",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 152,
+  y = 528,
+  width = 40,
+  height = 8,
+  pattern = "154",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 552,
+  width = 8,
+  height = 32,
+  pattern = "165",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 544,
+  width = 8,
+  height = 8,
+  pattern = "153",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 544,
+  width = 8,
+  height = 8,
+  pattern = "154",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 80,
+  y = 584,
+  width = 8,
+  height = 8,
+  pattern = "165",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 144,
+  y = 536,
+  width = 8,
+  height = 8,
+  pattern = "165",
+  tileset = "dungeon/d_fc_trv_floors_01",
+}
+
+tile{
+  layer = 0,
+  x = 88,
+  y = 552,
+  width = 8,
+  height = 8,
+  pattern = "66",
+  tileset = "dungeon/d_fc_trv_floors_02",
+}
+
 separator{
   layer = 0,
-  x = -8,
-  y = 0,
+  x = -80,
+  y = -112,
   width = 16,
   height = 640,
 }
@@ -8708,22 +9078,11 @@ enemy{
   breed = "e_fc_spiderskull_01",
 }
 
-custom_entity{
-  layer = 0,
-  x = 600,
-  y = 525,
-  width = 16,
-  height = 16,
-  direction = 0,
-  sprite = "entities/megabomb",
-  model = "megabomb_WIP",
-}
-
 destination{
   name = "starting_destination",
   layer = 0,
-  x = 360,
-  y = 541,
+  x = 120,
+  y = 117,
   direction = 1,
 }
 
@@ -9012,8 +9371,8 @@ pickable{
 
 pickable{
   layer = 0,
-  x = 168,
-  y = 109,
+  x = 88,
+  y = 93,
   treasure_name = "coin_bag",
 }
 
@@ -9038,7 +9397,6 @@ pickable{
   x = 24,
   y = 21,
   treasure_name = "potions/life_potion",
-  treasure_variant = 2,
 }
 
 pickable{
@@ -9046,7 +9404,6 @@ pickable{
   x = 40,
   y = 21,
   treasure_name = "potions/healing_potion",
-  treasure_variant = 2,
 }
 
 pickable{
@@ -9061,7 +9418,6 @@ pickable{
   x = 24,
   y = 37,
   treasure_name = "potions/magic_potion",
-  treasure_variant = 2,
 }
 
 chest{
@@ -9106,8 +9462,7 @@ chest{
   layer = 0,
   x = 168,
   y = 29,
-  treasure_name = "potions/magic_potion",
-  treasure_variant = 2,
+  treasure_name = "potions/healing_potion",
   sprite = "chests/chest03",
   opening_condition = "test_map_chest_01",
 }
@@ -9126,7 +9481,6 @@ chest{
   x = 136,
   y = 29,
   treasure_name = "potions/healing_potion",
-  treasure_variant = 2,
   sprite = "chests/chest02",
   opening_condition = "test_map_chest_01",
 }
@@ -9136,7 +9490,6 @@ chest{
   x = 104,
   y = 29,
   treasure_name = "potions/life_potion",
-  treasure_variant = 2,
   sprite = "chests/chest01",
   opening_condition = "test_map_chest_01",
 }
@@ -9159,20 +9512,11 @@ pickable{
 enemy{
   name = "boss",
   layer = 0,
-  x = 136,
-  y = 109,
+  x = 272,
+  y = 245,
   direction = 0,
   breed = "bosses/e_fc_jelleggtric",
   treasure_name = "heart_container",
-}
-
-chest{
-  layer = 0,
-  x = 104,
-  y = 93,
-  treasure_name = "bomb",
-  sprite = "chests/chest03",
-  opening_condition = "test_map_chest_01",
 }
 
 custom_entity{
@@ -9268,9 +9612,240 @@ crystal_block{
 pickable{
   layer = 0,
   x = 296,
-  y = 541,
+  y = 557,
   treasure_name = "rupee",
   treasure_variant = 3,
+}
+
+chest{
+  name = "wow",
+  layer = 0,
+  x = 424,
+  y = 557,
+  treasure_name = "bomb",
+  treasure_variant = 2,
+  sprite = "chests/chest03",
+  opening_condition = "test_map_chest_01",
+}
+
+chest{
+  layer = 0,
+  x = 424,
+  y = 525,
+  treasure_name = "bomb",
+  sprite = "chests/chest03",
+  opening_condition = "test_map_chest_01",
+}
+
+chest{
+  layer = 0,
+  x = 424,
+  y = 589,
+  treasure_name = "bomb",
+  treasure_variant = 3,
+  sprite = "chests/chest03",
+  opening_condition = "test_map_chest_01",
+}
+
+chest{
+  layer = 0,
+  x = 360,
+  y = 589,
+  treasure_name = "bomb",
+  treasure_variant = 4,
+  sprite = "chests/chest03",
+  opening_condition = "test_map_chest_01",
+}
+
+pickable{
+  layer = 0,
+  x = 296,
+  y = 541,
+  treasure_name = "bomb",
+}
+
+pickable{
+  layer = 0,
+  x = 296,
+  y = 589,
+  treasure_name = "bomb",
+}
+
+npc{
+  name = "old_man",
+  layer = 0,
+  x = 312,
+  y = 405,
+  properties = {
+    {
+      key = "positions",
+      value = "{264, 400, 2}, {392, 392}, {440, 576}",
+    },
+    {
+      key = "speed",
+      value = "8",
+    },
+  },
+  direction = 3,
+  subtype = 1,
+  sprite = "npc/old_man",
+}
+
+enemy{
+  name = "hideous",
+  layer = 0,
+  x = 120,
+  y = 237,
+  direction = 0,
+  breed = "bosses/e_fc_hideous",
+}
+
+enemy{
+  layer = 0,
+  x = 120,
+  y = 253,
+  direction = 0,
+  breed = "bosses/e_fc_hideous_mouth",
+}
+
+enemy{
+  name = "s1",
+  layer = 0,
+  x = 360,
+  y = 53,
+  direction = 3,
+  breed = "e_fc_skeleton_01",
+  treasure_name = "heart",
+}
+
+enemy{
+  name = "s1_2",
+  layer = 0,
+  x = 312,
+  y = 45,
+  direction = 1,
+  breed = "e_fc_skeleton_01",
+  treasure_name = "coin",
+}
+
+enemy{
+  name = "s1_3",
+  layer = 0,
+  x = 288,
+  y = 93,
+  direction = 0,
+  breed = "e_fc_skeleton_01",
+}
+
+enemy{
+  name = "s1_4",
+  layer = 0,
+  x = 440,
+  y = 61,
+  direction = 2,
+  breed = "e_fc_skeleton_01",
+  treasure_name = "heart",
+}
+
+enemy{
+  name = "s1_5",
+  layer = 0,
+  x = 312,
+  y = 141,
+  direction = 3,
+  breed = "e_fc_skeleton_01",
+}
+
+enemy{
+  name = "s1_6",
+  layer = 0,
+  x = 424,
+  y = 141,
+  direction = 2,
+  breed = "e_fc_skeleton_01",
+  treasure_name = "heart",
+}
+
+enemy{
+  name = "s1_7",
+  layer = 0,
+  x = 456,
+  y = 117,
+  direction = 3,
+  breed = "e_fc_skeleton_01",
+}
+
+enemy{
+  name = "s1_8",
+  layer = 0,
+  x = 264,
+  y = 53,
+  direction = 0,
+  breed = "e_fc_skeleton_01",
+  treasure_name = "coin",
+}
+
+enemy{
+  name = "s1_9",
+  layer = 0,
+  x = 280,
+  y = 37,
+  direction = 3,
+  breed = "e_fc_skeleton_01",
+}
+
+chest{
+  layer = 0,
+  x = 184,
+  y = 93,
+  treasure_name = "sword",
+  sprite = "chests/chest03",
+  opening_condition = "test_map_chest_01",
+}
+
+destructible{
+  layer = 0,
+  x = 88,
+  y = 45,
+  sprite = "destructibles/jar",
+  destruction_sound = "stone",
+}
+
+destructible{
+  layer = 0,
+  x = 88,
+  y = 29,
+  sprite = "destructibles/pot",
+  destruction_sound = "stone",
+}
+
+custom_entity{
+  name = "custom_pot",
+  layer = 0,
+  x = 152,
+  y = 77,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "destructibles/pot2",
+  model = "custom_pot",
+}
+
+block{
+  layer = 0,
+  x = 152,
+  y = 109,
+  sprite = "blocks/fc_statue1",
+  pushable = true,
+  pullable = true,
+}
+
+destructible{
+  layer = 0,
+  x = 88,
+  y = 61,
+  sprite = "destructibles/pot2",
+  destruction_sound = "stone",
 }
 
 tile{
@@ -9337,6 +9912,16 @@ tile{
   width = 32,
   height = 8,
   pattern = "131",
+}
+
+tile{
+  layer = 2,
+  x = 256,
+  y = 384,
+  width = 16,
+  height = 32,
+  pattern = "66",
+  tileset = "dungeon/d_fc_trv_floors_02",
 }
 
 wall{
