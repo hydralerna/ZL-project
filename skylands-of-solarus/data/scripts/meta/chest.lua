@@ -21,6 +21,7 @@ function chest_meta:on_created()
         sprite = graphic
   }
   local entity = self:get_map():create_custom_entity(setup)
+  entity:set_traversable_by("block", false)
   entity:set_treasure(item_name, variant, savegame_var)
   entity:create()
 
