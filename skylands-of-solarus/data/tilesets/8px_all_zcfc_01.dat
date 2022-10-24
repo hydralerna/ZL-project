@@ -341,7 +341,7 @@ tile_pattern{
 
 tile_pattern{
   id = "13",
-  ground = "shallow_water",
+  ground = "deep_water",
   default_layer = 0,
   x = 8,
   y = 48,
@@ -451,7 +451,7 @@ tile_pattern{
 
 tile_pattern{
   id = "14",
-  ground = "shallow_water",
+  ground = "deep_water",
   default_layer = 0,
   x = 16,
   y = 48,
@@ -561,7 +561,7 @@ tile_pattern{
 
 tile_pattern{
   id = "15",
-  ground = "shallow_water",
+  ground = "deep_water",
   default_layer = 0,
   x = 24,
   y = 48,
@@ -671,7 +671,7 @@ tile_pattern{
 
 tile_pattern{
   id = "16",
-  ground = "shallow_water",
+  ground = "deep_water",
   default_layer = 0,
   x = 32,
   y = 48,
@@ -1728,3 +1728,4 @@ tile_pattern{
   width = 8,
   height = 8,
 }
+
