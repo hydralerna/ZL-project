@@ -1,0 +1,17 @@
+animation{
+  name = "walking",
+  src_image = "blocks/fc_statues.png",
+  frame_delay = 180,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 72, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 4 },
+  },
+}
+animation{
+  name = "falling",
+  src_image = "blocks/fc_statues.png",
+  frame_delay = 125,
+  directions = {
+    { x = 0, y = 96, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 6 },
+  },
+}
