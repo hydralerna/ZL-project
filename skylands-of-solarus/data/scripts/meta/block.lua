@@ -24,11 +24,12 @@ function block_meta:on_moved()
       local offset_x, offset_y = sprite:get_origin()
       local width, height = self:get_size()
       local direction = map:get_hero():get_direction4_to(self)
+      print("Direction", direction, "offset_x", offset_x, "offset_y", offset_y)
       local custom_entity = map:create_custom_entity({
         name = "fake_block_" .. animation,
         sprite = sprite_name,
         x = direction == 0 and x + offset_x or direction == 2 and x - offset_x or x,
-        y = direction == 3 and y + offset_y - offset_x or y,
+        y = direction == 3 and y + 13 or direction == 1 and y - 3 or y,
         width = width,
         height = height,
         layer = layer,
