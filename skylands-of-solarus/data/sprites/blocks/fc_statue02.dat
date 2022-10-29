@@ -6,18 +6,18 @@ animation{
   },
 }
 animation{
-  name = "burning",
-  src_image = "blocks/fc_statues.png",
-  frame_delay = 125,
-  directions = {
-    { x = 96, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 6 },
-  },
-}
-animation{
-  name = "falling (copie)",
+  name = "falling",
   src_image = "blocks/fc_statues.png",
   frame_delay = 125,
   directions = {
     { x = 0, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 6 },
+  },
+}
+animation{
+  name = "melting",
+  src_image = "blocks/fc_statues.png",
+  frame_delay = 125,
+  directions = {
+    { x = 96, y = 24, frame_width = 16, frame_height = 24, origin_x = 8, origin_y = 21, num_frames = 6 },
   },
 }
