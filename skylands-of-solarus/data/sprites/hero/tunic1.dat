@@ -165,23 +165,23 @@ animation{
 animation{
   name = "plunging_lava",
   src_image = "hero/plunging.png",
-  frame_delay = 50,
+  frame_delay = 125,
   directions = {
-    { x = 336, y = 0, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
-    { x = 336, y = 24, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
-    { x = 336, y = 48, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
-    { x = 336, y = 72, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
+    { x = 288, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
+    { x = 288, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
+    { x = 288, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
+    { x = 288, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
   },
 }
 animation{
   name = "plunging_water",
   src_image = "hero/plunging.png",
-  frame_delay = 50,
+  frame_delay = 125,
   directions = {
-    { x = 0, y = 0, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
-    { x = 0, y = 24, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
-    { x = 0, y = 48, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
-    { x = 0, y = 72, frame_width = 56, frame_height = 24, origin_x = 28, origin_y = 21, num_frames = 6 },
+    { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
+    { x = 0, y = 48, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
+    { x = 0, y = 96, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
+    { x = 0, y = 144, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 6 },
   },
 }
 animation{
