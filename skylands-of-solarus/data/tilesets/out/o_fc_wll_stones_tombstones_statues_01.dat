@@ -7,7 +7,7 @@ tile_pattern{
   y = 0,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -18,7 +18,7 @@ tile_pattern{
   y = 16,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -29,7 +29,7 @@ tile_pattern{
   y = 16,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -40,7 +40,7 @@ tile_pattern{
   y = 16,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -51,7 +51,7 @@ tile_pattern{
   y = 32,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -62,7 +62,7 @@ tile_pattern{
   y = 32,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -73,7 +73,7 @@ tile_pattern{
   y = 32,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -84,7 +84,7 @@ tile_pattern{
   y = 32,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -95,7 +95,7 @@ tile_pattern{
   y = 32,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -106,7 +106,7 @@ tile_pattern{
   y = 32,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -117,7 +117,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -128,7 +128,7 @@ tile_pattern{
   y = 0,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -139,7 +139,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -150,7 +150,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -161,7 +161,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -172,7 +172,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -183,7 +183,7 @@ tile_pattern{
   y = 48,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -194,7 +194,7 @@ tile_pattern{
   y = 64,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -205,7 +205,7 @@ tile_pattern{
   y = 80,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -216,7 +216,7 @@ tile_pattern{
   y = 16,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -227,7 +227,18 @@ tile_pattern{
   y = 8,
   width = 16,
   height = 8,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
+}
+
+tile_pattern{
+  id = "29",
+  ground = "wall",
+  default_layer = 0,
+  x = 16,
+  y = 64,
+  width = 16,
+  height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -238,7 +249,29 @@ tile_pattern{
   y = 0,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
+}
+
+tile_pattern{
+  id = "30",
+  ground = "wall",
+  default_layer = 0,
+  x = 16,
+  y = 80,
+  width = 16,
+  height = 16,
+  repeat_mode = "horizontal",
+}
+
+tile_pattern{
+  id = "31",
+  ground = "wall",
+  default_layer = 0,
+  x = 32,
+  y = 80,
+  width = 16,
+  height = 16,
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -249,7 +282,7 @@ tile_pattern{
   y = 0,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -260,7 +293,7 @@ tile_pattern{
   y = 0,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -271,7 +304,7 @@ tile_pattern{
   y = 0,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -282,7 +315,7 @@ tile_pattern{
   y = 16,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -293,7 +326,7 @@ tile_pattern{
   y = 16,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
 tile_pattern{
@@ -304,6 +337,6 @@ tile_pattern{
   y = 16,
   width = 16,
   height = 16,
-  repeat_mode = "none",
+  repeat_mode = "horizontal",
 }
 
