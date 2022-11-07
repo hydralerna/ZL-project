@@ -1,7 +1,7 @@
 animation{
   name = "walking",
   src_image = "enemies/shadows/shadows.png",
-  frame_delay = 180,
+  frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
     { x = 48, y = 0, frame_width = 16, frame_height = 12, origin_x = 8, origin_y = 6 },
@@ -19,7 +19,7 @@ animation{
 animation{
   name = "preparing_egg",
   src_image = "enemies/shadows/shadows.png",
-  frame_delay = 180,
+  frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
     { x = 48, y = 0, frame_width = 16, frame_height = 12, origin_x = 8, origin_y = 6 },
@@ -28,7 +28,7 @@ animation{
 animation{
   name = "walking2",
   src_image = "enemies/shadows/shadows.png",
-  frame_delay = 180,
+  frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
     { x = 48, y = 0, frame_width = 16, frame_height = 12, origin_x = 8, origin_y = 6 },
