@@ -1,7 +1,7 @@
 animation{
   name = "walking",
   src_image = "enemies/bosses/e_fc_jelleggtric.png",
-  frame_delay = 180,
+  frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
     { x = 0, y = 0, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 37, num_frames = 4 },
@@ -19,7 +19,7 @@ animation{
 animation{
   name = "preparing_egg",
   src_image = "enemies/bosses/e_fc_jelleggtric.png",
-  frame_delay = 180,
+  frame_delay = 200,
   frame_to_loop_on = 1,
   directions = {
     { x = 0, y = 32, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 37, num_frames = 5 },
@@ -28,7 +28,7 @@ animation{
 animation{
   name = "walking2",
   src_image = "enemies/bosses/e_fc_jelleggtric.png",
-  frame_delay = 180,
+  frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
     { x = 0, y = 96, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 37, num_frames = 4 },
