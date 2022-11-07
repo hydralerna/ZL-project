@@ -13,7 +13,7 @@ animation{
 animation{
   name = "hurt",
   src_image = "enemies/bosses/e_fc_vitreous.png",
-  frame_delay = 90,
+  frame_delay = 100,
   frame_to_loop_on = 0,
   directions = {
     { x = 64, y = 96, frame_width = 32, frame_height = 32, origin_x = 16, origin_y = 26, num_frames = 3 },
@@ -35,7 +35,7 @@ animation{
 animation{
   name = "shadow_walking",
   src_image = "enemies/bosses/e_fc_vitreous.png",
-  frame_delay = 360,
+  frame_delay = 400,
   frame_to_loop_on = 0,
   directions = {
     { x = 0, y = 192, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13 },
