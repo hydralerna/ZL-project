@@ -8,7 +8,7 @@ animation{
 animation{
   name = "destroying",
   src_image = "npc/sorcerer_statue.png",
-  frame_delay = 180,
+  frame_delay = 200,
   directions = {
     { x = 0, y = 96, frame_width = 48, frame_height = 88, origin_x = 24, origin_y = 77, num_frames = 12 },
   },
@@ -16,7 +16,7 @@ animation{
 animation{
   name = "magic",
   src_image = "npc/sorcerer_statue.png",
-  frame_delay = 180,
+  frame_delay = 200,
   directions = {
     { x = 0, y = 0, frame_width = 48, frame_height = 88, origin_x = 24, origin_y = 77, num_frames = 12 },
   },
