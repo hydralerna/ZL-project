@@ -1,6 +1,7 @@
 map{ id = "Tests/Champiville", description = "Champiville (outside)" }
 map{ id = "Tests/Temple", description = "Temple" }
 map{ id = "Tests/cliffs_and_dungeons", description = "Cliffs & Dungeons" }
+map{ id = "Tests/grounds" }
 map{ id = "Tests/pavements" }
 map{ id = "Tests/test_cliffs" }
 map{ id = "Tests/test_map", description = "Test Map" }
@@ -36,6 +37,7 @@ tileset{ id = "out/o_fc_skylands_01" }
 tileset{ id = "out/o_fc_trv_grass_01" }
 tileset{ id = "out/o_fc_trv_grass_02" }
 tileset{ id = "out/o_fc_trv_grass_03" }
+tileset{ id = "out/o_fc_trv_ground_03", description = "out/o_fc_trv_ground_03" }
 tileset{ id = "out/o_fc_trv_pavement_01" }
 tileset{ id = "out/o_fc_trv_pavement_02" }
 tileset{ id = "out/o_fc_wll_barriers_01" }
@@ -61,10 +63,13 @@ tileset{ id = "out/o_zc_wll_roofs_01" }
 tileset{ id = "out/o_zc_wll_specials_01" }
 tileset{ id = "out/o_zc_wll_store_signs_01" }
 
-sprite{ id = "blocks/fc_statue1" }
-sprite{ id = "blocks/fc_statue2" }
-sprite{ id = "blocks/fc_statue3" }
-sprite{ id = "blocks/fc_statue4" }
+sprite{ id = "blocks/big_block01", description = "Big block 01" }
+sprite{ id = "blocks/fc_barrel01", description = "Barrel 01" }
+sprite{ id = "blocks/fc_barrel02", description = "Barrel 02" }
+sprite{ id = "blocks/fc_statue01", description = "Statue 01" }
+sprite{ id = "blocks/fc_statue02", description = "Statue 02" }
+sprite{ id = "blocks/fc_statue03", description = "Statue 03" }
+sprite{ id = "blocks/fc_statue04", description = "Statue 04" }
 sprite{ id = "chests/chest01", description = "Chest 01" }
 sprite{ id = "chests/chest02", description = "Chest 02" }
 sprite{ id = "chests/chest03", description = "Chest 03" }
@@ -72,9 +77,9 @@ sprite{ id = "chests/chest04", description = "Chest 04" }
 sprite{ id = "chests/chest05", description = "Chest 05" }
 sprite{ id = "chests/chest06", description = "Chest 06" }
 sprite{ id = "chests/chest07", description = "Chest 07" }
-sprite{ id = "destructibles/jar" }
-sprite{ id = "destructibles/pot" }
-sprite{ id = "destructibles/pot2" }
+sprite{ id = "destructibles/jar01" }
+sprite{ id = "destructibles/pot01" }
+sprite{ id = "destructibles/pot02" }
 sprite{ id = "doors/dungeon/d_fc_door_01_wood_black", description = "doors/dungeon/d_fc_door_01_wood_black" }
 sprite{ id = "doors/dungeon/d_fc_door_01_wood_normal", description = "doors/dungeon/d_fc_door_01_wood_normal" }
 sprite{ id = "doors/dungeon/d_fc_door_01_wood_stairs_down", description = "doors/dungeon/d_fc_door_01_wood_stairs_down" }
@@ -318,7 +323,7 @@ sound{ id = "items/ocarina_frog_song", description = "Ocarina frog song" }
 sound{ id = "items/ocarina_frog_song_revive_1", description = "Ocarina frog song revive 1" }
 sound{ id = "items/ocarina_frog_song_revive_2", description = "Ocarina frog song revive 2" }
 sound{ id = "items/ocarina_mambo", description = "Ocarina mambo" }
-sound{ id = "items/ocarina_mambo_warp", description = "Ocarina membo warp" }
+sound{ id = "items/ocarina_mambo_warp", description = "Ocarina mambo warp" }
 sound{ id = "items/shield", description = "Shield" }
 sound{ id = "items/shield_deflect", description = "Shield deflect" }
 sound{ id = "items/shovel_dig", description = "Shovel dig" }
@@ -417,6 +422,7 @@ sound{ id = "sword_tapping", description = "(engine) Sword- tap" }
 sound{ id = "sword_tapping_weak_wall", description = "(engine) Sword - tap bombable" }
 sound{ id = "throw", description = "(engine) Hero - throw" }
 sound{ id = "treasure", description = "(engine) Hero - get_sword" }
+sound{ id = "walk_on_water", description = "(engine) Hero - wade1" }
 sound{ id = "wrong", description = "(engine) Misc - error" }
 
 item{ id = "bomb", description = "Bomb" }
@@ -536,6 +542,7 @@ file{ path = "scripts/menus/solarus_logo.lua", author = "Maxs, Alex Gleason, fro
 file{ path = "scripts/menus/start_game.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus/sword_menu.lua", author = "froggy77 (just a test)", license = "GPL v3" }
 file{ path = "scripts/menus/title_screen/title_screen.lua", author = "Olivier Clero, froggy77", }
+file{ path = "scripts/meta/block.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "scripts/multi_events.lua", author = "Christopho, std::gregwar", license = "GPL v3" }
 file{ path = "scripts/text_fx_helper.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/utility/savegame_tables.lua", author = "Max Mraz", license = "MIT" }
@@ -778,11 +785,18 @@ file{ path = "sounds/sword_tapping.ogg", author = "Nintendo", license = "Proprie
 file{ path = "sounds/sword_tapping_weak_wall.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/throw.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/treasure.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
+file{ path = "sounds/walk_on_water.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/wrong.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
-file{ path = "sprites/blocks/fc_statue1.dat", author = "froggy77", license = "GPL v3" }
-file{ path = "sprites/blocks/fc_statue2.dat", author = "froggy77", license = "GPL v3" }
-file{ path = "sprites/blocks/fc_statue3.dat", author = "froggy77", license = "GPL v3" }
-file{ path = "sprites/blocks/fc_statue4.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/big_block01.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_barrel01.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_barrel02.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_barrels.png", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_big_blocks.png", author = "froogy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_statue01.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_statue02.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_statue03.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_statue04.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/blocks/fc_statues.png", author = "Jerom, froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_boss_monster.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/enemies/bosses/e_fc_boss_skull.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/enemies/bosses/e_fc_boss_slime.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
