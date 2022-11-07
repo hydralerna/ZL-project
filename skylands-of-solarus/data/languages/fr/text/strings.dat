@@ -1,3 +1,4 @@
+text{ key = "game.thief", value = "Voleur" }
 text{ key = "hud.action", value = "Action" }
 text{ key = "hud.change", value = "Change" }
 text{ key = "hud.grab", value = "Grab" }
