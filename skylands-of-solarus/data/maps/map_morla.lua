@@ -11,13 +11,14 @@ local map = ...
 local game = map:get_game()
 local hero = map:get_hero()
 
+
 -- Include scripts
 require("scripts/multi_events")
 
 
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
- -- count = 0
+  count = 0
   
   function collapse_sensor:on_activated()
 
@@ -50,48 +51,48 @@ map:register_event("on_started", function()
 end)
 
 
---function hero:on_state_changed(state)
+function hero:on_state_changed(new_state_name)
 
---  local map_morla = game:get_value("map_morla")
---  local distance = hero:get_distance(rock)
---  if state == "sword tapping" and distance <= 24 then
---    count = count + 1
---    print(count)
---    if map_morla == nil and count == 3 then
---        game:set_value("map_morla", 0)
---        count = 0
---        game:start_dialog("maps.out.morla.allergy")
---    elseif map_morla == 0 and count == 2 then
---        count = 0
---        game:start_dialog("maps.out.morla.0.waking_up_2")
---    end
---  elseif "sword tapping" and distance > 24 and count > 0 then
---    count = 0
---  end  
+  local map_morla = game:get_value("map_morla")
+  local distance = hero:get_distance(rock)
+  if new_state_name == "sword tapping" and distance <= 24 then
+    count = count + 1
+    --print(count)
+    if map_morla == nil and count == 3 then
+        game:set_value("map_morla", 0)
+        count = 0
+        game:start_dialog("maps.out.morla.allergy")
+    elseif map_morla == 0 and count == 2 then
+        count = 0
+        game:start_dialog("maps.out.morla.0.waking_up_2")
+    end
+  elseif new_state_name == "sword tapping" and distance > 24 and count > 0 then
+    count = 0
+  end  
 
---end
-
-
---function rock:on_interaction()
-
---  local map_morla = game:get_value("map_morla")
---  if map_morla == nil then
---    game:start_dialog("maps.out.morla.0.hero_calling_1")
---  elseif map_morla == 0 then 
---    game:start_dialog("maps.out.morla.0.question")
---  end
---end
+end
 
 
---function rock_2:on_interaction()
+function rock:on_interaction()
 
---  local map_morla = game:get_value("map_morla")
---  if map_morla == nil then
---    game:start_dialog("maps.out.morla.0.hero_calling_1")
---  elseif map_morla == 0 then 
---    game:start_dialog("maps.out.morla.0.question")
---  end
---end
+  local map_morla = game:get_value("map_morla")
+  if map_morla == nil then
+    game:start_dialog("maps.out.morla.0.hero_calling_1")
+  elseif map_morla == 0 then 
+    game:start_dialog("maps.out.morla.0.question", game:get_player_name())
+  end
+end
+
+
+function rock_2:on_interaction()
+
+  local map_morla = game:get_value("map_morla")
+  if map_morla == nil then
+    game:start_dialog("maps.out.morla.0.hero_calling_1")
+  elseif map_morla == 0 then 
+    game:start_dialog("maps.out.morla.0.question")
+  end
+end
 
 
 --function morla_step1()
