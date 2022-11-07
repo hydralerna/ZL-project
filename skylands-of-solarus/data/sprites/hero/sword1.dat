@@ -35,7 +35,7 @@ animation{
 animation{
   name = "sword_loading_stopped",
   src_image = "hero/sword.loading.stopped.sword1.png",
-  frame_delay = 180,
+  frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
     { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
@@ -47,7 +47,7 @@ animation{
 animation{
   name = "sword_loading_walking",
   src_image = "hero/sword.loading.walking.sword1.png",
-  frame_delay = 180,
+  frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
     { x = 0, y = 0, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 29, num_frames = 4 },
