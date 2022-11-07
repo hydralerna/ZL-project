@@ -16,7 +16,7 @@ animation{
 animation{
   name = "stopped",
   src_image = "destructibles/pots.png",
-  frame_delay = 180,
+  frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
     { x = 48, y = 480, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 21, num_frames = 4 },
@@ -25,7 +25,7 @@ animation{
 animation{
   name = "walking",
   src_image = "destructibles/pots.png",
-  frame_delay = 180,
+  frame_delay = 200,
   frame_to_loop_on = 0,
   directions = {
     { x = 48, y = 480, frame_width = 48, frame_height = 48, origin_x = 24, origin_y = 21, num_frames = 2 },
