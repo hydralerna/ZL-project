@@ -11,7 +11,7 @@ animation{
 animation{
   name = "egg_breaking",
   src_image = "enemies/shadows/shadows.png",
-  frame_delay = 180,
+  frame_delay = 200,
   directions = {
     { x = 0, y = 0, frame_width = 8, frame_height = 5, origin_x = 4, origin_y = 3 },
     { x = 0, y = 0, frame_width = 8, frame_height = 5, origin_x = 4, origin_y = 3 },
@@ -53,7 +53,7 @@ animation{
 animation{
   name = "walking",
   src_image = "enemies/shadows/shadows.png",
-  frame_delay = 180,
+  frame_delay = 200,
   directions = {
     { x = 0, y = 0, frame_width = 8, frame_height = 5, origin_x = 4, origin_y = 3 },
     { x = 0, y = 0, frame_width = 8, frame_height = 5, origin_x = 4, origin_y = 3 },
