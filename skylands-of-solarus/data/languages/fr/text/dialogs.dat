@@ -32,7 +32,7 @@ dialog{
   icon = "37",
   text = [[
 Tu as trouvé cinq bombes !
-Wow ! C'est ...c'est explosif !
+Wow !  C'est ...c'est explosif !
 ]],
 }
 
@@ -566,8 +566,8 @@ dialog{
   text = [[
 Cela n'a pas vraiment 
 d'importance. Mais nous
-saurions tromper sur la
-prophétie.
+nous saurions tromper sur
+la prophétie.
 Si tu n'es pas un petit
 homme, es-tu une bonne
 chose à manger?
