@@ -1,7 +1,7 @@
 animation{
   name = "stopped",
   src_image = "npc/mister_time.png",
-  frame_delay = 360,
+  frame_delay = 400,
   frame_to_loop_on = 0,
   directions = {
     { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 8 },
@@ -11,7 +11,7 @@ animation{
 animation{
   name = "walking",
   src_image = "npc/mister_time.png",
-  frame_delay = 360,
+  frame_delay = 400,
   frame_to_loop_on = 0,
   directions = {
     { x = 0, y = 48, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21, num_frames = 8 },
