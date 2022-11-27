@@ -1,0 +1,36 @@
+animation{
+  name = "stopped",
+  src_image = "enemies/bosses/e_fc_gelatinous_cube.png",
+  frame_delay = 350,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 56, origin_x = 24, origin_y = 53, num_frames = 4 },
+  },
+}
+animation{
+  name = "asleep",
+  src_image = "enemies/bosses/e_fc_gelatinous_cube.png",
+  frame_delay = 450,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 56, origin_x = 24, origin_y = 53, num_frames = 4 },
+  },
+}
+animation{
+  name = "awaking",
+  src_image = "enemies/bosses/e_fc_gelatinous_cube.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 48, frame_height = 56, origin_x = 24, origin_y = 53, num_frames = 4 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/bosses/e_fc_gelatinous_cube.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 56, frame_width = 48, frame_height = 56, origin_x = 24, origin_y = 53, num_frames = 4 },
+  },
+}
