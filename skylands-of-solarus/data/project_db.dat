@@ -20,10 +20,12 @@ tileset{ id = "dungeon/d_fc_trv_pavement_01" }
 tileset{ id = "dungeon/d_fc_trv_pavement_02" }
 tileset{ id = "dungeon/d_fc_trv_solarus_01" }
 tileset{ id = "dungeon/d_fc_trv_specials_01" }
+tileset{ id = "dungeon/d_fc_trv_specials_02" }
 tileset{ id = "dungeon/d_fc_wll_braziers_01" }
 tileset{ id = "dungeon/d_fc_wll_specials_01" }
 tileset{ id = "dungeon/d_fc_wll_torches_01" }
 tileset{ id = "dungeon/d_fc_wll_walls_01" }
+tileset{ id = "dungeon/d_zc_swtr_specials_01" }
 tileset{ id = "dungeon/d_zc_trv_entrances_01" }
 tileset{ id = "dungeon/d_zc_trv_floors_01" }
 tileset{ id = "dungeon/d_zc_trv_specials_01" }
@@ -104,6 +106,7 @@ sprite{ id = "enemies/bosses/e_fc_boss_monster" }
 sprite{ id = "enemies/bosses/e_fc_boss_skull" }
 sprite{ id = "enemies/bosses/e_fc_boss_slime" }
 sprite{ id = "enemies/bosses/e_fc_eater", description = "enemies/e_fc_eater" }
+sprite{ id = "enemies/bosses/e_fc_gelatinous_cube" }
 sprite{ id = "enemies/bosses/e_fc_hideous" }
 sprite{ id = "enemies/bosses/e_fc_hideous_eye" }
 sprite{ id = "enemies/bosses/e_fc_hideous_mouth" }
@@ -412,6 +415,7 @@ sound{ id = "monster_hurt", description = "(engine) Enemy - hit power" }
 sound{ id = "picked_item", description = "(engine) Hero - get_item" }
 sound{ id = "running", description = "(engine) Hero - run" }
 sound{ id = "shield", description = "(engine) Hero - shield" }
+sound{ id = "splash", description = "(engine) Hero - wade2" }
 sound{ id = "stone", description = "(engine) Misc - rock_shatter" }
 sound{ id = "swim", description = "(engine) Hero - swim" }
 sound{ id = "switch", description = "(engine) Misc - dungeon_switch" }
@@ -441,6 +445,7 @@ item{ id = "rupee_bag", description = "Rupee bag" }
 item{ id = "sword", description = "Sword" }
 
 enemy{ id = "bosses//e_fc_eater", description = "Papillosaur King" }
+enemy{ id = "bosses/e_fc_gelatinous_cube", description = "Gelatinous Cube" }
 enemy{ id = "bosses/e_fc_hideous", description = "Hideous" }
 enemy{ id = "bosses/e_fc_hideous_eye", description = "Hideous - eye" }
 enemy{ id = "bosses/e_fc_hideous_mouth", description = "Hideous - mouth" }
@@ -479,6 +484,7 @@ shader{ id = "sepia", description = "sepia" }
 shader{ id = "test" }
 
 file{ path = "enemies/bosses//e_fc_eater.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/bosses/e_fc_gelatinous_cube.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "enemies/bosses/e_fc_hideous.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "enemies/bosses/e_fc_hideous_eye.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "enemies/bosses/e_fc_hideous_mouth.lua", author = "froggy77", license = "GPL v3" }
@@ -775,6 +781,7 @@ file{ path = "sounds/monster_hurt.ogg", author = "Nintendo", license = "Propriet
 file{ path = "sounds/picked_item.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/running.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/shield.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
+file{ path = "sounds/splash.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/stone.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/swim.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/switch.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
@@ -800,6 +807,7 @@ file{ path = "sprites/blocks/fc_statues.png", author = "Jerom, froggy77", licens
 file{ path = "sprites/enemies/bosses/e_fc_boss_monster.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/enemies/bosses/e_fc_boss_skull.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/enemies/bosses/e_fc_boss_slime.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
+file{ path = "sprites/enemies/bosses/e_fc_gelatinous_cube.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_hideous.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_hideous.png", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_hideous_eye.dat", author = "froggy77", license = "GPL v3" }
@@ -843,6 +851,8 @@ file{ path = "tilesets/dungeon/d_fc_trv_halo_01.dat", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_fc_trv_halo_01.tiles.png", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_fc_trv_pavement_01.dat", author = "DragonDePlatino, froggy77", license = "CC-BY 4.0" }
 file{ path = "tilesets/dungeon/d_fc_trv_pavement_01.tiles.png", author = "DragonDePlatino, froggy77", license = "CC-BY 4.0" }
+file{ path = "tilesets/dungeon/d_fc_trv_specials_02.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "tilesets/dungeon/d_fc_trv_specials_02.tiles.png", author = "froggy77", license = "GPL v3" }
 file{ path = "tilesets/dungeon/d_fc_wll_braziers_01.dat", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_fc_wll_braziers_01.tiles.png", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_fc_wll_furnitures_01.tiles.png", author = "froggy77", }
@@ -852,6 +862,8 @@ file{ path = "tilesets/dungeon/d_fc_wll_torches_01.dat", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_01.dat", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_01.tiles.png", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_01_TEST_COLORS.tiles.png", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
+file{ path = "tilesets/dungeon/d_zc_swtr_specials_01.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "tilesets/dungeon/d_zc_swtr_specials_01.tiles.png", author = "froggy77", license = "GPL v3" }
 file{ path = "tilesets/dungeon/d_zc_trv_entrances_01.dat", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_zc_trv_entrances_01.tiles.png", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_zc_wll_braziers_01.dat", author = "Nintendo, edited and added stuffs by froggy77", license = "Nintendo License" }
