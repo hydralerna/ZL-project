@@ -9,7 +9,7 @@ init_enemy(enemy)
 enemy:set_properties({
    sprite = "enemies/e_fc_skeleton_01",
    life = 3,
-   damage = 2,
+   damage = 1,
    normal_speed = 8,
    faster_speed = 16,
    detection_distance = 48,
