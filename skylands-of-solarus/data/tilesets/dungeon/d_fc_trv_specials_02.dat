@@ -1,0 +1,12 @@
+background_color{ 255, 0, 255 }
+tile_pattern{
+  id = "1",
+  ground = "traversable",
+  default_layer = 0,
+  x = 0,
+  y = 0,
+  width = 64,
+  height = 56,
+  repeat_mode = "none",
+}
+
