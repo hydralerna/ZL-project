@@ -1,0 +1,24 @@
+animation{
+  name = "walking",
+  src_image = "enemies/e_fc_mouse_01.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 16, frame_width = 16, frame_height = 8, origin_x = 8, origin_y = 13, num_frames = 6 },
+    { x = 48, y = 0, frame_width = 8, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 6 },
+    { x = 0, y = 24, frame_width = 16, frame_height = 8, origin_x = 8, origin_y = 13, num_frames = 6 },
+    { x = 0, y = 0, frame_width = 8, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 6 },
+  },
+}
+animation{
+  name = "hurt",
+  src_image = "enemies/e_fc_mouse_01.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 48, frame_width = 16, frame_height = 8, origin_x = 8, origin_y = 13, num_frames = 6 },
+    { x = 48, y = 32, frame_width = 8, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 6 },
+    { x = 0, y = 56, frame_width = 16, frame_height = 8, origin_x = 8, origin_y = 13, num_frames = 6 },
+    { x = 0, y = 32, frame_width = 8, frame_height = 16, origin_x = 8, origin_y = 13, num_frames = 6 },
+  },
+}
