@@ -16,3 +16,5 @@ function explosion_meta:on_created()
   sol.audio.play_sound("items/bomb_explode")
 
 end
+
+return true
