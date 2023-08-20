@@ -151,6 +151,7 @@ function palette_menu:on_started()
   local camera = map:get_camera()
   --local map_w, map_h = map:get_size()
   local camera_x, camera_y = camera:get_position_to_track(hero)
+  print("PALETTE MENU", "camera_x:", camera_x, "camera_y:", camera_y )
   if hero_x - (self.preview_w / 2) < camera_x then
     print("X1")
     self.preview_x = 0
@@ -207,12 +208,12 @@ function palette_menu:on_started()
   self.palette_surface:fill_color(self.palette_array[self.active_palette_k][2])
   self.palette_surface:fill_color(self.palette_array[self.active_palette_k][1], 24, 2, 70, 98)
 
-  self.arrow_sprite1 = sol.sprite.create("menus/pause/arrow_"  .. submenu.color1)
+  self.arrow_sprite1 = sol.sprite.create("menus/pause/arrow_"  .. submenu.test)
   self.arrow_sprite1:set_direction(1)
   self.arrow_sprite1:set_animation("dynamic")
   index_palette_shader:set_palette(self.arrow_sprite1)
 
-  self.arrow_sprite2 = sol.sprite.create("menus/pause/arrow_" .. submenu.color1)
+  self.arrow_sprite2 = sol.sprite.create("menus/pause/arrow_" .. submenu.test)
   self.arrow_sprite2:set_direction(3)
   self.arrow_sprite2:set_animation("dynamic")
   index_palette_shader:set_palette(self.arrow_sprite2)
@@ -240,7 +241,7 @@ end
 function palette_menu:on_draw(dst_surface)
 
 
-  self:draw_background(dst_surface, 2)
+  self:draw_background(dst_surface, true)
 
 	--self.bg_surface:draw(dst_surface, 0, 0)
 
