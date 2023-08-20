@@ -7,6 +7,7 @@ map{ id = "Tests/test_cliffs" }
 map{ id = "Tests/test_map", description = "Test Map" }
 map{ id = "Tests/test_map_for_CrookiNari", description = "For CrookiNari" }
 map{ id = "Tests/test_python", description = "Test for Python" }
+map{ id = "Tests/test_tileset_32px" }
 map{ id = "map_morla" }
 
 tileset{ id = "8px_all_zcfc_01" }
@@ -25,6 +26,7 @@ tileset{ id = "dungeon/d_fc_wll_braziers_01" }
 tileset{ id = "dungeon/d_fc_wll_specials_01" }
 tileset{ id = "dungeon/d_fc_wll_torches_01" }
 tileset{ id = "dungeon/d_fc_wll_walls_01" }
+tileset{ id = "dungeon/d_fc_wll_walls_99" }
 tileset{ id = "dungeon/d_zc_swtr_specials_01" }
 tileset{ id = "dungeon/d_zc_trv_entrances_01" }
 tileset{ id = "dungeon/d_zc_trv_floors_01" }
@@ -82,12 +84,13 @@ sprite{ id = "chests/chest07", description = "Chest 07" }
 sprite{ id = "destructibles/jar01" }
 sprite{ id = "destructibles/pot01" }
 sprite{ id = "destructibles/pot02" }
-sprite{ id = "doors/dungeon/d_fc_door_01_wood_black", description = "doors/dungeon/d_fc_door_01_wood_black" }
-sprite{ id = "doors/dungeon/d_fc_door_01_wood_normal", description = "doors/dungeon/d_fc_door_01_wood_normal" }
-sprite{ id = "doors/dungeon/d_fc_door_01_wood_stairs_down", description = "doors/dungeon/d_fc_door_01_wood_stairs_down" }
-sprite{ id = "doors/dungeon/d_fc_door_01_wood_stairs_up", description = "doors/dungeon/d_fc_door_01_wood_stairs_up" }
-sprite{ id = "doors/dungeon/d_fc_door_01_wood_white", description = "doors/dungeon/d_fc_door_01_wood_white" }
-sprite{ id = "doors/dungeon/d_fc_door_02a_wide_door_nokey", description = "doors/dungeon/d_fc_door_02a_wide_door_nokey" }
+sprite{ id = "doors/dungeon/d_fc_door_01_wood_black" }
+sprite{ id = "doors/dungeon/d_fc_door_01_wood_normal" }
+sprite{ id = "doors/dungeon/d_fc_door_01_wood_stairs_down" }
+sprite{ id = "doors/dungeon/d_fc_door_01_wood_stairs_up" }
+sprite{ id = "doors/dungeon/d_fc_door_01_wood_white" }
+sprite{ id = "doors/dungeon/d_fc_door_02a_wide_door_nokey" }
+sprite{ id = "doors/dungeon/d_fc_door_99_wide_iron_gate" }
 sprite{ id = "doors/out/o_fc_door_big_01_double_metal", description = "doors/out/o_fc_door_big_01_double_metal" }
 sprite{ id = "doors/out/o_fc_door_big_01_double_wooden", description = "doors/out/o_fc_door_big_01_double_wooden" }
 sprite{ id = "doors/out/o_fc_door_big_01_gate", description = "doors/out/o_fc_door_big_01_gate" }
@@ -106,6 +109,7 @@ sprite{ id = "enemies/bosses/e_fc_boss_monster" }
 sprite{ id = "enemies/bosses/e_fc_boss_skull" }
 sprite{ id = "enemies/bosses/e_fc_boss_slime" }
 sprite{ id = "enemies/bosses/e_fc_eater", description = "enemies/e_fc_eater" }
+sprite{ id = "enemies/bosses/e_fc_fluffy", description = "Fluppy" }
 sprite{ id = "enemies/bosses/e_fc_gelatinous_cube" }
 sprite{ id = "enemies/bosses/e_fc_hideous" }
 sprite{ id = "enemies/bosses/e_fc_hideous_eye" }
@@ -116,22 +120,30 @@ sprite{ id = "enemies/e_fc_baby_jelleggtric_egg_fixed" }
 sprite{ id = "enemies/e_fc_baby_jelleggtric_egg_thrown", description = "enemies/e_fc_baby_eater_egg_thrown" }
 sprite{ id = "enemies/e_fc_bat_01", description = "enemies/e_fc_bat_01" }
 sprite{ id = "enemies/e_fc_electricity" }
+sprite{ id = "enemies/e_fc_fire_piranha_plant_01", description = "enemies/Fire Piranha (plant)" }
 sprite{ id = "enemies/e_fc_ghost_01", description = "enemies/e_fc_ghost_01" }
 sprite{ id = "enemies/e_fc_haunted_tree_01", description = "enemies/e_fc_haunted_tree_01" }
-sprite{ id = "enemies/e_fc_maloney" }
-sprite{ id = "enemies/e_fc_onime", description = "enemies/e_fc_test" }
+sprite{ id = "enemies/e_fc_onime", description = "enemies/e_fc_onime" }
+sprite{ id = "enemies/e_fc_rat_01", description = "enemies/e_fc_mouse_01" }
 sprite{ id = "enemies/e_fc_skeleton_01", description = "enemies/e_fc_skeleton_01" }
+sprite{ id = "enemies/e_fc_skeleton_02", description = "enemies/e_fc_skeleton_02" }
 sprite{ id = "enemies/e_fc_slime_01", description = "enemies/e_fc_slime_01" }
 sprite{ id = "enemies/e_fc_slime_02", description = "enemies/e_fc_slime_02" }
 sprite{ id = "enemies/e_fc_spider_01", description = "enemies/e_fc_spider_01" }
 sprite{ id = "enemies/e_fc_spiderskull_01", description = "enemies/e_fc_spiderskull_01" }
 sprite{ id = "enemies/e_fc_spiderskull_02", description = "enemies/e_fc_spiderskull_02" }
+sprite{ id = "enemies/e_fc_thief_01" }
 sprite{ id = "enemies/e_fc_vitreous_child" }
+sprite{ id = "enemies/e_fc_witch_01" }
+sprite{ id = "enemies/e_rc_slime_01", description = "enemies/e_rc_slime_01" }
 sprite{ id = "enemies/enemy_killed", description = "enemies/enemy_killed" }
+sprite{ id = "enemies/projectiles/e_fc_fireball_small_01", description = "Fireball (small)" }
 sprite{ id = "enemies/shadows/shadow_16x12", description = "Shadow (width: 16px, height: 12px)" }
 sprite{ id = "enemies/shadows/shadow_8x5", description = "Shadow (width: 8px, height: 5px)" }
+sprite{ id = "enemies/skullspiderbat", description = "Skull Spider-Bat" }
 sprite{ id = "entities/arrow" }
 sprite{ id = "entities/bomb" }
+sprite{ id = "entities/cauldron" }
 sprite{ id = "entities/crystal" }
 sprite{ id = "entities/crystal_block" }
 sprite{ id = "entities/custom_pot", description = "custom_pot" }
@@ -188,6 +200,7 @@ sprite{ id = "npc/mister_time" }
 sprite{ id = "npc/npc" }
 sprite{ id = "npc/old_man" }
 sprite{ id = "npc/sorcerer_statue" }
+sprite{ id = "npc/witch" }
 sprite{ id = "shadows/shadow", description = "shadows/shadow" }
 sprite{ id = "switches/fc_switches_cross2" }
 sprite{ id = "switches/fc_switches_cross4" }
@@ -453,12 +466,17 @@ enemy{ id = "bosses/e_fc_jelleggtric", description = "Jelleggtric" }
 enemy{ id = "bosses/e_fc_vitreous", description = "Vitreous" }
 enemy{ id = "e_fc_baby_jelleggtric_egg_fixed", description = "Jelleggtric Egg (thrown)" }
 enemy{ id = "e_fc_baby_jelleggtric_egg_thrown", description = "Jelleggtric Egg (fixed)" }
+enemy{ id = "e_fc_fire_piranha_plant_01", description = "Fire Piranha (plant)" }
 enemy{ id = "e_fc_onime" }
+enemy{ id = "e_fc_rat_01", description = "Rat" }
 enemy{ id = "e_fc_skeleton_01", description = "Skeleton" }
+enemy{ id = "e_fc_skeleton_02", description = "Oozing Skeleton" }
 enemy{ id = "e_fc_spiderskull_01", description = "Spiderskull" }
 enemy{ id = "e_fc_spiderskull_02", description = "Black Spiderskull" }
 enemy{ id = "e_fc_vitreous_child", description = "Vitreous child" }
-enemy{ id = "projectiles/generic_projectile", description = "generic_projectile" }
+enemy{ id = "e_fc_witch_01", description = "Witch" }
+enemy{ id = "projectiles/e_fc_fireball_small_01", description = "Fireball (small)" }
+enemy{ id = "projectiles/generic_projectile", description = "Generic Projectile" }
 
 entity{ id = "custom_pot", description = "custom_pot" }
 entity{ id = "fairy", description = "Fairy" }
@@ -475,13 +493,21 @@ font{ id = "minecraftia", description = "Minecraftia" }
 font{ id = "minecraftia_mono", description = "Minecraftia Mono" }
 
 shader{ id = "6xbrz", description = "6xbrz" }
+shader{ id = "border", description = "border" }
+shader{ id = "default" }
+shader{ id = "distortion" }
+shader{ id = "film_grain", description = "Film grain" }
 shader{ id = "gb", description = "gb" }
 shader{ id = "grayscale", description = "grayscale" }
 shader{ id = "hq2x", description = "hq2x" }
 shader{ id = "index_palette_shader", description = "Index Palette Shader" }
+shader{ id = "index_palette_shader2" }
 shader{ id = "lcd", description = "lcd" }
 shader{ id = "sepia", description = "sepia" }
 shader{ id = "test" }
+shader{ id = "test2", description = "sepia2" }
+shader{ id = "test3", description = "test3" }
+shader{ id = "tests" }
 
 file{ path = "enemies/bosses//e_fc_eater.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/bosses/e_fc_gelatinous_cube.lua", author = "froggy77", license = "GPL v3" }
@@ -492,10 +518,17 @@ file{ path = "enemies/bosses/e_fc_jelleggtric.lua", author = "Christopho", licen
 file{ path = "enemies/bosses/e_fc_vitreous.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "enemies/e_fc_baby_jelleggtric_egg_fixed.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/e_fc_baby_jelleggtric_egg_thrown.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/e_fc_fire_piranha_plant_01.lua", author = "froggy77", license = "GPL v3" }
+file{ path = "enemies/e_fc_rat_01.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "enemies/e_fc_skeleton_01.lua", author = "froggy77", license = "GPL v3" }
+file{ path = "enemies/e_fc_skeleton_02.lua", author = "froggy77", license = "GPL v3" }
+file{ path = "enemies/e_fc_witch_01.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "enemies/library/generic_soldier.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/library/generic_soldier_test.lua", author = "Christopho, froggy77", license = "GPL v3" }
 file{ path = "enemies/library/generic_towards_hero.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/library/generic_towards_hero_test.lua", author = "Christopho, froggy77", license = "GPL v3" }
 file{ path = "enemies/library/generic_waiting_for_hero.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "enemies/library/generic_waiting_for_hero_test.lua", author = "Christopho, froggy77", license = "GPL v3" }
 file{ path = "enemies/library/misc.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "entities/custom_pot.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "entities/fairy.lua", author = "froggy77", license = "GPL v3" }
@@ -556,6 +589,8 @@ file{ path = "shaders/grayscale.dat", author = "Christopho", license = "GPL v3" 
 file{ path = "shaders/grayscale.frag.glsl", author = "Vlag", license = "GPL v3" }
 file{ path = "shaders/hq2x.dat", author = "Christopho", license = "GPL v3" }
 file{ path = "shaders/hq2x.frag.glsl", author = "slime73, Vlag", license = "GPL v3" }
+file{ path = "shaders/index_palette_shader2.dat", author = "chatGPT", }
+file{ path = "shaders/index_palette_shader2.glsl", author = "chatGPT", }
 file{ path = "sounds", author = "Nintendo, Diarandor, Franck Jousseaume, Zonzifleur", license = "Proprietary, Fair use, CC BY-SA 4.0" }
 file{ path = "sounds/arrow.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
 file{ path = "sounds/boomerang.ogg", author = "Nintendo", license = "Proprietary, Fair use" }
@@ -804,9 +839,11 @@ file{ path = "sprites/blocks/fc_statue02.dat", author = "froggy77", license = "G
 file{ path = "sprites/blocks/fc_statue03.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/blocks/fc_statue04.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/blocks/fc_statues.png", author = "Jerom, froggy77", license = "GPL v3" }
+file{ path = "sprites/doors/dungeon/d_fc_door_99_wide_iron_gate.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_boss_monster.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/enemies/bosses/e_fc_boss_skull.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
 file{ path = "sprites/enemies/bosses/e_fc_boss_slime.dat", author = "froggy77, Lunarsignals", license = "CC-BY-SA 3.0" }
+file{ path = "sprites/enemies/bosses/e_fc_fluffy.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_gelatinous_cube.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_hideous.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_hideous.png", author = "froggy77", license = "GPL v3" }
@@ -815,7 +852,14 @@ file{ path = "sprites/enemies/bosses/e_fc_hideous_mouth.dat", author = "froggy77
 file{ path = "sprites/enemies/bosses/e_fc_jelleggtric.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/e_fc_baby_jelleggtric_egg_fixed.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/e_fc_electricity.dat", author = "froggy77", license = "GPV L3" }
+file{ path = "sprites/enemies/e_fc_rat_01.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/e_fc_skeleton_01.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/e_fc_skeleton_01.png", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/e_fc_skeleton_02.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/e_fc_skeleton_02.png", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/e_fc_thief_01.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/e_fc_witch_01.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/e_rc_slime_01.dat", author = "RPG Maker 2000", }
 file{ path = "sprites/enemies/shadows/shadow_16x12.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/shadows/shadow_8x5.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/crystal.dat", author = "Christopho", license = "CC BY-SA 4.0" }
@@ -862,6 +906,8 @@ file{ path = "tilesets/dungeon/d_fc_wll_torches_01.dat", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_01.dat", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_01.tiles.png", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_01_TEST_COLORS.tiles.png", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
+file{ path = "tilesets/dungeon/d_fc_wll_walls_99.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "tilesets/dungeon/d_fc_wll_walls_99.tiles.png", author = "froggy77", license = "GPL v3" }
 file{ path = "tilesets/dungeon/d_zc_swtr_specials_01.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "tilesets/dungeon/d_zc_swtr_specials_01.tiles.png", author = "froggy77", license = "GPL v3" }
 file{ path = "tilesets/dungeon/d_zc_trv_entrances_01.dat", author = "froggy77", }
