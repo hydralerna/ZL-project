@@ -19,30 +19,32 @@ end
 function submenu:on_started()
 
     submenu.colors = {{15, 31, 31}, {48, 111, 80}, {143, 192, 112}, {224, 255, 208}}
-    submenu.color1 = self.game:get_value("color1") or 1
-    submenu.color2 = self.game:get_value("color2") or 2
-    submenu.color3 = self.game:get_value("color3") or 3
+    submenu.theme_colors = {
+      {submenu.colors[1] , submenu.colors[2], submenu.colors[3], submenu.colors[4]},
+      {submenu.colors[2] , submenu.colors[1], submenu.colors[3], submenu.colors[4]},
+      {submenu.colors[3] , submenu.colors[4], submenu.colors[3], submenu.colors[4]},
+      {submenu.colors[4] , submenu.colors[3], submenu.colors[2], submenu.colors[1]}
+    }
+    submenu.theme = self.game:get_value("submenu_theme") or 1
+    submenu.test = 1
     submenu.sprite = self.game:get_value("submenu_bg_icon_sprite") or 1
     -- submenu.dst_x, submenu.dst_y = config.x, config.y
     submenu.dst_x, submenu.dst_y = 0, 0
     submenu.dst_w, submenu.dst_h = sol.video.get_quest_size()
-    --submenu.camera_w, submenu.camera_h = sol.main.get_game():get_map():get_camera():get_surface():get_size()
     submenu.camera_w, submenu.camera_h = sol.main.get_game():get_map():get_camera():get_size()
-    --print(submenu.camera_w, submenu.camera_h)
-    submenu.tile = 8
-    submenu.tilex4 = 32
+    print("PAUSE SUBMENU", "submenu.camera_w: ", submenu.camera_w, "submenu.camera_h: ", submenu.camera_h)
     submenu.left_w = (submenu.dst_w - submenu.camera_w) / 2
     -- Creation of surfaces
-    submenu.img = sol.surface.create("menus/pause/menu_" .. submenu.color1 .. ".png")
+    submenu.img = sol.surface.create("menus/pause/menu_" .. submenu.theme .. ".png")
     submenu.surface = sol.surface.create(submenu.dst_w, submenu.dst_h)
 
 
-    submenus_icon_bg_sprites[1] = sol.sprite.create("menus/pause/submenus_icon_bg_" .. submenu.color1)
+    submenus_icon_bg_sprites[1] = sol.sprite.create("menus/pause/submenus_icon_bg_" .. submenu.theme)
     submenus_icon_bg_sprites[1]:set_animation(submenus_icon_bg_animations[1])
-    submenus_icon_bg_sprites[2] = sol.sprite.create("menus/pause/submenus_icon_bg_" .. submenu.color1)
+    submenus_icon_bg_sprites[2] = sol.sprite.create("menus/pause/submenus_icon_bg_" .. submenu.theme)
     submenus_icon_bg_sprites[2]:set_animation(submenus_icon_bg_animations[2])
-    submenu.inventory_icon = sol.surface.create("menus/pause/inventory_icon_" .. submenu.color1 .. ".png")
-    submenu.emoji_icon = sol.surface.create("menus/pause/emoji_icon_".. submenu.color1 .. ".png")
+    submenu.inventory_icon = sol.surface.create("menus/pause/inventory_icon_" .. submenu.test .. ".png")
+    submenu.emoji_icon = sol.surface.create("menus/pause/emoji_icon_".. submenu.test .. ".png")
 
   -- Fix the font shift (issue with some fonts)
   self.font_y_shift = 0
@@ -85,7 +87,7 @@ function submenu:on_started()
     vertical_alignment = "middle",
     font = menu_font,
     font_size = menu_font_size,
-    color = submenu.colors[submenu.color3],
+    color = submenu.theme_colors[submenu.theme][3],
   }
   submenu.title_surface = sol.surface.create(128, 20)
 
@@ -267,7 +269,7 @@ function submenu:on_command_pressed(command)
 end
 
 
-function submenu:draw_background(dst_surface, design)
+function submenu:draw_background(dst_surface, on_camera)
 
   local width, height = dst_surface:get_size()
   local center_x = width / 2
@@ -275,55 +277,24 @@ function submenu:draw_background(dst_surface, design)
   local menu_x, menu_y = center_x - width / 2, center_y - height / 2
 
   -- Draw the menu GUI window &ns the title (in the correct language)
-  local submenu_index = self.game:get_value("pause_last_submenu")
-  --self.background_surfaces:draw_region(
-  --    self.width * (submenu_index - 1), 0,  -- region x, y
-  --    self.width, self.height,              -- region w, h
-  --    dst_surface,                          -- destination surface
-  --    menu_x, menu_y                        -- x, y in destination surface
-  --d)
-
+  -- local submenu_index = self.game:get_value("pause_last_submenu")
+  local submenu_index = sol.main.get_game():get_value("pause_last_submenu")
+  --print("PAUSE SUBMENU" , "submenu_index: ", submenu_index)
   local x1 = 8
-  local x6 = 328
-  local y1 = 8
-  local y1b = 8
+  local x2 = 328
 
-  submenu.surface:draw_region(0, 0, 48, 200, dst_surface, 8, 8)  -- Left
-  submenu.surface:draw_region(0, 0, 48, 200, dst_surface, 328, 8)   -- Right
-  submenu.surface:fill_color(submenu.colors[submenu.color1])
-  if design == 1 then
-  -- Borders
-    while y1 < 208 do
-     -- submenu.img:draw_region(0, 8, 8, 8, dst_surface, 0, y1)
-     -- submenu.img:draw_region(8, 0, 8, 8, dst_surface, 56, y1)
-     -- submenu.img:draw_region(0, 8, 8, 8, dst_surface, 320, y1)
-     -- submenu.img:draw_region(8, 0, 8, 8, dst_surface, 376, y1)
-      y1 = y1 + submenu.tile
-    end
-  -- Icons
-  submenus_icon_bg_sprites[1]:draw(dst_surface, 32, 24)
-  submenus_icon_bg_sprites[2]:draw(dst_surface, 352, 24)
-  submenu.inventory_icon:draw(dst_surface, 20, 13)
-  submenu.emoji_icon:draw(dst_surface, 340, 13)
-
-  else
+  submenu.surface:draw_region(0, 0, 64, 200, dst_surface, 0, 8)  -- Left
+  submenu.surface:draw_region(0, 0, 64, 200, dst_surface, 320, 8)   -- Right
+  submenu.surface:fill_color(submenu.theme_colors[submenu.theme][1])
+  if on_camera then
     -- Fill the camera surface with a colored surface.
-    submenu.surface:draw_region(0 , 0, submenu.camera_w + submenu.tilex4, submenu.camera_h, dst_surface, 56, 40)
-    -- Borders
-    while y1 < 208 do
-      submenu.img:draw_region(0, 8, 8, 8, dst_surface, 0, y1)
-      submenu.img:draw_region(8, 0, 8, 8, dst_surface, 376, y1)
-      y1 = y1 + submenu.tile
-    end
-    while y1b < 32 do
-      submenu.img:draw_region(8, 0, 8, 8, dst_surface, 56, y1b)
-      submenu.img:draw_region(0, 8, 8, 8, dst_surface, 320, y1b)
-      y1b = y1b + submenu.tile
-    end
-    submenu.img:draw_region(48, 16, 8, 8, dst_surface, 56, 32)
-    submenu.img:draw_region(48, 24, 8, 8, dst_surface, 56, 200)
-    submenu.img:draw_region(72, 16, 8, 8, dst_surface, 320, 32)
-    submenu.img:draw_region(72, 24, 8, 8, dst_surface, 320, 200)
+     submenu.surface:draw_region(0 , 0, submenu.camera_w + 16, submenu.camera_h, dst_surface, 64, 40)
+  else
+    -- Inventory icons
+    submenus_icon_bg_sprites[1]:draw(dst_surface, 35, 24)
+    submenus_icon_bg_sprites[2]:draw(dst_surface, 349, 24)
+    submenu.inventory_icon:draw(dst_surface, 23, 13)
+    submenu.emoji_icon:draw(dst_surface, 337, 13)
   end
   submenu.img:draw_region(48, 0, 8, 8, dst_surface, 0, 0)
   submenu.img:draw_region(56, 0, 8, 8, dst_surface, 56, 0)
@@ -332,12 +303,12 @@ function submenu:draw_background(dst_surface, design)
   while x1 < 56 do
     submenu.img:draw_region(0, 0, 8, 8, dst_surface, x1, 0)
     submenu.img:draw_region(8, 8, 8, 8, dst_surface, x1, 208)
-    x1 = x1 + submenu.tile
+    x1 = x1 + 8
   end
-  while x6 < 376 do
-    submenu.img:draw_region(0, 0, 8, 8, dst_surface, x6, 0)
-    submenu.img:draw_region(8, 8, 8, 8, dst_surface, x6, 208)
-    x6 = x6 + submenu.tile
+  while x2 < 376 do
+    submenu.img:draw_region(0, 0, 8, 8, dst_surface, x2, 0)
+    submenu.img:draw_region(8, 8, 8, 8, dst_surface, x2, 208)
+    x2 = x2 + 8
   end
   submenu.img:draw_region(48, 8, 8, 8, dst_surface, 0, 208)
   submenu.img:draw_region(56, 8, 8, 8, dst_surface, 56, 208)
@@ -419,15 +390,15 @@ end
 function submenu:rebuild_title_surface()
   submenu.title_surface:clear()
   local w, h = submenu.title_surface:get_size()
-  submenu.title_surface:fill_color(submenu.colors[submenu.color1])
-  submenu.title_surface:fill_color(submenu.colors[submenu.color2], 1, 2, w - 2, h - 5)
-  submenu.title_surface:fill_color(submenu.colors[submenu.color2], 2, 1, w - 4, h - 3)
-  submenu.title_surface:fill_color(submenu.colors[submenu.color2], 4, 0, w - 8, h - 1)
-  submenu.title_surface:fill_color(submenu.colors[submenu.color2], 0, 0, 1, 1)
-  submenu.title_surface:fill_color(submenu.colors[submenu.color2], w - 1, 0, 1, 1)
+  submenu.title_surface:fill_color(submenu.theme_colors[submenu.theme][1])
+  submenu.title_surface:fill_color(submenu.theme_colors[submenu.theme][2], 1, 2, w - 2, h - 5)
+  submenu.title_surface:fill_color(submenu.theme_colors[submenu.theme][2], 2, 1, w - 4, h - 3)
+  submenu.title_surface:fill_color(submenu.theme_colors[submenu.theme][2], 4, 0, w - 8, h - 1)
+  submenu.title_surface:fill_color(submenu.theme_colors[submenu.theme][2], 0, 0, 1, 1)
+  submenu.title_surface:fill_color(submenu.theme_colors[submenu.theme][2], w - 1, 0, 1, 1)
   submenu.title_text:set_text(submenu.title)
   submenu.title_text:set_xy(w / 2, h / 2 - 1)
-  text_fx_helper:draw_text_with_stroke(submenu.title_surface, submenu.title_text, submenu.colors[submenu.color1])
+  text_fx_helper:draw_text_with_stroke(submenu.title_surface, submenu.title_text, submenu.theme_colors[submenu.theme][1])
 end
 
 -- Return the menu.
