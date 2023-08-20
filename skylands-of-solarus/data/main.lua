@@ -10,11 +10,13 @@ local shader_manager = require("scripts/shader_manager")
 -- local util = require("scripts/util")
 local info_manager = require("scripts/info_manager")
 local index_palette_shader = require("scripts/index_palette_shader")
+--local index_palette_shader2 = require("scripts/index_palette_shader2")
 local palette_menu = require("scripts/menus/pause/palette_menu")
 -- local console = require("scripts/console")
 local sword_menu = require("scripts/menus/sword_menu")
 local initial_menus_config = require("scripts/menus/initial_menus_config")
 local initial_menus = {}
+
 
 -- This function is called when Solarus starts.
 function sol.main:on_started()
@@ -23,8 +25,8 @@ function sol.main:on_started()
   math.randomseed(os.time())
 
 
-  --index_palette_shader:set_palette()
-  
+--  index_palette_shader:set_palette()
+
   -- Show the initial menus.
   if #initial_menus_config == 0 then
     return
@@ -57,15 +59,22 @@ function sol.main:on_started()
   }
   info_manager:create_sol_file("palette.dat", default_settings)
 
+  -- Set default settings for "index_palette_shader2" if there is no "palette2.dat"
+  --local default_settings2 = {
+	--palette_size = 4,
+	--palette_colors = 4,
+  --}
+  --info_manager:create_sol_file("palette.dat", default_settings2)
 
   -- Set "index_palette_shader" to the camera
-  --local game_meta = sol.main.get_metatable("game")
-  --local game_meta = sol.main.get_metatable"game"
-  --function game_meta:on_map_changed()
-    --local camera_surface = self:get_map():get_camera():get_surface()
-	--index_palette_shader:set_palette(camera_surface)
-  --end
-
+  --[[
+  local game_meta = sol.main.get_metatable("game")
+  local game_meta = sol.main.get_metatable"game"
+  function game_meta:on_map_changed()
+    local camera_surface = self:get_map():get_camera():get_surface()
+	  index_palette_shader:set_palette(camera_surface)
+  end
+  --]]
 
   local game_meta = sol.main.get_metatable("game")
   game_meta:register_event("on_started", function(game)
@@ -82,8 +91,8 @@ function sol.main:on_finished()
   sol.main.save_settings()
 end
 
-local eff_m = require('scripts/maps/effect_manager')
-local gb = require('scripts/maps/gb_effect')
+--NOT used? local eff_m = require('scripts/maps/effect_manager')
+--NOT used? local gb = require('scripts/maps/gb_effect')
 
 
 -- Event called when the player pressed a keyboard key.
@@ -121,7 +130,7 @@ function sol.main:on_key_pressed(key, modifiers)
     if not sol.menu.is_started(palette_menu) then
       if sol.menu.is_started(sword_menu) then
         sol.menu.stop(sword_menu)
-        index_palette_shader:set_palette()
+        --index_palette_shader:set_palette()
   	   if game and not sol.menu.is_started(sword_menu) then
           game:set_paused(false)
         end
