@@ -118,7 +118,7 @@ function sprite:on_animation_finished(animation)
     else
       self:set_animation("walking")
       enemy:set_push_hero_on_sword(false)
-      local random = math.random(6)
+      local random = math.random(15)
       if random == 1 then
         enemy:set_treasure("heart")
       elseif random == 2 then
@@ -126,7 +126,9 @@ function sprite:on_animation_finished(animation)
       elseif random == 3 then
         enemy:set_treasure("rupee")
       else
-        enemy:set_treasure("potions/life_potion", 2)
+        enemy:set_treasure("bomb") -- debug
+        -- enemy:set_treasure("potions/life_potion", 2) -- debug
+        -- enemy:set_treasure("heart_container") -- debug
       end
       enemy:set_size(8, 13)
       enemy:set_origin(4, 13)

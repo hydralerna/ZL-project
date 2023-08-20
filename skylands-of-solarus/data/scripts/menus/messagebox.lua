@@ -1,4 +1,3 @@
---[[
 -- Simple message box dialog.
 
 local automation = require("scripts/automation/automation")
@@ -469,5 +468,3 @@ function messagebox_builder:show(context, text_lines, button_1_text, button_2_te
 end
 
 return messagebox_builder
-
---]]

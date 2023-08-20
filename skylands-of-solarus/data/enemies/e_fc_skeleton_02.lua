@@ -4,7 +4,7 @@
 -- You can add more events and remove the ones you don't need.
 
 local enemy = ...
-local init_enemy = require("enemies/library/generic_towards_hero")
+local init_enemy = require("enemies/library/generic_waiting_for_hero")
 init_enemy(enemy)
 enemy:set_properties({
    sprite = "enemies/e_fc_skeleton_02",

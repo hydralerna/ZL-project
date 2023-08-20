@@ -382,6 +382,14 @@ Tu as trouvé une épée !!!
 }
 
 dialog{
+  id = "boss.e_fc_gelatinous_cube",
+  text = [[
+
+       G E L A T I N O U S  C U B E
+]],
+}
+
+dialog{
   id = "generic_behavior.sleeping_rrr",
   text = [[
 Rrrrrr... Rrr... Rrrrrr 

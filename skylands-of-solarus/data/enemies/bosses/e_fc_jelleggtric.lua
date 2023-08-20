@@ -197,7 +197,7 @@ function enemy:run_away()
 end
 
 
-function enemy:on_dying()
+function enemy:on_dead()
 
   game:add_exp(30)
 

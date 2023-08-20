@@ -20,8 +20,8 @@ entity:register_event("on_created", function()
   local _, _, w, h = entity:get_max_bounding_box()
   entity:set_size(w - 4, h - 20)
   entity:set_origin((w - 4) / 2, h - 20)
-print(entity:get_bounding_box())
-print(entity:get_max_bounding_box())
+--print(entity:get_bounding_box())
+--print(entity:get_max_bounding_box())
   entity:set_can_traverse("wall", false)
   entity:set_traversable_by("hero", false)
   entity:set_traversable_by("enemy", false)
@@ -51,12 +51,12 @@ print(entity:get_max_bounding_box())
         entity:bring_to_front()
       --if not facing then
         --containing = true
-        print("containing")
+        --print("containing")
       --end
 		end
 	end)
   local hx, hy = hero:get_position()
-  print("HERO:", hx, hy)
+  --print("HERO:", hx, hy)
   --print(entity:test_obstacles([dx, dy, [layer]])
   
   sol.timer.start(720, function()
@@ -74,7 +74,7 @@ print(entity:get_max_bounding_box())
           entity:walk()
         end
       end
-      print(distance, angle, collision, animation)
+      --print(distance, angle, collision, animation)
 
     return true
   end)

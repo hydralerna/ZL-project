@@ -1,0 +1,66 @@
+animation{
+  name = "walking",
+  src_image = "enemies/bosses/e_fc_hideous.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 80, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 6 },
+    { x = 0, y = 96, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 6 },
+    { x = 0, y = 112, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 6 },
+    { x = 0, y = 80, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 6 },
+  },
+}
+animation{
+  name = "neck_1",
+  src_image = "enemies/bosses/e_fc_hideous.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 96, y = 0, frame_width = 5, frame_height = 5, origin_x = 2, origin_y = 0 },
+  },
+}
+animation{
+  name = "neck_2",
+  src_image = "enemies/bosses/e_fc_hideous.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 96, y = 5, frame_width = 5, frame_height = 5, origin_x = 2, origin_y = 0 },
+  },
+}
+animation{
+  name = "shadow_stopped",
+  src_image = "enemies/bosses/e_fc_hideous.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 256, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 11, num_frames = 6 },
+    { x = 0, y = 256, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 11, num_frames = 6 },
+    { x = 0, y = 256, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 11, num_frames = 6 },
+    { x = 0, y = 256, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 11, num_frames = 6 },
+  },
+}
+animation{
+  name = "shadow_walking",
+  src_image = "enemies/bosses/e_fc_hideous.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 224, frame_width = 32, frame_height = 16, origin_x = 18, origin_y = 11, num_frames = 6 },
+    { x = 0, y = 256, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 11, num_frames = 6 },
+    { x = 0, y = 240, frame_width = 32, frame_height = 16, origin_x = 14, origin_y = 11, num_frames = 6 },
+    { x = 0, y = 256, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 11, num_frames = 6 },
+  },
+}
+animation{
+  name = "stopped",
+  src_image = "enemies/bosses/e_fc_hideous.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 128, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 6 },
+    { x = 0, y = 128, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 6 },
+    { x = 0, y = 128, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 6 },
+    { x = 0, y = 128, frame_width = 32, frame_height = 16, origin_x = 16, origin_y = 13, num_frames = 6 },
+  },
+}

@@ -20,7 +20,7 @@ function item_icon_builder:new(game, config)
   item_icon.item_sprite = sol.sprite.create("entities/items")
   item_icon.item_sprite_w, item_icon.item_sprite_h = item_icon.item_sprite:get_size()
   item_icon.item_displayed = nil
-  item_icon.item_variant_displayed = 0
+  item_icon.item_variant_displayed = 1
   item_icon.font_color = {224, 255, 208}
   item_icon.font_fx_color = {143, 192, 112}
   item_icon.stroke_color = {48, 111, 80}
@@ -142,6 +142,7 @@ function item_icon_builder:new(game, config)
     if item ~= nil then
       -- Variant of the item.
       local item_variant = item:get_variant()
+      -- print("ID:" .. item:get_name() .. ", item_variant " .. item_variant)
       if item_icon.item_variant_displayed ~= item_variant then
         need_rebuild = true
         item_icon.item_variant_displayed = item_variant

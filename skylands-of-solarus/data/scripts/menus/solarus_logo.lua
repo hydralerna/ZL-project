@@ -88,6 +88,22 @@ function solarus_logo_menu:on_started()
   sword:set_xy(0, 0)
   -- Start the animation.
   solarus_logo_menu:start_animation()
+
+  -- TEST: shader
+  --local shader = sol.shader.create("film_grain")
+  --shader:set_uniform("custom", true)
+  --[[
+  shader:set_uniform("bgcolor", {.5, .5, .5, 1.0})
+  shader:set_uniform("slowness", 10.0)
+  shader:set_uniform("cos_x", false)
+  shader:set_uniform("cos_y", true)
+  shader:set_uniform("distortion_x", 5.0)
+  shader:set_uniform("distortion_y", 5.0)
+  shader:set_uniform("scale_x", 5.0)
+  shader:set_uniform("scale_y", 5.0)
+  --]]
+  --sol.video.set_shader(shader)
+
   -- Update the surface.
   rebuild_surface()
 end

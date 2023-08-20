@@ -1,0 +1,12 @@
+background_color{ 255, 255, 255 }
+tile_pattern{
+  id = "1",
+  ground = "shallow_water",
+  default_layer = 0,
+  x = { 0, 16, 32, 48 },
+  y = { 0, 0, 0, 0 },
+  width = 16,
+  height = 16,
+  frame_delay = 500,
+}
+

@@ -1498,28 +1498,28 @@ destructible{
   layer = 0,
   x = 24,
   y = 77,
-  sprite = "destructibles/pot",
+  sprite = "destructibles/jar01",
 }
 
 destructible{
   layer = 0,
   x = 88,
   y = 109,
-  sprite = "destructibles/jar",
+  sprite = "destructibles/pot02",
 }
 
 destructible{
   layer = 0,
   x = 184,
   y = 77,
-  sprite = "destructibles/pot2",
+  sprite = "destructibles/pot01",
 }
 
 destructible{
   layer = 0,
   x = 88,
   y = 61,
-  sprite = "destructibles/pot",
+  sprite = "destructibles/jar01",
 }
 
 tile{

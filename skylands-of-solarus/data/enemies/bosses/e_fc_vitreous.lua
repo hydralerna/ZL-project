@@ -52,7 +52,7 @@ function enemy:on_movement_changed(movement)
   if direction4 then
     for _, s in enemy:get_sprites() do
       if direction4 == 1 then
-        s:set_direction(math.random(1, 2))
+        s:set_direction(math.random(2))
       else
         s:set_direction(direction4)
       end

@@ -9,15 +9,16 @@
 -- init_enemy(enemy)
 -- enemy:set_properties({
 --   sprite = "enemies/globul",
---   life = 4,
+--   life = 1,
 --   damage = 2,
---   normal_speed = 8,
---   faster_speed = 16,
---   detection_distance = 48,
---   more_distance = 32,
+--   normal_speed = 32,
+--   faster_speed = 32,
 --   hurt_style = "normal",
 --   push_hero_on_sword = false,
 --   pushed_when_hurt = true,
+--   ignore_obstacles = false,
+--   obstacle_behavior = "flying",
+--   detection_distance = 100,
 --   movement_create = function()
 --     local m = sol.movement.create("random_path")
 --     return m
@@ -26,6 +27,7 @@
 
 -- The parameter of set_properties() is a table.
 -- Its values are all optional except the sprite.
+
 return function(enemy)
 
   local properties = {}
@@ -34,7 +36,7 @@ return function(enemy)
   function enemy:set_properties(prop)
 
     properties = prop
-    -- set default values
+    -- Set default properties.
     if properties.life == nil then
       properties.life = 2
     end
@@ -42,16 +44,10 @@ return function(enemy)
       properties.damage = 2
     end
     if properties.normal_speed == nil then
-      properties.normal_speed = 8
+      properties.normal_speed = 32
     end
     if properties.faster_speed == nil then
-      properties.faster_speed = 16
-    end
-    if properties.detection_distance == nil then
-      properties.detection_distance = 48
-    end
-    if properties.more_distance == nil then
-      properties.more_distance = 32
+      properties.faster_speed = 48
     end
     if properties.hurt_style == nil then
       properties.hurt_style = "normal"
@@ -61,6 +57,15 @@ return function(enemy)
     end
     if properties.push_hero_on_sword == nil then
       properties.push_hero_on_sword = false
+    end
+    if properties.ignore_obstacles == nil then
+      properties.ignore_obstacles = false
+    end
+    if properties.detection_distance == nil then
+      properties.detection_distance = 160
+    end
+    if properties.obstacle_behavior == nil then
+      properties.obstacle_behavior = "normal"
     end
     if properties.movement_create == nil then
       properties.movement_create = function()
@@ -78,6 +83,7 @@ return function(enemy)
     self:set_hurt_style(properties.hurt_style)
     self:set_pushed_back_when_hurt(properties.pushed_when_hurt)
     self:set_push_hero_on_sword(properties.push_hero_on_sword)
+    self:set_obstacle_behavior(properties.obstacle_behavior)
     self:set_size(16, 16)
     self:set_origin(8, 13)
   end
@@ -107,15 +113,14 @@ return function(enemy)
     local hero = self:get_map():get_entity("hero")
     local _, _, layer = self:get_position()
     local _, _, hero_layer = hero:get_position()
-    local distance = self:get_distance(hero)
-    local near_hero = layer == hero_layer
-      and distance < properties.detection_distance
-    local near_hero_md = layer == hero_layer
-      and distance < math.floor(properties.detection_distance + properties.more_distance) --md: more distance
+    local near_hero =
+        (layer == hero_layer or enemy:has_layer_independent_collisions()) and
+        self:get_distance(hero) < properties.detection_distance
+        self:is_in_same_region(hero)
 
     if near_hero and not going_hero then
       self:go_hero()
-    elseif not near_hero_md and going_hero then
+    elseif not near_hero and going_hero then
       self:go_random()
     end
 
@@ -124,17 +129,33 @@ return function(enemy)
   end
 
   function enemy:go_random()
-    local m = properties.movement_create()
-    m:set_speed(properties.normal_speed)
-    m:start(self)
     going_hero = false
+    local m = properties.movement_create()
+    if m == nil then
+      -- No movement.
+      self:get_sprite():set_animation("stopped")
+      m = self:get_movement()
+      if m ~= nil then
+        -- Stop the previous movement.
+        m:stop()
+      end
+    else
+      m:set_speed(properties.normal_speed)
+      m:set_ignore_obstacles(properties.ignore_obstacles)
+      m:start(self)
+    end
   end
 
   function enemy:go_hero()
+    going_hero = true
     local m = sol.movement.create("target")
     m:set_speed(properties.faster_speed)
+    m:set_ignore_obstacles(properties.ignore_obstacles)
     m:start(self)
-    going_hero = true
+    self:get_sprite():set_animation("walking")
   end
 
 end
+
+
+

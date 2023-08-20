@@ -63,7 +63,7 @@ function hud_bg_builder:new(game, config)
 
   function hud_bg:on_draw(dst_surface)
 
-    local sel_shader
+    --local sel_shader
     local x = hud_bg.x2
     local yt = hud_bg.tile -- top
     local yc = hud_bg.y2 -- y of tiles along the camera

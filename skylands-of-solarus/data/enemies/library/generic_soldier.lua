@@ -12,16 +12,15 @@
 --   life = 4,
 --   damage = 2,
 --   play_hero_seen_sound = false,
---   normal_speed = 8,
---   faster_speed = 16,
---   detection_distance = 48,
---   more_distance = 32,
+--   normal_speed = 32,
+--   faster_speed = 64,
 --   hurt_style = "normal"
 -- })
 
 -- The parameter of set_properties() is a table.
 -- Its values are all optional except main_sprite
 -- and sword_sprite.
+
 return function(enemy)
 
   local properties = {}
@@ -33,7 +32,6 @@ return function(enemy)
   function enemy:set_properties(prop)
 
     properties = prop
-    -- Set default values.
     if properties.life == nil then
       properties.life = 2
     end
@@ -44,16 +42,10 @@ return function(enemy)
       properties.play_hero_seen_sound = false
     end
     if properties.normal_speed == nil then
-      properties.normal_speed = 8
+      properties.normal_speed = 32
     end
     if properties.faster_speed == nil then
-      properties.faster_speed = 16
-    end
-    if properties.detection_distance == nil then
-      properties.detection_distance = 48
-    end
-    if properties.more_distance == nil then
-      properties.more_distance = 32
+      properties.faster_speed = 64
     end
     if properties.hurt_style == nil then
       properties.hurt_style = "normal"
@@ -62,51 +54,50 @@ return function(enemy)
 
   function enemy:on_created()
 
-    self:set_life(properties.life)
-    self:set_damage(properties.damage)
-    self:set_hurt_style(properties.hurt_style)
-    sword_sprite = self:create_sprite(properties.sword_sprite)
-    main_sprite = self:create_sprite(properties.main_sprite)
-    self:set_size(16, 16)
-    self:set_origin(8, 13)
+    enemy:set_life(properties.life)
+    enemy:set_damage(properties.damage)
+    enemy:set_hurt_style(properties.hurt_style)
+    sword_sprite = enemy:create_sprite(properties.sword_sprite)
+    main_sprite = enemy:create_sprite(properties.main_sprite)
+    enemy:set_size(16, 16)
+    enemy:set_origin(8, 13)
 
-    self:set_invincible_sprite(sword_sprite)
-    self:set_attack_consequence_sprite(sword_sprite, "sword", "custom")
+    enemy:set_invincible_sprite(sword_sprite)
+    enemy:set_attack_consequence_sprite(sword_sprite, "sword", "custom")
   end
 
   function enemy:on_restarted()
 
     if not being_pushed then
       if going_hero then
-        self:go_hero()
+        enemy:go_hero()
       else
-        self:go_random()
-        self:check_hero()
+        enemy:go_random()
+        enemy:check_hero()
       end
     end
   end
 
   function enemy:check_hero()
 
-    local hero = self:get_map():get_entity("hero")
-    local _, _, layer = self:get_position()
+    local map = enemy:get_map()
+    local hero = map:get_hero()
+    local _, _, layer = enemy:get_position()
     local _, _, hero_layer = hero:get_position()
-    local distance = self:get_distance(hero)
     local near_hero = layer == hero_layer
-      and distance < properties.detection_distance
-    local near_hero_md = layer == hero_layer
-      and distance < math.floor(properties.detection_distance + properties.more_distance) --md: more distance
+        and enemy:get_distance(hero) < 500
+        and enemy:is_in_same_region(hero)
 
     if near_hero and not going_hero then
       if properties.play_hero_seen_sound then
         sol.audio.play_sound("hero_seen")
       end
-      self:go_hero()
-    elseif not near_hero_md and going_hero then
-      self:go_random()
+      enemy:go_hero()
+    elseif not near_hero and going_hero then
+      enemy:go_random()
     end
     sol.timer.stop_all(self)
-    sol.timer.start(self, 1000, function() self:check_hero() end)
+    sol.timer.start(self, 1000, function() enemy:check_hero() end)
   end
 
   function enemy:on_movement_changed(movement)
@@ -121,14 +112,14 @@ return function(enemy)
   function enemy:on_movement_finished(movement)
 
     if being_pushed then
-      self:go_hero()
+      enemy:go_hero()
     end
   end
 
   function enemy:on_obstacle_reached(movement)
 
     if being_pushed then
-      self:go_hero()
+      enemy:go_hero()
     end
   end
 
@@ -137,21 +128,23 @@ return function(enemy)
     if attack == "sword" and sprite == sword_sprite then
       sol.audio.play_sound("sword_tapping")
       being_pushed = true
-      local x, y = self:get_position()
-      local angle = self:get_angle(self:get_map():get_entity("hero")) + math.pi
+      local map = enemy:get_map()
+      local hero = map:get_hero()
+      local x, y = enemy:get_position()
+      local angle = hero:get_angle(enemy)
       local movement = sol.movement.create("straight")
       movement:set_speed(128)
       movement:set_angle(angle)
       movement:set_max_distance(26)
       movement:set_smooth(true)
-      movement:start(self)
+      movement:start(enemy)
     end
   end
 
   function enemy:go_random()
     local movement = sol.movement.create("random_path")
     movement:set_speed(properties.normal_speed)
-    movement:start(self)
+    movement:start(enemy)
     being_pushed = false
     going_hero = false
   end
@@ -165,3 +158,4 @@ return function(enemy)
   end
 
 end
+

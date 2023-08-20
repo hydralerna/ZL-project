@@ -13,31 +13,33 @@
 --   sprite = "enemies/globul",
 --   life = 4,
 --   damage = 2,
---   normal_speed = 8,
---   faster_speed = 16,
---   detection_distance = 48,
---   more_distance = 32,
+--   normal_speed = 32,
+--   faster_speed = 48,
 --   hurt_style = "normal",
 --   push_hero_on_sword = false,
 --   pushed_when_hurt = true,
---   asleep_animation = "asleep",
+--   asleep_animation = "stopped",
 --   awaking_animation = "awaking",
 --   normal_animation = "walking",
+--   ignore_obstacles = false,
 --   obstacle_behavior = "flying",
---   awakening_sound  = "stone"
+--   awakening_sound  = "stone",
+--   waking_distance = 100,
 -- })
 
 -- The parameter of set_properties() is a table.
 -- Its values are all optional except the sprites.
+
 return function(enemy)
 
   local properties = {}
-  local going_hero = false
-  local awaken = false
 
   function enemy:set_properties(prop)
 
     properties = prop
+    local going_hero = false
+    local awaken = false
+
     -- Set default values.
     if properties.life == nil then
       properties.life = 2
@@ -46,16 +48,10 @@ return function(enemy)
       properties.damage = 2
     end
     if properties.normal_speed == nil then
-      properties.normal_speed = 8
+      properties.normal_speed = 32
     end
     if properties.faster_speed == nil then
-      properties.faster_speed = 16
-    end
-    if properties.detection_distance == nil then
-      properties.detection_distance = 48
-    end
-    if properties.more_distance == nil then
-      properties.more_distance = 32
+      properties.faster_speed = 48
     end
     if properties.hurt_style == nil then
       properties.hurt_style = "normal"
@@ -67,13 +63,19 @@ return function(enemy)
       properties.push_hero_on_sword = false
     end
     if properties.asleep_animation == nil then
-      properties.asleep_animation = "asleep"
-    end
-    if properties.awaking_animation == nil then
-      properties.awaking_animation = "awaking"
+      properties.asleep_animation = "stopped"
     end
     if properties.normal_animation == nil then
       properties.normal_animation = "walking"
+    end
+    if properties.ignore_obstacles == nil then
+      properties.ignore_obstacles = false
+    end
+    if properties.obstacle_behavior == nil then
+      properties.obstacle_behavior = "normal"
+    end
+    if properties.waking_distance == nil then
+      properties.waking_distance = 100
     end
   end
 
@@ -84,24 +86,15 @@ return function(enemy)
     self:set_hurt_style(properties.hurt_style)
     self:set_pushed_back_when_hurt(properties.pushed_when_hurt)
     self:set_push_hero_on_sword(properties.push_hero_on_sword)
-    self:set_invincible()
     self:set_size(16, 16)
-    self:set_origin(8, 12)
-    if not properties.obstacle_behavior == nil then
-      self:set_obstacle_behavior(properties.obstacle_behavior)
-    end
+    self:set_origin(8, 13)
+    self:set_obstacle_behavior(properties.obstacle_behavior)
 
     local sprite = self:create_sprite(properties.sprite)
     function sprite:on_animation_finished(animation)
       -- If the awakening transition is finished, make the enemy go toward the hero.
       if animation == properties.awaking_animation then
-        self:set_animation(properties.normal_animation)
-        enemy:set_size(16, 16)
-        enemy:set_origin(8, 13)
-        enemy:snap_to_grid()
-        enemy:set_default_attack_consequences()
-        awaken = true
-        enemy:go_hero()
+        finish_waking()
       end
     end
     sprite:set_animation(properties.asleep_animation)
@@ -135,18 +128,12 @@ return function(enemy)
   function enemy:check_hero()
 
     local hero = self:get_map():get_entity("hero")
-    local _, _, layer = self:get_position()
-    local _, _, hero_layer = hero:get_position()
-    local distance = self:get_distance(hero)
-    local near_hero = layer == hero_layer
-      and distance < properties.detection_distance
-    local near_hero_md = layer == hero_layer
-      and distance < math.floor(properties.detection_distance + properties.more_distance) --md: more distance
+    local near_hero = self:get_distance(hero) < properties.waking_distance and self:is_in_same_region(hero)
 
     if awaken then
       if near_hero and not going_hero then
         self:go_hero()
-      elseif not near_hero_md and going_hero then
+      elseif not near_hero and going_hero then
         self:go_random()
       end
     elseif not awaken and near_hero then
@@ -154,16 +141,27 @@ return function(enemy)
     end
 
     sol.timer.stop_all(self)
-    sol.timer.start(self, 1000, function() self:check_hero() end)
+    sol.timer.start(self, 200, function() self:check_hero() end)
+  end
+
+  function enemy:finish_waking_up()
+
+    self:get_sprite():set_animation(properties.normal_animation)
+    awaken = true
+    self:go_hero()
   end
 
   function enemy:wake_up()
 
     self:stop_movement()
-    local sprite = self:get_sprite()
-    sprite:set_animation(properties.awaking_animation)
-    if properties.awakening_sound ~= nil then
+    if properties.awakening_sound == nil then
+      self:finish_waking_up()
+    else
       sol.audio.play_sound(properties.awakening_sound)
+    end
+    if properties.awaking_animation ~= nil then
+      local sprite = self:get_sprite()
+      sprite:set_animation(properties.awaking_animation)
     end
   end
 
@@ -171,6 +169,7 @@ return function(enemy)
 
     local m = sol.movement.create("random")
     m:set_speed(properties.normal_speed)
+    m:set_ignore_obstacles(properties.ignore_obstacles)
     m:start(self)
     going_hero = false
   end
@@ -179,6 +178,7 @@ return function(enemy)
 
     local m = sol.movement.create("target")
     m:set_speed(properties.faster_speed)
+    m:set_ignore_obstacles(properties.ignore_obstacles)
     m:start(self)
     going_hero = true
   end

@@ -8,7 +8,7 @@ local function initialize_shaders()
 
   shaders = {}
   -- TODO find a more elegant way to filter
-  shader_ids = {'index_palette_shader','hq2x','6xbrz','gb','lcd','sepia','grayscale'}--sol.main.get_resource_ids("shader")
+  shader_ids = {'index_palette_shader','index_palette_shader2','hq2x','6xbrz','gb','lcd','sepia','grayscale'}--sol.main.get_resource_ids("shader")
   current_shader_index = 0
 end
 

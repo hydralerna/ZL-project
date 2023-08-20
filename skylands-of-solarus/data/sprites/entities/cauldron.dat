@@ -1,0 +1,17 @@
+animation{
+  name = "appearing",
+  src_image = "entities/cauldron.png",
+  frame_delay = 50,
+  directions = {
+    { x = 0, y = 0, frame_width = 32, frame_height = 24, origin_x = 8, origin_y = 13, num_frames = 8 },
+  },
+}
+animation{
+  name = "rising",
+  src_image = "entities/cauldron.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 32, y = 24, frame_width = 32, frame_height = 24, origin_x = 8, origin_y = 13, num_frames = 4 },
+  },
+}
