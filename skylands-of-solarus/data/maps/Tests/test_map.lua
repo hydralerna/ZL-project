@@ -13,6 +13,39 @@ require("scripts/ground_effects")
 
 local map = ...
 local game = map:get_game()
+local hero = map:get_hero()
+local map_width, map_height = map:get_size()
+local t_torches = map:create_table_lights()
+
+-- List for testing
+--[[
+for tk, tv in pairs(t_torches) do
+  print(tk, tv)
+  for k, v in pairs(tv) do
+    print(k, v)
+    for i, j in pairs(v) do
+      print(i, j)
+      for d, e in pairs(j) do
+        print(d, e)
+      end
+    end
+  end
+  print("--------------------")
+end
+--]]
+
+
+-- map:create_torch_surfaces(t_torches)
+--[[
+for k, v in pairs(t_torches) do
+  print("K: ", k, "V: ", v)
+  for i, j in pairs(v) do
+    print(i, j)
+  end
+end
+--]]
+
+--local camera = map:get_camera()
 
 
 local function custom_walk(npc)
@@ -33,12 +66,12 @@ local function custom_walk(npc)
       key = key + 1
       tbl_positions[key] = {}
       tbl_positions[key].x = string.sub(i, 2, #i)
-      print(tbl_positions[key].x)
+      --print(tbl_positions[key].x)
     else
       count = count + 1
       if count == 2 then
         tbl_positions[key].y = i
-        print(tbl_positions[key].y)
+        --print(tbl_positions[key].y)
       elseif count == 3 then
         tbl_positions[key].layer = i
       end
@@ -64,8 +97,24 @@ end
 -- Event called at initialization time, as soon as this map is loaded.
 map:register_event("on_started", function()
 
+  local hero = map:get_hero()
+  local hero_x, hero_y, _ = hero:get_position()
+  grid_id = map:get_grid_id(hero_x, hero_y)
+  print("GRID_ID: ", grid_id)
+  
+
+  tiles = sol.surface.create("entities/tiles.png")
+  tiles:set_blend_mode("multiply")
+
   -- You can initialize the movement and sprites of various
   -- map entities here.
+  --print(self:get_type())
+  map:generate_prop_id()
+
+  --[[for entity in map:get_entities_by_type("enemy") do
+    print("----- ID:", entity:get_property("id"))
+  end--]]
+
 
   custom_walk(old_man)
 
@@ -110,15 +159,56 @@ map:register_event("on_started", function()
   end
 
 
-
 end)
 
 
 function map:on_draw(dst_surface) 
 
+  -- TEST  lighted tiles
+  --[[
+  for k, v in pairs(t_torches) do
+      local surface = t_torches[k].surface
+      local x = map_width - t_torches[k].x
+      local y = map_height - t_torches[k].y
+      print(surface, x, y)
+      surface:draw(dst_surface, x, y) 
+      surface:fill_color({255, 255, 255, 255})
+  end
+  --]]
+  --local x = t_torches[1].x
+  --local y = t_torches[1].y
+  --t_torches[1].surface:draw(dst_surface, 128, 0)
+
+
+  --[[
+  local x_camera, y_camera = camera:get_position()
+  local x = 0
+  local y = 0
+  while y < 160 do
+    while x < 240 do
+      local distance = hero:get_distance(x_camera + x, y_camera + y)
+      if distance >= 48 then
+        tiles:draw_region(0, 0, 1, 1, dst_surface, x, y)
+      elseif distance >= 40 and distance < 48 then
+        tiles:draw_region(8, 0, 1, 1, dst_surface, x, y)
+      elseif distance >= 32 and distance < 40 then
+        tiles:draw_region(16, 0, 1, 1, dst_surface, x, y)
+      elseif distance >= 24 and distance < 32 then
+        tiles:draw_region(24, 0, 1, 1, dst_surface, x, y)
+      end
+      x = x + 1
+    end
+    x = 0
+    y = y + 1
+  end
+  --]]
+  map:draw_light_effect(dst_surface, t_torches[grid_id].torches)
+
+
   ---------------------------
   -- TEST DU SCRIPT util.lua
   ---------------------------
+  --[[
   local util = require"scripts/util"
   local LINE_COLOR = {143, 192, 112}
 
@@ -135,6 +225,7 @@ function map:on_draw(dst_surface)
     --surface:fill_color(LINE_COLOR, x, y, width, 20)
     --dst_surface:fill_color(LINE_COLOR, x, y, width, 20)
   end
+  --]]
   ---------------------------
 
 
