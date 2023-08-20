@@ -174,7 +174,7 @@ end
 function options_submenu:on_draw(dst_surface)
 
   -- Draw background.
-  self:draw_background(dst_surface)
+  self:draw_background(dst_surface, true)
   
   -- Draw caption.
   self:draw_caption(dst_surface)
