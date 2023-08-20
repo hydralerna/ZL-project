@@ -36,12 +36,42 @@ function enemy_meta:on_attacking_hero(hero, enemy_sprite)
   end
 end
 
-
+-- Function when the enemy is hurt.
 function enemy_meta:on_hurt()
 
   local enemy = self
   if enemy:get_life() == 0 then
     enemy:get_sprite():set_animation("dying")
+  end
+end
+
+-- Function to get enemy ID.
+-- e.g.
+-- enemy:get_id()    is equivalent to  enemy:get_property("id").
+function enemy_meta:get_id()
+  
+  return self:get_property("id")
+end
+
+-- Function to set an ID. 
+-- e.g.
+-- enemy:set_id()         will generate an automatic id between "0001" and "9999".
+-- FYI:  map:generate_prop_id(enemy) will do the same.
+--       You even can force the modification with    map:generate_prop_id(enemy, true)
+-- enemy:set_id("my_id")  will set a string id named "my_id". Equivalent to   enemy:set_property("id", "my_id").
+-- enemy:set_id(0001)   will set "1" without "000". So prefer a string like this:  enemy:set_id("0001").
+function enemy_meta:set_id(id)
+
+  if (id == nil) then
+    self:get_map():generate_prop_id(self)
+  else
+    if (type(id) == "number") then
+      self:set_property("id", tostring(id))
+    elseif (type(id) == "string") then
+      self:set_property("id", id)
+    else
+      error("Error with 'id' in function 'enemy_meta:set_id(id)' (number or string expected, got " .. type(id) .. ")", 2)
+    end    
   end
 end
 
