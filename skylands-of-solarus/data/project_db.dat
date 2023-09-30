@@ -8,6 +8,7 @@ map{ id = "Tests/test_map", description = "Test Map" }
 map{ id = "Tests/test_map_for_CrookiNari", description = "For CrookiNari" }
 map{ id = "Tests/test_python", description = "Test for Python" }
 map{ id = "Tests/test_tileset_32px" }
+map{ id = "Tests/test_tileset_32px_bee" }
 map{ id = "map_morla" }
 
 tileset{ id = "8px_all_zcfc_01" }
@@ -26,6 +27,7 @@ tileset{ id = "dungeon/d_fc_wll_braziers_01" }
 tileset{ id = "dungeon/d_fc_wll_specials_01" }
 tileset{ id = "dungeon/d_fc_wll_torches_01" }
 tileset{ id = "dungeon/d_fc_wll_walls_01" }
+tileset{ id = "dungeon/d_fc_wll_walls_98" }
 tileset{ id = "dungeon/d_fc_wll_walls_99" }
 tileset{ id = "dungeon/d_zc_swtr_specials_01" }
 tileset{ id = "dungeon/d_zc_trv_entrances_01" }
@@ -147,10 +149,17 @@ sprite{ id = "entities/cauldron" }
 sprite{ id = "entities/crystal" }
 sprite{ id = "entities/crystal_block" }
 sprite{ id = "entities/custom_pot", description = "custom_pot" }
+sprite{ id = "entities/effects/hero_aura" }
+sprite{ id = "entities/effects/light_l", description = "Light - L" }
+sprite{ id = "entities/effects/light_m", description = "Light M" }
+sprite{ id = "entities/effects/light_s", description = "Light - M" }
+sprite{ id = "entities/effects/light_torch", description = "Light - Torch" }
+sprite{ id = "entities/effects/light_xl", description = "Light XL" }
 sprite{ id = "entities/explosion" }
 sprite{ id = "entities/fairy" }
 sprite{ id = "entities/hinged_counter_door" }
 sprite{ id = "entities/items" }
+sprite{ id = "entities/lantern_sparkle", description = "Lantern Sparkle" }
 sprite{ id = "entities/lock" }
 sprite{ id = "entities/megabomb" }
 sprite{ id = "entities/morla" }
@@ -446,6 +455,7 @@ item{ id = "bomb", description = "Bomb" }
 item{ id = "bottle_1_EXAMPLE", description = "Bottle 1" }
 item{ id = "coin", description = "Coin (x1, x5, x10)" }
 item{ id = "coin_bag", description = "Coin bag" }
+item{ id = "gear/lantern", description = "Lantern" }
 item{ id = "heart", description = "Heart" }
 item{ id = "heart_container", description = "Heart container" }
 item{ id = "library/potions" }
@@ -536,6 +546,7 @@ file{ path = "entities/npc_target.lua", author = "froggy77", license = "GPL v3" 
 file{ path = "fonts/8_bit.png", author = "usr_share, Christopho", license = "Public domain" }
 file{ path = "fonts/enter_command.ttf", author = "Jeti", license = "CC BY 4.0" }
 file{ path = "items/bottle_1_EXAMPLE.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "items/gear/lantern.lua", author = "Max Mraz", license = "MIT" }
 file{ path = "items/heart.lua", license = "GPL v3" }
 file{ path = "items/heart_container.lua", license = "GPL v3" }
 file{ path = "items/library/bottle_EXAMPLE.lua", author = "Christopho", license = "GPL v3" }
@@ -551,6 +562,10 @@ file{ path = "main.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/automation/automation.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/automation/easing.lua", author = "Robert Penner, Olivier Cléro", license = "BSD" }
 file{ path = "scripts/features.lua", author = "Christopho", license = "GPL v3" }
+file{ path = "scripts/fx/lighting/dynamic_light_source_sprite_manager.lua", author = "Max Mraz", license = "MIT" }
+file{ path = "scripts/fx/lighting/lighting_manager.lua", author = "Max Mraz", license = "MIT" }
+file{ path = "scripts/fx/lighting/map_lighting.lua", author = "Max Mraz", license = "MIT" }
+file{ path = "scripts/fx/lighting_effects.lua", author = "Max Mraz", license = "MIT" }
 file{ path = "scripts/game_manager.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/hud", license = "GPL v3" }
 file{ path = "scripts/hud/action_icon.lua", author = "Christopho", license = "GPL v3" }
@@ -865,7 +880,20 @@ file{ path = "sprites/enemies/shadows/shadow_8x5.dat", author = "froggy77", lice
 file{ path = "sprites/entities/crystal.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/crystal_block.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/custom_pot.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/effects/hero_aura.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/effects/light_l.dat", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/effects/light_l.png", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/effects/light_m.dat", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/effects/light_m.png", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/effects/light_s.dat", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/effects/light_s.png", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/effects/light_torch.dat", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/effects/light_torch.png", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/effects/light_xl.dat", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/effects/light_xl.png", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/fairy.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/lantern_sparkle.dat", license = "CC BY-SA 4.0" }
+file{ path = "sprites/entities/lantern_sparkle.png", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/lock.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/lock.png", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/npc_target.dat", author = "froggy77", license = "GPL v3" }
@@ -906,6 +934,8 @@ file{ path = "tilesets/dungeon/d_fc_wll_torches_01.dat", author = "froggy77", }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_01.dat", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_01.tiles.png", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_01_TEST_COLORS.tiles.png", author = "Jerom, froggy77", license = "CC-BY-SA 3.0" }
+file{ path = "tilesets/dungeon/d_fc_wll_walls_98.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "tilesets/dungeon/d_fc_wll_walls_98.tiles.png", author = "froggy77", license = "GPL v3" }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_99.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "tilesets/dungeon/d_fc_wll_walls_99.tiles.png", author = "froggy77", license = "GPL v3" }
 file{ path = "tilesets/dungeon/d_zc_swtr_specials_01.dat", author = "froggy77", license = "GPL v3" }
