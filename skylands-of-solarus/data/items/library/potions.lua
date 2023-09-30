@@ -87,7 +87,7 @@ return function(item)
     -- The potion is on the ground. It did not fall. 
     if pickable:get_falling_height() == 0 then
       shadow_sprite:set_xy(0, 3)
-    -- The potion is falling. The animation is different to show that the content is unstable and will disappear.
+    -- The potion is falling. The animation is different to show that the content is unstable and is going to disappear.
     else
       local name_falling = item_name .. "_falling"
       local count = 0
