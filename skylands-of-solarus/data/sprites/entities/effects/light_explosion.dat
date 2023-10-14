@@ -1,0 +1,9 @@
+animation{
+  name = "stopped",
+  src_image = "entities/effects/light_explosion.png",
+  frame_delay = 50,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 240, frame_height = 240, origin_x = 120, origin_y = 120, num_frames = 4 },
+  },
+}
