@@ -150,6 +150,9 @@ sprite{ id = "entities/crystal" }
 sprite{ id = "entities/crystal_block" }
 sprite{ id = "entities/custom_pot", description = "custom_pot" }
 sprite{ id = "entities/effects/hero_aura" }
+sprite{ id = "entities/effects/light_bomb", description = "Light - Bomb" }
+sprite{ id = "entities/effects/light_entrance", description = "Light - Entrance" }
+sprite{ id = "entities/effects/light_explosion", description = "Light - Explosion" }
 sprite{ id = "entities/effects/light_l", description = "Light - L" }
 sprite{ id = "entities/effects/light_m", description = "Light M" }
 sprite{ id = "entities/effects/light_s", description = "Light - M" }
@@ -451,7 +454,7 @@ sound{ id = "treasure", description = "(engine) Hero - get_sword" }
 sound{ id = "walk_on_water", description = "(engine) Hero - wade1" }
 sound{ id = "wrong", description = "(engine) Misc - error" }
 
-item{ id = "bomb", description = "Bomb" }
+item{ id = "bomb", description = "Bomb (x1, x3, x5, x8)" }
 item{ id = "bottle_1_EXAMPLE", description = "Bottle 1" }
 item{ id = "coin", description = "Coin (x1, x5, x10)" }
 item{ id = "coin_bag", description = "Coin bag" }
@@ -881,6 +884,9 @@ file{ path = "sprites/entities/crystal.dat", author = "Christopho", license = "C
 file{ path = "sprites/entities/crystal_block.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/custom_pot.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/effects/hero_aura.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/effects/light_bomb.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/effects/light_entrance.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/entities/effects/light_explosion.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/effects/light_l.dat", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/effects/light_l.png", license = "CC BY-SA 4.0" }
 file{ path = "sprites/entities/effects/light_m.dat", license = "CC BY-SA 4.0" }
