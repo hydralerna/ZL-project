@@ -63,6 +63,15 @@ animation{
   },
 }
 animation{
+  name = "gear/lantern",
+  src_image = "items/sword.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 0, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+  },
+}
+animation{
   name = "gem",
   src_image = "items/gem.png",
   frame_delay = 150,
