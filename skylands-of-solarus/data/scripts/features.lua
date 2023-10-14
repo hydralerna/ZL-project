@@ -19,6 +19,8 @@ require("scripts/meta/hero")
 require("scripts/meta/npc")
 require("scripts/utility/savegame_tables")
 require("scripts/meta/sensor")
+require"scripts/fx/lighting/lighting_manager"
+require"scripts/fx/lighting/map_lighting"
 
 require("scripts/debug")
 
