@@ -1,0 +1,13 @@
+animation{
+  name = "stopped",
+  src_image = "entities/effects/light_torch.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 96, frame_height = 96, origin_x = 96, origin_y = 48, num_frames = 4 },
+    { x = 0, y = 96, frame_width = 96, frame_height = 96, origin_x = 48, origin_y = 0, num_frames = 4 },
+    { x = 0, y = 192, frame_width = 96, frame_height = 96, origin_x = 0, origin_y = 48, num_frames = 4 },
+    { x = 0, y = 288, frame_width = 96, frame_height = 96, origin_x = 48, origin_y = 96, num_frames = 4 },
+    { x = 0, y = 384, frame_width = 96, frame_height = 96, origin_x = 48, origin_y = 48, num_frames = 4 },
+  },
+}
