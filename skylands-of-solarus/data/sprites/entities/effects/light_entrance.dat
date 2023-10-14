@@ -1,0 +1,7 @@
+animation{
+  name = "stopped",
+  src_image = "entities/effects/light_entrance.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 160, frame_height = 176, origin_x = 72, origin_y = 160 },
+  },
+}
