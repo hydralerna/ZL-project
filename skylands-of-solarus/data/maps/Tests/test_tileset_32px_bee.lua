@@ -17,7 +17,7 @@ map:register_event("on_started", function()
 
   -- You can initialize the movement and sprites of various
   -- map entities here.
-  map:set_darkness_level({0,0,0})
+  map:set_darkness_level({0, 0, 0})
 end)
 
 -- Event called after the opening transition effect of the map,
