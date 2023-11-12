@@ -1,6 +1,6 @@
 local info_manager = {}
 
-local serpent = require"scripts/utility/serpent"
+local serpent = require"scripts/utility/serpent"  -- Source: https://github.com/pkulchenko/serpent/blob/master/src/serpent.lua
 
 
 -- Function to read a line in a sol.file (by Zefk)
