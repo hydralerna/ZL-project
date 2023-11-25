@@ -194,6 +194,7 @@ sprite{ id = "hud/icon_attack", description = "hud/icon_attack" }
 sprite{ id = "hud/icon_item_1", description = "hud/icon_item_1" }
 sprite{ id = "hud/icon_item_2", description = "hud/icon_item_2" }
 sprite{ id = "hud/icon_pause", description = "hud/icon_pause" }
+sprite{ id = "hud/magic_bar_star_light" }
 sprite{ id = "menus/menu_tabs", description = "menus/menu_tabs" }
 sprite{ id = "menus/messagebox/messagebox_cursor", description = "Message Box cursor" }
 sprite{ id = "menus/pause/arrow_1" }
@@ -583,7 +584,7 @@ file{ path = "scripts/hud/hud_menu.lua", author = "froggy77", license = "GPL v3"
 file{ path = "scripts/hud/item_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/hud/pause_icon.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/index_palette_shader.lua", author = "froggy77", license = "GPL v3" }
-file{ path = "scripts/info_manager.lua", author = "froggy77, Zefk", }
+file{ path = "scripts/info_manager.lua", author = "froggy77, Zefk", license = "GPL v3" }
 file{ path = "scripts/initial_game.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/language_manager.lua", author = "Christopho", license = "GPL v3" }
 file{ path = "scripts/menus", license = "GPL v3" }
@@ -603,6 +604,7 @@ file{ path = "scripts/meta/block.lua", author = "froggy77", license = "GPL v3" }
 file{ path = "scripts/multi_events.lua", author = "Christopho, std::gregwar", license = "GPL v3" }
 file{ path = "scripts/text_fx_helper.lua", author = "Olivier Cléro", license = "GPL v3" }
 file{ path = "scripts/utility/savegame_tables.lua", author = "Max Mraz", license = "MIT" }
+file{ path = "scripts/utility/serpent.lua", author = "Paul Kulchenko", license = "MIT" }
 file{ path = "shaders/grayscale.dat", author = "Christopho", license = "GPL v3" }
 file{ path = "shaders/grayscale.frag.glsl", author = "Vlag", license = "GPL v3" }
 file{ path = "shaders/hq2x.dat", author = "Christopho", license = "GPL v3" }
@@ -905,6 +907,7 @@ file{ path = "sprites/entities/lock.png", author = "froggy77", license = "GPL v3
 file{ path = "sprites/entities/npc_target.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/entities/star.dat", author = "Christopho", license = "CC BY-SA 4.0" }
 file{ path = "sprites/hud/dialog_icons.png", author = "froggy77, Romi, 7Soul1, OptimusDu", license = "CC-BY-SA 3.0" }
+file{ path = "sprites/hud/magic_bar_star_light.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/items/coin.png", author = "ansimuz, froggy77", }
 file{ path = "sprites/menus/title_screen/clouds.png", author = "ansimuz", }
 file{ path = "sprites/menus/title_screen/foreground_trees.png", author = "ansimuz", }
