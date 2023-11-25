@@ -1,0 +1,9 @@
+animation{
+  name = "stopped",
+  src_image = "hud/magic_bar.png",
+  frame_delay = 250,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 8, y = 16, frame_width = 8, frame_height = 8, origin_x = 4, origin_y = 4, num_frames = 12, num_columns = 6 },
+  },
+}
