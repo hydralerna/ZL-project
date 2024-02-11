@@ -154,10 +154,10 @@ function sol.main:on_key_pressed(key, modifiers)
     -- Alt + F4: stop the program.
     sol.main.exit()
     handled = true
-  elseif key == "escape" and sol.main.get_game() == nil then
+  --elseif key == "escape" and sol.main.get_game() == nil then
     -- Escape in pre-game menus: stop the program.
-    sol.main.exit()
-    handled = true
+    --sol.main.exit()
+    --handled = true
   end
 
   return handled
