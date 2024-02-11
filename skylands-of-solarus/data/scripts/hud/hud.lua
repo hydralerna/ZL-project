@@ -30,7 +30,7 @@ local function initialize_hud_features(game)
   local pause_icon
   local hearts
   local b_hearts
-  -- local rupees
+  local rupees
   local coins
   local keys
 
@@ -302,6 +302,7 @@ local function initialize_hud_features(game)
         local effect = game.get_custom_command_effect ~= nil and game:get_custom_command_effect("attack") or game:get_command_effect("attack")
         attack_icon:set_enabled(effect ~= nil)
         attack_icon:set_active(true)
+        --print"TEST attack effect"
       end
 
       if action_icon ~= nil then
@@ -565,8 +566,8 @@ local function initialize_hud_features(game)
   game:register_event("on_paused", hud_on_paused)
   game:register_event("on_unpaused", hud_on_unpaused)
   game:register_event("on_finished", hud_on_game_finished)
-  --game:register_event("on_dialog_started", hud_on_dialog_started)
-  --game:register_event("on_dialog_finished", hud_on_dialog_finished)
+  game:register_event("on_dialog_started", hud_on_dialog_started)
+  game:register_event("on_dialog_finished", hud_on_dialog_finished)
 
   -- Start the HUD.
   hud:set_enabled(true)
