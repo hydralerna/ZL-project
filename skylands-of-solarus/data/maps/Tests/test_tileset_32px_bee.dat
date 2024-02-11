@@ -2040,7 +2040,7 @@ separator{
 chest{
   layer = 0,
   x = 136,
-  y = 293,
+  y = 285,
   treasure_name = "gear/lantern",
   sprite = "chests/chest03",
   opening_condition = "test_map_chest_01",
@@ -2069,8 +2069,8 @@ destructible{
 
 destructible{
   layer = 0,
-  x = 104,
-  y = 317,
+  x = 88,
+  y = 269,
   sprite = "destructibles/jar01",
 }
 
@@ -2092,5 +2092,180 @@ chest{
   treasure_variant = 4,
   sprite = "chests/chest05",
   opening_condition = "test_map_chest_01",
+}
+
+pickable{
+  layer = 0,
+  x = 168,
+  y = 349,
+  treasure_name = "potions/life_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 88,
+  y = 381,
+  treasure_name = "potions/healing_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 152,
+  y = 381,
+  treasure_name = "potions/life_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 120,
+  y = 301,
+  treasure_name = "potions/magic_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 168,
+  y = 381,
+  treasure_name = "potions/life_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 72,
+  y = 381,
+  treasure_name = "potions/healing_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 168,
+  y = 365,
+  treasure_name = "potions/life_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 136,
+  y = 301,
+  treasure_name = "potions/magic_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 152,
+  y = 349,
+  treasure_name = "potions/life_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 72,
+  y = 365,
+  treasure_name = "potions/healing_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 152,
+  y = 365,
+  treasure_name = "potions/life_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 104,
+  y = 301,
+  treasure_name = "potions/magic_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 72,
+  y = 349,
+  treasure_name = "potions/healing_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 72,
+  y = 333,
+  treasure_name = "potions/healing_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 88,
+  y = 349,
+  treasure_name = "potions/healing_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 88,
+  y = 333,
+  treasure_name = "potions/healing_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 88,
+  y = 365,
+  treasure_name = "potions/healing_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 104,
+  y = 317,
+  treasure_name = "potions/magic_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 152,
+  y = 333,
+  treasure_name = "potions/life_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 168,
+  y = 333,
+  treasure_name = "potions/life_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 184,
+  y = 333,
+  treasure_name = "potions/life_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 152,
+  y = 301,
+  treasure_name = "potions/magic_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 136,
+  y = 317,
+  treasure_name = "potions/magic_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 152,
+  y = 317,
+  treasure_name = "potions/magic_potion",
+}
+
+pickable{
+  layer = 0,
+  x = 120,
+  y = 317,
+  treasure_name = "potions/magic_potion",
 }
 
