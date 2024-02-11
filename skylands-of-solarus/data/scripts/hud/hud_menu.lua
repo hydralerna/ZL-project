@@ -9,7 +9,7 @@ function hud_menu_builder:new(game, config)
 
   local hud_menu = {}
   hud_menu.color = game:get_value("color") or 1
-  local colors = {{15, 31, 31}, { 48, 111, 80 }, {143, 192, 112}, { 224, 255, 208 }}
+  local colors = {{15, 31, 32}, { 48, 111, 80 }, {143, 192, 112}, { 224, 255, 208 }}
   hud_menu.dst_x, hud_menu.dst_y = config.x, config.y
   hud_menu.dst_w, hud_menu.dst_h = sol.video.get_quest_size()
   hud_menu.camera_w = 240
@@ -26,7 +26,7 @@ function hud_menu_builder:new(game, config)
   hud_menu.surface_bot = sol.surface.create(48, 4)
   hud_menu.surface_bot:fill_color(colors[hud_menu.color])
   hud_menu.submenus_icon_bg_sprite = sol.sprite.create("menus/pause/submenus_icon_bg_" .. hud_menu.color)
-  hud_menu.submenus_icon_bg_sprite:set_animation("idle")
+  hud_menu.submenus_icon_bg_sprite:set_animation("static")
   hud_menu.inventory_icon = sol.surface.create("menus/pause/inventory_icon_".. hud_menu.color .. ".png")
   hud_menu.emoji_icon = sol.surface.create("menus/pause/emoji_icon_".. hud_menu.color .. ".png")
 
