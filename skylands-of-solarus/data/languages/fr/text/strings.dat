@@ -7,7 +7,7 @@ text{ key = "hud.lift", value = "Pick up" }
 text{ key = "hud.look", value = "Check" }
 text{ key = "hud.next", value = "Next" }
 text{ key = "hud.open", value = "Open" }
-text{ key = "hud.pause", value = "" }
+text{ key = "hud.pause", value = "Pause" }
 text{ key = "hud.return", value = "Back" }
 text{ key = "hud.run", value = "Run" }
 text{ key = "hud.save", value = "Save" }
