@@ -33,16 +33,22 @@ local hud_config = {
   {
     menu_script = "scripts/hud/hearts",
     x = -177,
-    y = 4,
+    y = 2,
+  },
+
+  -- Magic bar.
+  {
+    menu_script = "scripts/hud/magic_bar",
+    x = -177,
+    y = 26,
   },
 
   -- Hearts meter for the enemy
   {
     menu_script = "scripts/hud/b_hearts",
     x = -177,
-    y = 24,
+    y = 46,
   },
-
 
   -- Counter of coins
   {
@@ -68,8 +74,8 @@ local hud_config = {
   -- Pause icon.
   {
     menu_script = "scripts/hud/pause_icon",
-    x = x_offset + 12,
-    y = 2,
+    x = x_offset + 12, --old 12
+    y = 2, -- old 2
   },
 
   -- Chrono counter.
@@ -107,10 +113,10 @@ local hud_config = {
   -- Action icon.
   {
     menu_script = "scripts/hud/action_icon",
-    x = x_offset + 48,
-    y = 2,
-    dialog_x = x_offset + 48,
-    dialog_y = 2,
+    x = x_offset + 25, -- old 48
+    y = 40, -- old 2
+    dialog_x = x_offset + 24, -- old 48
+    dialog_y = 40, -- old 2
   },
 }
 
