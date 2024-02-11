@@ -132,11 +132,11 @@ function console:on_draw(dst_surface)
   local width, height = dst_surface:get_size()
   local text = self.title_text_surface
   --print("Width: "..width.." and ".."Height: "..height..".")
+  dst_surface:fill_color(self.color2, 8, height - 76, width - 154, 11)
+  self.title_text_surface:draw(dst_surface, 16, height - 71)
   dst_surface:fill_color(self.color, 8, height - 64, width - 16, 40)
   self.input_text_surface:draw(dst_surface, 16, height - 56)
   self.output_text_surface:draw(dst_surface, 16, height - 40)
-  dst_surface:fill_color(self.color2, 8, height - 76, width - 154, 11)
-  self.title_text_surface:draw(dst_surface, 16, height - 71)
 end
 
 function console:execute_code()
