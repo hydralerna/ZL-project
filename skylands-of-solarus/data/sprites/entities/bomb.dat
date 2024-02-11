@@ -47,7 +47,7 @@ animation{
 animation{
   name = "walking",
   src_image = "items/bomb.png",
-  frame_delay = 200,
+  frame_delay = 150,
   frame_to_loop_on = 0,
   directions = {
     { x = 208, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 8, num_frames = 4 },
