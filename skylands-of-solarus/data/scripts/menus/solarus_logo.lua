@@ -16,7 +16,7 @@ local solarus_logo_menu = {}
 -- Black background
 local quest_width, quest_height = sol.video.get_quest_size()
 local background = sol.surface.create(quest_width, quest_height)
-background:fill_color{15, 31, 31}
+background:fill_color{15, 31, 32}
 
 -- Main surface of the menu.
 local logo_surface = sol.surface.create(145, 34)
@@ -190,6 +190,40 @@ function solarus_logo_menu:start_animation()
   end)
 end
 
+
+-- Resets the timer.
+function solarus_logo_menu:reset_timer()
+
+  if self.timer ~= nil then
+    self.timer:stop()
+    self.timer = nil
+  end
+
+end
+
+
+-- Skips the menu.
+function solarus_logo_menu:skip_menu()
+
+  if not sol.menu.is_started(self) or self.finished then
+    return
+  end
+
+  -- Store the state.
+  self.finished = true
+
+  -- Stop the timer.
+  self:reset_timer()
+
+  -- Quits after a fade to black.
+  background:fade_in(20, function()
+    -- Quit the menu
+    sol.menu.stop(self)
+  end)
+
+end
+
+
 -- Draws this menu on the quest screen.
 function solarus_logo_menu:on_draw(screen)
 
@@ -207,8 +241,9 @@ end
 function solarus_logo_menu:on_key_pressed(key)
 
   if key == "escape" then
-    -- Escape: quit Solarus.
-    sol.main.exit()
+    -- Escape: skip Solarus logo.
+    --sol.menu.stop(solarus_logo_menu)
+    solarus_logo_menu:skip_menu()
   else
     -- If the timer exists (after step 1).
     if timer ~= nil then
