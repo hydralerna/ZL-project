@@ -12,9 +12,10 @@ function hearts_builder:new(game, config)
 
   hearts.surface = sol.surface.create(100, 19)
   hearts.empty_heart_sprite = sol.sprite.create("hud/empty_heart")
+  hearts.all_hearts_img = sol.surface.create("hud/hearts.png")
   hearts.nb_max_hearts_displayed = game:get_max_life() / 4
   hearts.nb_current_hearts_displayed = game:get_life()
-  hearts.all_hearts_img = sol.surface.create("hud/hearts.png")
+
 
   function hearts:on_started()
 
