@@ -61,10 +61,12 @@ animation{
   },
 }
 animation{
-  name = "idle",
+  name = "dynamic",
   src_image = "menus/pause/submenus_icon_bg_1.png",
+  frame_delay = 240,
+  frame_to_loop_on = 0,
   directions = {
-    { x = 192, y = 96, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16 },
+    { x = 240, y = 96, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16, num_frames = 4 },
   },
 }
 animation{
@@ -74,6 +76,13 @@ animation{
   frame_to_loop_on = 0,
   directions = {
     { x = 0, y = 96, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16, num_frames = 4 },
+  },
+}
+animation{
+  name = "static",
+  src_image = "menus/pause/submenus_icon_bg_1.png",
+  directions = {
+    { x = 192, y = 96, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16 },
   },
 }
 animation{
