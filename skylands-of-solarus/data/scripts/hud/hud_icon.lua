@@ -100,7 +100,7 @@ function hud_icon_builder:new(game, command, icon_x, icon_y, dialog_icon_x, dial
     -- Draw only if needed.
     if hud_icon.enabled or hud_icon.animating then
       -- Update the surface if the foreground or the background size have changed since last draw.
-      --hud_icon:update_surface_if_needed()
+      hud_icon:update_surface_if_needed()
 
       -- Draw only if the surface previously created has a valid size.
       if hud_icon.surface ~= nil then
