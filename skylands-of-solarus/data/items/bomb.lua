@@ -113,6 +113,7 @@ function item:on_using()
       end
 
       item:get_map():create_bomb{
+        name = "bomb",
         x = x,
         y = y,
         layer = layer,
