@@ -1,0 +1,16 @@
+animation{
+  name = "static",
+  src_image = "menus/pause/options_icon_4.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 24, frame_height = 6, origin_x = 12, origin_y = 3 },
+  },
+}
+animation{
+  name = "dynamic",
+  src_image = "menus/pause/options_icon_4.png",
+  frame_delay = 120,
+  frame_to_loop_on = 6,
+  directions = {
+    { x = 0, y = 6, frame_width = 24, frame_height = 6, origin_x = 12, origin_y = 3, num_frames = 42, num_columns = 6 },
+  },
+}
