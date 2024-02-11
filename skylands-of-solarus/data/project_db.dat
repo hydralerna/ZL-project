@@ -118,6 +118,7 @@ sprite{ id = "enemies/bosses/e_fc_hideous_eye" }
 sprite{ id = "enemies/bosses/e_fc_hideous_mouth" }
 sprite{ id = "enemies/bosses/e_fc_jelleggtric" }
 sprite{ id = "enemies/bosses/e_fc_vitreous", description = "enemies/bosses/vitreous" }
+sprite{ id = "enemies/darknut" }
 sprite{ id = "enemies/e_fc_baby_jelleggtric_egg_fixed" }
 sprite{ id = "enemies/e_fc_baby_jelleggtric_egg_thrown", description = "enemies/e_fc_baby_eater_egg_thrown" }
 sprite{ id = "enemies/e_fc_bat_01", description = "enemies/e_fc_bat_01" }
@@ -203,7 +204,14 @@ sprite{ id = "menus/pause/arrow_3" }
 sprite{ id = "menus/pause/arrow_4" }
 sprite{ id = "menus/pause/cursor_1" }
 sprite{ id = "menus/pause/cursor_4" }
+sprite{ id = "menus/pause/options_icon_1" }
+sprite{ id = "menus/pause/options_icon_2" }
+sprite{ id = "menus/pause/options_icon_3" }
+sprite{ id = "menus/pause/options_icon_4" }
+sprite{ id = "menus/pause/save_icon_1" }
 sprite{ id = "menus/pause/submenus_icon_bg_1" }
+sprite{ id = "menus/pause/submenus_icon_bg_2" }
+sprite{ id = "menus/pause/submenus_icon_bg_3" }
 sprite{ id = "menus/pause/submenus_icon_bg_4" }
 sprite{ id = "menus/solarus_logo/solarus_logo" }
 sprite{ id = "menus/title_screen/sword" }
@@ -521,6 +529,7 @@ shader{ id = "sepia", description = "sepia" }
 shader{ id = "test" }
 shader{ id = "test2", description = "sepia2" }
 shader{ id = "test3", description = "test3" }
+shader{ id = "test4_triangle" }
 shader{ id = "tests" }
 
 file{ path = "enemies/bosses//e_fc_eater.lua", author = "Christopho", license = "GPL v3" }
@@ -870,6 +879,7 @@ file{ path = "sprites/enemies/bosses/e_fc_hideous.png", author = "froggy77", lic
 file{ path = "sprites/enemies/bosses/e_fc_hideous_eye.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_hideous_mouth.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/bosses/e_fc_jelleggtric.dat", author = "froggy77", license = "GPL v3" }
+file{ path = "sprites/enemies/darknut.dat", author = "froggy77", }
 file{ path = "sprites/enemies/e_fc_baby_jelleggtric_egg_fixed.dat", author = "froggy77", license = "GPL v3" }
 file{ path = "sprites/enemies/e_fc_electricity.dat", author = "froggy77", license = "GPV L3" }
 file{ path = "sprites/enemies/e_fc_rat_01.dat", author = "froggy77", license = "GPL v3" }
