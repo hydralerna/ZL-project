@@ -7,9 +7,10 @@ local bomb_meta = sol.main.get_metatable("bomb")
 require ("scripts/multi_events")
 
 -- Allows you to have more "directions" for the sprite, here chosen randomly.
-function bomb_meta:on_created()
+--function bomb_meta:on_created()
+bomb_meta:register_event("on_created", function(self)
 
-  local bomb = self
+  --local bomb = self
   -- Just a test to get a value from an array. See in /items/bomb.lua, item:get_map():create_bomb{ ...
   --[[
   --local map = bomb:get_map()
@@ -21,10 +22,17 @@ function bomb_meta:on_created()
   print(properties[1]["value"])
   --]]
   sol.audio.play_sound("items/bomb_drop")
-  local sprite = bomb:get_sprite()
+  local sprite = self:get_sprite()
   sprite:set_animation("stopped_on_floor")
   sprite:set_direction(math.random(0, 3))
-end
+end)
+
+
+--bomb_meta:register_event("on_lifting", function(self, carrier, carried_object)
+
+--    print("FUNCTION on_lifting")
+--end)
+
 
 -- Set the value of "cooldown_active_bomb"
 function bomb_meta:on_removed()
