@@ -100,7 +100,9 @@ function messagebox_builder:show(context, text_lines, button_1_text, button_2_te
       return s
     end
 
-    local game = sol.main.game
+    --local game = sol.main.game
+    local game = sol.main.get_game()
+
     if game ~= nil then
       -- Retrieve the keyboard bindings.
       for key, _  in pairs(messagebox_menu.command_bindings) do
@@ -168,7 +170,8 @@ function messagebox_builder:show(context, text_lines, button_1_text, button_2_te
 
   -- Callded when the menu is finished.
   function messagebox_menu:on_finished()
-    local game = sol.main.game
+    -- local game = sol.main.game
+    local game = sol.main.get_game()
     if game ~= nil then
       -- Restore HUD mode.
       game:set_hud_mode(messagebox_menu.backup_hud_mode)
@@ -364,8 +367,12 @@ function messagebox_builder:show(context, text_lines, button_1_text, button_2_te
     end
 
     if not messagebox_menu:is_game_started() then
+      -- Use some commands as key
+      --local game = sol.main.get_game()
+      --local attack_key = game:get_command_keyboard_binding("attack")
+      --local pause_key = game:get_command_keyboard_binding("pause")
       -- Escape: cancel the dialog (same as choosing No).
-      if key == "escape" then
+      if key == "escape" or key == pause_key then
         messagebox_menu:reject()
       -- Left/right: moves the cursor.
       elseif key == "left" or key == "right" then
@@ -385,6 +392,7 @@ function messagebox_builder:show(context, text_lines, button_1_text, button_2_te
       elseif key == "up" or key == "down" then
         messagebox_menu:notify_cursor_not_allowed()
       -- Space/Return: validate the button at the cursor.
+      --elseif key == "space" or key == "return" or key == attack_key then
       elseif key == "space" or key == "return" then
         if messagebox_menu.cursor_position == 1 then
           messagebox_menu:accept()
