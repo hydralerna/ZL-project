@@ -2,7 +2,7 @@ animation{
   name = "visible",
   src_image = "hud/icon_action.png",
   directions = {
-    { x = 0, y = 0, frame_width = 24, frame_height = 24, origin_x = 0, origin_y = 0 },
+    { x = 0, y = 0, frame_width = 72, frame_height = 24, origin_x = 0, origin_y = 0 },
   },
 }
 animation{
@@ -10,7 +10,7 @@ animation{
   src_image = "hud/icon_action.png",
   frame_delay = 20,
   directions = {
-    { x = 144, y = 0, frame_width = 24, frame_height = 24, origin_x = 0, origin_y = 0, num_frames = 6 },
+    { x = 432, y = 0, frame_width = 72, frame_height = 24, origin_x = 0, origin_y = 0, num_frames = 6 },
   },
 }
 animation{
@@ -18,7 +18,7 @@ animation{
   src_image = "hud/icon_action.png",
   frame_delay = 20,
   directions = {
-    { x = 24, y = 0, frame_width = 24, frame_height = 24, origin_x = 0, origin_y = 0, num_frames = 6 },
+    { x = 72, y = 0, frame_width = 72, frame_height = 24, origin_x = 0, origin_y = 0, num_frames = 6 },
   },
 }
 animation{
@@ -26,13 +26,13 @@ animation{
   src_image = "hud/icon_action.png",
   frame_delay = 20,
   directions = {
-    { x = 24, y = 0, frame_width = 24, frame_height = 24, origin_x = 0, origin_y = 0, num_frames = 11 },
+    { x = 72, y = 0, frame_width = 72, frame_height = 24, origin_x = 0, origin_y = 0, num_frames = 11 },
   },
 }
 animation{
   name = "invisible",
   src_image = "hud/icon_action.png",
   directions = {
-    { x = 288, y = 0, frame_width = 24, frame_height = 24, origin_x = 0, origin_y = 0 },
+    { x = 432, y = 0, frame_width = 72, frame_height = 24, origin_x = 0, origin_y = 0 },
   },
 }
