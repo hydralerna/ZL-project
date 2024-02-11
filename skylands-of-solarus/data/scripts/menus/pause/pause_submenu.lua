@@ -18,33 +18,33 @@ end
 
 function submenu:on_started()
 
-    submenu.colors = {{15, 31, 31}, {48, 111, 80}, {143, 192, 112}, {224, 255, 208}}
-    submenu.theme_colors = {
-      {submenu.colors[1] , submenu.colors[2], submenu.colors[3], submenu.colors[4]},
-      {submenu.colors[2] , submenu.colors[1], submenu.colors[3], submenu.colors[4]},
-      {submenu.colors[3] , submenu.colors[4], submenu.colors[3], submenu.colors[4]},
-      {submenu.colors[4] , submenu.colors[3], submenu.colors[2], submenu.colors[1]}
-    }
-    submenu.theme = self.game:get_value("submenu_theme") or 1
-    submenu.test = 1
-    submenu.sprite = self.game:get_value("submenu_bg_icon_sprite") or 1
-    -- submenu.dst_x, submenu.dst_y = config.x, config.y
-    submenu.dst_x, submenu.dst_y = 0, 0
-    submenu.dst_w, submenu.dst_h = sol.video.get_quest_size()
-    submenu.camera_w, submenu.camera_h = sol.main.get_game():get_map():get_camera():get_size()
-    print("PAUSE SUBMENU", "submenu.camera_w: ", submenu.camera_w, "submenu.camera_h: ", submenu.camera_h)
-    submenu.left_w = (submenu.dst_w - submenu.camera_w) / 2
-    -- Creation of surfaces
-    submenu.img = sol.surface.create("menus/pause/menu_" .. submenu.theme .. ".png")
-    submenu.surface = sol.surface.create(submenu.dst_w, submenu.dst_h)
+  submenu.colors = {{15, 31, 31}, {48, 111, 80}, {143, 192, 112}, {224, 255, 208}}
+  submenu.theme_colors = {
+    {submenu.colors[1] , submenu.colors[2], submenu.colors[3], submenu.colors[4]},
+    {submenu.colors[2] , submenu.colors[1], submenu.colors[3], submenu.colors[4]},
+    {submenu.colors[3] , submenu.colors[4], submenu.colors[3], submenu.colors[4]},
+    {submenu.colors[4] , submenu.colors[3], submenu.colors[2], submenu.colors[1]}
+  }
+  submenu.theme = self.game:get_value("submenu_theme") or 1
+  submenu.test = 1
+  submenu.sprite = self.game:get_value("submenu_bg_icon_sprite") or 1
+  -- submenu.dst_x, submenu.dst_y = config.x, config.y
+  submenu.dst_x, submenu.dst_y = 0, 0
+  submenu.dst_w, submenu.dst_h = sol.video.get_quest_size()
+  submenu.camera_w, submenu.camera_h = sol.main.get_game():get_map():get_camera():get_size()
+  print("PAUSE SUBMENU", "submenu.camera_w: ", submenu.camera_w, "submenu.camera_h: ", submenu.camera_h)
+  submenu.left_w = (submenu.dst_w - submenu.camera_w) / 2
+  -- Creation of surfaces
+  submenu.img = sol.surface.create("menus/pause/menu_" .. submenu.theme .. ".png")
+  submenu.surface = sol.surface.create(submenu.dst_w, submenu.dst_h)
 
 
-    submenus_icon_bg_sprites[1] = sol.sprite.create("menus/pause/submenus_icon_bg_" .. submenu.theme)
-    submenus_icon_bg_sprites[1]:set_animation(submenus_icon_bg_animations[1])
-    submenus_icon_bg_sprites[2] = sol.sprite.create("menus/pause/submenus_icon_bg_" .. submenu.theme)
-    submenus_icon_bg_sprites[2]:set_animation(submenus_icon_bg_animations[2])
-    submenu.inventory_icon = sol.surface.create("menus/pause/inventory_icon_" .. submenu.test .. ".png")
-    submenu.emoji_icon = sol.surface.create("menus/pause/emoji_icon_".. submenu.test .. ".png")
+  submenus_icon_bg_sprites[1] = sol.sprite.create("menus/pause/submenus_icon_bg_" .. submenu.theme)
+  submenus_icon_bg_sprites[1]:set_animation(submenus_icon_bg_animations[1])
+  submenus_icon_bg_sprites[2] = sol.sprite.create("menus/pause/submenus_icon_bg_" .. submenu.theme)
+  submenus_icon_bg_sprites[2]:set_animation(submenus_icon_bg_animations[2])
+  submenu.inventory_icon = sol.surface.create("menus/pause/inventory_icon_" .. submenu.test .. ".png")
+  submenu.emoji_icon = sol.surface.create("menus/pause/emoji_icon_".. submenu.test .. ".png")
 
   -- Fix the font shift (issue with some fonts)
   self.font_y_shift = 0
@@ -93,7 +93,7 @@ function submenu:on_started()
 
   -- Command icons.
   self.game:set_custom_command_effect("action", nil)
-  self.game:set_custom_command_effect("attack", "save")
+  self.game:set_custom_command_effect("attack", nil) -- old value "save"
 
   -- Register if a dialog or messagebox is opened.
   self.backup_dialog_opened = false
@@ -260,15 +260,21 @@ function submenu:on_command_pressed(command)
   if self.game:is_dialog_enabled() or self.dialog_opened then
     -- Commands will be applied to the dialog box only.
     handled = false
-  elseif command == "attack" and not self.dialog_opened then
-    self:show_save_messagebox()
-    handled = true
+  --elseif command == "attack" and not self.dialog_opened then
+  --  self:show_save_messagebox()
+  --  handled = true
   end
 
   return handled
 end
 
+-- Return the sprite
+function submenu:get_icon_bg_sprite(sprite)
 
+  return submenus_icon_bg_sprites[sprite]
+end
+
+-- Draw the background
 function submenu:draw_background(dst_surface, on_camera)
 
   local width, height = dst_surface:get_size()
@@ -371,6 +377,11 @@ function submenu:set_bg_icon(sprite, animation)
     elseif animation == "disappearing2" then
       submenus_icon_bg_animations[sprite] = "inactivated"
       submenus_icon_bg_sprites[sprite]:set_animation("disappearing2", function()
+        submenus_icon_bg_sprites[sprite]:set_animation(submenus_icon_bg_animations[sprite])
+      end)
+    elseif animation == "dynamic" then
+      submenus_icon_bg_animations[sprite] = "dynamic"
+      submenus_icon_bg_sprites[sprite]:set_animation("disappearing1", function()
         submenus_icon_bg_sprites[sprite]:set_animation(submenus_icon_bg_animations[sprite])
       end)
     else
