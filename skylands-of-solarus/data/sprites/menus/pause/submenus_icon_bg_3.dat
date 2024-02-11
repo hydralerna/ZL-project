@@ -61,7 +61,7 @@ animation{
   },
 }
 animation{
-  name = "idle",
+  name = "static",
   src_image = "menus/pause/submenus_icon_bg_3.png",
   directions = {
     { x = 192, y = 96, frame_width = 48, frame_height = 32, origin_x = 24, origin_y = 16 },
